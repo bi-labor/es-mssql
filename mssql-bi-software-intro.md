@@ -62,6 +62,8 @@ We can debug the process using the **Debug** button in the toolbar. During the e
   - You specified incorrect length for in the flat file source connection details.
 - "The integration service execution takes too long"
   - If you have multiple sort actions, they may use a lot of memory. Force execution of the steps after each other by specifying a dependency in the control flow view (disables parallelism).
+- When running the IS process in Visual studio it complains about "file being used".
+  - Close Visual Studio. Start the Task Manager, and kill the "IS Debug Host" processes. Re-open the solution in Visual Studio and try again.
 
 ## Reporting Services project
 
