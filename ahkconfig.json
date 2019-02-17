@@ -1,0 +1,8 @@
+{
+  "docker": {
+    "imageName": "aut/bi-lab-elasticsearch:2019",
+    "solutionInContainer": "/tmp/solution",
+    "resultInContainer": "/tmp/result",
+    "evaluationTimeout": "00:02:00"
+  }
+}
