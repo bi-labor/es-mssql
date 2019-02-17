@@ -16,14 +16,17 @@ COPY --chown=1000:0 ./evaluator/docker-entrypoint.sh /usr/local/bin/docker-entry
 
 # Initialize the 'salaries' index in Elasticsearch
 COPY ["./evaluator/init", "/tmp/init"]
-RUN /usr/local/bin/docker-entrypoint.sh eswrapper && \
+RUN /usr/local/bin/docker-entrypoint.sh eswrapper &> /dev/null && \
     python3.5 /tmp/init/init.py 2>/dev/null && \
     ES_PID=$(cat /tmp/elasticsearch-pid) && \
     kill -15 $ES_PID && \
     while $(kill -0 $ES_PID 2>/dev/null); do sleep 1; done;
 
-ENTRYPOINT /usr/local/bin/docker-entrypoint.sh eswrapper && \
-           python3.5 && \
+# Copy the evaluator tests into the container
+COPY ["./evaluator/tests", "/tmp/tests"]
+
+ENTRYPOINT /usr/local/bin/docker-entrypoint.sh eswrapper &> /dev/null && \
+           python3.5 -m unittest discover -c -v -s /tmp/tests && \
            ES_PID=$(cat /tmp/elasticsearch-pid) && \
            kill -15 $ES_PID && \
            while $(kill -0 $ES_PID 2>/dev/null); do sleep 1; done;
