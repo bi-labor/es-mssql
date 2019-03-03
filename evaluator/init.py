@@ -1,37 +1,10 @@
 import elasticsearch
-import urllib.request
-import time
-
-
-def ensure_elasticsearch_available(timeout):
-    available = False
-    start = time.time()
-    print('Connecting to Elasticsearch', end='')
-
-    while time.time() - start < timeout:
-        try:
-            print('.', end='', flush=True)
-
-            request = urllib.request.Request('http://localhost:9200/', method='HEAD')
-            with urllib.request.urlopen(request, timeout=10) as response:
-                if response.getcode() == 200:
-                    available = True
-                    break
-        except:
-            pass
-
-        time.sleep(2)
-
-    if available:
-        print(' SUCCESS')
-    else:
-        print(' FAILED')
-        exit(1)
+import es_common
 
 
 def main():
     # Ensure that ES is available
-    ensure_elasticsearch_available(90)
+    es_common.ensure_elasticsearch_available(60)
 
     # Connect to ES and wait for it to initialize
     es = elasticsearch.Elasticsearch()
@@ -61,11 +34,11 @@ def main():
         })
 
     # Index the sample document
-    with open('/tmp/init/salaries_sample.json', 'r') as f:
+    with open('/tmp/evaluator/data/salaries_sample.json', 'r') as f:
         es.index(index='salaries', doc_type='_doc', body=f.read())
 
     # Index the remaining documents
-    with open('/tmp/init/salaries.json', 'r') as f:
+    with open('/tmp/evaluator/data/salaries.json', 'r') as f:
         es.bulk(body=f.read())
 
     # Flush the changes to disk
@@ -76,4 +49,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

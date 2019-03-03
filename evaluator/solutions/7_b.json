@@ -1,0 +1,31 @@
+{
+  "query": {
+    "bool": {
+      "must": {
+        "match_all": {}
+      },
+      "filter": [
+        {
+          "range": {
+            "salary": {
+              "gte": 80000
+            }
+          }
+        },
+        {
+          "term": {
+            "company": "KFC"
+          }
+        }
+      ]
+    }
+  },
+  "size": 3,
+  "sort": [
+    {
+      "age": {
+        "order": "asc"
+      }
+    }
+  ]
+}

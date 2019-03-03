@@ -20,17 +20,20 @@ class DockerTest(unittest.TestCase):
 
         assert cls._neptun, 'Missing NEPTUN code from neptun.txt'
 
-    def test_docker(self):
+    def test_exercise_2(self):
         expected = calculate_secret('/usr/local/bin/python', self._neptun)
+        self.assert_file_equals(expected, '/tmp/solution/exercise-2/secret.txt')
 
-        with open('/tmp/solution/exercise-2/secret.txt', 'r') as f:
-            self.assertEqual(expected, f.read())
-
-    def test_docker_compose(self):
+    def test_exercise_3(self):
         expected = calculate_secret('/data/redis-server', self._neptun)
+        self.assert_file_equals(expected, '/tmp/solution/exercise-3/secret.txt')
 
-        with open('/tmp/solution/exercise-3/secret.txt', 'r') as f:
-            self.assertEqual(expected, f.read())
+    def assert_file_equals(self, expected, filename):
+        try:
+            with open(filename, 'r') as file:
+                self.assertEqual(expected, file.read())
+        except IOError:
+            self.fail('Missing solution for exercise')
 
 
 if __name__ == '__main__':

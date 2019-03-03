@@ -12,21 +12,21 @@ RUN yum install -q -y https://centos7.iuscommunity.org/ius-release.rpm && \
     python3.5 -m pip install -q elasticsearch==6.3.1
 
 # Copy the (slightly modified) entrypoint shell script
-COPY --chown=1000:0 ./evaluator/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+COPY --chown=1000:0 ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
+# Copy initializer files and the evaluator tests into the container
+COPY ["./evaluator", "/tmp/evaluator"]
+WORKDIR "/tmp/evaluator"
 
 # Initialize the 'salaries' index in Elasticsearch
-COPY ["./evaluator/init", "/tmp/init"]
 RUN /usr/local/bin/docker-entrypoint.sh eswrapper &> /dev/null && \
-    python3.5 /tmp/init/init.py 2>/dev/null && \
+    python3.5 ./init.py 2>/dev/null && \
     ES_PID=$(cat /tmp/elasticsearch-pid) && \
     kill -15 $ES_PID && \
     while $(kill -0 $ES_PID 2>/dev/null); do sleep 1; done;
 
-# Copy the evaluator tests into the container
-COPY ["./evaluator/tests", "/tmp/tests"]
-
 ENTRYPOINT /usr/local/bin/docker-entrypoint.sh eswrapper &> /dev/null && \
-           python3.5 -m unittest discover -c -v -s /tmp/tests && \
+           python3.5 -m unittest discover -c -v && \
            ES_PID=$(cat /tmp/elasticsearch-pid) && \
            kill -15 $ES_PID && \
            while $(kill -0 $ES_PID 2>/dev/null); do sleep 1; done;
