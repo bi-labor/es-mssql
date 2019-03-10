@@ -25,3 +25,7 @@ The purpose of this exercise is to practice the data visualization capabilities 
 > :memo: Create a screenshot of the visualization and save it as `exercise-8\c.png`.
 
 > :memo: Save and export the visualization. Save the exported file as `exercise-8\c.json`.
+
+## Submit your solution
+
+See instructions in [exercise 1](exercise1.md) to submit your solution.
