@@ -5,7 +5,7 @@ The purpose of this exercise to use the `docker-compose` tool to define and run 
 1. Create a `docker-compose.yml` file next to the `Dockerfile` created in the previous exercise. The file's contents should be the following.
 
     ```yml
-    version: '3'    # Version of the docker-compose.yml file, the tool tries to parse it differently depending on this value
+    version: '3' # Version of the docker-compose.yml file, the tool tries to parse it differently depending on this value
 
     services:               # List the services our application consists of
       bilab_redis:          # The Redis service

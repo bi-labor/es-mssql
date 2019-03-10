@@ -30,12 +30,12 @@ While completing your exercises, please include the scripts, packages, projects,
 
 ## Grading
 
-Follow the exercises in order. The 3-hour laboratory class should be sufficient time to complete all exercises. The result will be graded as follows.
+Follow the exercises in order. In order for an exercise to count as _completed_ you must finish **all** its subtasks successfully. The 3-hour laboratory class should be sufficient time to complete all exercises. The result will be graded as follows.
 
-- For a sufficient grade (2) you must complete exercise 2 and 3. Exercise 3 must run to completion, but it may work incorrectly (e.g. import less data, or skip the duplicate search, etc.).
-- For a satisfactory grade (3) exercise 3 must work correctly.
-- For a good grade (4) exercise 4 should be completed without errors.
-- For a very good grade (5) all exercises should be completed without errors.
+- For a sufficient grade (**2**) you must complete exercises **1** through **5**.
+- For a satisfactory grade (**3**) exercise **6** should be completed as well.
+- For a good grade (**4**) exercise **7** should be completed.
+- For a very good grade (**5**) **all** exercises should be completed.
 
 ## Exercises
 

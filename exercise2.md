@@ -26,7 +26,7 @@ The purpose of this exercise is to build a _Docker_ image from this _Python_web 
     CMD ["python", "app.py"]
     ```
 
-    > :heavy_exclamation_mark: Make sure to set the `NEPTUN` variable to yourown _NEPTUN_ code instead of _ABC123_.
+    > :heavy_exclamation_mark: Make sure to set the `NEPTUN` variable to your own _NEPTUN_ code instead of _ABC123_.
 
 1. Open a _PowerShell_ window and navigate to the `data\pyton_redis` folder. Execute the following command here.
 
@@ -70,7 +70,7 @@ The purpose of this exercise is to build a _Docker_ image from this _Python_web 
 
     * Make sure that the page prints out your _NEPTUN_ code. If it does not, you have to go back and change it in the `Dockerfile`.
 
-    * Note that the _Hostname_ showed on the webpage is the _CONTAINER ID_ we saw when listing the running containers in the previous step.
+    * Note that the _Hostname_ shown on the webpage is the _CONTAINER ID_ we saw when listing the running containers in the previous step.
 
     > :memo: If everything is working, save the `Dockerfile` in `exercise-2\Dockerfile` and copy the _Secret 1_ value in `exercise-2\secret.txt`.
 
@@ -80,7 +80,7 @@ The purpose of this exercise is to build a _Docker_ image from this _Python_web 
     docker stop container_id
     ```
 
-    If you now enter `docker ps` you will no longer see the container. This, however, does only mean that the container is _stopped_ not _removed_. You can see the difference if you enter `docker ps -a`. To remove the container entirely, you have to enter the following command.
+    If you now enter `docker ps` you will no longer see the container. This, however, does only mean that the container is _stopped_, not _removed_. You can see the difference if you enter `docker ps -a`. To remove the container entirely, you have to enter the following command.
 
     ```powershell
     docker rm container_id
