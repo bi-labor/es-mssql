@@ -142,14 +142,14 @@ In this part of the exercise we are going to create an index for documents conta
 
     ![Elasticsearch indices](./images/elasticsearch-indices-1.png)
 
-    > :information_source_ Note how the health of the `test` index is **yellow** and the health of the `salaries` index is **green**. That is because the default value for the number of _replicas_ is **1**.
+    > :information_source: Note how the health of the `test` index is **yellow** and the health of the `salaries` index is **green**. That is because the default value for the number of _replicas_ is **1**.
 
 1. Insert the sample document into the created index.
 
     ```
     POST salaries/_doc
     {
-      ...
+      ... // the sample document comes here 
     }
     ```
 

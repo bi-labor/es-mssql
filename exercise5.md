@@ -2,7 +2,7 @@
 
 The purpose of this exercise is to try out the search and aggregation capabilities of _Elasticsearch_.
 
-> :information_source: All of the following queries are sent to the `salaries/_search` endpoint with a `GET` method. This means that the first row will be `GET salaries/elasticsearch` for all of them. Therefore, the following examples will only contain the query JSON.
+> :information_source: All of the following queries are sent to the `salaries/_search` endpoint with a `GET` method. This means that the first row in _Kibana_ will be `GET salaries/elasticsearch` for all of them. Therefore, the following examples will only contain the query JSON.
 
 ![Kibana query parts](./images/kibana-query-parts.png)
 
@@ -21,7 +21,7 @@ Issue the following query.
 
 * `query`: This provides the filter for the query. Think of the `WHERE` clause in _SQL_.
 
-* `from` and `size`: These can be used for paging results. It is important to note that there is no way to query **all** documents using _Elasticsearch_. If you omit the `size` value it defaults to **10**.
+* `from` and `size`: These can be used for paging results. It is important to note that there is no way to query **all** documents using _Elasticsearch_. If you omit the `size` value, it defaults to **10**.
 
 * `sort`: This can be used to sort the results.
 

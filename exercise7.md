@@ -13,3 +13,7 @@ The purpose of this exercise is to practice the search and aggregation capabilit
 ## c) What is the average age of the workers at the different companies?
 
 > :memo: Save the query JSON as `exercise-7\c.json`.
+
+## Next exercise
+
+Next is [exercise 8](exercise8.md).
