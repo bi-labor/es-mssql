@@ -44,8 +44,7 @@ First, we are going to use _Elasticsearch's_ REST API through _PowerShell_.
 1. To index a document in _Elasticsearch_ issue the following command.
 
     ```powershell
-    (curl 'http://localhost:9200/test/_doc/1?pretty' -Method Put`
-    -ContentType 'application/json' -Body '{ "name": "John Doe" }').Content
+    (curl 'http://localhost:9200/test/_doc/1?pretty' -Method Put -ContentType 'application/json' -Body '{ "name": "John Doe" }').Content
     ```
 
     This way we inserted a document of type `_doc` into the index called `test` with id `1`. The response JSON should state `"result": "created"`.
@@ -76,6 +75,8 @@ First, we are going to use _Elasticsearch's_ REST API through _PowerShell_.
 ## Crate an index and index many documents using the _bulk_ API
 
 In this part of the exercise we are going to create an index for documents containing information about people working in the fast food industry. Here is a sample document.
+
+### Sample document
 
 ```json
 {
@@ -144,7 +145,7 @@ In this part of the exercise we are going to create an index for documents conta
 
     > :information_source: Note how the health of the `test` index is **yellow** and the health of the `salaries` index is **green**. That is because the default value for the number of _replicas_ is **1**.
 
-1. Insert the sample document into the created index.
+1. Insert the sample document into the created index. You can find the sample document [here](#sample-document).
 
     ```
     POST salaries/_doc
