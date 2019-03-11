@@ -2,7 +2,7 @@
 
 The purpose of this exercise is to try out the search and aggregation capabilities of _Elasticsearch_.
 
-> :information_source: All of the following queries are sent to the `salaries/_search` endpoint with a `GET` method. This means that the first row in _Kibana_ will be `GET salaries/elasticsearch` for all of them. Therefore, the following examples will only contain the query JSON.
+> :information_source: All of the following queries are sent to the `salaries/_search` endpoint with a `GET` method. This means that the first row in _Kibana_ will be `GET salaries/_search` for all of them. Therefore, the following examples will only contain the query JSON.
 
 ![Kibana query parts](./images/kibana-query-parts.png)
 
