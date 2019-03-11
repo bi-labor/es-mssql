@@ -27,7 +27,7 @@ The purpose of this exercise is to start _Elasticsearch_ and _Kibana_ and to cre
 1. We can also check the state of the cluster using _Elasticsearch's_ REST API.
 
     ```powershell
-    (curl 'http://localhost:9200/_cat/health?v&pretty' -Method Get).Content
+    (curl 'http://localhost:9200/_cat/health?v&pretty' -Method Get -UseBasicParsing).Content
     ```
 
     ![Elasticsearch cluster health](./images/elasticsearch-cluster-health.png)
@@ -44,7 +44,7 @@ First, we are going to use _Elasticsearch's_ REST API through _PowerShell_.
 1. To index a document in _Elasticsearch_ issue the following command.
 
     ```powershell
-    (curl 'http://localhost:9200/test/_doc/1?pretty' -Method Put -ContentType 'application/json' -Body '{ "name": "John Doe" }').Content
+    (curl 'http://localhost:9200/test/_doc/1?pretty' -Method Put -ContentType 'application/json' -Body '{ "name": "John Doe" }' -UseBasicParsing).Content
     ```
 
     This way we inserted a document of type `_doc` into the index called `test` with id `1`. The response JSON should state `"result": "created"`.
@@ -52,7 +52,7 @@ First, we are going to use _Elasticsearch's_ REST API through _PowerShell_.
 1. Query the document with the following command.
 
     ```powershell
-    (curl 'http://localhost:9200/test/_doc/1?pretty' -Method Get).Content
+    (curl 'http://localhost:9200/test/_doc/1?pretty' -Method Get -UseBasicParsing).Content
     ```
 
     The result JSON tells us the name of the index, the id of the document, as well as the full document we inserted in the `_source` field.
@@ -165,7 +165,7 @@ In this part of the exercise we are going to create an index for documents conta
 1. Add multiple documents to the index using the _bulk_ API. Issue the following command from the _PowerShell_ window.
 
     ```powershell
-    curl 'http://localhost:9200/_bulk' -Method Post -ContentType 'application/json' -InFile .\salaries.json
+    curl 'http://localhost:9200/_bulk' -Method Post -ContentType 'application/json' -InFile .\salaries.json -UseBasicParsing
     ```
 
     Check the indices again with `GET _cat/indices?v` query. You should see **1101* documents in the `salaries` index.
