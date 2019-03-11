@@ -40,3 +40,29 @@ Follow the exercises in order. In order for an exercise to count as _completed_ 
 ## Exercises
 
 Start with [Exercise 1 here](exercise1.md).
+
+## Finishing your work from home
+
+If you weren't able to do all the exercises during the 3-hour laboratory class, you are welcome to finish them from home. If you decide to do that, however, you have to be aware of the following.
+
+Due to how the _Docker Hub's_ rate limitations work, we have to use a private _Docker_ repository during the lab. You cannot use that from home, therefore you have to use the original _Docker_ images. The required modifications:
+
+* [Exercise 2](exercise2.md), `Dockerfile`:
+
+    * **From**: sydney.aut.bme.hu:5000/python:3.7.2-alpine
+    * **To**: python:3.7.2-alpine
+
+* [Exercise 3](exercise3.md), `docker-compose.yml`:
+
+    * **From**: sydney.aut.bme.hu:5000/redis:5.0.3-alpine
+    * **To**: redis:5.0.3-alpine
+
+* [Exercise 4](exercise4.md), `docker-compose.yml`:
+
+    * **From**: sydney.aut.bme.hu:5000/elasticsearch-oss:6.6.0
+    * **To**: docker.elastic.co/elasticsearch/elasticsearch-oss:6.6.0
+
+* [Exercise 4](exercise4.md), `docker-compose.yml`:
+
+    * **From**: sydney.aut.bme.hu:5000/kibana-oss:6.6.0
+    * **To**: docker.elastic.co/kibana/kibana-oss:6.6.0
