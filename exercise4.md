@@ -14,7 +14,11 @@ The purpose of this exercise is to start _Elasticsearch_ and _Kibana_ and to cre
 
     * `volumes`: Due to how file storage works in _Docker_ containers, every data is lost if we remove a container and start a new one. Of course, this is not exactly appropriate for a database service like _Elasticsearch_. Therefore we are going to use a `volume` which provides a more durable storage option.
 
-1. Navigate a _PowerShell_ window into the folder with the `docker-compose.yml` file, and issue the following command.
+1. Navigate a _PowerShell_ window into the folder with the `docker-compose.yml` file, and issue the following commands.
+
+    ```powershell
+    docker-compose down -v
+    ```
 
     ```powershell
     docker-compose up -d
