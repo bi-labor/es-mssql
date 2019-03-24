@@ -72,7 +72,7 @@ First, we are going to use _Elasticsearch's_ REST API through _PowerShell_.
     }
     ```
 
-## Crate an index and index many documents using the _bulk_ API
+## Create an index and index many documents using the _bulk_ API
 
 In this part of the exercise we are going to create an index for documents containing information about people working in the fast food industry. Here is a sample document.
 

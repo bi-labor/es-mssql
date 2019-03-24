@@ -4,6 +4,10 @@ The purpose of this exercise is to try out the search and aggregation capabiliti
 
 > :information_source: All of the following queries are sent to the `salaries/_search` endpoint with a `GET` method. This means that the first row in _Kibana_ will be `GET salaries/_search` for all of them. Therefore, the following examples will only contain the query JSON.
 
+### Query json
+
+> :information_source: Both exercise **5** and exercise **7** will tell you to save the **query** JSON as part of the exercise. The following picture shows you what that means _(i.e. the **VALID** JSON that is sent to Elasticseach, **WITHOUT** the header part; **NOT** the result JSON that is on the right side in Kibana)_.
+
 ![Kibana query parts](./images/kibana-query-parts.png)
 
 ## `SELECT *` in _Elasticsearch_
@@ -41,7 +45,7 @@ The following query answers our question.
 
 The only difference between this query and the previous one is that we want only **5** documents, and we changed the `sort` order to be by the `salary` values.
 
-> :memo: Save the query JSON as `exercise-5\a.json`.
+> :memo: Save the **query** JSON (explained [here](#query-json)) as `exercise-5\a.json`.
 
 ## b) Who are the top **5** five workers at _McDonalds_ aged between **18** and **30** with the best salaries?
 
@@ -68,7 +72,7 @@ The difference between this query and the previous one is that we have to apply 
 * The `age` must be between **18** and **30**.
 * The `company` must be _McDonalds_.
 
-> :memo: Save the query JSON as `exercise-5\b.json`.
+> :memo: Save the **query** JSON (explained [here](#query-json)) as `exercise-5\b.json`.
 
 ## c) Are there more men or women working for these companies? Is there a difference between the average salaries?
 
@@ -96,7 +100,7 @@ We have to use aggregations to answer these questions. We can use the following 
 
 This query first groups the documents by the `gender` value and then calculates the average of the `salary` values in them.
 
-> :memo: Save the query JSON as `exercise-5\c.json`.
+> :memo: Save the **query** JSON (explained [here](#query-json)) as `exercise-5\c.json`.
 
 ## d) What is the answer to the previous question in different age groups?
 
@@ -136,7 +140,7 @@ To answer this question we can mostly reuse the previous query. The only thing w
 }
 ```
 
-> :memo: Save the query JSON as `exercise-5\d.json`.
+> :memo: Save the **query** JSON (explained [here](#query-json)) as `exercise-5\d.json`.
 
 ## Next exercise
 
