@@ -4,5 +4,8 @@
     "solutionInContainer": "/tmp/solution",
     "resultInContainer": "/tmp/result",
     "evaluationTimeout": "00:02:00"
+  },
+  "consoleMessageGrader": {
+    "validationCode": "ARt$=fC3CpDg%mfK"
   }
 }

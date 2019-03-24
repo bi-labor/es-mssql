@@ -1,9 +1,10 @@
+import common_test
 import elasticsearch
 import es_common
 import unittest
 
 
-class ElasticsearchTest(unittest.TestCase):
+class ElasticsearchTest(common_test.CommonTest):
 
     @classmethod
     def setUpClass(cls):
@@ -36,18 +37,28 @@ class ElasticsearchTest(unittest.TestCase):
         self.execute_aggregation_test(7, 'c', ['sterm', 'avg'])
 
     def execute_query_test(self, exercise, sub):
+        self.execute_test(lambda: self.execute_query_test_internal(exercise, sub), exercise, sub)
+
+    def execute_query_test_internal(self, exercise, sub):
         expected = self.get_query_result('./solutions/{}_{}.json'.format(exercise, sub))
         actual = self.get_query_result('/tmp/solution/exercise-{}/{}.json'.format(exercise, sub))
-        self.assertEqual(expected, actual)
+        self.assertEqual(len(expected), len(actual),
+                         msg='Incorrect number of results for the query (should be {}, got {})'
+                         .format(len(expected), len(actual)))
+        self.assertEqual(expected, actual, msg='Incorrect results for query')
 
     def get_query_result(self, filename):
         result = self.execute_search(filename, is_aggregation=False)['hits']['hits']
         return [item['_source']['email'] for item in result]
 
     def execute_aggregation_test(self, exercise, sub, aggregations):
+        self.execute_test(lambda: self.execute_aggregation_test_internal(exercise, sub, aggregations), exercise, sub)
+
+    def execute_aggregation_test_internal(self, exercise, sub, aggregations):
         expected = self.get_aggregation_result('./solutions/{}_{}.json'.format(exercise, sub), aggregations)
-        actual = self.get_aggregation_result('/tmp/solution/exercise-{}/{}.json'.format(exercise, sub), aggregations)
-        self.assertEqual(expected, actual)
+        actual = self.get_aggregation_result('/tmp/solution/exercise-{}/{}.json'.format(exercise, sub),
+                                             aggregations)
+        self.assertEqual(expected, actual, msg='Incorrect results for aggregation')
 
     def get_aggregation_result(self, filename, aggregations):
         result = self.execute_search(filename, is_aggregation=True)
@@ -57,15 +68,17 @@ class ElasticsearchTest(unittest.TestCase):
         try:
             with open(filename, 'r') as file:
                 query = file.read()
-                self.assertTrue(query, 'Missing solution for exercise')
+                self.assertTrue(query, msg='Missing solution for exercise')
                 return self._es.search(index='salaries', doc_type='_doc', body=query, typed_keys=is_aggregation)
         except IOError:
-            self.fail('Missing solution for exercise')
+            self.fail(msg='Missing solution for exercise')
+        except elasticsearch.exceptions.TransportError as e:
+            self.fail(msg='Invalid query json (Elasticsearch response: {} - {})'.format(e.status_code, e.error))
 
     def get_doc_counts(self, result, aggregations):
         aggregation = aggregations[0]
         aggregation_key = ElasticsearchTest.get_aggregation_key(result, aggregation)
-        self.assertTrue(aggregation_key, 'The query does not have the proper aggregations')
+        self.assertTrue(aggregation_key, msg='The query does not have the proper aggregations')
 
         if len(aggregations) == 1:
             return result[aggregation_key]['value']

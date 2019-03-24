@@ -26,7 +26,7 @@ RUN /usr/local/bin/docker-entrypoint.sh eswrapper &> /dev/null && \
     while $(kill -0 $ES_PID 2>/dev/null); do sleep 1; done;
 
 ENTRYPOINT /usr/local/bin/docker-entrypoint.sh eswrapper &> /dev/null && \
-           python3.5 -m unittest discover -c -v && \
+           python3.5 -m unittest discover -c -q && \
            ES_PID=$(cat /tmp/elasticsearch-pid) && \
            kill -15 $ES_PID && \
            while $(kill -0 $ES_PID 2>/dev/null); do sleep 1; done;
