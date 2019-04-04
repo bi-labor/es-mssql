@@ -6,7 +6,7 @@ The purpose of this exercise is to try out the search and aggregation capabiliti
 
 ### Query json
 
-> :information_source: Both exercise **5** and exercise **7** will tell you to save the **query** JSON as part of the exercise. The following picture shows you what that means _(i.e. the **VALID** JSON that is sent to Elasticseach, **WITHOUT** the header part; **NOT** the result JSON that is on the right side in Kibana)_.
+> :information_source: Both exercise **5** and exercise **7** will tell you to save the **query** JSON as part of the exercise. The following picture shows you what that means _(i.e. the **VALID** JSON that is sent to Elasticsearch, **WITHOUT** the header part; **NOT** the result JSON that is on the right side in Kibana)_.
 
 ![Kibana query parts](./images/kibana-query-parts.png)
 
