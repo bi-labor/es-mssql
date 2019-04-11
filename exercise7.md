@@ -1,4 +1,4 @@
-# Exercise 5: _Elasticsearch_ queries — practice
+# Exercise 7: _Elasticsearch_ queries — practice
 
 The purpose of this exercise is to practice the search and aggregation capabilities of _Elasticsearch_. Feel free to take inspiration from the solutions in [exercise 5](exercise5.md).
 
