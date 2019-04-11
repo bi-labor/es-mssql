@@ -47,7 +47,7 @@ The only difference between this query and the previous one is that we want only
 
 > :memo: Save the **query** JSON (explained [here](#query-json)) as `exercise-5\a.json`.
 
-## b) Who are the top **5** five workers at _McDonalds_ aged between **18** and **30** with the best salaries?
+## b) Who are the top **5** workers at _McDonalds_ aged between **18** and **30** with the best salaries?
 
 ```json
 {
