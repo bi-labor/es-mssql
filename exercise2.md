@@ -28,7 +28,7 @@ The purpose of this exercise is to build a _Docker_ image from this _Python_web 
 
     > :heavy_exclamation_mark: Make sure to set the `NEPTUN` variable to your own _NEPTUN_ code instead of _ABC123_.
 
-1. Open a _PowerShell_ window and navigate to the `data\pyton_redis` folder. Execute the following command here.
+1. Open a _PowerShell_ window and navigate to the `data\python_redis` folder. Execute the following command here.
 
     ```powershell
     docker build -t bilab_web .
