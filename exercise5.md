@@ -9,6 +9,7 @@
    > :memo: The ETL process should be edited in solution `exercise-5\ex5_integration_services.sln`.
 
    - Import the **ISBN** from the books as **string**.
+   - Prefix the **book titles** with your Neptun code.
    - You will need to **filter for duplicate ISBNs** among the books dataset, as we did before. Make sure to use case insensitive comparison for the duplicate filter.
    - Make sure to import the **image URLs** from the books data file.
    - Remember to extend the length of the imported columns in the flat file connection settings (**_OutputColumnWidth_**) for the fields; **1000 characters** should be sufficient.

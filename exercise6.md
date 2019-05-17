@@ -4,7 +4,7 @@ Create a report that lists the **top 10 highest rated books** in a table.
 
 > :memo: The report should be edited in solution `exercise-6\ex6_reporting_services.sln` in file `books.rdl`.
 
-- The list should be in a table format displaying the title, author, publication year, and the cover image of the book (using the medium sized image URL from the dataset).
+- The list should be in a table format displaying the title, author, publication year, average rating, and the cover image of the book (using the medium sized image URL from the dataset).
 
   - Use an _Image_ component from the toolbox. The image source should be _External_ in order to fetch it based on the URL.
 

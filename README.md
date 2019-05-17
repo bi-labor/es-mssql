@@ -25,6 +25,8 @@ You need to following tools to complete this laboratory:
 
 ## Submitting your solution
 
+To complete this laboratory you are required to solve excercises and submit your work, as prescribed by the exercise descriptions. You may only submit your own work! Submitting a work that you did not create is considered cheating, and will be handled according to the code of studies ("TVSZ").
+
 While completing your exercises, please include the scripts, packages, projects, etc. in your submission. A starter submission is provided to you. Fill in the missing pieces there.
 
 > :memo: The exercises all highlight the `path` where you should put your solution. **Please follow these guidelines.** The submissions are checked automatically. Files and folders not adhering to the prescribed structure might be skipped, and you will get a worse grade.

@@ -52,10 +52,10 @@
 
    - Add a new column that contains the age as an integer. Check if the string is "NULL", in that case keep the null value, or cast to int.
      - Use the following expression: `[Age] == "NULL" ? NULL(DT_I4) : (DT_I4)[Age]`. (You may need to change the column name.)
-   - Split the location column into two. Create a new _City_ and a new _Country_ column using string operations.
+   - Split the location column into two, and include your neptun code in the text: create a new _City_ and a new _Country_ column using string operations; _Country_ should be prefixed with your neptun code.
      - Take a look at a few examples of the _Location_: they are in the form of "city, state, country"
-     - To separate the country find the second comma in the text. The rest is the city (you can keep the state included in the city text). E.g. "nyc, new york, usa" becomes:
-       - Country: "usa"
+     - To separate the country find the second comma in the text. The rest is the city (you can keep the state included in the city text). And prefix the country with your neptun code by concatenating it as a string to the front. E.g. "nyc, new york, usa" becomes:
+       - Country: "NEPTUN usa"
        - City: "nyc, new york"
    - Find more information on the syntax of the _Expression_ here: <https://docs.microsoft.com/en-us/sql/integration-services/expressions/integration-services-ssis-expressions?view=sql-server-2017)>
 
@@ -97,9 +97,11 @@
 
 1. Run the ETL process.
 
-1. If the process succeeded, verify the contents of the table using SQL Server Management Studio. Create a screenshot of the table contents. Please make sure that the screenshot is taken such that it **includes the database name** (which is your Neptun code) from the _Object explorer_ window!
+1. If the process succeeded, verify the contents of the table using SQL Server Management Studio. Create a screenshot of the table contents. Please make sure that the screenshot is taken such that it **includes the database name** (which is your Neptun code) from the _Object explorer_ window! Also verify that you **added your Neptun code prefix** to the Country names!
 
    > :memo: Save the screenshot file as `exercise-3\ex3_table_screenshot_users.png` - overwrite the placeholder file with yours.
+
+     ![Sample expected screenshot](images/exercise/users-table-verify-content.png)
 
 ## Next exercise
 

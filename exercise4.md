@@ -69,7 +69,7 @@ The final report should look similar to this:
 
 1. Preview the report by switching to the _Preview_ tab in Visual Studio.
 
-> :memo: Include a screenshot of the report from Visual Studio as `exercise-4\ex4_report_screenshot_users.png`.
+   > :memo: Include a screenshot of the report from Visual Studio as `exercise-4\ex4_report_screenshot_users.png`.
 
 ## Next exercise
 
