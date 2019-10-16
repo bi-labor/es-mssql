@@ -1,6 +1,6 @@
 # Exercise 4: Report
 
-> :memo: Extend the provided Reporting Services project `exercise-4\ex4_reporting_services.sln` by modifying the project contents in place.
+> Extend the provided Reporting Services project `exercise-4\ex4_reporting_services.sln` by modifying the project contents in place.
 
 Create a report that summarizes from which country do our users come from. A table should list the number of users by country, along with the average age from the country; and a pie chart should display the number of users from the top 10 countries.
 
@@ -69,7 +69,7 @@ The final report should look similar to this:
 
 1. Preview the report by switching to the _Preview_ tab in Visual Studio.
 
-   > :memo: Include a screenshot of the report from Visual Studio as `exercise-4\ex4_report_screenshot_users.png`.
+   > Include a screenshot of the report from Visual Studio as `exercise-4\ex4_report_screenshot_users.png`.
 
 ## Next exercise
 

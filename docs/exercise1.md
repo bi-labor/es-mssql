@@ -8,9 +8,9 @@
 
 1. Wait for the Git repository to initialize.
 
-   > :information_source: Please note that your repository is private. No one has access to it, but you, and the teachers.
+   > Please note that your repository is private. No one has access to it, but you, and the teachers.
 
-1. Check out the repository with your favorite tool. Work in the `c:\work\<neptun>` directory. If you do not have a favorit git tool, follow these steps:
+1. Check out the repository with your favorite tool. Work in the `c:\work\<neptun>` directory. If you do not have a favorite git tool, follow these steps:
 
    1. Create a folder where you will work, e.g. `c:\work\<neptun>\mssql-lab`
    1. Open a console to this location
@@ -19,7 +19,7 @@
 
 1. Open the checked out folder, and type your NEPTUN code into the `neptun.txt` file. We need this to map your submission to you.
 
-   > :memo: Open `neptun.txt` and type your NEPTUN code in the file.
+   > Open `neptun.txt` and type your NEPTUN code in the file.
 
 1. Go to the `data` folder and extract the zip file.
 
@@ -42,7 +42,7 @@ When you are finished, submit your solution by pushing the changes to the remote
 
 ### Commit and push your work
 
-If you do not have a favorit git tool, execute the following commands in a console window in the same directory where your files are.
+If you do not have a favorite git tool, execute the following commands in a console window in the same directory where your files are.
 
 ```bash
 git add -A
@@ -56,6 +56,6 @@ To verify that you have uploaded everything, open the repository online and chec
 
 In the university laboratories, the computer may remember your login information. To remove your credentials, follow these steps.
 
-1. Open `Credential manager` from the Start menu.
+1. Open `Credential Manager` from the Start menu.
 1. Look for GitHub tokens in the `Windows Credentials` page, and remove all of them.
    ![Remove existing GitHub access token](images/git-credential-remove.png)

@@ -1,6 +1,6 @@
 # Exercise 3: Import the users dataset using Integration Services
 
-> :memo: Extend the provided Integration Services project `exercise-3\ex3_integration_services.sln` by modifying the project contents in place.
+> Extend the provided Integration Services project `exercise-3\ex3_integration_services.sln` by modifying the project contents in place.
 
 1. Open the solution with Visual Studio, open _Package.dtsx_ from _Solution explorer_.
 
@@ -67,8 +67,8 @@
 
 1. Add an _ADO NET Destination_ component (look in the _Other Destinations_ category) to save the data into database.
 
-   - Direct he output of the previous _Sort_ component here.
-   - Open the components settings dialog by double clicking the component box.
+   - Direct the output of the previous _Sort_ component here.
+   - Open the component's settings dialog by double clicking the component box.
    - Create a new _Connection manager_ that connects to the database. Use the same connection settings as before.
    - Select the users table you created as target.
 
@@ -101,7 +101,7 @@
 
    > :memo: Save the screenshot file as `exercise-3\ex3_table_screenshot_users.png` - overwrite the placeholder file with yours.
 
-     ![Sample expected screenshot](images/exercise/users-table-verify-content.png)
+   ![Sample expected screenshot](images/exercise/users-table-verify-content.png)
 
 ## Next exercise
 
