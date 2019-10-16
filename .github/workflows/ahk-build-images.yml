@@ -1,0 +1,33 @@
+name: Build Docker image for AHK
+
+on:
+  push:
+    paths:
+      - "ahk/**"
+      - "megoldas/**"
+      - ".github/workflows/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - name: Build image with compose
+        run: |
+          cd ahk
+          docker build -t bmeviaumb00/lab-mssql .
+      - name: Test sample solution
+        run: docker run --rm -v $(pwd)/megoldas:/megoldas bmeviaumb00/lab-mssql
+      - name: Tag and push docker images
+        env:
+          AHK_DOCKER_IMAGE_TAG: "2019"
+          DOCKER_REG_USERNAME: ${{ secrets.DOCKER_REG_USERNAME }}
+          DOCKER_REG_TOKEN: ${{ secrets.DOCKER_REG_TOKEN }}
+        run: |
+          docker login docker.pkg.github.com -u $DOCKER_REG_USERNAME -p $DOCKER_REG_TOKEN
+          docker tag bmeviaumb00/lab-mssql docker.pkg.github.com/bi-labor/mssql/lab-mssql:$AHK_DOCKER_IMAGE_TAG
+          docker push docker.pkg.github.com/bi-labor/mssql/lab-mssql:$AHK_DOCKER_IMAGE_TAG
+          docker logout docker.pkg.github.com
