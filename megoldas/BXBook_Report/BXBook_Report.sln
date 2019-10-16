@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "BXBook_Report", "BXBook_Report\BXBook_Report.rptproj", "{EF9C50EB-F94F-4E16-8EA6-0200EE9EFF1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF9C50EB-F94F-4E16-8EA6-0200EE9EFF1E}.Debug|Default.ActiveCfg = Debug
+		{EF9C50EB-F94F-4E16-8EA6-0200EE9EFF1E}.Debug|Default.Build.0 = Debug
+		{EF9C50EB-F94F-4E16-8EA6-0200EE9EFF1E}.Debug|Default.Deploy.0 = Debug
+		{EF9C50EB-F94F-4E16-8EA6-0200EE9EFF1E}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{EF9C50EB-F94F-4E16-8EA6-0200EE9EFF1E}.DebugLocal|Default.Build.0 = DebugLocal
+		{EF9C50EB-F94F-4E16-8EA6-0200EE9EFF1E}.Release|Default.ActiveCfg = Release
+		{EF9C50EB-F94F-4E16-8EA6-0200EE9EFF1E}.Release|Default.Build.0 = Release
+		{EF9C50EB-F94F-4E16-8EA6-0200EE9EFF1E}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
