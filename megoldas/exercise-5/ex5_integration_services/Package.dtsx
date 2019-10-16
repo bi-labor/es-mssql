@@ -1,0 +1,1691 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/14/2019 3:46:58 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="VM-WIN10"
+  DTS:CreatorName="VM-WIN10\user"
+  DTS:DelayValidation="True"
+  DTS:DTSID="{778782EE-D2E4-4795-93D1-BA6E4141FF88}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.0900.40"
+  DTS:LocaleID="1038"
+  DTS:MaxConcurrentExecutables="1"
+  DTS:MaxErrorCount="10"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{98CDD5AB-49B9-428C-A578-2A5207C1934C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(localdb)\mssqllocaldb.IWVRAI]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{4D32B288-242A-4A83-B9C5-E848B894AC31}"
+      DTS:ObjectName="(localdb)\mssqllocaldb.IWVRAI">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=mssqllab;User Id=sa;Password=eFapZ63eA9sH;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(localdb)\mssqllocaldb.IWVRAI1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{865374AB-A86B-4299-9B0B-2E894771407F}"
+      DTS:ObjectName="(localdb)\mssqllocaldb.IWVRAI1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=mssqllab;User Id=sa;Password=eFapZ63eA9sH;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{025DCBDF-1D60-4272-9B3A-CC445F690EA6}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1038"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="c:\\evaluator\\data-reduced\\BX-Books.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ISBN"
+              DTS:DTSID="{7C01E7BC-22A1-4754-BBB6-57BFD26A95C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Book-Title"
+              DTS:DTSID="{34BB6938-4A35-4D8D-9F0F-82A9CC7F5146}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Book-Author"
+              DTS:DTSID="{C246B0B9-7590-4C22-B615-4B5AF48894DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year-Of-Publication"
+              DTS:DTSID="{0490FCF3-CCC6-4E56-AB78-E4A25E3AED9F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Publisher"
+              DTS:DTSID="{8D55D138-5F72-4B8C-8CD9-FC61E4B507A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Image-URL-S"
+              DTS:DTSID="{0AAF0D26-FB97-4BFF-A646-F4E1A4FC78CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Image-URL-M"
+              DTS:DTSID="{C02DA481-B8B0-4514-A995-E4B07F42984D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Image-URL-L"
+              DTS:DTSID="{6E7AE8B0-C7F7-4BE0-A053-3F510A9FEE0C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager ratings]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DA38D358-6091-4807-9B03-F4622D18E9A6}"
+      DTS:ObjectName="Flat File Connection Manager ratings">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1038"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="c:\\evaluator\\data-reduced\\BX-Book-Ratings.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="User-ID"
+              DTS:DTSID="{AD26C6F1-CA65-4265-A3B7-03308770B835}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ISBN"
+              DTS:DTSID="{79A035D6-3E68-4D0A-98AA-49429B1D683E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Book-Rating"
+              DTS:DTSID="{81781806-1BDD-4937-A7AE-58A1A0BA06DD}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DF Books"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{AB485CF6-8EBD-4781-9720-66D0B598B20A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DF Books"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DF Books\ADO NET Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO NET Destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Books"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF Books\ADO NET Destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\mssqllocaldb.IWVRAI]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\mssqllocaldb.IWVRAI]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[ISBN]"
+                      cachedCodepage="1250"
+                      cachedComparisonFlags="1"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="ISBN"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ISBN]"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[ISBN]" />
+                    <inputColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Book-Title]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Book-Title"
+                      externalMetadataColumnId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Book-Title]"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Book-Title]" />
+                    <inputColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Book-Author]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Book-Author"
+                      externalMetadataColumnId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Book-Author]"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Book-Author]" />
+                    <inputColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Year-Of-Publication]"
+                      cachedDataType="i4"
+                      cachedName="Year-Of-Publication"
+                      externalMetadataColumnId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Year-Of-Publication]"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Year-Of-Publication]" />
+                    <inputColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Publisher]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Publisher"
+                      externalMetadataColumnId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Publisher]"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Publisher]" />
+                    <inputColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Image-URL-S]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Image-URL-S"
+                      externalMetadataColumnId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Image-URL-S]"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Image-URL-S]" />
+                    <inputColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Image-URL-M]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Image-URL-M"
+                      externalMetadataColumnId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Image-URL-M]"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Image-URL-M]" />
+                    <inputColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Image-URL-L]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Image-URL-L"
+                      externalMetadataColumnId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Image-URL-L]"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Image-URL-L]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ISBN]"
+                      dataType="wstr"
+                      length="1000"
+                      name="ISBN" />
+                    <externalMetadataColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Book-Title]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Book-Title" />
+                    <externalMetadataColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Book-Author]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Book-Author" />
+                    <externalMetadataColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Year-Of-Publication]"
+                      dataType="i4"
+                      name="Year-Of-Publication" />
+                    <externalMetadataColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Publisher]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Publisher" />
+                    <externalMetadataColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Image-URL-S]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Image-URL-S" />
+                    <externalMetadataColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Image-URL-M]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Image-URL-M" />
+                    <externalMetadataColumn
+                      refId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Image-URL-L]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Image-URL-L" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF Books\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Books\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF Books\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF Books\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF Books\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF Books\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1038"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF Books\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[ISBN]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ISBN]"
+                      length="1000"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[ISBN]"
+                      name="ISBN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Book-Title]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Book-Title]"
+                      length="1000"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Book-Title]"
+                      name="Book-Title"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Book-Author]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Book-Author]"
+                      length="1000"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Book-Author]"
+                      name="Book-Author"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Year-Of-Publication]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Year-Of-Publication]"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Year-Of-Publication]"
+                      name="Year-Of-Publication"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Publisher]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Publisher]"
+                      length="1000"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Publisher]"
+                      name="Publisher"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Image-URL-S]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Image-URL-S]"
+                      length="1000"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Image-URL-S]"
+                      name="Image-URL-S"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Image-URL-M]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Image-URL-M]"
+                      length="1000"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Image-URL-M]"
+                      name="Image-URL-M"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Image-URL-L]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Image-URL-L]"
+                      length="1000"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Image-URL-L]"
+                      name="Image-URL-L"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ISBN]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1000"
+                      name="ISBN" />
+                    <externalMetadataColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Book-Title]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1000"
+                      name="Book-Title" />
+                    <externalMetadataColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Book-Author]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1000"
+                      name="Book-Author" />
+                    <externalMetadataColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Year-Of-Publication]"
+                      dataType="i4"
+                      name="Year-Of-Publication" />
+                    <externalMetadataColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Publisher]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1000"
+                      name="Publisher" />
+                    <externalMetadataColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Image-URL-S]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1000"
+                      name="Image-URL-S" />
+                    <externalMetadataColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Image-URL-M]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1000"
+                      name="Image-URL-M" />
+                    <externalMetadataColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Image-URL-L]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1000"
+                      name="Image-URL-L" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF Books\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF Books\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DF Books\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF Books\Sort.Inputs[Sort Input].Columns[ISBN]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="ISBN"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[ISBN]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF Books\Sort.Inputs[Sort Input].Columns[Book-Title]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Book-Title"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Book-Title]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF Books\Sort.Inputs[Sort Input].Columns[Book-Author]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Book-Author"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Book-Author]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF Books\Sort.Inputs[Sort Input].Columns[Year-Of-Publication]"
+                      cachedDataType="i4"
+                      cachedName="Year-Of-Publication"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Year-Of-Publication]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF Books\Sort.Inputs[Sort Input].Columns[Publisher]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Publisher"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Publisher]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF Books\Sort.Inputs[Sort Input].Columns[Image-URL-S]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Image-URL-S"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Image-URL-S]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF Books\Sort.Inputs[Sort Input].Columns[Image-URL-M]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Image-URL-M"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Image-URL-M]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF Books\Sort.Inputs[Sort Input].Columns[Image-URL-L]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="Image-URL-L"
+                      lineageId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Image-URL-L]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF Books\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Books\Sort.Outputs[Sort Output].Columns[ISBN]"
+                      codePage="1250"
+                      comparisonFlags="1"
+                      dataType="str"
+                      length="1000"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[ISBN]"
+                      name="ISBN"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[ISBN]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Book-Title]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1000"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Book-Title]"
+                      name="Book-Title">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Book-Title]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Book-Author]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1000"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Book-Author]"
+                      name="Book-Author">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Book-Author]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Year-Of-Publication]"
+                      dataType="i4"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Year-Of-Publication]"
+                      name="Year-Of-Publication">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Year-Of-Publication]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Publisher]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1000"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Publisher]"
+                      name="Publisher">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Publisher]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Image-URL-S]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1000"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Image-URL-S]"
+                      name="Image-URL-S">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Image-URL-S]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Image-URL-M]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1000"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Image-URL-M]"
+                      name="Image-URL-M">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Image-URL-M]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Image-URL-L]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1000"
+                      lineageId="Package\DF Books\Sort.Outputs[Sort Output].Columns[Image-URL-L]"
+                      name="Image-URL-L">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DF Books\Flat File Source.Outputs[Flat File Source Output].Columns[Image-URL-L]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DF Books.Paths[Flat File Source Output]"
+              endId="Package\DF Books\Sort.Inputs[Sort Input]"
+              name="Flat File Source Output"
+              startId="Package\DF Books\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\DF Books.Paths[Sort Output]"
+              endId="Package\DF Books\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="Sort Output"
+              startId="Package\DF Books\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DF Ratings"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{98274FA7-DF8C-4C0A-B688-3000B09F963C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DF Ratings"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DF Ratings\ADO NET Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO NET Destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Ratings"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF Ratings\ADO NET Destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\mssqllocaldb.IWVRAI]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\mssqllocaldb.IWVRAI]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF Ratings\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF Ratings\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[User-ID]"
+                      cachedDataType="i4"
+                      cachedName="User-ID"
+                      externalMetadataColumnId="Package\DF Ratings\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[User-ID]"
+                      lineageId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].Columns[User-ID]" />
+                    <inputColumn
+                      refId="Package\DF Ratings\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[ISBN]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1000"
+                      cachedName="ISBN"
+                      externalMetadataColumnId="Package\DF Ratings\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ISBN]"
+                      lineageId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].Columns[ISBN]" />
+                    <inputColumn
+                      refId="Package\DF Ratings\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Book-Rating]"
+                      cachedDataType="i4"
+                      cachedName="Book-Rating"
+                      externalMetadataColumnId="Package\DF Ratings\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Book-Rating]"
+                      lineageId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].Columns[Book-Rating]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF Ratings\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[User-ID]"
+                      dataType="i4"
+                      name="User-ID" />
+                    <externalMetadataColumn
+                      refId="Package\DF Ratings\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ISBN]"
+                      dataType="wstr"
+                      length="1000"
+                      name="ISBN" />
+                    <externalMetadataColumn
+                      refId="Package\DF Ratings\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Book-Rating]"
+                      dataType="i4"
+                      name="Book-Rating" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF Ratings\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\DF Ratings\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Ratings\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF Ratings\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF Ratings\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF Ratings\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF Ratings\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF Ratings\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF Ratings\Conditional Split.Inputs[Conditional Split Input].Columns[Book-Rating]"
+                      cachedDataType="i4"
+                      cachedName="Book-Rating"
+                      lineageId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].Columns[Book-Rating]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF Ratings\Conditional Split.Outputs[Invalid_rating]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Invalid_rating"
+                  synchronousInputId="Package\DF Ratings\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].Columns[Book-Rating]} &lt; 1</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">[Book-Rating] &lt; 1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF Ratings\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\DF Ratings\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF Ratings\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\DF Ratings\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Ratings\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF Ratings\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF Ratings\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF Ratings\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF Ratings\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1038"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF Ratings\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager ratings]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager ratings]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].Columns[User-ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[User-ID]"
+                      lineageId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].Columns[User-ID]"
+                      name="User-ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].Columns[ISBN]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ISBN]"
+                      length="1000"
+                      lineageId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].Columns[ISBN]"
+                      name="ISBN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].Columns[Book-Rating]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Book-Rating]"
+                      lineageId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].Columns[Book-Rating]"
+                      name="Book-Rating"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[User-ID]"
+                      dataType="i4"
+                      name="User-ID" />
+                    <externalMetadataColumn
+                      refId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ISBN]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1000"
+                      name="ISBN" />
+                    <externalMetadataColumn
+                      refId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Book-Rating]"
+                      dataType="i4"
+                      name="Book-Rating" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DF Ratings.Paths[Conditional Split Default Output]"
+              endId="Package\DF Ratings\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="Conditional Split Default Output"
+              startId="Package\DF Ratings\Conditional Split.Outputs[Conditional Split Default Output]" />
+            <path
+              refId="Package\DF Ratings.Paths[Flat File Source Output]"
+              endId="Package\DF Ratings\Conditional Split.Inputs[Conditional Split Input]"
+              name="Flat File Source Output"
+              startId="Package\DF Ratings\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\truncate Books"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{CD0434F7-0FCA-41B3-8741-7388F25D4C60}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="truncate Books"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{865374AB-A86B-4299-9B0B-2E894771407F}"
+          SQLTask:SqlStatementSource="truncate table &quot;Books&quot;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\truncate Ratings"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{209ecb3a-154d-404e-b5e0-1f902d0fdefc}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="truncate Ratings"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{865374AB-A86B-4299-9B0B-2E894771407F}"
+          SQLTask:SqlStatementSource="truncate table &quot;Ratings&quot;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{CE47F2F2-6966-40E1-B952-41688D849D21}"
+      DTS:From="Package\truncate Books"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\truncate Ratings" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{1B70A2F5-DCE9-4F64-BD64-5D124380D259}"
+      DTS:From="Package\truncate Ratings"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\DF Books" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{640458A0-0E98-4B2A-A550-D9B35C01466F}"
+      DTS:From="Package\DF Books"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\DF Ratings" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="127,42"
+          Id="Package\DF Books"
+          TopLeft="100,316" />
+        <NodeLayout
+          Size="134,42"
+          Id="Package\DF Ratings"
+          TopLeft="100,436" />
+        <NodeLayout
+          Size="119,42"
+          Id="Package\truncate Books"
+          TopLeft="104,120" />
+        <NodeLayout
+          Size="119,42"
+          Id="Package\truncate Ratings"
+          TopLeft="104,222" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="163.5,162">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="163.5,264">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="165.25,358">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78"
+              Start="0,0"
+              End="0,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DF Books">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DF Books\Flat File Source"
+          TopLeft="138,146" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\DF Books\Sort"
+          TopLeft="162,323" />
+        <EdgeLayout
+          Id="Package\DF Books.Paths[Flat File Source Output]"
+          TopLeft="213.75,188">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,135"
+              Start="0,0"
+              End="0,127.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,127.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="186,42"
+          Id="Package\DF Books\ADO NET Destination"
+          TopLeft="411,315" />
+        <EdgeLayout
+          Id="Package\DF Books.Paths[Sort Output]"
+          TopLeft="261,344">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="150,-8"
+              Start="0,0"
+              End="142.5,-8">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="71,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="71,0"
+                    Point2="75,0"
+                    Point3="75,-4" />
+                  <mssgle:LineSegment
+                    End="75,-4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="75,-4"
+                    Point2="75,-8"
+                    Point3="79,-8" />
+                  <mssgle:LineSegment
+                    End="142.5,-8" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF Books\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DF Ratings">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="159,42"
+          Id="Package\DF Ratings\Conditional Split"
+          TopLeft="296,329" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DF Ratings\Flat File Source"
+          TopLeft="201,136" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\DF Ratings\ADO NET Destination"
+          TopLeft="548,238" />
+        <EdgeLayout
+          Id="Package\DF Ratings.Paths[Conditional Split Default Output]"
+          TopLeft="400.666666666667,329">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="240.333333333333,-49"
+              Start="0,0"
+              End="240.333333333333,-41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-15.892901618929" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-15.892901618929"
+                    Point2="0,-19.892901618929"
+                    Point3="4,-19.892901618929" />
+                  <mssgle:LineSegment
+                    End="236.333333333333,-19.892901618929" />
+                  <mssgle:CubicBezierSegment
+                    Point1="236.333333333333,-19.892901618929"
+                    Point2="240.333333333333,-19.892901618929"
+                    Point3="240.333333333333,-23.892901618929" />
+                  <mssgle:LineSegment
+                    End="240.333333333333,-41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="49.5527604166665,-14.892901618929,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF Ratings.Paths[Flat File Source Output]"
+          TopLeft="279,178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.3333333333333,151"
+              Start="0,0"
+              End="71.3333333333333,143.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,85.6973848069739" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,85.6973848069739"
+                    Point2="0,89.6973848069739"
+                    Point3="4,89.6973848069739" />
+                  <mssgle:LineSegment
+                    End="67.3333333333333,89.6973848069739" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.3333333333333,89.6973848069739"
+                    Point2="71.3333333333333,89.6973848069739"
+                    Point3="71.3333333333333,93.6973848069739" />
+                  <mssgle:LineSegment
+                    End="71.3333333333333,143.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF Ratings\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
