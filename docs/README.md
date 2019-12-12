@@ -21,15 +21,16 @@ You need to following tools to complete this laboratory:
 
 ## Material to review before the laboratory
 
-- The expected mode of submitting your work, as detailed [here](Github-usage.md).
+- The expected mode of submitting your work, as detailed [here](GitHub-usage.md).
 - The material covered in course _Business intelligence_ related to the topic, including, but not limited to
   - The demo material covered during the semester (<https://github.com/peekler/Business-Intelligence-Demos/tree/master/MSSQL-BI>)
   - The short introduction to using these software in [mssql-bi-software-intro.md](mssql-bi-software-intro.md)
+- SQL Integration Services [tutorial](https://docs.microsoft.com/en-us/sql/integration-services/ssis-how-to-create-an-etl-package)
 - SQL Reporting Services [tutorial](https://docs.microsoft.com/en-us/sql/reporting-services/create-a-basic-table-report-ssrs-tutorial)
 
 ## Submitting your solution
 
-To complete this laboratory you are required to solve exercises and submit your work through GitHub. The detailed description of the process of submission is detailed [here](Github-usage.md).
+To complete this laboratory you are required to solve exercises and submit your work through GitHub. The detailed description of the process of submission is detailed [here](GitHub-usage.md).
 
 While completing your exercises, please include the scripts, packages, projects, etc. in your submission. A starter submission is provided to you. Fill in the missing pieces there.
 

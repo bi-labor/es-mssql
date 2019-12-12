@@ -14,15 +14,16 @@
    - Make sure to import the **image URLs** from the books data file.
    - Remember to extend the length of the imported columns in the flat file connection settings (**_OutputColumnWidth_**) for the fields; **1000 characters** should be sufficient.
    - The **ratings** dataset contains invalid values. The ratings data file contains lines where the value is **0**. These should be skipped using a **Conditional split** component.
-   - It is best to separate the two CSV import into a different _data flow_ within the same _control flow_ process.
+   - It is best to separate the two CSV import into different _data flows_ within the same _control flow_ process.
 
 1. Include proof of the successful imports by taking two screenshots of the database table contents after successful execution of the ETL process as `ex5_books.png` and `ex5_ratings.png`.
 
    Please make sure that the screenshot is taken such that both
 
    - include the database name (which is your Neptun code) from the _Object explorer_ window,
-   - contains the date and time when the screenshot was taken (e.g. including the clock form the Start menu)
-   - and includes the name of the machine you are working on (e.g. execute a `whoami` command from the command prompt).
+   - contain sample rows to verify the result of the ETL process
+   - contain the date and time when the screenshot was taken (e.g. including the clock form the Start menu)
+   - and include the name of the machine you are working on (e.g. execute a `whoami` command from the command prompt).
 
 ## Next exercise
 

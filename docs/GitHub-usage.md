@@ -1,196 +1,195 @@
 # Feladatok beadása
 
-A feladatok beadásához a GitHub platformot használjuk. Minden labor beadása egy-egy GitHub repository-ban történik, melyet a feladatleírásban található linken keresztül kapsz meg. A labor feladatainak megoldását ezen repository-ban kell elkészítened, és ide kell feltöltened. A kész megoldás beadása a repository-ba való feltöltés után egy un. _pull request_ formájában történik, amelyet a laborvezetődhöz rendelsz.
+We are using GitHub for submitting the solutions. Your solution is to be submitted by uploading it to a GitHub repository, which repository is created through an URL included in the exercise. You must complete the exercises in this repository and upload the repository when finished. Your submission is completed by opening a _pull request_ and assigning it to your laboratory instructor.
 
-> **FONTOS** Az itt leírt formai előírások betartása elvárás. A nem ilyen formában beadott megoldásokat nem értékeljük.
+> **IMPORTANT** The requirements here are mandatory. Submissions not following these steps are not evaluated.
 
-## Rövidített verzió
+## Short version, aka. TL;DR
 
-Alább részletesen bemutatjuk a beadás menetét. Itt egy rövid összefoglaló az áttekintéshez, illetve a helyes beadás ellenőrzéséhez.
+Please read the detailed description too. This short summary is to give you an overview and a chance to verify your submission quickly.
 
-1. A munkádat a labor anyagban található linken keresztül létrehozott GitHub repository-ban kell elkészítsd.
+1. You must complete your work in the repository created through the link in the exercise description.
 
-1. A megoldáshoz készíts egy külön ágat, ne a master-en dolgozz. Erre az ágra akárhány kommitot tehetsz. Mindenképpen pushold a megoldást.
+1. You need to work on a new branch, not on master. You may add any number of commits to the working branch, and do not forget to push at the end.
 
-1. A beadást egy pull request jelzi, amely pull request-et a laborvezetődhöz kell rendelned.
+1. You submit your solution for evaluation by opening a pull request and assigning it to your laboratory instructor.
 
-## A munka elkezdése: git checkout
+## Starting your work: git checkout
 
-1. [Regisztrálj](https://github.com/join) egy GitHub accountot, ha még nincs.
+1. [Register](https://github.com/join) a GitHub account, if you don't have one yet.
 
-1. A feladat beadásához tartozó linket nyisd meg. Ez minden feladathoz más lesz, a feladat leírásában találod.
+1. Open the link in the exercise description to create your repository.
 
-1. Ha kéri, adj engedélyt a _GitHub Classroom_ alkalmazásnak, hogy használja az account adataidat.
+1. If needed, authorize the _GitHub Classroom_ application to use your account data.
 
-   ![Authorize GitHub classroom](images/github-authorize-classroom.png)
+   ![Authorize GitHub classroom](images/github/github-authorize-classroom.png)
 
-1. Látni fogsz egy oldalt, ahol elfogadhatod a feladatot ("Accept the ... assignment"). Kattints a gombra.
+1. You will see a page where you can "Accept the ... assignment". Click the button.
 
-   ![Accept assignment](images/github-accept-assignment.png)
+   ![Accept assignment](images/github/github-accept-assignment.png)
 
-1. Várd meg, amíg elkészül a repository. A repository linkjét itt kapod meg.
+1. Wait for the repository creation to finish. You will get the repository URL here.
 
-   > A repository privát lesz, azaz az senki nem látja, csak te, és az oktatók.
+   > The repository will be private. No one but you and the instructor will see it.
 
-   ![Repository created](images/github-repository-create-success.png)
+   ![Repository created](images/github/github-repository-create-success.png)
 
-1. Nyisd meg a repository-t a webes felületen a linkre kattintva. Ezt az URL-t írd fel, vagy mentsd el.
+1. Open the repository webpage by following the link. You will need this URL, so remember it.
 
-   ![Repository webes felülete](images/github-repository-webpage.png)
+   ![Repository webpage](images/github/github-repository-webpage.png)
 
-1. Klónozd le a repository-t. Ehhez szükséges lesz a repository címére, amit a repository webes felületén a _Clone or download_ alatt találsz.
+1. Clone the repository. You will need the repository git URL, which you can get from the repository webpage following the _Clone or download_ button.
 
-   > A git repository kezeléséhez tetszőleges klienst használhatsz. Ha nincs kedvenced még, akkor legegyszerűbb a [GitHub Desktop](https://desktop.github.com/). Ebben az alkalmazásban közvetlenül tudod listázni a repository-kat GitHub-ról, vagy használhatod az URL-t is a klónozáshoz.
+   > You may use any git client. If you do not have a favorit yet, the simplest one is [GitHub Desktop](https://desktop.github.com/). You can list your repositories in this application directly from GitHub.
 
-   ![GitHub Desktop repository clone](images/github-desktop-clone.png)
+   ![GitHub Desktop repository clone](images/github/github-desktop-clone.png)
 
-   Ha konzolt használnál, az alábbi parancs klónozza a repository-t (ha a `git` parancs elérhető): `git clone <repository link>`
+   If you are using console, the following command performs the clone (if the `git` command is available): `git clone <repository link>`
 
-1. Ha sikerült a klónozás, **MÉG NE KEZDJ EL DOLGOZNI!** A megoldást _ne_ a repository `master` ágán készítsd el. Hozz létre egy új ágat (branch) `megoldas` néven.
+1. If the cloning is successful, **DO NOT START WORKING YET!** The solution should _not_ be committed to the repository `master` branch. Instead, create a new branch with the name `solution`.
 
-   GitHub Desktop-ban a _Branch_ menüben teheted ezt meg.
+   In GitHub Desktop, use the _Branch_ menu for creating a new one.
 
-   ![GitHub Desktop create branch](images/github-desktop-new-branch.png)
+   ![GitHub Desktop create branch](images/github/github-desktop-new-branch.png)
 
-   Ha konzolt használsz, az új ág elkészíthető ezzel a paranccsal: `git checkout -b megoldas`
+   If using console, use the following command: `git checkout -b solution`
 
-1. Ezen a megoldás ágon dolgozva készítsd el a beadandókat. Akárhányszor kommitolhatsz és pusholhatsz.
+1. Complete the exercises on this branch. You may have any number of commits and pushes.
 
-   GitHub Desktop-ban így tudsz kommitolni. Mindig ellenőrizd, hogy jó ágon vagy-e. Első alkalommal a _megoldas_ ág csak helyben létezik, ezért publikálni kell: _Publish this branch_.
+   To commit using GitHub Desktop, first check if you are on the right branch. During the first push, the _solution_ branch needs to be published.
 
-   ![GitHub Desktop push branch](images/github-desktop-commit-to-branch.png)
+   ![GitHub Desktop push branch](images/github/github-desktop-commit-to-branch.png)
 
-   A további kommitoknál is mindig ellenőrizd a megfelelő ágat. Ha egy kommit még nincs felöltve, azt a _Push origin_ gombbal teheted meg. A kis szám a gombon jelzi, hogy hány, még nem pusholt kommit van.
+   When adding further commits, verify the branch. You can publish the commit using the _Push origin_ button. The little number of this buttons shows you how many commits need pushing.
 
-   ![GitHub Desktop commit and push](images/github-desktop-push-commit.png)
+   ![GitHub Desktop commit and push](images/github/github-desktop-push-commit.png)
 
-   Ha konzolt használsz, akkor az alábbi parancsokat használd (feltéve, hogy a jó ágon vagy):
+   If you are using console, use the following commands:
 
    ```bash
-   # Ellenőrizd az ágat, és hogy milyen fájlok módosultak
+   # Check the current branch and the files modified
    git status
 
-   # Minden változtatást előkészít kommitolásra
+   # Prepares all changes for commit
    git add .
 
-   # Kommit
+   # Commit
    git commit -m "f1"
 
-   # Push első alkalommal az új ág publikálásához
+   # Push the new branch (first time)
    git push --set-upstream origin megoldas
 
-   # Push a továbbiakban, amikor az ág már nem új
+   # Push futher commits
    git push
    ```
 
-## A megoldás beadása
+## Submitting the solution
 
-1. Ha végeztél a megoldással, ellenőrizd a GitHub webes felületén, hogy mindent feltöltöttél-e. Ehhez a webes felületen váltanod kell az ágak között.
+1. When you are ready with the exercises, verify on the repository web page that you uploaded everything. You may need to switch branches.
 
-   ![GitHub web switch branch](images/github-switch-branch-webpage.png)
+   ![GitHub web switch branch](images/github/github-switch-branch-webpage.png)
 
-   > Arra kérünk, hogy **NE használd** a GitHub fájl feltöltés funkcióját. Ha valami hiányzik, a helyi git repository-ban pótold, és kommitold majd pushold.
+   > Please do **NOT use** GitHub web file upload. If something is missing, add it to your local repository and commit and push again.
 
-1. Ha tényleg kész vagy, akkor nyiss egy _pull request_-et.
+1. When you are truly ready, open a _pull request_.
 
-   > Ez a _pull request_ fogja össze a megoldásodat, és annak "végeredményét" mutatja. Így a laborvezetőnek nem az egyes kommitjaidat vagy fájljaidat kell néznie, hanem csak a releváns, változott részeket látja egyben. A _pull request_ jelenti a feladatod beadását is, így ez a lépés **nem hagyható ki**.
+   > This _pull request_ combines all changes you made, and shows us the final result. This helps the laboratory instructor to evaluate your submission more easily. This _pull request_ means you submit your solution, hence this step **cannot be omitted**.
 
-   A _pull request_ nyitásához a GitHub webes felületére kell menj. Itt, ha nem rég pusholtál, a GitHub fel is ajánlja a pull request létrehozását.
+   To open the _pull request_ you need to go to the repository's GitHub web frontend. If you pushed recently, GitHub will offer you to create the pull request..
 
-   ![GitHub create pull request](images/github-create-pull-request-1.png)
+   ![GitHub create pull request](images/github/github-create-pull-request-1.png)
 
-   A _pull request_-et a fenti menüben is létrehozhatod. Fontos, hogy a megfelelő brancheket válaszd ki: `master`-be megy a `megoldas` ág.
+   You may also open the _pull request_ from the menu at the top. It is important to specify the correct branches: `master` is the target into witch `solution` is merged.
 
-   ![GitHub create pull request](images/github-create-pull-request-2.png)
+   ![GitHub create pull request](images/github/github-create-pull-request-2.png)
 
-1. Ha minden rendben sikerült, a menüben fent látod a kis "1" számot a _Pull request_ elem mellett, jelezve, hogy van egy nyitott pull request. **DE MÉG NEM VÉGEZTÉL!**
+1. When the _pull request_ is created, you will see a little number "1" on the _Pull request_ menu showing you that there is one open item there. **YOU ARE NOT FINISHED YET!**
 
-   ![GitHub create pull request](images/github-create-pull-request-4.png)
+   ![GitHub create pull request](images/github/github-create-pull-request-4.png)
 
-1. A _pull request_ hatására le fog futni egy előzetes értékelés. Ennek eredényét a pull request alatt kommentben fogod látni.
+1. The _pull request_ will trigger a preliminary evaluation. You will see the result in a comment in the _pull request_ thread.
 
-   ![GitHub create pull request](images/github-pull-request-eval-result.png)
+   ![GitHub create pull request](images/github/github-pull-request-eval-result.png)
 
-   > Ez az értékelés minden labor esetében más lesz. Az értékelés eltarthat egy ideig, ne aggódj.
+   > This evaluation may differ from the image. And it may take some time.
 
-1. Ha nem vagy megelégedve a munkáddal, akkor még javíthatsz rajta. Ehhez kommitolj és pusholj újra. Ha továbbra is a megfelelő ágon dolgozol, akkor a _pull request_ újból le fogja futtatni a kiértékelést. Arra kérünk, hogy **MAXIMUM 5 alkalommal** futtasd le a kiértékelést!
+1. If you are not satisfied with your work, you can make further changes. You only need to commit and push your changes continuing to work on the correct branch. Any changes pushed will re-trigger the evaluation of the _pull request_. We ask that you trigger **NO MORE THAN 5 evaluations**!
 
-   > Ha úgy látod, hogy a megoldásodat még javítani akarod, és nem szeretnéd, hogy mindig lefusson az értékelés, akkor **zárd le** a pull request-et a webes felületen. Ha kész vagy, nyiss majd egy újat.
+   > If you want to make changes to your submission and not have the re-evaluation run, you should **close the pull request**. When you are finished, you can open a new one instead.
 
-1. **VÉGEZETÜL**, ha kész vagy, a _pull request_-et rendeld a laborvezetődhöz. Ez a lépés feltétlenül fontos, ez jelzi a beadást.
+1. **FINALLY**, when you are ready, assign the _pull request_ to your laboratory instructor. This step is considered as the submission of your work.
 
-   ![GitHub create pull request](images/github-create-pull-request-3.png)
+   ![GitHub create pull request](images/github/github-create-pull-request-3.png)
 
-   > Ha nincs pull request-et, vagy van, de nincs a laborvezetőhöz rendelve, akkor úgy tekintjük, hogy még nem vagy készen, és nem adtad be a megoldást.
+   > If you have no pull request, or it is not assigned to the instructor, we consider it work in progress and not submitted.
 
-1. Most végeztél. Miután a laborvezetőhöz rendelted a pull request-et, már **ne módosíts** semmin. A laborvezető értékelni fogja a munkádat, és a pull request lezárásával kommentben jelzi a végeredményt.
+1. Now you are ready. After assigning the pull request, **make no further changes**. The instructor will evaluate the submission and close the pull request.
 
-## Kapott eredménnyel kapcsolatban kérdés
+## Questions regarding the final result
 
-Ha kiértékeltük a feladatokat, és az eredménnyel kapcsolatban kérdésed van, használd a GitHub Issue kezelését ennek jelzésére. De először is, ellenőrizd még egyszer a megoldásod. Lefutottak a tesztek? Ha nem, a pontszámod is ezt tükrözi. A hibaüzenet jogos? Tényleg van egy elírás a kódban? Ha igen, a pontszám ezt tükrözi.
+Once your submission has been evaluated by the instructor, you may use the issue management feature of GitHub to raise questions. But first, you need to validate your submission again: did you test it? Did it work? Were there any error messages in the evaluation result? Do you have a typo in the code? If so, accept the results as-is.
 
-Ha mégis úgy gondolod, hogy rosszul értékeltük a feladatot, nyiss egy új issue-t:
+If you still think the evaluation has some errors, open a new issue:
 
-1. Menj a GitHub webes felületén a megoldásodat tartalmazó repository-hoz.
+1. Go to the related repository on GitHub web frontend.
 
-1. Az "Issues" fülre kattintva hozz létre egy új issue-t.
+1. Click "Issues" and create a new one.
 
-1. Írd le, hogy mi a problémád. Pontosan add meg, hogy mivel nem értesz egyet, és hogyan ellenőrizted a megoldásod.
+1. Describe the nature of your problem, and also include the steps you took to verify your solution.
 
-1. Az issue-t rendeld a lavorvezetődhöz.
+1. Assign the issue to your instructor.
 
-   ![Create new GitHub issue](images/github-new-issue.png)
+   ![Create new GitHub issue](images/github/github-new-issue.png)
 
-Amint megnéztük a problémát, itt fogunk visszajelzést is adni.
+Once we checked it, we will give you feedback here.
 
-## Lehetséges problémák és megoldásuk
+## Possible issues and their resolution
 
-Ha valami problémád akad, az alábbiak próbálnak segíteni ebben.
+If you are faced with a problem, read the followings.
 
-Ha elakadtál, és az alábbiak se segítenek, először magad próbálj megoldást keresni. A laborvezetők is állnak rendelkezésre, de ha olyan problémával keresed őket, ami a leírásban egyértelműen szerepel, akkor a segítséget mínusz pontért adjuk csak meg.
+If you still have an error, first, please seek to resolve it on your own. The laboratory instructors are available to help, but if you ask something that is clearly explained in the exercises, help will only be give in exchange for minus points.
 
-#### Nem találod a repository-t
+#### You cannot find your repository
 
-Menj a www.github.com címre, jelentkezz be és a kezdőoldalon bal oldalon látod a repository listádat.
+Go to www.github.com and after login you will see the list of your repositories on the left.
 
-#### Kapsz egy "run failed" emailt / a pull request azt mondja, hogy "checks have failed"
+#### You gen an email with "run failed" / the pull request contains "checks have failed"
 
-Minden kommit után lefuttatunk pár egyszerű ellenőrzést. Ez az email arról tájékoztat, hogy nem sikerültek a tesztek. Ezeket mindenképpen javítanod kell. Ha email kaptál, abban találsz egy "View results" linket. Ha a pull request-et nézed, akkor a hiba szöveg alatt lesz egy "Details" link. Itt láthatod a futtatás pontos menetét. Ahol piros X-et látsz, ott nézelődj.
+After each commit you push, a minimal set of tests are executed for verification. This email tells you that these checks have failed.You must fix these. In the email you will find a link "View results". In the pull request, there is a "Details" link. You can check the logs of the execution here and look for red X-es marking the errors.
 
-#### Nem tudod, mi a hiba a megoldásodban
+#### You do not know that is the problem in your solution
 
-Nem feltétlenül célunk a hiba pontos azonosítása számodra. A mérnöki munka része, hogy a feladataidat magad ellenőrzöd. A kiértékelés jó esetben mond valami féle irányt, de nem fogja megmondani a pontos problémát.
+It is not our goal with the evaluation to explain the problems. It is part of your work to evaluate and test your own solution.
 
-#### A hiba fura szöveg, nem érted
+#### Do no not understand the error message received
 
-Ez akkor fordulhat elő, ha a lefuttatott C# vagy SQL kódban hiba van. A szöveg a hibaüzenet.
+The message is like from the actual execution of your work and comes from the used tools.
 
-#### Elfelejtetted branch-et létrehozni / nem tudod a pull request-et létrehozni
+#### You forgot to branch / You cannot create the pull request
 
-Ha nem hoztad létre az ágat a megoldásnak, vagy túl későn hoztad létre, bajban leszel a pull request-tel. Pull request-et csak két olyan ág között lehet nyitni, amelyek eltérnek. Kövesd az alábbi lépéseket.
+If you failed to create the branch for the solution, or created it too late, you will have a hard time opening the pull request. A pull request requires a branch with changes. To overcome this, follow the steps below.
 
-1. Hozd létre az új ágat. Válts erre az ágra.
-1. Kell, hogy legyen valami változás ezen az ágon. Szerkessz bele egy fájlba egy olyan változást, ami nem módosít érdemben a tartalmon. Pl. egy újsort tegyél bele, vagy egy kommentet. Esetleg hozz létre egy új fájlt.
-1. Ezt a módosítást kommitold és pushold. Ez a megoldásod ágára kell kerüljön.
-1. Pushold fel az ágat.
-1. Most nyiss pull request-et. A pull request-ben megjegyzésbe jelezd, hogy a pull request kerülőúton készült.
+1. Create the new branch. Switch to this branch.
+1. You need to make a change on this branch. Add a meaningless change somewhere, like a newline, or an empty new file.
+1. Commit this change and push this branch.
+1. Now you can open the pull request. When opening the pull request add a note explaining that you used this approach.
 
-Amennyiben ezen pull request értékelése a laborvezető számára nehezebb lesz, akkor ezért pontot vonhat le (max -3 pont).
+It may be harder for the instructor to evaluate your submission due to not seeing the accumulated changes. This may be rewarded with minus points.
 
-#### Nem tudod a laborvezetőd GitHub nevét
+#### You do not know whom to assign the pull request
 
-A laborvezetőd GitHub nevét a laboron el kell mondja, ezt írd fel. Ha valami oknál fogva nem tudod, ki a laborvezetőd, akkor rendeld `akosdudas`-hoz a pull request-et. Ezt a kis kitérőt, ha nem a laborvezetőd hibájából történt, akkor -3 ponttal jutalmazzuk.
+The laboratory instructor should have given you a GitHub name to assign to. If you do not know this, assign the pull request to `akosdudas`. In case this was not due to the error of the instructor, the extra work you have us do will be rewarded with minus points.
 
-#### Elkészítetted a megoldásod, de nem kaptál értékelést / pontot / jegyet
+#### You finished your work but got no evaluation / grade
 
-Kommitoltál? Pusholtál? Készítettél pull request-et? Hozzárendelted a laborvezetőhöz?
+Did you: commit? psuh? open the pull request? assign it?
 
-## Mit NE csinálj
+## Things you MUST NOT do
 
-Ha a git és a pull request-ek ismerősnek számítanak, akkor eszedbe juthatnak az alábbi opciók. Arra kérünk, hogy ezeket **NE HASZNÁLD**, mert visszaélésnek tekintjük őket.
+You may be familiar with git and pull requests and you may think of the following actions. We ask that you **DO NOT** do any of the followings as we consider them as cheating.
 
-- **NE** force pusholj
-- **NE** nyúlj bele a kiértékelést leíró yaml fájlokba
-- **NE** branchelj és mergelj, nincs rá szükség, csak egy megoldás ág legyen
-- **NE** mergeld a pull requestet, nem arra használjuk
-- **NE** törölj semmit a pull request kommentjei közül
+- **DO NOT** force push
+- **DO NOT** edit the evaluation yaml files
+- **DO NOT** use branches and merge branches, only have master and solution branches
+- **DO NOT** merge your pull request
+- **DO NOT** delete anything from the pull request comments
