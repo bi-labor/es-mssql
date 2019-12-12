@@ -12,7 +12,9 @@
 
 ## Prepare and check the data
 
-1. Go to the `data` folder and extract the zip file.
+1. Download the data files from [here](BXBooks-CSV.zip) and extract the contents of this zip into the `data` folder.
+
+   > Unfortunately we cannot include this in the starter repository due to limitations of GitHub Template Repositories. Hence the manual step here.
 
 1. Open the CSV files to check their contents.
 
