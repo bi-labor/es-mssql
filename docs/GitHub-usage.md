@@ -1,4 +1,4 @@
-# Feladatok beadása
+# Submitting your work
 
 We are using GitHub for submitting the solutions. Your solution is to be submitted by uploading it to a GitHub repository, which repository is created through an URL included in the exercise. You must complete the exercises in this repository and upload the repository when finished. Your submission is completed by opening a _pull request_ and assigning it to your laboratory instructor.
 
@@ -77,7 +77,7 @@ Please read the detailed description too. This short summary is to give you an o
    git commit -m "f1"
 
    # Push the new branch (first time)
-   git push --set-upstream origin megoldas
+   git push --set-upstream origin solution
 
    # Push futher commits
    git push
