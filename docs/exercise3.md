@@ -1,12 +1,14 @@
 # Exercise 3: Import the users dataset using Integration Services
 
-> Extend the provided Integration Services project `exercise-3\ex3_integration_services.sln` by modifying the project contents in place.
+> Extend the provided Integration Services project `ex3.sln` by modifying the project contents in place.
 
-1. Open the solution with Visual Studio, open _Package.dtsx_ from _Solution explorer_.
+1. Open the solution with Visual Studio, open `Package.dtsx` from _Solution explorer_.
 
    ![Solution explorer of the project](images/exercise/is-solution-explorer.png)
 
 1. Find the _SSIS Toolbox_; you will need to use this window in the following tasks.
+
+   > If you cannot see this toolbox window, after opening `Package.dtsx`, look for the _Extensions > SSIS > SSIS Toolbox_ menu.
 
 1. Add a new _SQL Task_ to the _Control flow_ that erases any content from the target table. You will likely need to run the ETL process multiple times, but the data should only be imported once; hence the initial cleanup task.
 
@@ -97,9 +99,15 @@
 
 1. Run the ETL process.
 
-1. If the process succeeded, verify the contents of the table using SQL Server Management Studio. Create a screenshot of the table contents. Please make sure that the screenshot is taken such that it **includes the database name** (which is your Neptun code) from the _Object explorer_ window! Also verify that you **added your Neptun code prefix** to the Country names!
+1. If the process succeeded, verify the contents of the table using SQL Server Management Studio. Verify that you **added your Neptun code prefix** to the Country names. Then create a screenshot of the table contents.
 
-   > :memo: Save the screenshot file as `exercise-3\ex3_table_screenshot_users.png` - overwrite the placeholder file with yours.
+   > Save the screenshot file as `ex3.png` - overwrite the placeholder file with yours.
+
+   Please make sure that the screenshot is taken such that it
+
+   - includes the database name (which is your Neptun code) from the _Object explorer_ window,
+   - contains the date and time when the screenshot was taken (e.g. including the clock form the Start menu)
+   - and includes the name of the machine you are working on (e.g. execute a `whoami` command from the command prompt).
 
    ![Sample expected screenshot](images/exercise/users-table-verify-content.png)
 

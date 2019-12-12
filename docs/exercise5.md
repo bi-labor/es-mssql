@@ -2,11 +2,11 @@
 
 1. Create two new tables in the database to store the books and ratings contents. Design the tables such that they map to the columns in the CSV.
 
-   > Put the SQL code that creates the tables into two separate files `exercise-5\ex5_create_table_books.sql` and `exercise-5\ex5_create_table_ratings.sql`. There should be a single sql command ("create table") in each. Please do _not_ include the database names in the commands.
+   > Put the SQL code that creates the tables into two separate files `ex5_books.sql` and `ex5_ratings.sql`. There should be a single sql command ("create table") in each. Please do _not_ include the database names in the commands and do not include and `go` command in them either.
 
 1. Create a new ETL process to import the books and ratings datasets. Open the provided empty Integration Services project for this exercise, and perform the modifications in place.
 
-   > The ETL process should be edited in solution `exercise-5\ex5_integration_services.sln`.
+   > The ETL process should be edited in solution `ex5.sln`.
 
    - Import the **ISBN** from the books as **string**.
    - Prefix the **book titles** with your Neptun code.
@@ -16,7 +16,13 @@
    - The **ratings** dataset contains invalid values. The ratings data file contains lines where the value is **0**. These should be skipped using a **Conditional split** component.
    - It is best to separate the two CSV import into a different _data flow_ within the same _control flow_ process.
 
-   > Include proof of the successful imports by taking two screenshots of the database table contents after successful execution of the ETL process as `exercise-5\ex5_table_screenshot_books.png` and `exercise-5\ex5_table_screenshot_ratings.png`. Please make sure that the screenshots are taken such that both **include the database name** (which is your Neptun code) from the _Object explorer_ window!
+1. Include proof of the successful imports by taking two screenshots of the database table contents after successful execution of the ETL process as `ex5_books.png` and `ex5_ratings.png`.
+
+   Please make sure that the screenshot is taken such that both
+
+   - include the database name (which is your Neptun code) from the _Object explorer_ window,
+   - contains the date and time when the screenshot was taken (e.g. including the clock form the Start menu)
+   - and includes the name of the machine you are working on (e.g. execute a `whoami` command from the command prompt).
 
 ## Next exercise
 

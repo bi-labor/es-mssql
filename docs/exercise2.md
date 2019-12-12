@@ -3,6 +3,7 @@
 1. Connect to the local database server using SQL Server Management Studio with the following credentials:
 
    - Server name: `(localdb)\mssqllocaldb`
+     - If you are using the Express edition, the the connection string is `localhost\sqlexpress`
    - Authentication: _Windows Authentication_
 
    ![Connect to SQL Server](images/exercise/mssql-connect.png)

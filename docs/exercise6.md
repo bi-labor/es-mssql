@@ -1,26 +1,34 @@
 # Exercise 6: Create a report listing the highest rated books
 
-Create a report that lists the **top 10 highest rated books** in a table.
+1. Create a report that lists the **top 10 highest rated books** in a table.
 
-> The report should be edited in solution `exercise-6\ex6_reporting_services.sln` in file `books.rdl`.
+   > The report should be edited in solution `ex6.sln` in file `books.rdl`.
 
-- The list should be in a table format displaying the title, author, publication year, average rating, and the cover image of the book (using the medium sized image URL from the dataset).
+   - The list should be in a table format displaying the title, author, publication year, average rating, and the cover image of the book (using the medium sized image URL from the dataset).
 
-  - Use an _Image_ component from the toolbox. The image source should be _External_ in order to fetch it based on the URL.
+   - Use an _Image_ component from the toolbox. The image source should be _External_ in order to fetch it based on the URL.
 
-- The average rating should be computed by an SQL script. Ignore any book that does not have at least 20 ratings.
+   - The average rating should be computed by an SQL script. Ignore any book that does not have at least 20 ratings.
 
-  > Include this sql script (a single sql statement) in file `exercise-6\ex6_sql_get_top_books.sql`.
+     > Include this sql script (a single sql statement) in file `ex6.sql`.
 
-- Make sure to calculate the rating appropriately: if the imported rating is of type integer, make sure to use decimal types when averaging the values!
+     The file should contain a single sql query. Do not include the database name, and do not include any `go` command either.
 
-- Add a title to the report, and include your neptun code in the title.
+   - Make sure to calculate the rating appropriately: if the imported rating is of type integer, make sure to use decimal types when averaging the values!
 
-The final report should look similar to this:
+   - Add a title to the report, and include your neptun code in the title.
 
-![Top books report](images/exercise/report-books.png)
+   - The final report should look similar to this:
 
-> Include a screenshot of the report from Visual Studio as `exercise-6\ex6_report_screenshot_books.png`.
+     ![Top books report](images/exercise/report-books.png)
+
+2. Include a screenshot of the report as `ex6.png`.
+
+   Please make sure that the screenshot is taken such that it
+
+   - includes entire window of Visual Studio, not just the report preview,
+   - contains the date and time when the screenshot was taken (e.g. including the clock form the Start menu)
+   - and includes the name of the machine you are working on (e.g. execute a `whoami` command from the command prompt).
 
 ## Submit your solution
 
