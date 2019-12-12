@@ -153,7 +153,7 @@ If you still have an error, first, please seek to resolve it on your own. The la
 
 Go to www.github.com and after login you will see the list of your repositories on the left.
 
-#### You gen an email with "run failed" / the pull request contains "checks have failed"
+#### You got an email with "run failed" / the pull request contains "checks have failed"
 
 After each commit you push, a minimal set of tests are executed for verification. This email tells you that these checks have failed.You must fix these. In the email you will find a link "View results". In the pull request, there is a "Details" link. You can check the logs of the execution here and look for red X-es marking the errors.
 
@@ -182,7 +182,7 @@ The laboratory instructor should have given you a GitHub name to assign to. If y
 
 #### You finished your work but got no evaluation / grade
 
-Did you: commit? psuh? open the pull request? assign it?
+Did you: commit? push? open the pull request? assign it?
 
 ## Things you MUST NOT do
 
@@ -190,6 +190,6 @@ You may be familiar with git and pull requests and you may think of the followin
 
 - **DO NOT** force push
 - **DO NOT** edit the evaluation yaml files
-- **DO NOT** use branches and merge branches, only have master and solution branches
+- **DO NOT** use more branches or merge branches, only have a master and a solution branch
 - **DO NOT** merge your pull request
 - **DO NOT** delete anything from the pull request comments
