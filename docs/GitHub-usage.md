@@ -125,11 +125,11 @@ Please read the detailed description too. This short summary is to give you an o
 
 1. Now you are ready. After assigning the pull request, **make no further changes**. The instructor will evaluate the submission and close the pull request.
 
-## Questions regarding the final result
+## Questions and complaints regarding the final result
 
-Once your submission has been evaluated by the instructor, you may use the issue management feature of GitHub to raise questions. But first, you need to validate your submission again: did you test it? Did it work? Were there any error messages in the evaluation result? Do you have a typo in the code? If so, accept the results as-is.
+Once your submission has been evaluated by the instructor, you may use the issue management feature of GitHub to raise questions or complaint. But remember, that in this case, you have support your question/complaint with proof (e.g. show how you tested your solution and prove that it worked). If you do not provide evidence to support your claim, we will not consider it.
 
-If you still think the evaluation has some errors, open a new issue:
+To submit your question or complaint, open a new issue:
 
 1. Go to the related repository on GitHub web frontend.
 
