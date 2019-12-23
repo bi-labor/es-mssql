@@ -1,0 +1,13 @@
+{
+  "query": {
+    "match_all": {}
+  },
+  "size": 3,
+  "sort": [
+    {
+      "age": {
+        "order": "asc"
+      }
+    }
+  ]
+}

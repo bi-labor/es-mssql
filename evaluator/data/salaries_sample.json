@@ -1,0 +1,18 @@
+{
+  "gender": "female",
+  "firstName": "Evelyn",
+  "lastName": "Petersen",
+  "age": 17,
+  "phone": "+1 (900) 503-3892",
+  "address": {
+    "zipCode": 63775,
+    "state": "NY",
+    "city": "Lynn",
+    "street": "Clarkson Avenue",
+    "houseNumber": 503
+  },
+  "salary": 87217,
+  "company": "Subway",
+  "email": "evelyn.petersen@subway.com",
+  "hired": "09/29/2009"
+}
