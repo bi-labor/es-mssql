@@ -1,147 +1,102 @@
-# Exercise 5: _Elasticsearch_ queries
+# Exercise 5: _Kibana_ visualizations
 
-The purpose of this exercise is to try out the search and aggregation capabilities of _Elasticsearch_.
+The purpose of this exercise is to use the data visualization capabilities of _Kibana_.
 
-> :information_source: All of the following queries are sent to the `salaries/_search` endpoint with a `GET` method. This means that the first row in _Kibana_ will be `GET salaries/_search` for all of them. Therefore, the following examples will only contain the query JSON.
+The following exercises will ask you to create visualizations, then export their Kibana description as JSON, as well as create a screenshot of the visualization itself. When creating the screenshot, follow the same requirements as before (Include entire browser window, show time and username).
 
-### Query json
+## Create an Index pattern
 
-> :information_source: Both exercise **5** and exercise **7** will tell you to save the **query** JSON as part of the exercise. The following picture shows you what that means _(i.e. the **VALID** JSON that is sent to Elasticsearch, **WITHOUT** the header part; **NOT** the result JSON that is on the right side in Kibana)_.
+Our first step is to tell _Kibana_ which indexes it should consider when creating the visualizations.
 
-![Kibana query parts](./images/kibana-query-parts.png)
+1. Click on the _Visualize_ tab on the left side menu.
 
-## `SELECT *` in _Elasticsearch_
+   ![Kibana Visualize](./images/exercises/kibana-visualize.png)
 
-Issue the following query.
+   When opening this page the first time, you will be redirected to the _Management_ / _Index patterns_ configuration page to create a new _index pattern_.
 
-```json
-{
-  "query": { "match_all": {} },
-  "from": 0,
-  "size": 10,
-  "sort": [ "_doc" ]
-}
-```
+1. Enter the index name — `salaries` — as the index pattern. Make sure _Kibana_ says _Success! Your pattern matches 1 index_, and click _Next step_.
 
-* `query`: This provides the filter for the query. Think of the `WHERE` clause in _SQL_.
+   ![Kibana index pattern](./images/exercises/kibana-index-pattern-1.png)
 
-* `from` and `size`: These can be used for paging results. It is important to note that there is no way to query **all** documents using _Elasticsearch_. If you omit the `size` value, it defaults to **10**.
+1. Select _I don't want to use the Time Filter_ as _Time Filter field name_ since we are not going to use this function during the exercises. Click on _Create index pattern_.
 
-* `sort`: This can be used to sort the results.
+   ![Kibana index pattern](./images/exercises/kibana-index-pattern-2.png)
 
-## a) Who are the top **5** workers with the best salaries?
+1. Now click on the _Visualize_ tab again to see the following.
 
-The following query answers our question.
+   ![Kibana create first visualization](./images/exercises/kibana-create-first-visualization.png)
 
-```json
-{
-  "query": { "match_all": {} },
-  "size": 5,
-  "sort": [
-    { "salary": { "order": "desc" } }
-  ]
-}
-```
+## a) How many people did the companies hire each month between 2010 and 2016? (vertical bar chart)
 
-The only difference between this query and the previous one is that we want only **5** documents, and we changed the `sort` order to be by the `salary` values.
+1. Click on the _Create new visualization_ button on the _Visualize_ tab, and select _Vertical Bar_.
 
-> :memo: Save the **query** JSON (explained [here](#query-json)) as `exercise-5\a.json`.
+   ![Kibana vertical bar](./images/exercises/kibana-vertical-bar.png)
 
-## b) Who are the top **5** workers at _McDonalds_ aged between **18** and **30** with the best salaries?
+1. Select the previously created `salaries` index pattern as the search source.
 
-```json
-{
-  "query": { 
-    "bool": {
-      "must": { "match_all": {} },
-      "filter": [
-        { "range": { "age": { "gte": 18, "lte": 30} } },
-        { "term": { "company": "McDonalds" } }
-      ]
-    }
-  },
-  "size": 5,
-  "sort": [
-    { "salary": { "order": "desc" } }
-  ]
-}
-```
+   ![Kibana search source](./images/exercises/kibana-search-source.png)
 
-The difference between this query and the previous one is that we have to apply some filters to the results.
+1. Under the _Metrics_ setting set _People hired NEPTUN_ (with **your Neptun code**) as the _Custom Label_. (Expand the _Y-axis_ label to get the configuration options.)
 
-* The `age` must be between **18** and **30**.
-* The `company` must be _McDonalds_.
+   ![Kibana Metrics](./images/exercises/kibana-a-metrics.png)
 
-> :memo: Save the **query** JSON (explained [here](#query-json)) as `exercise-5\b.json`.
+1. Under the _Buckets_ setting click _Add_ then select _X-Axis_, and set the following.
 
-## c) Are there more men or women working for these companies? Is there a difference between the average salaries?
+   - _Aggregation_ should be _Date Histogram_
+   - _Field_ should be `hired`
+   - _Minimum nterval_ should be _Monthly_
+   - _Custom Label_ should be _Month NEPTUN_, make sure to include **your Neptun** code here.
 
-We have to use aggregations to answer these questions. We can use the following query.
+   ![Kibana Buckets](./images/exercises/kibana-a-buckets.png)
 
-```json
-{
-  "size": 0,
-  "aggs": {
-    "group_by_gender": {
-      "terms": {
-        "field": "gender"
-      },
-      "aggs": {
-        "average_salary": {
-          "avg": {
-            "field": "salary"
-          }
-        }
-      }
-    }
-  }
-}
-```
+1. In the top left corner click on the _Add a filter_ link and use the following settings to create the filter. Click on _Save_ to save the filter.
 
-This query first groups the documents by the `gender` value and then calculates the average of the `salary` values in them.
+   ![Kibana filter](./images/exercises/kibana-a-filter.png)
 
-> :memo: Save the **query** JSON (explained [here](#query-json)) as `exercise-5\c.json`.
+1. Create a screenshot of the result (note the requirements!) and save it as `ex5-a.png`.
 
-## d) What is the answer to the previous question in different age groups?
+1. Click on the _Save_ button at the top right corner, and save the visualization as `5_a`.
 
-To answer this question we can mostly reuse the previous query. The only thing we have to change is to add a `range` aggregation to create age buckets before doing the grouping by the `gender` value.
+   ![Kibana save visualization](./images/exercises/kibana-a-save.png)
 
-```json
-{
-  "size": 0,
-  "aggs": {
-    "group_by_age": {
-      "range": {
-        "field": "age",
-        "ranges": [
-          { "from": 20, "to": 30 },
-          { "from": 30, "to": 40 },
-          { "from": 40, "to": 50 },
-          { "from": 50, "to": 60 },
-          { "from": 60, "to": 70 }
-        ]
-      },
-      "aggs": {
-        "group_by_gender": {
-          "terms": {
-            "field": "gender"
-          },
-          "aggs": {
-            "average_salary": {
-              "avg": {
-                "field": "salary"
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-```
+1. Click on the _Management_ tab in the left side menu, and choose the _Saved Objects_ option. Select and export the visualization you just saved. No need to include related objects. Save the downloaded file as `ex5-a.ndjson`.
 
-> :memo: Save the **query** JSON (explained [here](#query-json)) as `exercise-5\d.json`.
+   ![Kibana export](./images/exercises/kibana-export.png)
+
+## b) Show the gender and age distribution of the workers! (pie chart)
+
+1. Go back to the _Visualize_ tab. It will likely load the last visualization. Click on the tab button again to get back to the landing page of all visualizations.
+
+1. Click on the _Create visualization_ button on the _Visualize_ tab, and select _Pie_.
+
+1. Select the previously created `salaries` index pattern as the search source.
+
+1. Under the _Buckets_ setting click _Add_ and select _Split Slices_ and set a _Terms_ aggregation on the `gender` field. As _Custom Label_ set _Gender NEPTUN_ and make sure to use **your own Neptun code**.
+
+   ![Kibana Buckets](./images/exercises/kibana-b-buckets-1.png)
+
+1. Within the _Buckets_ configuration area click on the _Add_ button and select _Split Slices_ with a _Range_ aggregation on the `age` field with the following ranges. Also add a custom label _Age NEPTUN_.
+
+   ![Kibana Buckets](./images/exercises/kibana-b-buckets-2.png)
+
+1. Create a screenshot of the resulting visualization (note the requirements!) and save it as `ex5-b.png`. Use the previous method to save and export the visualization. Save the exported file as `ex5-b.ndjson`.
+
+## c) Show the distribution of the workers' locations on a map!
+
+1. Create a new visualization of type _Region Map_. Select the previously created `salaries` index pattern as the search source.
+
+1. Under the _Buckets_ setting add a _Shape field_ with _Terms_ aggregation on the `address.state` field. Make sure to set the _Size_ value to at least 50.
+
+   ![Kibana Buckets](./images/exercises/kibana-c-buckets.png)
+
+1. Under _Options_ / _Layer Settings_ select _USA States_ as _Vector map_ and _FIPS 5-2 alpha code_ as _Join field_.
+
+   ![Kibana Options](./images/exercises/kibana-c-options.png)
+
+1. Create a screenshot of the result (remember the requirements!) and save it as `ex5-c.png`. Save and export the visualization. Save the exported file as `ex5-c.ndjson`.
 
 ## Next exercise
+
+Verify that you created 3 screenshots with the requirements as in the previous exercises, and also exported the 3 visualizations!
 
 Next is [exercise 6](exercise6.md).

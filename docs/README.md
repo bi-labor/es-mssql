@@ -2,19 +2,22 @@
 
 ## Goal
 
-The goal of this laboratory is to practice the usage of the _Docker_ virtualization technology and the _Elasticsearch_ and _Kibana_ systems.
-
-Through the exercises you will familiarize yourself with the building of _Docker_ images as well as managing services consisting of multiple containers. You will also get hands on with _Elasticsearch_ queries and aggregations and try out some visualization tools provided by _Kibana_.
+The goal of this laboratory is to practice working with _Elasticsearch_ through writing queries and aggregations and try out some visualization tools provided by _Kibana_.
 
 ## Pre-requisites
 
 You need the following tools to complete this laboratory:
 
-- Docker Community Edition (CE)
-  - Docker Desktop for Windows is available for download [here](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+- Elasticsearch and Kibana
+  - Either run them using Docker: [get Docker Desktop for Windows or Mac](https://www.docker.com/products/docker-desktop) or [install on Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+  - Or you can install the binaries from following [these steps](https://www.elastic.co/start)
+- PowerShell
+  - Included in Windows
+  - [Install PowerShell Core for Linux](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux)
 
 ## Material to review before the laboratory
 
+- The expected mode of submitting your work, as detailed [here](GitHub-usage.md).
 - The material covered in course _Business intelligence_ related to the topic, including, but not limited to
   - The demo material covered during the semester <https://github.com/peekler/Business-Intelligence-Demos/tree/master/ELK>
 - Elasticsearch documentation
@@ -33,9 +36,9 @@ While completing your exercises, please include the scripts, packages, projects,
 
 Follow the exercises in order. In order for an exercise to count as _completed_ you must finish **all** its subtasks successfully. The 3-hour laboratory class should be sufficient time to complete all exercises. The result will be graded as follows.
 
-- For a sufficient grade (**2**) you must complete exercises **1** through **5**.
-- For a satisfactory grade (**3**) exercise **6** should be completed as well.
-- For a good grade (**4**) exercise **7** should be completed.
+- For a sufficient grade (**2**) you must complete exercises **1** through **4**.
+- For a satisfactory grade (**3**) exercise **5** should be completed as well.
+- For a good grade (**4**) exercise **6** should be completed.
 - For a very good grade (**5**) **all** exercises should be completed.
 
 ## Exercises
