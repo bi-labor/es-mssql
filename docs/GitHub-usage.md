@@ -161,9 +161,9 @@ After each commit you push, a minimal set of tests are executed for verification
 
 It is not our goal with the evaluation to explain the problems. It is part of your work to evaluate and test your own solution.
 
-#### Do no not understand the error message received
+#### You do no not understand the error message received
 
-The message is like from the actual execution of your work and comes from the used tools.
+The message is likely from the actual execution of your work and comes from the tools used
 
 #### You forgot to branch / You cannot create the pull request
 
