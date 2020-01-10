@@ -8,12 +8,16 @@ The goal of this laboratory is to practice working with _Elasticsearch_ through 
 
 You need the following tools to complete this laboratory:
 
+- Windows, Linux, or Mac
+  - Every component you need is platform independent.
 - Elasticsearch and Kibana
   - Either run them using Docker: [get Docker Desktop for Windows or Mac](https://www.docker.com/products/docker-desktop) or [install on Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
   - Or you can install the binaries from following [these steps](https://www.elastic.co/start)
 - PowerShell
   - Included in Windows
-  - [Install PowerShell Core for Linux](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux)
+  - [Install PowerShell Core on Linux](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux)
+  - [Install PowerShell Core on MacOS](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-macos)
+- A GitHub account and a git tool
 
 ## Material to review before the laboratory
 
