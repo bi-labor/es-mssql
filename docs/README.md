@@ -8,6 +8,8 @@ The goal of this laboratory is to practice the usage of Microsoft SQL Server pro
 
 You need to following tools to complete this laboratory:
 
+- PC with Windows
+  - (You can also use a VM at <https://cloud.bme.hu>.)
 - Microsoft SQL Server
   - Express edition is sufficient, or _localdb_ installed along with Visual Studio is also fine
 - [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
