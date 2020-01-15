@@ -1,6 +1,6 @@
 # Exercise 1: Get the starter solution
 
-1. Open the following URL to get your own repository: TBD
+1. Open the following URL to get your own repository: <https://classroom.github.com/a/e9QliRGi>
 
 1. Wait for the repository creation to complete, then check out the repository.
 
