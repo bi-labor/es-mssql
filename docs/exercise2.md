@@ -5,7 +5,7 @@ The purpose of this exercise is to start _Elasticsearch_ and _Kibana_. You have 
 1. Using Docker
 1. Or installing them on your machine.
 
-Chose the option best suited for you. (In university computer laboratories use the Docker option.)
+In university computer laboratories use the Docker option. Otherwise chose the option best suited for you.
 
 ## Option 1: Start _Elasticsearch_ and _Kibana_ using Docker
 
@@ -17,7 +17,7 @@ If you have Docker, or you are working in the university computer laboratories, 
 
 1. Open a command prompt or PowerShell console and test whether Docker is working: execute `docker version`, which should print version information for client and server.
 
-1. Locate the provided `docker-compose.yml` file in the checked out starter solution. Open it in a text editor of your choice and check its contents. Check the following specifics:
+1. Locate the provided `docker-compose.yml` file in the checked out starter solution (located in the root of your git repository). Open it in a text editor of your choice and check its contents. Check the following specifics:
 
    - `environment`: This is used to set environment variables in the container. We can use these to provide some settings for _Elasticsearch_ and _Kibana_ as well. One example is the `cluster.name` variable.
 
@@ -39,7 +39,7 @@ If you have Docker, or you are working in the university computer laboratories, 
 
 ## Option 2: Start _Elasticsearch_ and _Kibana_ by installing them
 
-1. Download Elasticsearch and Kibana from <https://www.elastic.co/start>. Chose the versions matching your operating system.
+1. Download Elasticsearch and Kibana from <https://www.elastic.co/start>. Use **version 7.5.x**; the starter code and the instructions might be specific to this version.
 
 1. Extract the archives.
 

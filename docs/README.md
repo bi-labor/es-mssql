@@ -11,7 +11,7 @@ You need the following tools to complete this laboratory:
 - Windows, Linux, or Mac
   - Every component you need is platform independent.
 - Elasticsearch and Kibana
-  - Either run them using Docker: [get Docker Desktop for Windows or Mac](https://www.docker.com/products/docker-desktop) or [install on Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+  - Either run them using Docker: [get Docker Desktop for Windows or Mac](https://www.docker.com/products/docker-desktop) or [install Docker on Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
   - Or you can install the binaries from following [these steps](https://www.elastic.co/start)
 - PowerShell
   - Included in Windows

@@ -2,7 +2,7 @@
 
 The purpose of this exercise is to use the data visualization capabilities of _Kibana_.
 
-The following exercises will ask you to create visualizations, then export their Kibana description as JSON, as well as create a screenshot of the visualization itself. When creating the screenshot, follow the same requirements as before (Include entire browser window, show time and username).
+The following exercises will ask you to create visualizations, then export their Kibana description as JSON, as well as create a screenshot of the visualization itself. When creating the screenshot, follow the same requirements as before (include entire browser window, show time and username).
 
 ## Create an Index pattern
 
@@ -53,7 +53,7 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
    ![Kibana filter](./images/exercises/kibana-a-filter.png)
 
-1. Create a screenshot of the result (note the requirements!) and save it as `ex5-a.png`.
+1. The configuration of the visualization is now ready. You see the preview of the visualization to the right. Create a screenshot of the result (note the requirements!) and save it as `ex5-a.png`.
 
 1. Click on the _Save_ button at the top right corner, and save the visualization as `5_a`.
 

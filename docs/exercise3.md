@@ -135,7 +135,9 @@ We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although
 
    ![Elasticsearch indices](./images/exercises/kibana-search-total.png)
 
-1. Create a screenshot of the result as follows.
+   If you see fewer documents, you need to use the Refresh API to make sure Elasticsearch is finished with all indexing operations. To trigger this, execute a `POST salaries/_refresh` request.
+
+1. Create a screenshot of the result of the previous search requests as follows.
 
    Save the screenshot file as `ex3.png` - overwrite the placeholder file with yours.
 
