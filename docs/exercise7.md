@@ -13,8 +13,6 @@ The purpose of this exercise is to practice the data visualization capabilities 
   - You will have to use two aggregations to create this visualization. By default, Kibana stacks the data for the different companies on top of each other. For our use-case it would be much better if these would be next to each other instead. Fortunately, you can set this if you choose the _Mode_ called _normal_ instead of _stacked_ under the _Metrics & Axes_ settings.
   - Make sure to set the _Metrics_ to _Average_ of _age_ instead of _Count_!
 
-  Specify meaningful custom labels for both axes, and **include your Neptun code** in the labels!
-
 - b) What is the distribution of the workers between the various companies in the state of New York (NY)?
 
   Use a _pie chart_ for visualization.
