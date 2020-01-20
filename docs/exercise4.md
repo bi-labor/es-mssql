@@ -1,6 +1,6 @@
-# Exercise 4: Report
+# Exercise 4: Report about users
 
-> Extend the provided Reporting Services project `ex4.sln` by modifying the project contents in place.
+Extend the provided Reporting Services project `ex4.sln` by modifying the project contents in place. You can find this solution in the root of the checked out git repository.
 
 Create a report that summarizes from which country do our users come from. A table should list the number of users by country, along with the average age from the country; and a pie chart should display the number of users from the top 10 countries.
 
@@ -46,13 +46,14 @@ The final report should look similar to this:
 
    ![Add a new dataset](images/exercise/rs-add-dataset.png)
 
-1. Add a table to the report surface by dragging one from the _Toolbox_.
+1. Visualize the result in a table.
 
+   - Add a table to the report surface by dragging one from the _Toolbox_.
    - Drag each field from the _Report data_ toolbox from under the _Dataset_ created above into the table.
    - Delete obsolete columns by right clicking the table. There should be 3 columns: country, number of users, and average age.
    - Edit the header row to have meaningful column headers.
 
-1. Add a pie chart by dragging a _Chart_ item from the toolbox next to the table.
+1. Add a pie chart by dragging a _Chart_ item from the _Toolbox_ next to the table.
 
    - The designer view of the report should be similar:
 
@@ -65,13 +66,13 @@ The final report should look similar to this:
 
      ![Specify chart data](images/exercise/rs-users-chart-data.png)
 
-1. Add a title to the report, and include your neptun code in the title. (See the sample report at the top.)
+1. Add a title to the report, and **include your Neptun code in the title**. (See the sample report at the top.)
 
 1. Preview the report by switching to the _Preview_ tab in Visual Studio.
 
-   > Include a screenshot of the report as `ex4.png`.
+   Include a screenshot of the report as `ex4.png`.
 
-   Please make sure that the screenshot is taken such that it
+   Please make sure that the screenshot is taken such that it:
 
    - includes entire window of Visual Studio, not just the report preview,
    - contains the date and time when the screenshot was taken (e.g. including the clock form the Start menu)

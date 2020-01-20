@@ -99,9 +99,9 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
 
 1. Run the ETL process by using the _Start_ button on the toolbar of Visual Studio.
 
-1. If the process succeeded, verify the contents of the table using SQL Server Management Studio. Verify that you **added your Neptun code prefix** to the Country names. Then create a screenshot of the table contents.
+1. If the process succeeded, verify the **contents of the table** using SQL Server Management Studio. Verify that you **added your Neptun code prefix** to the Country names. Then create a screenshot of the table contents.
 
-   > Save the screenshot file as `ex3.png` - overwrite the placeholder file with yours.
+   Save the screenshot file as `ex3.png` - overwrite the placeholder file with yours.
 
    Please make sure that the screenshot is taken such that it
 
