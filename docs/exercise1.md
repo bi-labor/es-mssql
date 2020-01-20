@@ -1,6 +1,6 @@
 # Exercise 1: Get the starter solution
 
-1. Open the following URL to get your own repository: <https://classroom.github.com/a/e9QliRGi>
+1. Open the following URL and accept the assignment to get your own repository: <https://classroom.github.com/a/e9QliRGi>
 
 1. Wait for the repository creation to complete, then check out the repository.
 
@@ -18,7 +18,7 @@
 
 1. Open the CSV files to check their contents.
 
-   > You will work with these datasets, hence familiarize yourself with their content.
+   > You will work with these datasets, hence familiarize yourself with their structure and content.
 
 ## Next exercise
 
@@ -31,6 +31,7 @@ Next is [exercise 2](exercise2.md).
 1. Verify that `neptun.txt` contains your Neptun code.
 1. Verify in the git commit that you have modified and extended the starter solution and you followed the expected file naming conventions.
 1. Verify that you have provided the required screenshots.
+1. Make sure that you are working on a new branch and commit everything to this branch.
 1. Commit and push your work. You can use the web frontend of GitHub to check the published contents inside your repository.
 1. Open a pull request of your solution and assign it to user `akosdudas`.
 1. If you are working in the university laboratories, delete your GitHub credentials.

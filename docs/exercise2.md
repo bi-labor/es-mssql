@@ -8,7 +8,7 @@
 
    ![Connect to SQL Server](images/exercise/mssql-connect.png)
 
-1. Use _Object explorer_ to create a new database. The name should be your NEPTUN code to avoid clashes.
+1. Use _Object explorer_ to create a new database. **The name should be your NEPTUN code.**
 
    ![Create new database](images/exercise/mssql-create-db.png)
 
