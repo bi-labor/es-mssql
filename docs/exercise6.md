@@ -20,7 +20,7 @@ In this exercise you are required to create a new report using Reporting Service
 
    - Add a title to the report, and include your neptun code in the title.
 
-   - The final report should look similar to this:
+   - The final report should look similar to this (your results do not need to match exactly):
 
      ![Top books report](images/exercise/report-books.png)
 

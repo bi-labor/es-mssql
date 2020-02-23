@@ -71,7 +71,7 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
 
    - Direct the output of the previous _Sort_ component here.
    - Open the component settings dialog by double clicking the component box.
-   - Create a new _Connection manager_ that connects to the database. Use the same connection settings as before.
+   - Use the connection manager created before.
    - Select the users table you created as target.
 
      ![Integration Services ADO NET Destination settings](images/exercise/is-users-adonet-destination.png)
