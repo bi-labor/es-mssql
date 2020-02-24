@@ -39,7 +39,7 @@ If you have Docker, or you are working in the university computer laboratories, 
 
 ## Option 2: Start _Elasticsearch_ and _Kibana_ by installing them
 
-1. Download Elasticsearch and Kibana from <https://www.elastic.co/start>. Use **version 7.5.x**; the starter code and the instructions might be specific to this version.
+1. Download [Elasticsearch](https://www.elastic.co/downloads/past-releases/elasticsearch-7-5-1) and [Kibana](https://www.elastic.co/downloads/past-releases/kibana-7-5-1). Please make sure to use **version 7.5.x**; the starter code and the instructions might be specific to this version.
 
 1. Extract the archives.
 
@@ -69,15 +69,11 @@ If you have Docker, or you are working in the university computer laboratories, 
 
 ## Check that the systems are running
 
-1. Check the state of the cluster using _Elasticsearch's_ REST API (use PowerShell for this command).
+1. Open a browser of your choice and navigate to <http://localhost:9200> to verify that Elasticsearch is up and running. Make sure to verify the version too!
 
-   ```powershell
-   (curl 'http://localhost:9200/_cat/health?v&pretty' -Method Get -UseBasicParsing).Content
-   ```
+   ![Elasticsearch version](./images/exercises/elasticsearch-version.png)
 
-   ![Elasticsearch cluster health](./images/exercises/elasticsearch-cluster-health.png)
-
-1. Open a browser of your choice (_Kibana_ used to prefer _Chrome_, but you are free to experiment with others) and navigate to <localhost:5601>. You should see _Kibana's_ starting page.
+1. Open a browser of your choice (_Kibana_ used to prefer _Chrome_, but you are free to experiment with others) and navigate to <http://localhost:5601>. You should see _Kibana's_ starting page.
 
    ![Kibana started](./images/exercises/kibana-started.png)
 
