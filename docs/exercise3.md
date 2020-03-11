@@ -14,7 +14,9 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
 
    - Drag the _SQL Task_ from the toolbox.
    - Double click to open the details.
-   - Specify the connection to the database. Use `ADO NET` connection type, and add a new connection using the dropdown. Use the same connection details as before.
+   - Specify the connection settings:
+     - Use `ADO.NET` connection type.
+     - Add a new connection using the dropdown. This will open a new dialog, where you need to click on the _New_ button again to add a new connection. Use the same connection settings (address and authentication) as before. When you configured the connection properties, make sure to press the _Test_ button to verify the settings.
    - Specify a `truncate table <tablename>` [sql statement](https://docs.microsoft.com/en-us/sql/t-sql/statements/truncate-table-transact-sql?view=sql-server-2017) to prune the table contents.
 
    ![SQL statement task settings](images/exercise/is-create-sql-connection.png)
