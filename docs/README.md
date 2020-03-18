@@ -30,7 +30,7 @@ You need the following tools to complete this laboratory:
 
 ## Submitting your solution
 
-To complete this laboratory you are required to solve exercises and submit your work through GitHub. The detailed description of the process of submission is detailed [here](GitHub-usage.md). Deadline: you must complete and submit your solution no later than **April 20, 2020, 23:59 CET**.
+To complete this laboratory you are required to solve exercises and submit your work through GitHub. The detailed description of the process of submission is detailed [here](GitHub-usage.md). Deadline: you must complete and submit your solution no later than **April ~~20~~ 30, 2020, 23:59 CET**.
 
 While completing your exercises, please include the scripts, packages, projects, etc. in your submission. A starter submission is provided to you. Fill in the missing pieces there.
 
