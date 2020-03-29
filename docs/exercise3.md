@@ -73,7 +73,7 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
 
    - Direct the output of the previous _Sort_ component here.
    - Open the component settings dialog by double clicking the component box.
-   - Use the connection manager created before.
+   - Use the connection manager created before. (Make sure _not_ to create a new connection manager - the database access has already been defined in the existing connection manager.)
    - Select the users table you created as target.
 
      ![Integration Services ADO NET Destination settings](images/exercise/is-users-adonet-destination.png)
@@ -96,6 +96,7 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
    - Open the new _ADO NET Destination_ and specify its settings too.
 
      - Although the result of the transformations are not available, we still save the UserId value. The other database columns will not have any mapping. So effectively only the UserID will be saved to database.
+     - Use the connection manager created before. (Make sure _not_ to create a new connection manager - the database access has already been defined in the existing connection manager.)
 
      ![Integration Services database output mapping for transformation errors](images/exercise/is-users-adonet-mapping-for-errors.png)
 
