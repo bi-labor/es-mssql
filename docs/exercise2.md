@@ -31,6 +31,8 @@ If you have Docker, or you are working in the university computer laboratories, 
 
    Then to start, use `docker-compose up`.
 
+   > If you are using Linux, and this command fails, you might try to `sudo` to make things easier.
+
    Keep this shell open. You will see the application logs here.
 
 1. To shut down the running system, use _CTRL + C_. Your data will be kept, and restarting with the same command as above will restart the applications.
