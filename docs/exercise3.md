@@ -68,7 +68,7 @@ We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although
 
 ![Kibana Dev Tools](./images/exercises/kibana-dev-tools.png)
 
-1. In _Kibana's_ Dev Tools enter `PUT salaries` in the first line and then enter the following JSON starting on a new line. Then press the _Play_ button in the top left corner of the editor.
+1. In _Kibana's_ Dev Tools enter `PUT salaries` in the first line and then enter the following JSON starting on a new line. Then press the _Play_ button in the top right corner of the editor.
 
    ```json
    {
