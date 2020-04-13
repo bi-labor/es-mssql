@@ -104,9 +104,11 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
 
    > Note, that the execution may take a while, if the amount of memory is limited (e.g. in the BME cloud).
 
-1. If the process succeeded, verify the **contents of the table** using SQL Server Management Studio. Verify that you **added your Neptun code prefix** to the Country names. Then create a screenshot of the table contents.
+1. If the process succeeded, verify the **contents of the table** using SQL Server Management Studio. Verify that you **added your Neptun code prefix** to the Country names.
 
-   Save the screenshot file as `ex3.png` - overwrite the placeholder file with yours.
+   There will be a few rows with `NULL` values, these are the records that failed the _Derived column_ transformation. Check whether the failure were justified (the problem is indeed with the input), or whether the error is in your ETL process!
+
+   Then create a screenshot of the table contents. Save the screenshot file as `ex3.png` - overwrite the placeholder file with yours.
 
    Please make sure that the screenshot is taken such that it
 
