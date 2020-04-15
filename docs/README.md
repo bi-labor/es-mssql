@@ -9,7 +9,7 @@ The goal of this laboratory is to practice the usage of Microsoft SQL Server pro
 You need to following tools to complete this laboratory:
 
 - PC with Windows
-  - You can also use a VM at <https://cloud.bme.hu>. A prepared VM template is available in the "Smallville" datacenter with name "BI laboratory MSSQL". You can use this template to create a VM that has all the necessary software installed. If you do not have access to the template, please request it via email from the instructor.
+  - You can also use a VM at <https://cloud.bme.hu>. A prepared VM template is available in the "Smallville" datacenter with name "BI laboratory MSSQL". You can use this template to create a VM that has all the necessary software installed. If you do not have access to the template, please request it via email from the instructor. Please note, that altough being installed already, you may need to [log into Visual Studio](https://visualstudio.microsoft.com/vs/support/community-edition-expired-buy-license/) with a Microsoft account (e.g. your @edu.bme.hu account).
 - Microsoft SQL Server
   - Express edition is sufficient, or _localdb_ installed along with Visual Studio is also fine
 - [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
