@@ -23,7 +23,7 @@ After installing Microsoft SQL Server Data Tools, you will find new project type
 
 ![New projects in Visual Studio](images/mssql-bi-software-intro/vs-project-types.png)
 
-The projects themselves contain mostly xml-based descriptions. For production use, these so-called *packages* are published to servers for execution. For debugging purposes Visual Studio is also able to execute the packages.
+The projects themselves contain mostly xml-based descriptions. For production use, these so-called _packages_ are published to servers for execution. For debugging purposes Visual Studio is also able to execute the packages.
 
 ## Integration Services project
 
@@ -33,11 +33,11 @@ The Integration services project contains a _Package.dtsx_ (visible in Solution 
 
 Control flow is the high-level component responsible for the execution of the entire process; Data flow contains part of the whole process, a single ETL flow. We build ETL processes by combining the two.
 
-The ETL process is built from the available components by dragging them from the *SSIS toolbox* and connecting them to each other. The _SSIS toolbox_ can be opened from the _View_ menu under _Other Windows_. The settings of each component can edited in the *Properties* box on the right, or by *double clicking* the boxes themselves.
+The ETL process is built from the available components by dragging them from the _SSIS toolbox_ and connecting them to each other. The _SSIS toolbox_ can be opened from the _View_ menu under _Other Windows_. The settings of each component can edited in the _Properties_ box on the right, or by _double clicking_ the boxes themselves.
 
 ![SSIS toolbox and element properties](images/mssql-bi-software-intro/is-package-components.png)
 
-Notable components (from the *SSIS Toolbox*) that you will need:
+Notable components (from the _SSIS Toolbox_) that you will need:
 
 - Data Flow Task: data extract-transform-load sequence of steps
 - Execute SQL Task: execute a command
@@ -49,6 +49,10 @@ Notable components (from the *SSIS Toolbox*) that you will need:
 We can debug the process using the **Debug** button in the toolbar. During the execution we will get immediate feedback on the progress and the result. The detailed log can be viewed by clicking the **Progress** button, or in the **Output window**.
 
 ![Debug execution of the ETL process](images/mssql-bi-software-intro/is-debug.png)
+
+If there are errors during execution, you will see the component that has issues marked with a red circle. In most cases the actual error you can find in the _Output_ window.
+
+![Debug execution of the ETL process](images/mssql-bi-software-intro/is-debug-error-output.png)
 
 ### Typical issues
 
@@ -67,8 +71,8 @@ We can debug the process using the **Debug** button in the toolbar. During the e
 
 ## Reporting Services project
 
-The easiest was to start with a new project is to use the _Reporting Server Project Wizard_. It guides you through creating the project and then a new report. The report is presented in a WYSIWYG manner in a designer surface. You can add new elements from the *Toolbox* (open the toolbox from _View_ menu under
-_Other Windows_). The layout and contents is edited here, while the *Properties* of each element is specified in the toolbox on the right. You can also *Preview* the report here.
+The easiest was to start with a new project is to use the _Reporting Server Project Wizard_. It guides you through creating the project and then a new report. The report is presented in a WYSIWYG manner in a designer surface. You can add new elements from the _Toolbox_ (open the toolbox from _View_ menu under
+_Other Windows_). The layout and contents is edited here, while the _Properties_ of each element is specified in the toolbox on the right. You can also _Preview_ the report here.
 
 ![Designer of Reporting Services project](images/mssql-bi-software-intro/rs-designer.png)
 

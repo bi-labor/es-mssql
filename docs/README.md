@@ -31,7 +31,7 @@ You need to following tools to complete this laboratory:
 - The expected mode of submitting your work, as detailed [here](GitHub-usage.md).
 - The material covered in course _Business intelligence_ related to the topic, including, but not limited to
   - The demo material covered during the semester (<https://github.com/peekler/Business-Intelligence-Demos/tree/master/MSSQL-BI>)
-  - The short introduction to using these software in [mssql-bi-software-intro.md](mssql-bi-software-intro.md)
+  - The [short introduction](mssql-bi-software-intro.md) to using these software
 - SQL Integration Services [tutorial](https://docs.microsoft.com/en-us/sql/integration-services/ssis-how-to-create-an-etl-package)
 - SQL Reporting Services [tutorial](https://docs.microsoft.com/en-us/sql/reporting-services/create-a-basic-table-report-ssrs-tutorial)
 

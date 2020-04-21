@@ -102,7 +102,9 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
 
 1. Run the ETL process by using the _Start_ button on the toolbar of Visual Studio.
 
-   > Note, that the execution may take a while, if the amount of memory is limited (e.g. in the BME cloud).
+   > Note, that the execution may take a while, if the amount of memory is limited (e.g. in the BME cloud). It may help to close memory-hog processes (e.g. browsers).
+
+   Verify that the execution succeeded. If not, see [this guide](mssql-bi-software-intro.md) for debugging and resolving typical issues.
 
 1. If the process succeeded, verify the **contents of the table** using SQL Server Management Studio. Verify that you **added your Neptun code prefix** to the Country names.
 
