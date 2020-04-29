@@ -56,16 +56,20 @@ If there are errors during execution, you will see the component that has issues
 
 ### Typical issues
 
-- "The integration services project failed to execute"
+- The integration services project failed to execute
   - Check the log in the _Progress_ view, and locate the first error.
-- "I changed the properties of a connection manager and nothing works now"
+- You changed the properties of a connection manager and "nothing works"
   - You need to open the data input or output component by double clicking it. It will update the changes made to the connection manager.
-- "CSV import fails" if you removed columns in the flat file source connection manager
+- CSV import fails if you removed columns in the flat file source connection manager
   - Do not remove columns in the file source. You will just ignore the unnecessary columns later on.
 - "Truncation" related errors
-  - You specified incorrect length for in the flat file source connection details.
-- "The integration service execution takes too long"
+  - You specified incorrect length in the flat file source connection details.
+- "... failed validation and returned validation status VS_NEEDSNEWMETADATA", "... has been out of synchronization with the database column" , or similar errors
+  - Most likely you changed a column length either in the flat file source or in the database and the ETL process definition is not aware of this change. You need to find the component with this error (the name is in the error message), then right click it and open the _Advanced editor_ and click _Refresh_.
+  - If doing this for a single component does not solve the problem, repeat the same action for _all_ components, starting with the input source and following the data flow direction (this synchronizes the input of each component with the output of the previous one, hence the need to do this in order).
+- The integration service execution takes too long
   - If you have multiple sort actions, they may use a lot of memory. Force execution of the steps after each other by specifying a dependency in the control flow view (disables parallelism).
+  - Another thing you can do is to close other applications, especially memory-heavy ones, like browsers. This will significantly speed up exection.
 - When running the IS process in Visual studio it complains about "file being used".
   - Close Visual Studio. Start the Task Manager, and kill the "IS Debug Host" processes. Re-open the solution in Visual Studio and try again.
 
@@ -87,3 +91,8 @@ You can find these in the _Report Data_ window (open it from the _View_ menu).
 A report project can contain multiple reports. You can add new ones using the Solution Explorer.
 
 ![Reports in solution explorer](images/mssql-bi-software-intro/rs-reports-in-solution.png)
+
+### Typical issues
+
+- "There was no endpoint listening at net.pipe"
+  - Close Visual Studio then start it as administrator.
