@@ -4,20 +4,23 @@ on:
   push:
     branches:
       - master
-    paths-ignore:
-      - "docs/**"
+    paths:
+      - "ahk/**"
 
 jobs:
   build:
     runs-on: ubuntu-18.04
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 1
 
-      - name: Build and push Docker images
-        working-directory: ./ahk
+      - name: Login to GitHub packages Docker registy
+        run: docker login docker.pkg.github.com -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push evaluator Docker image
+        working-directory: ./ahk/evaluator
         env:
           DOCKER_REG_USERNAME: ${{ secrets.DOCKER_REG_USERNAME }}
           DOCKER_REG_TOKEN: ${{ secrets.DOCKER_REG_TOKEN }}
@@ -26,3 +29,7 @@ jobs:
           docker-compose build
           docker-compose push
           docker logout
+
+      - name: Logout from GitHub packages Docker registy
+        if: ${{ always() }}
+        run: docker logout docker.pkg.github.com
