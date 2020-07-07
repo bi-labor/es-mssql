@@ -1,0 +1,361 @@
+<svg id="mermaid-1547475018678" width="100%" xmlns="http://www.w3.org/2000/svg" style="max-width: 755px;" viewBox="0 0 755 239"><style>
+
+
+#mermaid-1547475018678 .label {
+  font-family: 'trebuchet ms', verdana, arial;
+  font-size: 10pt;
+  color: #333; }
+
+#mermaid-1547475018678 .node rect,
+#mermaid-1547475018678 .node circle,
+#mermaid-1547475018678 .node ellipse,
+#mermaid-1547475018678 .node polygon {
+  fill: #ECECFF;
+  stroke: #9370DB;
+  stroke-width: 1px; }
+
+#mermaid-1547475018678 .node.clickable {
+  cursor: pointer; }
+
+#mermaid-1547475018678 .arrowheadPath {
+  fill: #333333; }
+
+#mermaid-1547475018678 .edgePath .path {
+  stroke: #333333;
+  stroke-width: 1.5px; }
+
+#mermaid-1547475018678 .edgeLabel {
+  background-color: #e8e8e8; }
+
+#mermaid-1547475018678 .cluster rect {
+  fill: #ffffde !important;
+  stroke: #aaaa33 !important;
+  stroke-width: 1px !important; }
+
+#mermaid-1547475018678 .cluster text {
+  fill: #333; }
+
+#mermaid-1547475018678 div.mermaidTooltip {
+  position: absolute;
+  text-align: center;
+  max-width: 200px;
+  padding: 2px;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-size: 12px;
+  background: #ffffde;
+  border: 1px solid #aaaa33;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 100; }
+
+#mermaid-1547475018678 .actor {
+  stroke: #CCCCFF;
+  fill: #ECECFF; }
+
+#mermaid-1547475018678 text.actor {
+  fill: black;
+  stroke: none; }
+
+#mermaid-1547475018678 .actor-line {
+  stroke: grey; }
+
+#mermaid-1547475018678 .messageLine0 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: #333; }
+
+#mermaid-1547475018678 .messageLine1 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: #333; }
+
+#mermaid-1547475018678 #arrowhead {
+  fill: #333; }
+
+#mermaid-1547475018678 #crosshead path {
+  fill: #333 !important;
+  stroke: #333 !important; }
+
+#mermaid-1547475018678 .messageText {
+  fill: #333;
+  stroke: none; }
+
+#mermaid-1547475018678 .labelBox {
+  stroke: #CCCCFF;
+  fill: #ECECFF; }
+
+#mermaid-1547475018678 .labelText {
+  fill: black;
+  stroke: none; }
+
+#mermaid-1547475018678 .loopText {
+  fill: black;
+  stroke: none; }
+
+#mermaid-1547475018678 .loopLine {
+  stroke-width: 2;
+  stroke-dasharray: '2 2';
+  stroke: #CCCCFF; }
+
+#mermaid-1547475018678 .note {
+  stroke: #aaaa33;
+  fill: #fff5ad; }
+
+#mermaid-1547475018678 .noteText {
+  fill: black;
+  stroke: none;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-size: 14px; }
+
+#mermaid-1547475018678 .activation0 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+#mermaid-1547475018678 .activation1 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+#mermaid-1547475018678 .activation2 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+
+#mermaid-1547475018678 .section {
+  stroke: none;
+  opacity: 0.2; }
+
+#mermaid-1547475018678 .section0 {
+  fill: rgba(102, 102, 255, 0.49); }
+
+#mermaid-1547475018678 .section2 {
+  fill: #fff400; }
+
+#mermaid-1547475018678 .section1,
+#mermaid-1547475018678 .section3 {
+  fill: white;
+  opacity: 0.2; }
+
+#mermaid-1547475018678 .sectionTitle0 {
+  fill: #333; }
+
+#mermaid-1547475018678 .sectionTitle1 {
+  fill: #333; }
+
+#mermaid-1547475018678 .sectionTitle2 {
+  fill: #333; }
+
+#mermaid-1547475018678 .sectionTitle3 {
+  fill: #333; }
+
+#mermaid-1547475018678 .sectionTitle {
+  text-anchor: start;
+  font-size: 11px;
+  text-height: 14px; }
+
+
+#mermaid-1547475018678 .grid .tick {
+  stroke: lightgrey;
+  opacity: 0.3;
+  shape-rendering: crispEdges; }
+
+#mermaid-1547475018678 .grid path {
+  stroke-width: 0; }
+
+
+#mermaid-1547475018678 .today {
+  fill: none;
+  stroke: red;
+  stroke-width: 2px; }
+
+
+
+#mermaid-1547475018678 .task {
+  stroke-width: 2; }
+
+#mermaid-1547475018678 .taskText {
+  text-anchor: middle;
+  font-size: 11px; }
+
+#mermaid-1547475018678 .taskTextOutsideRight {
+  fill: black;
+  text-anchor: start;
+  font-size: 11px; }
+
+#mermaid-1547475018678 .taskTextOutsideLeft {
+  fill: black;
+  text-anchor: end;
+  font-size: 11px; }
+
+
+#mermaid-1547475018678 .taskText0,
+#mermaid-1547475018678 .taskText1,
+#mermaid-1547475018678 .taskText2,
+#mermaid-1547475018678 .taskText3 {
+  fill: white; }
+
+#mermaid-1547475018678 .task0,
+#mermaid-1547475018678 .task1,
+#mermaid-1547475018678 .task2,
+#mermaid-1547475018678 .task3 {
+  fill: #8a90dd;
+  stroke: #534fbc; }
+
+#mermaid-1547475018678 .taskTextOutside0,
+#mermaid-1547475018678 .taskTextOutside2 {
+  fill: black; }
+
+#mermaid-1547475018678 .taskTextOutside1,
+#mermaid-1547475018678 .taskTextOutside3 {
+  fill: black; }
+
+
+#mermaid-1547475018678 .active0,
+#mermaid-1547475018678 .active1,
+#mermaid-1547475018678 .active2,
+#mermaid-1547475018678 .active3 {
+  fill: #bfc7ff;
+  stroke: #534fbc; }
+
+#mermaid-1547475018678 .activeText0,
+#mermaid-1547475018678 .activeText1,
+#mermaid-1547475018678 .activeText2,
+#mermaid-1547475018678 .activeText3 {
+  fill: black !important; }
+
+
+#mermaid-1547475018678 .done0,
+#mermaid-1547475018678 .done1,
+#mermaid-1547475018678 .done2,
+#mermaid-1547475018678 .done3 {
+  stroke: grey;
+  fill: lightgrey;
+  stroke-width: 2; }
+
+#mermaid-1547475018678 .doneText0,
+#mermaid-1547475018678 .doneText1,
+#mermaid-1547475018678 .doneText2,
+#mermaid-1547475018678 .doneText3 {
+  fill: black !important; }
+
+
+#mermaid-1547475018678 .crit0,
+#mermaid-1547475018678 .crit1,
+#mermaid-1547475018678 .crit2,
+#mermaid-1547475018678 .crit3 {
+  stroke: #ff8888;
+  fill: red;
+  stroke-width: 2; }
+
+#mermaid-1547475018678 .activeCrit0,
+#mermaid-1547475018678 .activeCrit1,
+#mermaid-1547475018678 .activeCrit2,
+#mermaid-1547475018678 .activeCrit3 {
+  stroke: #ff8888;
+  fill: #bfc7ff;
+  stroke-width: 2; }
+
+#mermaid-1547475018678 .doneCrit0,
+#mermaid-1547475018678 .doneCrit1,
+#mermaid-1547475018678 .doneCrit2,
+#mermaid-1547475018678 .doneCrit3 {
+  stroke: #ff8888;
+  fill: lightgrey;
+  stroke-width: 2;
+  cursor: pointer;
+  shape-rendering: crispEdges; }
+
+#mermaid-1547475018678 .doneCritText0,
+#mermaid-1547475018678 .doneCritText1,
+#mermaid-1547475018678 .doneCritText2,
+#mermaid-1547475018678 .doneCritText3 {
+  fill: black !important; }
+
+#mermaid-1547475018678 .activeCritText0,
+#mermaid-1547475018678 .activeCritText1,
+#mermaid-1547475018678 .activeCritText2,
+#mermaid-1547475018678 .activeCritText3 {
+  fill: black !important; }
+
+#mermaid-1547475018678 .titleText {
+  text-anchor: middle;
+  font-size: 18px;
+  fill: black; }
+
+#mermaid-1547475018678 g.classGroup text {
+  fill: #9370DB;
+  stroke: none;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-size: 10px; }
+
+#mermaid-1547475018678 g.classGroup rect {
+  fill: #ECECFF;
+  stroke: #9370DB; }
+
+#mermaid-1547475018678 g.classGroup line {
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1547475018678 .classLabel .box {
+  stroke: none;
+  stroke-width: 0;
+  fill: #ECECFF;
+  opacity: 0.5; }
+
+#mermaid-1547475018678 .classLabel .label {
+  fill: #9370DB;
+  font-size: 10px; }
+
+#mermaid-1547475018678 .relation {
+  stroke: #9370DB;
+  stroke-width: 1;
+  fill: none; }
+
+#mermaid-1547475018678 #compositionStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1547475018678 #compositionEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1547475018678 #aggregationStart {
+  fill: #ECECFF;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1547475018678 #aggregationEnd {
+  fill: #ECECFF;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1547475018678 #dependencyStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1547475018678 #dependencyEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1547475018678 #extensionStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1547475018678 #extensionEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1547475018678 .commit-id,
+#mermaid-1547475018678 .commit-msg,
+#mermaid-1547475018678 .branch-label {
+  fill: lightgrey;
+  color: lightgrey; }
+</style><style>#mermaid-1547475018678 {
+    color: rgba(0, 0, 0, 0.65);
+    font: ;
+  }</style><g transform="translate(-12, -12)"><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M123.5,40.5L230,40.5L353.56868131868134,111" marker-end="url(#arrowhead3514)" style="fill:none"></path><defs><marker id="arrowhead3514" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M125,131.5L230,131.5L315,131.5" marker-end="url(#arrowhead3515)" style="fill:none"></path><defs><marker id="arrowhead3515" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M145,222.5L230,222.5L353.56868131868134,152" marker-end="url(#arrowhead3516)" style="fill:none"></path><defs><marker id="arrowhead3516" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M459.5604395604396,111L545,86L643.5,86" marker-end="url(#arrowhead3517)" style="fill:none"></path><defs><marker id="arrowhead3517" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M459.5604395604396,152L545,177L626,177" marker-end="url(#arrowhead3518)" style="fill:none"></path><defs><marker id="arrowhead3518" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform="translate(230,40.5)"><g transform="translate(-60,-10.5)" class="label"><foreignObject width="120" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Integration Services</span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform="translate(230,131.5)"><g transform="translate(-60,-10.5)" class="label"><foreignObject width="120" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Integration Services</span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform="translate(230,222.5)"><g transform="translate(-60,-10.5)" class="label"><foreignObject width="120" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Integration Services</span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform="translate(545,86)"><g transform="translate(-56,-10.5)" class="label"><foreignObject width="112" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Reporting Services</span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform="translate(545,177)"><g transform="translate(-56,-10.5)" class="label"><foreignObject width="112" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Reporting Services</span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="A" transform="translate(82.5,40.5)"><rect rx="0" ry="0" x="-41" y="-20.5" width="82" height="41"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-31,-10.5)"><foreignObject width="62" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Users CSV</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="D" transform="translate(389.5,131.5)"><rect rx="5" ry="5" x="-74.5" y="-20.5" width="149" height="41"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-64.5,-10.5)"><foreignObject width="129" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">SQL Server database</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="B" transform="translate(82.5,131.5)"><rect rx="0" ry="0" x="-42.5" y="-20.5" width="85" height="41"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-32.5,-10.5)"><foreignObject width="65" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Books CSV</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="C" transform="translate(82.5,222.5)"><rect rx="0" ry="0" x="-62.5" y="-20.5" width="125" height="41"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-52.5,-10.5)"><foreignObject width="105" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">BookRatings CSV</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="E" transform="translate(692.5,86)"><rect rx="5" ry="5" x="-49" y="-20.5" width="98" height="41"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-39,-10.5)"><foreignObject width="78" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Users report</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="F" transform="translate(692.5,177)"><rect rx="5" ry="5" x="-66.5" y="-20.5" width="133" height="41"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-56.5,-10.5)"><foreignObject width="113" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Best books report</div></foreignObject></g></g></g></g></g></g></svg>

@@ -1,0 +1,25 @@
+name: Build Docker image for SSIS
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "ahk/ssis/**"
+
+jobs:
+  build-ssis:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Build and push SSIS Docker image
+        working-directory: ./ahk/ssis
+        run: |
+          docker login docker.pkg.github.com -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+          docker-compose build
+          docker-compose push
+          docker logout docker.pkg.github.com
