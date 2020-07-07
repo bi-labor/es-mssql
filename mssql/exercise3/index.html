@@ -1,0 +1,878 @@
+
+
+
+<!doctype html>
+<html lang="hu" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Dudás Ákos">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Exercise 3: Import the users dataset using Integration Services - VIAUMB00 Business Intelligence Laboratory</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.b79bcd20.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5350">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../extra-material-theme.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="red">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercise-3-import-the-users-dataset-using-integration-services" class="md-skip">
+          Kihagyás
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="VIAUMB00 Business Intelligence Laboratory" class="md-header-nav__button md-logo" aria-label="VIAUMB00 Business Intelligence Laboratory">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            VIAUMB00 Business Intelligence Laboratory
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Exercise 3: Import the users dataset using Integration Services
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Keresés" placeholder="Keresés" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/bi-labor/es-mssql/" title="Főoldalra ugrás" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    bi-labor/es-mssql
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          Guides
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../elasticsearch/index.md" class="md-tabs__link">
+          Elasticsearch
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../" class="md-tabs__link md-tabs__link--active">
+          MSSQL
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="VIAUMB00 Business Intelligence Laboratory" class="md-nav__button md-logo" aria-label="VIAUMB00 Business Intelligence Laboratory">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    VIAUMB00 Business Intelligence Laboratory
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/bi-labor/es-mssql/" title="Főoldalra ugrás" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    bi-labor/es-mssql
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Guides" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Requirements" class="md-nav__link">
+      Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../GitHub/" title="Submitting your work (GitHub)" class="md-nav__link">
+      Submitting your work (GitHub)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../GitHub-Actions/" title="GitHub Actions" class="md-nav__link">
+      GitHub Actions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../GitHub-credentials/" title="GitHub credentials in university labs" class="md-nav__link">
+      GitHub credentials in university labs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Elasticsearch
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Elasticsearch" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Elasticsearch
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/index.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/exercise1.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/exercise2.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/exercise3.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/exercise4.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/exercise5.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/exercise6.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/exercise7.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      MSSQL
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="MSSQL" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        MSSQL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Microsoft SQL Server Business Intelligence" class="md-nav__link">
+      Microsoft SQL Server Business Intelligence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exercise1/" title="Exercise 1: Get the starter solution" class="md-nav__link">
+      Exercise 1: Get the starter solution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exercise2/" title="Exercise 2: Create database and table for users data" class="md-nav__link">
+      Exercise 2: Create database and table for users data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Exercise 3: Import the users dataset using Integration Services" class="md-nav__link md-nav__link--active">
+      Exercise 3: Import the users dataset using Integration Services
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exercise4/" title="Exercise 4: Report about users" class="md-nav__link">
+      Exercise 4: Report about users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exercise5/" title="Exercise 5: Import the books and ratings datasets using Integration Services" class="md-nav__link">
+      Exercise 5: Import the books and ratings datasets using Integration Services
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exercise6/" title="Exercise 6: Create a report listing the highest rated books" class="md-nav__link">
+      Exercise 6: Create a report listing the highest rated books
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bi-software-intro/" title="Using MSSQL BI tools" class="md-nav__link">
+      Using MSSQL BI tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bme-cloud-vm-usage/" title="Using BME Cloud" class="md-nav__link">
+      Using BME Cloud
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/bi-labor/es-mssql/edit/master/docs/mssql/exercise3.md" title="Oldal szerkesztése" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="exercise-3-import-the-users-dataset-using-integration-services">Exercise 3: Import the users dataset using Integration Services<a class="headerlink" href="#exercise-3-import-the-users-dataset-using-integration-services" title="Permanent link">&para;</a></h1>
+<p>Extend the provided Integration Services project <code>ex3.sln</code> by modifying the project contents in place. You can find this solution in the root of the checked out git repository.</p>
+<ol>
+<li>
+<p>Open the solution with Visual Studio, then open <code>Package.dtsx</code> from <em>Solution explorer</em>.</p>
+<p><img alt="Solution explorer of the project" src="../images/is-solution-explorer.png" /></p>
+</li>
+<li>
+<p>Find the <em>SSIS Toolbox</em>; you will need to use this window in the following tasks.</p>
+<div class="admonition note">
+<p>If you cannot see this toolbox window, after opening <code>Package.dtsx</code>, look for the <em>Extensions &gt; SSIS &gt; SSIS Toolbox</em> menu.</p>
+</div>
+</li>
+<li>
+<p>Add a new <em>SQL Task</em> to the <em>Control flow</em> that erases any content from the target database table. You will likely need to run the ETL process multiple times, but the data should only be imported once; hence the initial cleanup task.</p>
+<ul>
+<li>Drag the <em>SQL Task</em> from the toolbox.</li>
+<li>Double click to open the details.</li>
+<li>Specify the connection settings:<ul>
+<li>Use <code>ADO.NET</code> connection type.</li>
+<li>Add a new connection using the dropdown. This will open a new dialog, where you need to click on the <em>New</em> button again to add a new connection. Use the same connection settings (address and authentication) as before. When you configured the connection properties, make sure to press the <em>Test</em> button to verify the settings.</li>
+</ul>
+</li>
+<li>Specify a <code>truncate table &lt;tablename&gt;</code> <a href="https://docs.microsoft.com/en-us/sql/t-sql/statements/truncate-table-transact-sql?view=sql-server-2017">sql statement</a> to prune the table contents. The sql command should <em>NOT</em> contain the database name; that is already configured in the connection manager.</li>
+</ul>
+<p><img alt="SQL statement task settings" src="../images/is-create-sql-connection.png" /></p>
+</li>
+<li>
+<p>Add a new <em>Data flow</em> element to the control flow pane. Give a meaningful name to this task: "import users". This task should follow the previous cleanup task: draw a line from the previous task box to this one to specify the ordering.</p>
+<p>Your control flow should like like the following at this moment.</p>
+<p><img alt="Integration Services Control Flow for importing users" src="../images/is-users-control-flow.png" /></p>
+</li>
+<li>
+<p>Open the data flow element by double clicking it.</p>
+</li>
+<li>
+<p>Drag a <em>Flat file source</em> from the toolbox to the data flow pane. Double click to open in. Add a new <em>Flat file connection manager</em> that specifies the source file and its details.</p>
+<ul>
+<li>Browse the input file <code>BX-Users.csv</code> from your local disk.</li>
+<li>
+<p>Set the correct <em>Format</em> for parsing</p>
+<ul>
+<li>Format: Delimited</li>
+<li>Text qualifier: specify " (double quotation mark)</li>
+<li>Check "Column names in the first data row"</li>
+</ul>
+<p><img alt="Integration Services flat file source settings" src="../images/is-users-flat-file-conn.png" /></p>
+</li>
+<li>
+<p>Switch to the <em>Columns</em> page (within the dialog)</p>
+<ul>
+<li>Verify that the <em>Row delimiter</em> is <code>{CR}{LF}</code> and the <em>Column delimiter</em> is semicolon.</li>
+</ul>
+</li>
+<li>Switch to the <em>Advanced</em> page (within the dialog)<ul>
+<li>Verify that the correct number of columns is present</li>
+<li>Change the UserID to be parsed as <code>four byte signed integer</code></li>
+<li>Although the age should be a number, it must be parsed as a string here, because there are values in the CSV with the literal <code>NULL</code> text</li>
+<li>Increase the length (<em>OutputColumnWidth</em>) of the Location column from 50 to 1.000</li>
+</ul>
+</li>
+<li>The preview pane is a good way to verify the results. Make sure that there are no lingering quotation marks in the values (if there are, you missed to specify the text qualifier before).</li>
+<li>
+<p>Close the dialog. If you need to modify the settings, you will find this <em>Connection manager</em> at the bottom of the designer surface.</p>
+<p><img alt="Integration Services connection managers" src="../images/is-connection-managers.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>In order to split the <em>Location</em> column into two, and to parse the <em>Age</em> as a number, add a <em>Derived column</em> transformation (drag one from the SSIS Toolbox pane to the data flow editor surface). Connect the blue output of the file source to into this new box to specify the data flow direction (see image below for reference). Then open the settings of the <em>Derived column</em> element to specify how the derived values are calculated.</p>
+<ul>
+<li>Add a new column that contains the age as an integer. Check if the string is "NULL", in that case keep the null value, or cast to int.<ul>
+<li>Use the following expression: <code>[Age] == "NULL" ? NULL(DT_I4) : (DT_I4)[Age]</code>. (You may need to change the column names.)</li>
+</ul>
+</li>
+<li>Split the location column into two, and <strong>include your Neptun code</strong> in the text: create a new <em>City</em> and a new <em>Country</em> column using string operations; <em>Country</em> should be prefixed with your neptun code.<ul>
+<li>Take a look at a few examples of the <em>Location</em>: they are in the form of "city, state, country"</li>
+<li>To separate the country find the second comma in the text. The rest is the city (you can keep the state included in the city text). <strong>Prefix the country with your Neptun code</strong> by concatenating it as a string to the front. E.g. "nyc, new york, usa" becomes:<ul>
+<li>Country: "NEPTUN usa"</li>
+<li>City: "nyc, new york"</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Find more information on the syntax of the <em>Expression</em> here: <a href="https://docs.microsoft.com/en-us/sql/integration-services/expressions/integration-services-ssis-expressions?view=sql-server-2017)">https://docs.microsoft.com/en-us/sql/integration-services/expressions/integration-services-ssis-expressions?view=sql-server-2017)</a></p>
+<p><img alt="Integration Services Derived column transformation" src="../images/is-users-derived-col.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Remove duplicate records. Add a new <em>Sort</em> transformation, then connect it to the output of the previous element. Open its settings: chose to sort on the <em>UserID</em>, and check the <em>Remove rows with duplicate sort values</em> checkbox.</p>
+<p><img alt="Integration Services duplicate filtering" src="../images/is-users-sorting.png" /></p>
+</li>
+<li>
+<p>Add an <em>ADO NET Destination</em> component (look in the <em>Other Destinations</em> category) to save the data into database.</p>
+<ul>
+<li>Direct the output of the previous <em>Sort</em> component here.</li>
+<li>Open the component settings dialog by double clicking the component box.</li>
+<li>Use the connection manager created before. (Make sure <em>not</em> to create a new connection manager - the database access has already been defined in the existing connection manager.)</li>
+<li>
+<p>Select the users table you created as target.</p>
+<p><img alt="Integration Services ADO NET Destination settings" src="../images/is-users-adonet-destination.png" /></p>
+</li>
+<li>
+<p>Check the mapping and make sure that the right fields go into the right columns. Make sure to double check the <em>Age</em> column because it may exist as a number and as a string too; you need the numbered type here. (Mind, that the input column names may be different for you.)</p>
+<p><img alt="Integration Services ADO NET Destination mapping" src="../images/is-users-adonet-mapping.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>If you were to execute the process now, it would fail due to errors in the <em>Derived columns</em> transformation. Some content does not correspond to the transformations. Let us skip these rows.</p>
+<ul>
+<li>Add another <em>ADO NET Destination</em> component.</li>
+<li>
+<p>Point the red arrow from the <em>Derived column</em> into this new database destination.</p>
+<p><img alt="Integration Services Data flow of the Users import" src="../images/is-users-data-flow.png" /></p>
+</li>
+<li>
+<p>A the <a href="https://docs.microsoft.com/en-us/sql/integration-services/configure-an-error-output-in-a-data-flow-component">Configure Error Output dialog</a> will pop up to specify how to handle errors. For all columns and error types select <em>Redirect row</em>. There is a total number of 6 elements to change here. Close this dialog.</p>
+<p><img alt="Integration Services Error output configuration" src="../images/is-users-error-output.png" /></p>
+</li>
+<li>
+<p>Open the new <em>ADO NET Destination</em> and specify its settings too.</p>
+<ul>
+<li>Although the result of the transformations are not available, we still save the UserId value. The other database columns will not have any mapping. So effectively only the UserID will be saved to database.</li>
+<li>Use the connection manager created before. (Make sure <em>not</em> to create a new connection manager - the database access has already been defined in the existing connection manager.)</li>
+</ul>
+<p><img alt="Integration Services database output mapping for transformation errors" src="../images/is-users-adonet-mapping-for-errors.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Run the ETL process by using the <em>Start</em> button on the toolbar of Visual Studio.</p>
+<p>Verify that the execution succeeded. If not, see <a href="mssql-bi-software-intro.md">this guide</a> for debugging and resolving typical issues.</p>
+</li>
+<li>
+<p>If the process succeeded, verify the <strong>contents of the table</strong> using SQL Server Management Studio. Verify that you <strong>added your Neptun code prefix</strong> to the Country names.</p>
+<p>There will be a few rows with <code>NULL</code> values, these are the records that failed the <em>Derived column</em> transformation. Check whether the failure were justified (the problem is indeed with the input), or whether the error is in your ETL process!</p>
+</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">SUBMISSION</p>
+<p>Then create a screenshot of the table contents. Save the screenshot file as <code>ex3.png</code> - overwrite the placeholder file with yours.</p>
+<p>Please make sure that the screenshot is taken such that it includes the database name (which is your Neptun code) from the <em>Object explorer</em> window, and includes a few sample records with the Neptun code clearly visible.</p>
+<p><img alt="Sample expected screenshot" src="../images/users-table-verify-content.png" /></p>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+
+<!-- Application footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+  <div class="md-footer-nav">
+    <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+
+      <!-- Link to previous page -->
+      
+      <a href="../exercise2/" title="Exercise 2: Create database and table for users data"
+        class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+        <div class="md-footer-nav__button md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </div>
+        <div class="md-footer-nav__title">
+          <div class="md-ellipsis">
+            <span class="md-footer-nav__direction">
+              Előző
+            </span>
+            Exercise 2: Create database and table for users data
+          </div>
+        </div>
+      </a>
+      
+
+      <!-- Link to next page -->
+      
+      <a href="../exercise4/" title="Exercise 4: Report about users"
+        class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+        <div class="md-footer-nav__title">
+          <div class="md-ellipsis">
+            <span class="md-footer-nav__direction">
+              Következő
+            </span>
+            Exercise 4: Report about users
+          </div>
+        </div>
+        <div class="md-footer-nav__button md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+        </div>
+      </a>
+      
+    </nav>
+  </div>
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        
+        <div class="md-footer-copyright__highlight">
+          Copyright &copy; BME AUT
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "search.config.lang": "hu", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["tabs"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

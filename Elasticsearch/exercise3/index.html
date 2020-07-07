@@ -1,0 +1,914 @@
+
+
+
+<!doctype html>
+<html lang="hu" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Dudás Ákos">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Exercise 3: Initializing Elasticsearch - VIAUMB00 Business Intelligence Laboratory</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.b79bcd20.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ef5350">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../extra-material-theme.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="red">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercise-3-initializing-elasticsearch" class="md-skip">
+          Kihagyás
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="VIAUMB00 Business Intelligence Laboratory" class="md-header-nav__button md-logo" aria-label="VIAUMB00 Business Intelligence Laboratory">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            VIAUMB00 Business Intelligence Laboratory
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Exercise 3: Initializing Elasticsearch
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Keresés" placeholder="Keresés" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/bi-labor/es-mssql/" title="Főoldalra ugrás" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    bi-labor/es-mssql
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          Guides
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../elasticsearch/index.md" class="md-tabs__link">
+          Elasticsearch
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../mssql/" class="md-tabs__link">
+          MSSQL
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="VIAUMB00 Business Intelligence Laboratory" class="md-nav__button md-logo" aria-label="VIAUMB00 Business Intelligence Laboratory">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    VIAUMB00 Business Intelligence Laboratory
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/bi-labor/es-mssql/" title="Főoldalra ugrás" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    bi-labor/es-mssql
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Guides" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Requirements" class="md-nav__link">
+      Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../GitHub/" title="Submitting your work (GitHub)" class="md-nav__link">
+      Submitting your work (GitHub)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../GitHub-Actions/" title="GitHub Actions" class="md-nav__link">
+      GitHub Actions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../GitHub-credentials/" title="GitHub credentials in university labs" class="md-nav__link">
+      GitHub credentials in university labs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Elasticsearch
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Elasticsearch" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Elasticsearch
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/index.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/exercise1.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/exercise2.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/exercise3.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/exercise4.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/exercise5.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/exercise6.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../elasticsearch/exercise7.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      MSSQL
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="MSSQL" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        MSSQL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mssql/" title="Microsoft SQL Server Business Intelligence" class="md-nav__link">
+      Microsoft SQL Server Business Intelligence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mssql/exercise1/" title="Exercise 1: Get the starter solution" class="md-nav__link">
+      Exercise 1: Get the starter solution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mssql/exercise2/" title="Exercise 2: Create database and table for users data" class="md-nav__link">
+      Exercise 2: Create database and table for users data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mssql/exercise3/" title="Exercise 3: Import the users dataset using Integration Services" class="md-nav__link">
+      Exercise 3: Import the users dataset using Integration Services
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mssql/exercise4/" title="Exercise 4: Report about users" class="md-nav__link">
+      Exercise 4: Report about users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mssql/exercise5/" title="Exercise 5: Import the books and ratings datasets using Integration Services" class="md-nav__link">
+      Exercise 5: Import the books and ratings datasets using Integration Services
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mssql/exercise6/" title="Exercise 6: Create a report listing the highest rated books" class="md-nav__link">
+      Exercise 6: Create a report listing the highest rated books
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mssql/bi-software-intro/" title="Using MSSQL BI tools" class="md-nav__link">
+      Using MSSQL BI tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mssql/bme-cloud-vm-usage/" title="Using BME Cloud" class="md-nav__link">
+      Using BME Cloud
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#index-a-document-via-powershell" class="md-nav__link">
+    Index a document via PowerShell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-index-and-index-a-document-using-kibana" class="md-nav__link">
+    Create an index and index a document using Kibana
+  </a>
+  
+    <nav class="md-nav" aria-label="Create an index and index a document using Kibana">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-document" class="md-nav__link">
+    Sample document
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-the-input-data" class="md-nav__link">
+    Modify the input data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#index-many-documents-using-the-bulk-api" class="md-nav__link">
+    Index many documents using the bulk API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/bi-labor/es-mssql/edit/master/docs/Elasticsearch/exercise3.md" title="Oldal szerkesztése" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="exercise-3-initializing-elasticsearch">Exercise 3: Initializing Elasticsearch<a class="headerlink" href="#exercise-3-initializing-elasticsearch" title="Permanent link">&para;</a></h1>
+<p>Now that both <em>Elasticsearch</em> and <em>Kibana</em> are operational, let us create the necessary indices for us to work with in the following exercises.</p>
+<h2 id="index-a-document-via-powershell">Index a document via <em>PowerShell</em><a class="headerlink" href="#index-a-document-via-powershell" title="Permanent link">&para;</a></h2>
+<p>First, we are going to use <em>Elasticsearch's</em> REST API through <em>PowerShell</em>.</p>
+<ol>
+<li>
+<p>To index a document in <em>Elasticsearch</em> issue the following command.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">Invoke-WebRequest</span> <span class="s1">&#39;http://localhost:9200/test/_doc/1?pretty&#39;</span> <span class="n">-Method</span> <span class="n">Put</span> <span class="n">-ContentType</span> <span class="s1">&#39;application/json&#39;</span> <span class="n">-Body</span> <span class="s1">&#39;{ &quot;name&quot;: &quot;John Doe&quot; }&#39;</span> <span class="n">-UseBasicParsing</span><span class="p">).</span><span class="n">Content</span>
+</code></pre></div>
+
+<p>This way we inserted a document of type <code>_doc</code> into the index called <code>test</code> with id <code>1</code>. The response JSON should state <code>"result": "created"</code>.</p>
+</li>
+<li>
+<p>Query the document with the following command.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">Invoke-WebRequest</span> <span class="s1">&#39;http://localhost:9200/test/_doc/1?pretty&#39;</span> <span class="n">-Method</span> <span class="n">Get</span> <span class="n">-UseBasicParsing</span><span class="p">).</span><span class="n">Content</span>
+</code></pre></div>
+
+<p>The result JSON tells us the name of the index, the id of the document, as well as the full document we inserted in the <code>_source</code> field.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;_index&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;_type&quot;</span><span class="p">:</span> <span class="s2">&quot;_doc&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;_version&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;_seq_no&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;_primary_term&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;found&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;_source&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</li>
+</ol>
+<h2 id="create-an-index-and-index-a-document-using-kibana">Create an index and index a document using Kibana<a class="headerlink" href="#create-an-index-and-index-a-document-using-kibana" title="Permanent link">&para;</a></h2>
+<p>In this part of the exercise we are going to create an index for documents containing information about people working in the fast food industry. Here is a sample document.</p>
+<h3 id="sample-document">Sample document<a class="headerlink" href="#sample-document" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;female&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;firstName&quot;</span><span class="p">:</span> <span class="s2">&quot;Evelyn&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;lastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Petersen&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;age&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+  <span class="nt">&quot;phone&quot;</span><span class="p">:</span> <span class="s2">&quot;+1 (900) 503-3892&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;zipCode&quot;</span><span class="p">:</span> <span class="mi">63775</span><span class="p">,</span>
+    <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Lynn&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;street&quot;</span><span class="p">:</span> <span class="s2">&quot;Clarkson Avenue&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;houseNumber&quot;</span><span class="p">:</span> <span class="mi">503</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;salary&quot;</span><span class="p">:</span> <span class="mi">87217</span><span class="p">,</span>
+  <span class="nt">&quot;company&quot;</span><span class="p">:</span> <span class="s2">&quot;Subway&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;evelyn.petersen@subway.com&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;hired&quot;</span><span class="p">:</span> <span class="s2">&quot;09/29/2009&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>We are going to use <em>Kibana's</em> Dev Tools for this part of the exercise. Although it uses the same REST API that we used through <em>PowerShell</em>, it provides a more convenient GUI for us to use. In this <em>Dev tool</em> we can run queries. A query contains of (1) a http verb and an URL matching Elasticsearch' REST API, and then (2) a body as JSON.</p>
+<p><img alt="Kibana Dev Tools" src="../images/kibana-dev-tools.png" /></p>
+<ol>
+<li>
+<p>In <em>Kibana's</em> Dev Tools enter <code>PUT salaries</code> in the first line and then enter the following JSON starting on a new line. Then press the <em>Play</em> button in the top right corner of the editor.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;settings&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;number_of_shards&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;number_of_replicas&quot;</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;mappings&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;gender&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;keyword&quot;</span> <span class="p">},</span>
+      <span class="nt">&quot;address.state&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;keyword&quot;</span> <span class="p">},</span>
+      <span class="nt">&quot;company&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;keyword&quot;</span> <span class="p">},</span>
+      <span class="nt">&quot;hired&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;MM/dd/yyyy&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><img alt="Kibana create index" src="../images/kibana-create-index.png" /></p>
+<p>The settings we use here are the following.</p>
+<ul>
+<li>
+<p><code>settings</code>: We set the number of <em>shards</em> and <em>replicas</em> here. While settings the number of <em>shards</em> is not that important here, we must set the number of <em>replicas</em> to <strong>zero</strong> in order to have an index with <strong>green</strong> <em>health</em> value. This is because <em>Elasticsearch</em> refuses to put a <em>shard</em> and its <em>replica</em> on the same node, and we only have a single node.</p>
+</li>
+<li>
+<p><code>mapping</code>: Mapping is the "schema" of the data. It is not necessary to set this, but when the data is ambiguous, Elasticsearch will make a choice how to interpret data, unless we specify the mapping.</p>
+<ul>
+<li>
+<p><code>gender</code>, <code>address.state</code>, <code>company</code>: These are values we know are only going to have a few select values (e.g. "male" and "female" for gender), therefore we do not want to allow <em>free text search</em> on them. We can help the system by specifying this.</p>
+</li>
+<li>
+<p><code>hired</code>: Although this is a date field, the date representation of our data is not standard — <em>Elasticsearch</em> wouldn't recognize it by itself. Therefore we have to explicitly specify the date format.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>We can check the indices with the <code>GET _cat/indices?v</code> query.</p>
+<p><img alt="Elasticsearch indices" src="../images/elasticsearch-indices.png" /></p>
+<div class="admonition note">
+<p>Note how the health of the <code>test</code> index is <strong>yellow</strong> and the health of the <code>salaries</code> index is <strong>green</strong>. That is because the default value for the number of <em>replicas</em> is <strong>1</strong>.</p>
+</div>
+</li>
+<li>
+<p>Insert the sample document into the created index. You can find the sample document <a href="#sample-document">here</a>.</p>
+<div class="highlight"><pre><span></span><code>POST salaries/_doc
+{
+  ... // the sample document comes here
+}
+</code></pre></div>
+
+<p>Executing the query will yield a similar result (in the right side of the window). This is the response of the POST query with the <code>id</code> of the document inserted.</p>
+<p><img alt="Elasticsearch created document" src="../images/elasticsearch-created-document.png" /></p>
+<p>We can use the <code>_id</code> value in the response to query the document.</p>
+<div class="highlight"><pre><span></span><code>GET salaries/_doc/eZSmaGkBig5GeeBFsFG6
+</code></pre></div>
+
+</li>
+</ol>
+<h2 id="modify-the-input-data">Modify the input data<a class="headerlink" href="#modify-the-input-data" title="Permanent link">&para;</a></h2>
+<p>Before we import the rest of the sample data, let us make some changes by adding your <strong>Neptun code</strong> as a prefix to some of the values:</p>
+<ul>
+<li>Each <code>gender</code> value shall be prefixed, e.g. <code>"gender":"NEPTUN female"</code></li>
+<li>
+<p>Each <code>company</code> value shall be prefixed, e.g. <code>"company":"NEPTUN McDonalds"</code></p>
+</li>
+<li>
+<p>Find the <code>salaries.json</code> file in the root of the repository. Open a <em>PowerShell</em> console here.</p>
+</li>
+<li>
+<p>Edit the following command by adding your Neptun code, then execute it in <em>PowerShell</em> (do NOT change the quotation marks, only edit the 6 characters of the Neptun code!):</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">Get-Content</span> <span class="p">.\</span><span class="n">salaries</span><span class="p">.</span><span class="n">json</span><span class="p">)</span> <span class="o">-replace</span> <span class="s1">&#39;&quot;gender&quot;:&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;gender&quot;:&quot;NEPTUN &#39;</span> <span class="o">-replace</span> <span class="s1">&#39;&quot;company&quot;:&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;company&quot;:&quot;NEPTUN &#39;</span> <span class="p">|</span> <span class="nb">Set-Content</span> <span class="p">.\</span><span class="n">salaries</span><span class="p">.</span><span class="n">json</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Verify the results, it should look similar (with your own Neptun code):</p>
+<p><img alt="Replacements in the document" src="../images/replace-data-result.png" /></p>
+<p>The file must be a valid JSON! Please double check the quotations marks around the values. If the result is not correct, you can revert the change made to this file using git (<code>git checkout HEAD -- salaries.json</code>), and then retry.</p>
+<p>The modified file shall be uploaded as part of the submission.</p>
+<div class="admonition warning">
+<p class="admonition-title">IMPORTANT</p>
+<p>Adding your Neptun code is a mandatory step. It will be displayed on visualizations created in the following exercises.</p>
+</div>
+</li>
+</ul>
+<h2 id="index-many-documents-using-the-bulk-api">Index many documents using the <em>bulk</em> API<a class="headerlink" href="#index-many-documents-using-the-bulk-api" title="Permanent link">&para;</a></h2>
+<p>And now let us index these documents.</p>
+<ol>
+<li>
+<p>We can add multiple documents to the index using the <em>bulk</em> API. Issue the following command from the <em>PowerShell</em> window in the folder of the starter solution.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Invoke-WebRequest</span> <span class="s1">&#39;http://localhost:9200/_bulk&#39;</span> <span class="n">-Method</span> <span class="n">Post</span> <span class="n">-ContentType</span> <span class="s1">&#39;application/json&#39;</span> <span class="n">-InFile</span> <span class="p">.\</span><span class="n">salaries</span><span class="p">.</span><span class="n">json</span> <span class="n">-UseBasicParsing</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Verify the response whether there are any errors. You will see a similar message if everything is OK (note the <em>errors</em> in the response):</p>
+<p><img alt="Elasticsearch indices" src="../images/bulk-import-ok.png" /></p>
+<p>If you see a similar error, it means the changes in the source file resulted in an invalid json file.</p>
+<p><img alt="Elasticsearch indices" src="../images/bulk-import-parse-error.png" /></p>
+<p>If this happens, you need to start over:</p>
+<ol>
+<li>
+<p>Delete the <code>salaries</code> index by executing a <code>DELETE salaries</code> request in Kibana.</p>
+</li>
+<li>
+<p>Go back to the index creation step, then repeat the index creation and indexing of the single document.</p>
+</li>
+<li>
+<p>Reset the changes made to the <code>salaries.json</code> file, and retry the replacement with special care regarding the quotation marks.</p>
+</li>
+<li>
+<p>Now retry the bulk index request.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Execute a search using query <code>GET salaries/_search</code> (using Kibana). This will return a few documents, and also let us know how many documents there are (total number matching the query will be the total number of documents, due to the lack of filtering in this search). There should be <strong>1101</strong> documents.</p>
+<p><img alt="Elasticsearch indices" src="../images/kibana-search-total.png" /></p>
+<p>If you see fewer documents, you need to use the Refresh API to make sure Elasticsearch is finished with all indexing operations. To trigger this, execute a <code>POST salaries/_refresh</code> request.</p>
+</li>
+</ol>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+
+<!-- Application footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        
+        <div class="md-footer-copyright__highlight">
+          Copyright &copy; BME AUT
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "search.config.lang": "hu", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["tabs"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
