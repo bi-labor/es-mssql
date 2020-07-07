@@ -101,7 +101,7 @@ Specifying `"size": 0` means that we do not want any matching documents, we only
 
 This query first groups the documents by the `gender` value and then calculates the average of the `salary` values within the groups.
 
-Based on the results, what is the average salary of women? Type your answer into `ex4-c.txt`. Include only the number and nothing else in this text file. (You do _not_ need to save the query JSON here.)
+Based on the results, what is the average salary of women? Type your answer into `ex4-c.txt`. Include only the number and nothing else in this text file (e.g. `123.45`). (You do _not_ need to save the query JSON here.)
 
 ## Next exercise
 

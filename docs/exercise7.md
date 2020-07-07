@@ -37,7 +37,7 @@ When all three visualizations are ready, create a new dashboard and add the visu
 
 1. Save the dashboard (just like you saved each visualization).
 
-1. Create a screenshot of this dashboard and save it as `ex7.png`. The screenshot should contain the entire browser window, the time, and the computer and username (as previously).
+1. Create a screenshot of this dashboard and save it as `ex7.png`. The screenshot should show the entire dashboard with all three visualizations visible.
 
 1. Export the dashboard _ndjson_ file as `ex7.ndjson`, as done previously, but this time also **include related objects** (this is a setting in Kibana when exporting).
 

@@ -1,6 +1,6 @@
 # Exercise 6: _Elasticsearch_ queries — practice
 
-The purpose of this exercise is to practice the search and aggregation capabilities of _Elasticsearch_. Feel free to take inspiration from the solutions in [exercise 4](exercise4.md). Please use the _Dev Tools_ of Kibana to creating and testing of the queries.
+The purpose of this exercise is to practice the search and aggregation capabilities of _Elasticsearch_. Feel free to take inspiration from the solutions in [exercise 4](exercise4.md). Please use the _Dev Tools_ of Kibana for creating and testing of the queries.
 
 As in exercise 4, you are required to save the **query** JSON as part of the exercise. Please refer to exercise 4 for an explanation of what the _query JSON_ is.
 

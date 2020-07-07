@@ -2,7 +2,7 @@
 
 The purpose of this exercise is to use the data visualization capabilities of _Kibana_.
 
-The following exercises will ask you to create visualizations, then export their Kibana description as JSON, as well as create a screenshot of the visualization itself. When creating the screenshot, follow the same requirements as before (include entire browser window, show time and username).
+The following exercises will ask you to create visualizations, then export their Kibana description as JSON, as well as create a screenshot of the visualization itself. When creating the screenshot, make sure the entire visualization with the legend is visible.
 
 ## Create an Index pattern
 
@@ -36,7 +36,7 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
    ![Kibana search source](./images/exercises/kibana-search-source.png)
 
-1. Under the _Metrics_ setting set _People hired NEPTUN_ (with **your Neptun code**) as the _Custom Label_. (Expand the _Y-axis_ label to get the configuration options.)
+1. Under the _Metrics_ setting set _People hired_ as the _Custom Label_. (Expand the _Y-axis_ label to get the configuration options.)
 
    ![Kibana Metrics](./images/exercises/kibana-a-metrics.png)
 
@@ -44,8 +44,8 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
    - _Aggregation_ should be _Date Histogram_
    - _Field_ should be `hired`
-   - _Minimum nterval_ should be _Monthly_
-   - _Custom Label_ should be _Month NEPTUN_, make sure to include **your Neptun** code here.
+   - _Minimum interval_ should be _Monthly_
+   - _Custom Label_ should be _Month_.
 
    ![Kibana Buckets](./images/exercises/kibana-a-buckets.png)
 
@@ -53,7 +53,7 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
    ![Kibana filter](./images/exercises/kibana-a-filter.png)
 
-1. The configuration of the visualization is now ready. You see the preview of the visualization to the right. Create a screenshot of the result (note the requirements!) and save it as `ex5-a.png`.
+1. The configuration of the visualization is now ready. You see the preview of the visualization to the right. Create a screenshot of the result and save it as `ex5-a.png`.
 
 1. Click on the _Save_ button at the top right corner, and save the visualization as `5_a`.
 
@@ -71,15 +71,15 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
 1. Select the previously created `salaries` index pattern as the search source.
 
-1. Under the _Buckets_ setting click _Add_ and select _Split Slices_ and set a _Terms_ aggregation on the `gender` field. As _Custom Label_ set _Gender NEPTUN_ and make sure to use **your own Neptun code**.
+1. Under the _Buckets_ setting click _Add_ and select _Split Slices_ and set a _Terms_ aggregation on the `gender` field. As _Custom Label_ set _Gender_.
 
    ![Kibana Buckets](./images/exercises/kibana-b-buckets-1.png)
 
-1. Within the _Buckets_ configuration area click on the _Add_ button and select _Split Slices_ with a _Range_ aggregation on the `age` field with the following ranges. Also add a custom label _Age NEPTUN_.
+1. Within the _Buckets_ configuration area click on the _Add_ button and select _Split Slices_ with a _Range_ aggregation on the `age` field with the following ranges. Also add a custom label _Age_.
 
    ![Kibana Buckets](./images/exercises/kibana-b-buckets-2.png)
 
-1. Create a screenshot of the resulting visualization (note the requirements!) and save it as `ex5-b.png`. Use the previous method to save and export the visualization. Save the exported file as `ex5-b.ndjson`.
+1. Create a screenshot of the resulting visualization and save it as `ex5-b.png`. Use the previous method to save and export the visualization. Save the exported file as `ex5-b.ndjson`.
 
 ## c) Show the distribution of the workers' locations on a map!
 
@@ -93,10 +93,10 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
    ![Kibana Options](./images/exercises/kibana-c-options.png)
 
-1. Create a screenshot of the result (remember the requirements!) and save it as `ex5-c.png`. Save and export the visualization. Save the exported file as `ex5-c.ndjson`.
+1. Create a screenshot of the result and save it as `ex5-c.png`. Save and export the visualization. Save the exported file as `ex5-c.ndjson`.
 
 ## Next exercise
 
-Verify that you created 3 screenshots with the requirements as in the previous exercises, and also exported the 3 visualizations!
+Verify that you created 3 screenshots and also exported the 3 visualizations!
 
 Next is [exercise 6](exercise6.md).

@@ -32,20 +32,19 @@ You need the following tools to complete this laboratory:
 
 ## Submitting your solution
 
-To complete this laboratory you are required to solve exercises and submit your work through GitHub. The detailed description of the process of submission is detailed [here](GitHub-usage.md). Deadline: you must complete and submit your solution no later than **April ~~20~~ 30, 2020, 23:59 CET**.
+To complete this laboratory you are required to solve exercises and submit your work through GitHub. The detailed description of the process of submission is detailed [here](GitHub-usage.md). Deadline: you must complete and submit your solution no later than **TBD**.
 
 While completing your exercises, please include the scripts, packages, projects, etc. in your submission. A starter submission is provided to you. Fill in the missing pieces there.
 
-> The exercises all highlight the `path` where you should put your solution. **Please follow these guidelines.** The submissions are checked automatically, and files and folders not adhering to the prescribed structure are not graded.
+> The exercises all highlight the `path` where you should put your solution. **Please follow these guidelines.** The submissions are checked automatically, and files and folders not adhering to the prescribed structure or content are not graded.
 
 ## Grading
 
-Follow the exercises in order. In order for an exercise to count as _completed_ you must finish **all** its subtasks successfully. The 3-hour laboratory class should be sufficient time to complete all exercises. The result will be graded as follows.
+Exercises 1 & 2 help you prepare the environment. Starting with exercise 3, **each exercise is worth one grade when completed successfully**. In order for an exercise to count as _successful_ you must finish _all_ its subtasks successfully. (E.g. if you complete exercises 3, 4 and 5 successfully, but there is an error in exercise 6, and you did not complete exercise 7, the resulting grade will be 3.)
 
-- For a sufficient grade (**2**) you must complete exercises **1** through **4**.
-- For a satisfactory grade (**3**) exercise **5** should be completed as well.
-- For a good grade (**4**) exercise **6** should be completed.
-- For a very good grade (**5**) **all** exercises should be completed.
+**You will receive an automatic feedback in GitHub when submitting your solution.** This feedback includes a "total", which is the number of successfully completed exercises; this is a preliminary grade, and it is subject to change by the instructor.
+
+**Your solution is expected to work in this automated evaluation environment**. Please take extra care following the exercise guidelines. The automated feedback will let you know if there is some error in your submission; you are required to fix these. The evaluation uses _GitHub Actions_. You have access to all the logs and the detailed result of every evaluation on the GitHub web interface. [This guide](GitHub-Actions-usage.md) helps you understand where to look for them.
 
 ## Exercises
 

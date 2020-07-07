@@ -37,7 +37,7 @@ First, we are going to use _Elasticsearch's_ REST API through _PowerShell_.
    }
    ```
 
-## Create an index and index many documents using the _bulk_ API
+## Create an index and index a document using Kibana
 
 In this part of the exercise we are going to create an index for documents containing information about people working in the fast food industry. Here is a sample document.
 
@@ -117,6 +117,8 @@ We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although
    }
    ```
 
+   Executing the query will yield a similar result (in the right side of the window). This is the response of the POST query with the `id` of the document inserted.
+
    ![Elasticsearch created document](./images/exercises/elasticsearch-created-document.png)
 
    We can use the `_id` value in the response to query the document.
@@ -125,29 +127,62 @@ We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although
    GET salaries/_doc/eZSmaGkBig5GeeBFsFG6
    ```
 
-1. Add multiple documents to the index using the _bulk_ API. Issue the following command from the _PowerShell_ window in the folder of the starter solution.
+## Modify the input data
+
+Before we import the rest of the sample data, let us make some changes by adding your **Neptun code** as a prefix to some of the values:
+
+- Each `gender` value shall be prefixed, e.g. `"gender":"NEPTUN female"`
+- Each `company` value shall be prefixed, e.g. `"company":"NEPTUN McDonalds"`
+
+1. Find the `salaries.json` file in the root of the repository. Open a _PowerShell_ console here.
+
+1. Edit the following command by adding your Neptun code, then execute it in _PowerShell_ (do NOT change the quotation marks, only edit the 6 characters of the Neptun code!):
+
+```powershell
+(Get-Content .\salaries.json) -replace '"gender":"', '"gender":"NEPTUN ' -replace '"company":"', '"company":"NEPTUN ' | Set-Content .\salaries.json
+```
+
+1. Verify the results, it should look similar (with your own Neptun code):
+
+   ![Replacements in the document](./images/exercises/replace-data-result.png)
+
+   The file must be a valid JSON! Please double check the quotations marks around the values. If the result is not correct, you can revert the change made to this file using git (`git checkout HEAD -- salaries.json`), and then retry.
+
+> The modified file shall be uploaded as part of the submission.
+
+## Index many documents using the _bulk_ API
+
+And now let us index these documents.
+
+1. We can add multiple documents to the index using the _bulk_ API. Issue the following command from the _PowerShell_ window in the folder of the starter solution.
 
    ```powershell
    Invoke-WebRequest 'http://localhost:9200/_bulk' -Method Post -ContentType 'application/json' -InFile .\salaries.json -UseBasicParsing
    ```
 
-1. Execute a search using query `GET salaries/_search`. This will return a few documents, and also let us know how many documents there are (total number matching the query will be the total number of documents, due to the lack of filtering in this search). There should be **1101** documents.
+1. Verify the response whether there are any errors. You will see a similar message if everything is OK (note the _errors_ in the response):
+
+   ![Elasticsearch indices](./images/exercises/bulk-import-ok.png)
+
+   If you see a similar error, it means the changes in the source file resulted in an invalid json file.
+
+   ![Elasticsearch indices](./images/exercises/bulk-import-parse-error.png)
+
+   If this happens, you need to start over:
+
+   1. Delete the `salaries` index by executing a `DELETE salaries` request in Kibana.
+
+   1. Go back to the index creation step, then repeat the index creation and indexing of the single document.
+
+   1. Reset the changes made to the `salaries.json` file, and retry the replacement with special care regarding the quotation marks.
+
+   1. Now retry the bulk index request.
+
+1. Execute a search using query `GET salaries/_search` (using Kibana). This will return a few documents, and also let us know how many documents there are (total number matching the query will be the total number of documents, due to the lack of filtering in this search). There should be **1101** documents.
 
    ![Elasticsearch indices](./images/exercises/kibana-search-total.png)
 
    If you see fewer documents, you need to use the Refresh API to make sure Elasticsearch is finished with all indexing operations. To trigger this, execute a `POST salaries/_refresh` request.
-
-1. Create a screenshot of the result of the previous search requests as follows.
-
-   Save the screenshot file as `ex3.png` - overwrite the placeholder file with yours.
-
-   Please make sure that the screenshot is taken such that it
-
-   - includes the entire browser window and especially the result,
-   - contains the date and time when the screenshot was taken (e.g. including the clock form the taskbar)
-   - and includes the name of the machine you are working on (e.g. execute a `whoami` command from the command prompt).
-
-   ![Sample expected screenshot](images/exercises/kibana-sample-screenshot.png)
 
 ## Next exercise
 

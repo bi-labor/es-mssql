@@ -1,18 +1,6 @@
 # Submitting your work
 
-We are using GitHub for submitting the solutions. Your solution is to be submitted by uploading it to a GitHub repository, which repository is created through an URL included in the exercise. You must complete the exercises in this repository and upload the repository when finished. Your submission is completed by opening a _pull request_ and assigning it to your laboratory instructor.
-
-> **IMPORTANT** The requirements here are mandatory. Submissions not following these steps are not evaluated.
-
-## Short version, aka. TL;DR
-
-Please read the detailed description too. This short summary is to give you an overview and a chance to verify your submission quickly.
-
-1. You must complete your work in the repository created through the link in the exercise description.
-
-1. You need to work on a new branch, not on master. You may add any number of commits to the working branch, and do not forget to push at the end.
-
-1. You submit your solution for evaluation by opening a pull request and assigning it to your laboratory instructor.
+We are using GitHub for submitting the solutions. This guide explains how to use GitHub and pull requests.
 
 ## Starting your work: git checkout
 
@@ -111,7 +99,9 @@ Please read the detailed description too. This short summary is to give you an o
 
    ![GitHub create pull request](images/github/github-pull-request-eval-result.png)
 
-   > This evaluation may differ from the image. And it may take some time.
+   This evaluation may differ from the image. And it may take some time.
+
+   If you need more information about the evaluation and the results, _GitHub Actions_ can provide you more. See the short guide [here](GitHub-Actions-usage.md).
 
 1. If you are not satisfied with your work, you can make further changes. You only need to commit and push your changes continuing to work on the correct branch. Any changes pushed will re-trigger the evaluation of the _pull request_. We ask that you trigger **NO MORE THAN 5 evaluations**!
 
@@ -127,21 +117,11 @@ Please read the detailed description too. This short summary is to give you an o
 
 ## Questions and complaints regarding the final result
 
-Once your submission has been evaluated by the instructor, you may use the issue management feature of GitHub to raise questions or complaint. But remember, that in this case, you have support your question/complaint with proof (e.g. show how you tested your solution and prove that it worked). If you do not provide evidence to support your claim, we will not consider it.
+If you have questions on concerns regarding the automated evaluation, use the pull request for communication with the instructor by asking questions via comments. To let the instructor know you have questions, please use `@akosdudas` [mention](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#mentioning-people-and-teams) in the PR comment. This will automatically send an email notification.
 
-To submit your question or complaint, open a new issue:
+![GitHub PR asking questions](images/github/github-question-in-pr.png)
 
-1. Go to the related repository on GitHub web frontend.
-
-1. Click "Issues" and create a new one.
-
-1. Describe the nature of your problem, and also include the steps you took to verify your solution.
-
-1. Assign the issue to your instructor.
-
-   ![Create new GitHub issue](images/github/github-new-issue.png)
-
-Once we checked it, we will give you feedback here.
+Please note, that if you think the evaluation made a mistake, you are required to support your question/complaint with proof (e.g. show how you tested your solution and prove that it worked).
 
 ## Possible issues and their resolution
 
@@ -155,41 +135,12 @@ Go to www.github.com and after login you will see the list of your repositories 
 
 #### You got an email with "run failed" / the pull request contains "checks have failed"
 
-After each commit you push, a minimal set of tests are executed for verification. This email tells you that these checks have failed.You must fix these. In the email you will find a link "View results". In the pull request, there is a "Details" link. You can check the logs of the execution here and look for red X-es marking the errors.
+After each commit you push, a minimal set of tests are executed for verification. This email tells you that these checks have failed. You must fix these. In the email you will find a link "View results". In the pull request, there is a "Details" link. You can check the logs of the execution here and look for red X-es marking the errors.
 
-#### You do not know that is the problem in your solution
+#### You do not know that is the problem in your solution / you do no not understand the error message received
 
-It is not our goal with the evaluation to explain the problems. It is part of your work to evaluate and test your own solution.
-
-#### You do no not understand the error message received
-
-The message is likely from the actual execution of your work and comes from the tools used.
-
-#### You forgot to branch / You cannot create the pull request
-
-If you failed to create the branch for the solution, or created it too late, you will have a hard time opening the pull request. A pull request requires a branch with changes. To overcome this, follow the steps below.
-
-1. Create the new branch. Switch to this branch.
-1. You need to make a change on this branch. Add a meaningless change somewhere, like a newline, or an empty new file.
-1. Commit this change and push this branch.
-1. Now you can open the pull request. When opening the pull request add a note explaining that you used this approach.
-
-It may be harder for the instructor to evaluate your submission due to not seeing the accumulated changes. This may be rewarded with minus points.
-
-#### You do not know whom to assign the pull request
-
-The laboratory instructor should have given you a GitHub name to assign to. If you do not know this, assign the pull request to `akosdudas`. In case this was not due to the error of the instructor, the extra work you have us do will be rewarded with minus points.
+It is not our goal with the evaluation to explain the problems exactly. It is part of your work to evaluate and test your own solution. The error message can also come from the actual execution of your work and comes from the tools used.
 
 #### You finished your work but got no evaluation / grade
 
 Did you: commit? push? open the pull request? assign it?
-
-## Things you MUST NOT do
-
-You may be familiar with git and pull requests and you may think of the following actions. We ask that you **DO NOT** do any of the followings as we consider them as cheating.
-
-- **DO NOT** force push
-- **DO NOT** edit the evaluation yaml files
-- **DO NOT** use more branches or merge branches, only have a master and a solution branch
-- **DO NOT** merge your pull request
-- **DO NOT** delete anything from the pull request comments
