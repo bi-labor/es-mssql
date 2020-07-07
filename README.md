@@ -1,5 +1,20 @@
-# Üzleti intelligencia laboratórium Elasticsearch labor
+# Business Intelligence Laboratory exercises
 
-A `docs` mappa kerül publikálása GitHub Pages-zel: <https://bi-labor.github.io/Elasticsearch/>
+![Build docs](https://github.com/bi-labor/es-mssql/workflows/Build%20docs/badge.svg?branch=master)
 
-Az `ahk` mappában találhatóak az AHK kompatibilis automata ellenőrzők. ![](https://github.com/bi-labor/Elasticsearch/workflows/Build%20Docker%20image%20for%20AHK/badge.svg)
+This repository contains laboratory exercises for the following course topics:
+
+- Elasticsearch laboratory
+- Microsoft SQL Server Business Intelligence laboratory
+
+The exercise documentation is build with MkDocs and published on GitHub Pages at <https://bi-labor.github.io/es-mssql/>
+
+#### Render website locally
+
+1. Open a PowerShell console at the repository root
+
+1. `docker run -it --rm -p 8000:8000 -v ${PWD}:/src --workdir /src python:3.8-slim /bin/bash -c "pip install -r requirements_docs.txt;mkdocs serve --dev-addr=0.0.0.0:8000"`
+
+1. Open <http://localhost:8000> in a browser
+
+1. Edit the Markdown and it will trigger automatic update in the browser
