@@ -26,11 +26,7 @@ In this exercise you are required to create a new report using Reporting Service
 
 2. Include a screenshot of the **report** in file `ex6.png`.
 
-   Please make sure that the screenshot is taken such that it
-
-   - includes entire window of Visual Studio, not just the report preview,
-   - contains the date and time when the screenshot was taken (e.g. including the clock form the Start menu)
-   - and includes the name of the machine you are working on (e.g. execute a `whoami` command from the command prompt).
+   Please make sure that the screenshot is taken such that relevant parts of the report are all visible (title, table with Neptun codes, ratings, cover images). See the sample above.
 
 ## Submit your solution
 

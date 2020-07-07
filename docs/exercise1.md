@@ -1,6 +1,31 @@
 # Exercise 1: Get the starter solution
 
-1. Open the following URL and accept the assignment to get your own repository: <https://classroom.github.com/a/e9QliRGi>
+## Submission requirements
+
+We are using GitHub for submitting the solutions:
+
+1. You must complete your work in the **GitHub repository created through the link** (see below).
+
+1. You need to **work on a new branch**, not on _master_. You may add any number of commits to the working branch.
+
+1. Submit your solution for **evaluation by opening a pull request**.
+
+   - Opening the pull request, and any subsequent commit, will trigger an **automatic evaluation** of your work. You will get the result as a comment in the PR.
+   - There is limited capacity for executing these automatic evaluations. Therefore you are limited to **5 evaluations**. Further evaluations will be penalized. To stop automatic evaluation, close the PR, continue your work, push more commits, then open a new PR.
+
+1. When you are satisfied with the results, **assign the PR** to your laboratory instructor (`akosdudas` on GitHub). This assignment is the final submission.
+
+   - You must assign the pull request, because this is how we know, you are ready and do not wish to make any more changes. Do not assign the pull request until you are finished!
+
+1. If you have a **question** regarding the automated evaluation, **use the pull request for communication**, and use `@akosdudas` mention in the comment text.
+
+> **IMPORTANT** These requirements are mandatory. Submissions not following these steps are not evaluated.
+>
+> If GitHub and pull requests are unfamiliar to you, please read the [detailed guidelines](GitHub-usage.md).
+
+## Checking out your repository
+
+1. Open the following URL and accept the assignment to get your own repository: <TBD>
 
 1. Wait for the repository creation to complete, then check out the repository.
 
@@ -18,7 +43,7 @@
 
 1. Open the CSV files to check their contents.
 
-   > You will work with these datasets, hence familiarize yourself with their structure and content.
+   > You will work with these datasets. Familiarize yourself with their structure and content.
 
 ## Next exercise
 

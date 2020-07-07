@@ -18,14 +18,9 @@ Your task is to import the remaining two CSV files using Integration Services in
    - The **ratings** dataset contains invalid values: there are rows where the value is **0**. These should be skipped using a **Conditional split** component.
    - It is best to separate the two CSV import into different _data flows_ within the same _control flow_ process.
 
-1. Include proof of the successful imports by taking two screenshots of the **database table contents** after successful execution of the ETL process as `ex5_books.png` and `ex5_ratings.png`.
+1. Include proof of the successful import by taking a screenshots of the **books database table contents** after successful execution of the ETL process as `ex5.png`.
 
-   Please make sure that the screenshot is taken such that both
-
-   - include the database name (which is your Neptun code) from the _Object explorer_ window,
-   - contain sample rows to verify the result of the ETL process,
-   - contain the date and time when the screenshot was taken (e.g. including the clock form the Start menu)
-   - and include the name of the machine you are working on (e.g. execute a `whoami` command from the command prompt).
+   Please make sure that the screenshot is taken such that it includes the database name (which is your Neptun code) from the _Object explorer_ window, and includes a few sample records with the Neptun code clearly visible.
 
 ## Next exercise
 

@@ -17,7 +17,7 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
    - Specify the connection settings:
      - Use `ADO.NET` connection type.
      - Add a new connection using the dropdown. This will open a new dialog, where you need to click on the _New_ button again to add a new connection. Use the same connection settings (address and authentication) as before. When you configured the connection properties, make sure to press the _Test_ button to verify the settings.
-   - Specify a `truncate table <tablename>` [sql statement](https://docs.microsoft.com/en-us/sql/t-sql/statements/truncate-table-transact-sql?view=sql-server-2017) to prune the table contents.
+   - Specify a `truncate table <tablename>` [sql statement](https://docs.microsoft.com/en-us/sql/t-sql/statements/truncate-table-transact-sql?view=sql-server-2017) to prune the table contents. The sql command should _NOT_ contain the database name; that is already configured in the connection manager.
 
    ![SQL statement task settings](images/exercise/is-create-sql-connection.png)
 
@@ -102,8 +102,6 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
 
 1. Run the ETL process by using the _Start_ button on the toolbar of Visual Studio.
 
-   > Note, that the execution may take a while, if the amount of memory is limited (e.g. in the BME cloud). It may help to close memory-hog processes (e.g. browsers).
-
    Verify that the execution succeeded. If not, see [this guide](mssql-bi-software-intro.md) for debugging and resolving typical issues.
 
 1. If the process succeeded, verify the **contents of the table** using SQL Server Management Studio. Verify that you **added your Neptun code prefix** to the Country names.
@@ -112,11 +110,7 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
 
    Then create a screenshot of the table contents. Save the screenshot file as `ex3.png` - overwrite the placeholder file with yours.
 
-   Please make sure that the screenshot is taken such that it
-
-   - includes the database name (which is your Neptun code) from the _Object explorer_ window,
-   - contains the date and time when the screenshot was taken (e.g. including the clock form the Start menu)
-   - and includes the name of the machine you are working on (e.g. execute a `whoami` command from the command prompt).
+   Please make sure that the screenshot is taken such that it includes the database name (which is your Neptun code) from the _Object explorer_ window, and includes a few sample records with the Neptun code clearly visible.
 
    ![Sample expected screenshot](images/exercise/users-table-verify-content.png)
 
