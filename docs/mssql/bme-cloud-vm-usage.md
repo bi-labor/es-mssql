@@ -10,4 +10,5 @@ You will need an RDP client to connect to the could VM.
 
 Please note, that although being installed already, you may need to [log into Visual Studio](https://visualstudio.microsoft.com/vs/support/community-edition-expired-buy-license/) with a Microsoft account (e.g. your @edu.bme.hu account).
 
-Please also note that the performance of the VM depends on the usage of the cloud. You may experience slowdown compared to a performant machine. The exercises can be solved on the VM though in due time (we have tested it).
+!!! note "VM performance"
+    Please also note that the performance of the VM depends on the usage of the cloud. You may experience slowdown compared to a performant machine. The exercises can be solved on the VM though in due time (we have tested it).

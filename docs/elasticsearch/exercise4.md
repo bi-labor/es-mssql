@@ -1,12 +1,14 @@
-# Exercise 4: _Elasticsearch_ queries
+# Exercise 4: Elasticsearch queries
 
 The purpose of this exercise is to use the search and aggregation capabilities of _Elasticsearch_ to answer questions of the data imported previously.
 
-You will be requested to save the **query** JSON in the following exercises. The image below shows you what that means (i.e. the **VALID** JSON that is sent to Elasticsearch, **WITHOUT** the header part; **NOT** the result JSON that is on the right side in Kibana).
+!!! note "Query JSON"
+    You will be requested to save the **query** JSON in the following exercises. The image below shows you what that means (i.e. the **VALID** JSON that is sent to Elasticsearch, **WITHOUT** the header part; **NOT** the result JSON that is on the right side in Kibana).
 
-![Kibana query parts](./images/exercises/kibana-query-parts.png)
+    ![Kibana query parts](images/kibana-query-parts.png)
 
-Please use the [search syntax](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-body.html) of Elasticsearch that defines the criteria in JSON body. Do _not_ use the URL query method filtering.
+!!! note "Search syntax"
+    Please use the [search syntax](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-body.html) of Elasticsearch that defines the criteria in JSON body. Do _not_ use the URL query method filtering.
 
 All of the following queries are sent to the `salaries/_search` endpoint with a `GET` method. This means that the **first line in _Kibana Dev Tools_ will be `GET salaries/_search`** for all of them.
 
@@ -45,7 +47,10 @@ Change the previous query:
   }
   ```
 
-Execute this query and verify the results. Save the final query JSON as `ex4-a.json`.
+Execute this query and verify the results.
+
+!!! example "SUBMISSION"
+    Save the final query JSON as `ex4-a.json`.
 
 ## b) Who are the top **5** workers at _McDonalds_ aged between **18** and **30** with the best salaries?
 
@@ -71,7 +76,10 @@ The difference between this query and the previous one is that we have to apply 
 - The `age` must be between **18** and **30**.
 - The `company` must be _McDonalds_.
 
-Execute this query and verify the results. Save the final query JSON as `ex4-b.json`.
+Execute this query and verify the results.
+
+!!! example "SUBMISSION"
+    Save the final query JSON as `ex4-b.json`.
 
 ## c) Are there more men or women working for these companies? Is there a difference between the average salaries?
 
@@ -101,8 +109,5 @@ Specifying `"size": 0` means that we do not want any matching documents, we only
 
 This query first groups the documents by the `gender` value and then calculates the average of the `salary` values within the groups.
 
-Based on the results, what is the average salary of women? Type your answer into `ex4-c.txt`. Include only the number and nothing else in this text file (e.g. `123.45`). (You do _not_ need to save the query JSON here.)
-
-## Next exercise
-
-Next is [exercise 5](exercise5.md).
+!!! example "SUBMISSION"
+    Based on the results, what is the average salary of women? Type your answer into `ex4-c.txt`. Include only the number and nothing else in this text file (e.g. `123.45`). (You do _not_ need to save the query JSON here.)

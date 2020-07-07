@@ -1,4 +1,4 @@
-# GitHub Actions guide
+# GitHub Actions
 
 The automatic evaluation of your submissions uses [GitHub Actions](https://github.com/features/actions). It is a CI/CD and workflow automation platform that enables us to execute and test your code in a virtual environment.
 
