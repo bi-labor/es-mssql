@@ -17,7 +17,7 @@
     
     
       
-        <title>Exercise 6: Elasticsearch queries — practice - VIAUMB00 Business Intelligence Laboratory</title>
+        <title>Exercise 5: Kibana visualizations - VIAUMB00 Business Intelligence Laboratory</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercise-6-elasticsearch-queries-practice" class="md-skip">
+        <a href="#exercise-5-kibana-visualizations" class="md-skip">
           Kihagyás
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Exercise 6: Elasticsearch queries — practice
+              Exercise 5: Kibana visualizations
             
           </span>
         </div>
@@ -150,7 +150,9 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -172,7 +174,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../elasticsearch/index.md" class="md-tabs__link">
+        <a href="../" class="md-tabs__link md-tabs__link--active">
           Elasticsearch
         </a>
       
@@ -325,10 +327,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Elasticsearch
@@ -352,8 +356,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../elasticsearch/index.md" title="None" class="md-nav__link">
-      None
+    <a href="../" title="Elasticsearch laboratory" class="md-nav__link">
+      Elasticsearch laboratory
     </a>
   </li>
 
@@ -364,8 +368,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise1.md" title="None" class="md-nav__link">
-      None
+    <a href="../exercise1/" title="Exercise 1: Get the starter solution" class="md-nav__link">
+      Exercise 1: Get the starter solution
     </a>
   </li>
 
@@ -376,8 +380,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise2.md" title="None" class="md-nav__link">
-      None
+    <a href="../exercise2/" title="Exercise 2: Initializing Elasticsearch and Kibana" class="md-nav__link">
+      Exercise 2: Initializing Elasticsearch and Kibana
     </a>
   </li>
 
@@ -388,8 +392,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise3.md" title="None" class="md-nav__link">
-      None
+    <a href="../exercise3/" title="Exercise 3: Initializing Elasticsearch" class="md-nav__link">
+      Exercise 3: Initializing Elasticsearch
     </a>
   </li>
 
@@ -400,8 +404,95 @@
 
 
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise4.md" title="None" class="md-nav__link">
-      None
+    <a href="../exercise4/" title="Exercise 4: Elasticsearch queries" class="md-nav__link">
+      Exercise 4: Elasticsearch queries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Exercise 5: Kibana visualizations
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Exercise 5: Kibana visualizations" class="md-nav__link md-nav__link--active">
+      Exercise 5: Kibana visualizations
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-index-pattern" class="md-nav__link">
+    Create an Index pattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-how-many-people-did-the-companies-hire-each-month-between-2010-and-2016-vertical-bar-chart" class="md-nav__link">
+    a) How many people did the companies hire each month between 2010 and 2016? (vertical bar chart)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-show-the-gender-and-age-distribution-of-the-workers-pie-chart" class="md-nav__link">
+    b) Show the gender and age distribution of the workers! (pie chart)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-show-the-distribution-of-the-workers-locations-on-a-map" class="md-nav__link">
+    c) Show the distribution of the workers' locations on a map!
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exercise6/" title="Exercise 6: Elasticsearch queries — practice" class="md-nav__link">
+      Exercise 6: Elasticsearch queries — practice
     </a>
   </li>
 
@@ -412,32 +503,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise5.md" title="None" class="md-nav__link">
-      None
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise6.md" title="None" class="md-nav__link">
-      None
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise7.md" title="None" class="md-nav__link">
-      None
+    <a href="../exercise7/" title="Exercise 7: Kibana visualizations — practice" class="md-nav__link">
+      Exercise 7: Kibana visualizations — practice
     </a>
   </li>
 
@@ -602,6 +669,44 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-index-pattern" class="md-nav__link">
+    Create an Index pattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-how-many-people-did-the-companies-hire-each-month-between-2010-and-2016-vertical-bar-chart" class="md-nav__link">
+    a) How many people did the companies hire each month between 2010 and 2016? (vertical bar chart)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-show-the-gender-and-age-distribution-of-the-workers-pie-chart" class="md-nav__link">
+    b) Show the gender and age distribution of the workers! (pie chart)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-show-the-distribution-of-the-workers-locations-on-a-map" class="md-nav__link">
+    c) Show the distribution of the workers' locations on a map!
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -612,7 +717,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/bi-labor/es-mssql/edit/master/docs/Elasticsearch/exercise6.md" title="Oldal szerkesztése" class="md-content__button md-icon">
+                  <a href="https://github.com/bi-labor/es-mssql/edit/master/docs/elasticsearch/exercise5.md" title="Oldal szerkesztése" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -620,15 +725,113 @@
                   
                 
                 
-                <h1 id="exercise-6-elasticsearch-queries-practice">Exercise 6: Elasticsearch queries — practice<a class="headerlink" href="#exercise-6-elasticsearch-queries-practice" title="Permanent link">&para;</a></h1>
-<p>The purpose of this exercise is to practice the search and aggregation capabilities of <em>Elasticsearch</em>. Feel free to take inspiration from the solutions in <a href="../exercise4/">exercise 4</a>. Please use the <em>Dev Tools</em> of Kibana for creating and testing of the queries.</p>
-<p>a) Who are the <strong>3</strong> youngest people?</p>
-<p>b) Who are the <strong>3</strong> youngest people working at <em>KFC</em> earning at least <strong>80000</strong> USD per year?</p>
-<p>c) What is the average age of the workers at the different companies?</p>
+                <h1 id="exercise-5-kibana-visualizations">Exercise 5: Kibana visualizations<a class="headerlink" href="#exercise-5-kibana-visualizations" title="Permanent link">&para;</a></h1>
+<p>The purpose of this exercise is to use the data visualization capabilities of <em>Kibana</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Screenshots</p>
+<p>The following exercises will ask you to create visualizations, then export their Kibana description as JSON, as well as create a screenshot of the visualization itself. When creating the screenshot, make sure the <strong>entire visualization with the legend</strong> is visible.</p>
+</div>
+<h2 id="create-an-index-pattern">Create an Index pattern<a class="headerlink" href="#create-an-index-pattern" title="Permanent link">&para;</a></h2>
+<p>Our first step is to tell <em>Kibana</em> which indexes it should consider when creating the visualizations.</p>
+<ol>
+<li>
+<p>Click on the <em>Visualize</em> tab on the left side menu.</p>
+<p><img alt="Kibana Visualize" src="../images/kibana-visualize.png" /></p>
+<p>When opening this page the first time, you will be redirected to the <em>Management</em> / <em>Index patterns</em> configuration page to create a new <em>index pattern</em>.</p>
+</li>
+<li>
+<p>Enter the index name — <code>salaries</code> — as the index pattern. Make sure <em>Kibana</em> says <em>Success! Your pattern matches 1 index</em>, and click <em>Next step</em>.</p>
+<p><img alt="Kibana index pattern" src="../images/kibana-index-pattern-1.png" /></p>
+</li>
+<li>
+<p>Select <em>I don't want to use the Time Filter</em> as <em>Time Filter field name</em> since we are not going to use this function during the exercises. Click on <em>Create index pattern</em>.</p>
+<p><img alt="Kibana index pattern" src="../images/kibana-index-pattern-2.png" /></p>
+</li>
+<li>
+<p>Now click on the <em>Visualize</em> tab again to see the following.</p>
+<p><img alt="Kibana create first visualization" src="../images/kibana-create-first-visualization.png" /></p>
+</li>
+</ol>
+<h2 id="a-how-many-people-did-the-companies-hire-each-month-between-2010-and-2016-vertical-bar-chart">a) How many people did the companies hire each month between 2010 and 2016? (vertical bar chart)<a class="headerlink" href="#a-how-many-people-did-the-companies-hire-each-month-between-2010-and-2016-vertical-bar-chart" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Click on the <em>Create new visualization</em> button on the <em>Visualize</em> tab, and select <em>Vertical Bar</em>.</p>
+<p><img alt="Kibana vertical bar" src="../images/kibana-vertical-bar.png" /></p>
+</li>
+<li>
+<p>Select the previously created <code>salaries</code> index pattern as the search source.</p>
+<p><img alt="Kibana search source" src="../images/kibana-search-source.png" /></p>
+</li>
+<li>
+<p>Under the <em>Metrics</em> setting set <em>People hired</em> as the <em>Custom Label</em>. (Expand the <em>Y-axis</em> label to get the configuration options.)</p>
+<p><img alt="Kibana Metrics" src="../images/kibana-a-metrics.png" /></p>
+</li>
+<li>
+<p>Under the <em>Buckets</em> setting click <em>Add</em> then select <em>X-Axis</em>, and set the following.</p>
+<ul>
+<li><em>Aggregation</em> should be <em>Date Histogram</em></li>
+<li><em>Field</em> should be <code>hired</code></li>
+<li><em>Minimum interval</em> should be <em>Monthly</em></li>
+<li><em>Custom Label</em> should be <em>Month</em>.</li>
+</ul>
+<p><img alt="Kibana Buckets" src="../images/kibana-a-buckets.png" /></p>
+</li>
+<li>
+<p>In the top left corner click on the <em>Add a filter</em> link and use the following settings to create the filter. Click on <em>Save</em> to save the filter.</p>
+<p><img alt="Kibana filter" src="../images/kibana-a-filter.png" /></p>
+</li>
+<li>
+<p>The configuration of the visualization is now ready. You see the preview of the visualization to the right. Click on the <em>Save</em> button to save the visualization as <code>5_a</code>.</p>
+<p><img alt="Kibana save visualization" src="../images/kibana-a-save.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">SUBMISSION</p>
-<p>As in exercise 4, you are required to save the <strong>query</strong> JSON as part of this exercise. Please refer to exercise 4 for an explanation of what the <em>query JSON</em> is.</p>
-<p>Save the <em>query JSON</em> as <code>ex6-a.json</code>, <code>ex6-b.json</code> and <code>ex6-c.json</code> respectively.</p>
+<p>Create a screenshot of the visualization preview and save it as <code>ex5-a.png</code>.</p>
+<p>Click on the <em>Management</em> tab in the left side menu, and choose the <em>Saved Objects</em> option. Select and export the visualization you just saved. No need to include related objects. Save the downloaded file as <code>ex5-a.ndjson</code>.</p>
+<p><img alt="Kibana export" src="../images/kibana-export.png" /></p>
+</div>
+</li>
+</ol>
+<h2 id="b-show-the-gender-and-age-distribution-of-the-workers-pie-chart">b) Show the gender and age distribution of the workers! (pie chart)<a class="headerlink" href="#b-show-the-gender-and-age-distribution-of-the-workers-pie-chart" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Go back to the <em>Visualize</em> tab. It will likely load the last visualization. Click on the tab button again to get back to the landing page of all visualizations.</p>
+</li>
+<li>
+<p>Click on the <em>Create visualization</em> button on the <em>Visualize</em> tab, and select <em>Pie</em>.</p>
+</li>
+<li>
+<p>Select the previously created <code>salaries</code> index pattern as the search source.</p>
+</li>
+<li>
+<p>Under the <em>Buckets</em> setting click <em>Add</em> and select <em>Split Slices</em> and set a <em>Terms</em> aggregation on the <code>gender</code> field. As <em>Custom Label</em> set <em>Gender</em>.</p>
+<p><img alt="Kibana Buckets" src="../images/kibana-b-buckets-1.png" /></p>
+</li>
+<li>
+<p>Within the <em>Buckets</em> configuration area click on the <em>Add</em> button and select <em>Split Slices</em> with a <em>Range</em> aggregation on the <code>age</code> field with the following ranges. Also add a custom label <em>Age</em>.</p>
+<p><img alt="Kibana Buckets" src="../images/kibana-b-buckets-2.png" /></p>
+</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">SUBMISSION</p>
+<p>Create a screenshot of the resulting visualization and save it as <code>ex5-b.png</code>. Use the previous method to save and export the visualization. Save the exported file as <code>ex5-b.ndjson</code>.</p>
+</div>
+<h2 id="c-show-the-distribution-of-the-workers-locations-on-a-map">c) Show the distribution of the workers' locations on a map!<a class="headerlink" href="#c-show-the-distribution-of-the-workers-locations-on-a-map" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Create a new visualization of type <em>Region Map</em>. Select the previously created <code>salaries</code> index pattern as the search source.</p>
+</li>
+<li>
+<p>Under the <em>Buckets</em> setting add a <em>Shape field</em> with <em>Terms</em> aggregation on the <code>address.state</code> field. Make sure to set the <em>Size</em> value to at least 50.</p>
+<p><img alt="Kibana Buckets" src="../images/kibana-c-buckets.png" /></p>
+</li>
+<li>
+<p>Under <em>Options</em> / <em>Layer Settings</em> select <em>USA States</em> as <em>Vector map</em> and <em>FIPS 5-2 alpha code</em> as <em>Join field</em>.</p>
+<p><img alt="Kibana Options" src="../images/kibana-c-options.png" /></p>
+</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">SUBMISSION</p>
+<p>Create a screenshot of the result and save it as <code>ex5-c.png</code>. Save and export the visualization. Save the exported file as <code>ex5-c.ndjson</code>.</p>
 </div>
                 
               
@@ -648,6 +851,47 @@
 <footer class="md-footer">
 
   <!-- Link to previous and/or next page -->
+  
+  <div class="md-footer-nav">
+    <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+
+      <!-- Link to previous page -->
+      
+      <a href="../exercise4/" title="Exercise 4: Elasticsearch queries"
+        class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+        <div class="md-footer-nav__button md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </div>
+        <div class="md-footer-nav__title">
+          <div class="md-ellipsis">
+            <span class="md-footer-nav__direction">
+              Előző
+            </span>
+            Exercise 4: Elasticsearch queries
+          </div>
+        </div>
+      </a>
+      
+
+      <!-- Link to next page -->
+      
+      <a href="../exercise6/" title="Exercise 6: Elasticsearch queries — practice"
+        class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+        <div class="md-footer-nav__title">
+          <div class="md-ellipsis">
+            <span class="md-footer-nav__direction">
+              Következő
+            </span>
+            Exercise 6: Elasticsearch queries — practice
+          </div>
+        </div>
+        <div class="md-footer-nav__button md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+        </div>
+      </a>
+      
+    </nav>
+  </div>
   
 
   <!-- Further information -->

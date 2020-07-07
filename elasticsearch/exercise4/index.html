@@ -17,7 +17,7 @@
     
     
       
-        <title>Exercise 2: Initializing Elasticsearch and Kibana - VIAUMB00 Business Intelligence Laboratory</title>
+        <title>Exercise 4: Elasticsearch queries - VIAUMB00 Business Intelligence Laboratory</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercise-2-initializing-elasticsearch-and-kibana" class="md-skip">
+        <a href="#exercise-4-elasticsearch-queries" class="md-skip">
           Kihagyás
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Exercise 2: Initializing Elasticsearch and Kibana
+              Exercise 4: Elasticsearch queries
             
           </span>
         </div>
@@ -150,7 +150,9 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -172,7 +174,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../elasticsearch/index.md" class="md-tabs__link">
+        <a href="../" class="md-tabs__link md-tabs__link--active">
           Elasticsearch
         </a>
       
@@ -325,10 +327,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Elasticsearch
@@ -352,8 +356,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../elasticsearch/index.md" title="None" class="md-nav__link">
-      None
+    <a href="../" title="Elasticsearch laboratory" class="md-nav__link">
+      Elasticsearch laboratory
     </a>
   </li>
 
@@ -364,8 +368,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise1.md" title="None" class="md-nav__link">
-      None
+    <a href="../exercise1/" title="Exercise 1: Get the starter solution" class="md-nav__link">
+      Exercise 1: Get the starter solution
     </a>
   </li>
 
@@ -376,8 +380,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise2.md" title="None" class="md-nav__link">
-      None
+    <a href="../exercise2/" title="Exercise 2: Initializing Elasticsearch and Kibana" class="md-nav__link">
+      Exercise 2: Initializing Elasticsearch and Kibana
     </a>
   </li>
 
@@ -388,8 +392,95 @@
 
 
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise3.md" title="None" class="md-nav__link">
-      None
+    <a href="../exercise3/" title="Exercise 3: Initializing Elasticsearch" class="md-nav__link">
+      Exercise 3: Initializing Elasticsearch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Exercise 4: Elasticsearch queries
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Exercise 4: Elasticsearch queries" class="md-nav__link md-nav__link--active">
+      Exercise 4: Elasticsearch queries
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#select-in-elasticsearch" class="md-nav__link">
+    "SELECT *" in Elasticsearch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-who-are-the-top-5-workers-with-the-best-salaries" class="md-nav__link">
+    a) Who are the top 5 workers with the best salaries?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-who-are-the-top-5-workers-at-mcdonalds-aged-between-18-and-30-with-the-best-salaries" class="md-nav__link">
+    b) Who are the top 5 workers at McDonalds aged between 18 and 30 with the best salaries?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-are-there-more-men-or-women-working-for-these-companies-is-there-a-difference-between-the-average-salaries" class="md-nav__link">
+    c) Are there more men or women working for these companies? Is there a difference between the average salaries?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exercise5/" title="Exercise 5: Kibana visualizations" class="md-nav__link">
+      Exercise 5: Kibana visualizations
     </a>
   </li>
 
@@ -400,8 +491,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise4.md" title="None" class="md-nav__link">
-      None
+    <a href="../exercise6/" title="Exercise 6: Elasticsearch queries — practice" class="md-nav__link">
+      Exercise 6: Elasticsearch queries — practice
     </a>
   </li>
 
@@ -412,32 +503,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise5.md" title="None" class="md-nav__link">
-      None
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise6.md" title="None" class="md-nav__link">
-      None
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise7.md" title="None" class="md-nav__link">
-      None
+    <a href="../exercise7/" title="Exercise 7: Kibana visualizations — practice" class="md-nav__link">
+      Exercise 7: Kibana visualizations — practice
     </a>
   </li>
 
@@ -611,22 +678,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#option-1-start-elasticsearch-and-kibana-using-docker" class="md-nav__link">
-    Option 1: Start Elasticsearch and Kibana using Docker
+  <a href="#select-in-elasticsearch" class="md-nav__link">
+    "SELECT *" in Elasticsearch
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-2-start-elasticsearch-and-kibana-by-installing-them" class="md-nav__link">
-    Option 2: Start Elasticsearch and Kibana by installing them
+  <a href="#a-who-are-the-top-5-workers-with-the-best-salaries" class="md-nav__link">
+    a) Who are the top 5 workers with the best salaries?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check-that-the-systems-are-running" class="md-nav__link">
-    Check that the systems are running
+  <a href="#b-who-are-the-top-5-workers-at-mcdonalds-aged-between-18-and-30-with-the-best-salaries" class="md-nav__link">
+    b) Who are the top 5 workers at McDonalds aged between 18 and 30 with the best salaries?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-are-there-more-men-or-women-working-for-these-companies-is-there-a-difference-between-the-average-salaries" class="md-nav__link">
+    c) Are there more men or women working for these companies? Is there a difference between the average salaries?
   </a>
   
 </li>
@@ -643,7 +717,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/bi-labor/es-mssql/edit/master/docs/Elasticsearch/exercise2.md" title="Oldal szerkesztése" class="md-content__button md-icon">
+                  <a href="https://github.com/bi-labor/es-mssql/edit/master/docs/elasticsearch/exercise4.md" title="Oldal szerkesztése" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -651,95 +725,110 @@
                   
                 
                 
-                <h1 id="exercise-2-initializing-elasticsearch-and-kibana">Exercise 2: Initializing Elasticsearch and Kibana<a class="headerlink" href="#exercise-2-initializing-elasticsearch-and-kibana" title="Permanent link">&para;</a></h1>
-<p>The purpose of this exercise is to start <em>Elasticsearch</em> and <em>Kibana</em>. You have to options for running them:</p>
-<ol>
-<li>Using Docker</li>
-<li>Or installing them on your machine.</li>
-</ol>
-<p>In university computer laboratories use the Docker option. Otherwise chose the option best suited for you.</p>
-<h2 id="option-1-start-elasticsearch-and-kibana-using-docker">Option 1: Start <em>Elasticsearch</em> and <em>Kibana</em> using Docker<a class="headerlink" href="#option-1-start-elasticsearch-and-kibana-using-docker" title="Permanent link">&para;</a></h2>
-<p>If you have Docker, or you are working in the university computer laboratories, use this option.</p>
-<ol>
-<li>
-<p>Start Docker Desktop and wait for it to initialize.</p>
-</li>
-<li>
-<p><strong>Only in university computer laboratories</strong>: open Docker Desktop settings (right click on the Docker icon on the taskbar), and follow the instructions from the laboratory instructor to configure a proxy to be used by Docker.</p>
-</li>
-<li>
-<p>Open a command prompt or PowerShell console and test whether Docker is working: execute <code>docker version</code>, which should print version information for client and server.</p>
-</li>
-<li>
-<p>Locate the provided <code>docker-compose.yml</code> file in the checked out starter solution (located in the root of your git repository). Open it in a text editor of your choice and check its contents. Check the following specifics:</p>
-<ul>
-<li>
-<p><code>environment</code>: This is used to set environment variables in the container. We can use these to provide some settings for <em>Elasticsearch</em> and <em>Kibana</em> as well. One example is the <code>cluster.name</code> variable.</p>
-</li>
-<li>
-<p><code>ulimits</code>: In order for <em>Elasticsearch</em> to function properly, we have to set some <code>ulimit</code> values in the container.</p>
-</li>
-<li>
-<p><code>volumes</code>: Due to how file storage works in <em>Docker</em> containers, every data is lost if we remove a container and start a new one. Of course, this is not exactly appropriate for a database service like <em>Elasticsearch</em>. Therefore we are going to use a <code>volume</code> which provides a more durable storage option.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Navigate a command prompt / PowerShell / bash shell into the folder with the <code>docker-compose.yml</code> file, and issue the following commands.</p>
-<p>If you are in the university computer laboratories, please run <code>docker-compose down -v</code> first to remove any lingering containers and data left behind.</p>
-<p>Then to start, use <code>docker-compose up</code>.</p>
-<div class="admonition tip">
-<p>If you are using Linux, and this command fails, you might try to <code>sudo</code> to make things easier.</p>
-</div>
-<p>Keep this shell open. You will see the application logs here.</p>
-</li>
-<li>
-<p>To shut down the running system, use <em>CTRL + C</em>. Your data will be kept, and restarting with the same command as above will restart the applications.</p>
-<p>To completely shut down the applications and remove all data, use <code>docker-compose down -v</code>.</p>
-</li>
-</ol>
-<h2 id="option-2-start-elasticsearch-and-kibana-by-installing-them">Option 2: Start <em>Elasticsearch</em> and <em>Kibana</em> by installing them<a class="headerlink" href="#option-2-start-elasticsearch-and-kibana-by-installing-them" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Download <a href="https://www.elastic.co/downloads/past-releases/elasticsearch-7-5-1">Elasticsearch</a> and <a href="https://www.elastic.co/downloads/past-releases/kibana-7-5-1">Kibana</a>. Please make sure to use <strong>version 7.5.x</strong>; the starter code and the instructions might be specific to this version.</p>
-</li>
-<li>
-<p>Extract the archives.</p>
+                <h1 id="exercise-4-elasticsearch-queries">Exercise 4: Elasticsearch queries<a class="headerlink" href="#exercise-4-elasticsearch-queries" title="Permanent link">&para;</a></h1>
+<p>The purpose of this exercise is to use the search and aggregation capabilities of <em>Elasticsearch</em> to answer questions of the data imported previously.</p>
 <div class="admonition note">
-<p>Extracting the zip files will take a considerable amount of time.</p>
+<p class="admonition-title">Query JSON</p>
+<p>You will be requested to save the <strong>query</strong> JSON in the following exercises. The image below shows you what that means (i.e. the <strong>VALID</strong> JSON that is sent to Elasticsearch, <strong>WITHOUT</strong> the header part; <strong>NOT</strong> the result JSON that is on the right side in Kibana).</p>
+<p><img alt="Kibana query parts" src="../images/kibana-query-parts.png" /></p>
 </div>
-</li>
-<li>
-<p>Start both using the executables <code>bin/elasticsearch(.bat)</code> and <code>bin/kibana(.bat)</code>. There is no configuration needed; the default setup will work fine</p>
-</li>
-<li>
-<p>Wait for a few seconds while they start up.</p>
-<p>Elasticsearch will print something like this:</p>
-<div class="highlight"><pre><span></span><code>[INFO ][o.e.h.AbstractHttpServerTransport] [xx] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
-[INFO ][o.e.n.Node               ] [xx] started
+<div class="admonition note">
+<p class="admonition-title">Search syntax</p>
+<p>Please use the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-body.html">search syntax</a> of Elasticsearch that defines the criteria in JSON body. Do <em>not</em> use the URL query method filtering.</p>
+</div>
+<p>All of the following queries are sent to the <code>salaries/_search</code> endpoint with a <code>GET</code> method. This means that the <strong>first line in <em>Kibana Dev Tools</em> will be <code>GET salaries/_search</code></strong> for all of them.</p>
+<h2 id="select-in-elasticsearch">"SELECT *" in <em>Elasticsearch</em><a class="headerlink" href="#select-in-elasticsearch" title="Permanent link">&para;</a></h2>
+<p>Issue the following query.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;match_all&quot;</span><span class="p">:</span> <span class="p">{}</span> <span class="p">},</span>
+  <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+  <span class="nt">&quot;sort&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;_doc&quot;</span><span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div>
 
-<p>Note the port where Elasticsearch is available (should be 9200).</p>
-<p>Kibana, when ready, will print:</p>
-<p><code>[info][server][Kibana][http] http server running at http://localhost:5601</code></p>
-<p>If you need to change the ports, edit the following files, then restart the applications:</p>
 <ul>
-<li><code>config\elasticsearch.yml</code>, look for key <code>http.port</code>, uncomment it and set a port;</li>
-<li><code>config\kibana.yml</code>, look for key <code>elasticsearch.hosts</code>, uncomment it and set the same port.</li>
+<li>
+<p><code>query</code>: This provides the filter for the query. Think of the <code>WHERE</code> clause in <em>SQL</em>.</p>
+</li>
+<li>
+<p><code>from</code> and <code>size</code>: These can be used for paging results. It is important to note that there is no way to query <strong>all</strong> documents using <em>Elasticsearch</em>. If you omit the <code>size</code> value, it defaults to <strong>10</strong>.</p>
+</li>
+<li>
+<p><code>sort</code>: This can be used to sort the results.</p>
+</li>
 </ul>
-</li>
-</ol>
-<h2 id="check-that-the-systems-are-running">Check that the systems are running<a class="headerlink" href="#check-that-the-systems-are-running" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Open a browser of your choice and navigate to <a href="http://localhost:9200">http://localhost:9200</a> to verify that Elasticsearch is up and running. Make sure to verify the version too!</p>
-<p><img alt="Elasticsearch version" src="../images/elasticsearch-version.png" /></p>
-</li>
-<li>
-<p>Open a browser of your choice (<em>Kibana</em> used to prefer <em>Chrome</em>, but you are free to experiment with others) and navigate to <a href="http://localhost:5601">http://localhost:5601</a>. You should see <em>Kibana's</em> starting page.</p>
-<p><img alt="Kibana started" src="../images/kibana-started.png" /></p>
-</li>
-</ol>
+<p>You do not have to save this query.</p>
+<h2 id="a-who-are-the-top-5-workers-with-the-best-salaries">a) Who are the top <strong>5</strong> workers with the best salaries?<a class="headerlink" href="#a-who-are-the-top-5-workers-with-the-best-salaries" title="Permanent link">&para;</a></h2>
+<p>Change the previous query:</p>
+<ul>
+<li>we need the first <em>5</em>, so the size will be <em>5</em>;</li>
+<li>the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-body.html#_sort_values">sort</a> has to be performed on field <em>salary</em>, for which use the following syntax:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&quot;sort&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;salary&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;desc&quot;</span> <span class="p">}</span> <span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Execute this query and verify the results.</p>
+<div class="admonition example">
+<p class="admonition-title">SUBMISSION</p>
+<p>Save the final query JSON as <code>ex4-a.json</code>.</p>
+</div>
+<h2 id="b-who-are-the-top-5-workers-at-mcdonalds-aged-between-18-and-30-with-the-best-salaries">b) Who are the top <strong>5</strong> workers at <em>McDonalds</em> aged between <strong>18</strong> and <strong>30</strong> with the best salaries?<a class="headerlink" href="#b-who-are-the-top-5-workers-at-mcdonalds-aged-between-18-and-30-with-the-best-salaries" title="Permanent link">&para;</a></h2>
+<p>Building on the previous query, replace the <code>query</code> with a <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html#query-dsl-bool-query">boolean query</a> as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;bool&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;must&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;match_all&quot;</span><span class="p">:</span> <span class="p">{}</span> <span class="p">},</span>
+      <span class="nt">&quot;filter&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nt">&quot;range&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;age&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;gte&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="nt">&quot;lte&quot;</span><span class="p">:</span> <span class="mi">30</span> <span class="p">}</span> <span class="p">}</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;term&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;company&quot;</span><span class="p">:</span> <span class="s2">&quot;McDonalds&quot;</span> <span class="p">}</span> <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="err">...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The difference between this query and the previous one is that we have to apply some filters to the results.</p>
+<ul>
+<li>The <code>age</code> must be between <strong>18</strong> and <strong>30</strong>.</li>
+<li>The <code>company</code> must be <em>McDonalds</em>.</li>
+</ul>
+<p>Execute this query and verify the results.</p>
+<div class="admonition example">
+<p class="admonition-title">SUBMISSION</p>
+<p>Save the final query JSON as <code>ex4-b.json</code>.</p>
+</div>
+<h2 id="c-are-there-more-men-or-women-working-for-these-companies-is-there-a-difference-between-the-average-salaries">c) Are there more men or women working for these companies? Is there a difference between the average salaries?<a class="headerlink" href="#c-are-there-more-men-or-women-working-for-these-companies-is-there-a-difference-between-the-average-salaries" title="Permanent link">&para;</a></h2>
+<p>We have to use <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html">term aggregations</a> to answer these questions. We can use the following query.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;aggs&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;group_by_gender&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;terms&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;field&quot;</span><span class="p">:</span> <span class="s2">&quot;gender&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;aggs&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;average_salary&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;avg&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;field&quot;</span><span class="p">:</span> <span class="s2">&quot;salary&quot;</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Specifying <code>"size": 0</code> means that we do not want any matching documents, we only need the aggregation results. (There is no search criteria specified here, but there could be.)</p>
+<p>This query first groups the documents by the <code>gender</code> value and then calculates the average of the <code>salary</code> values within the groups.</p>
+<div class="admonition example">
+<p class="admonition-title">SUBMISSION</p>
+<p>Based on the results, what is the average salary of women? Type your answer into <code>ex4-c.txt</code>. Include only the number and nothing else in this text file (e.g. <code>123.45</code>). (You do <em>not</em> need to save the query JSON here.)</p>
+</div>
                 
               
               
@@ -758,6 +847,47 @@
 <footer class="md-footer">
 
   <!-- Link to previous and/or next page -->
+  
+  <div class="md-footer-nav">
+    <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+
+      <!-- Link to previous page -->
+      
+      <a href="../exercise3/" title="Exercise 3: Initializing Elasticsearch"
+        class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+        <div class="md-footer-nav__button md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </div>
+        <div class="md-footer-nav__title">
+          <div class="md-ellipsis">
+            <span class="md-footer-nav__direction">
+              Előző
+            </span>
+            Exercise 3: Initializing Elasticsearch
+          </div>
+        </div>
+      </a>
+      
+
+      <!-- Link to next page -->
+      
+      <a href="../exercise5/" title="Exercise 5: Kibana visualizations"
+        class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+        <div class="md-footer-nav__title">
+          <div class="md-ellipsis">
+            <span class="md-footer-nav__direction">
+              Következő
+            </span>
+            Exercise 5: Kibana visualizations
+          </div>
+        </div>
+        <div class="md-footer-nav__button md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+        </div>
+      </a>
+      
+    </nav>
+  </div>
   
 
   <!-- Further information -->
