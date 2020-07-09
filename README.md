@@ -13,7 +13,7 @@ The exercise documentation is build with MkDocs and published on GitHub Pages at
 
 1. Open a PowerShell console at the repository root
 
-1. `docker run -it --rm -p 8000:8000 -v ${PWD}:/src --workdir /src python:3.8-slim /bin/bash -c "pip install -r requirements_docs.txt;mkdocs serve --dev-addr=0.0.0.0:8000"`
+1. `docker run -it --rm -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material:5.4.0`
 
 1. Open <http://localhost:8000> in a browser
 
