@@ -1,13 +1,14 @@
 site_name: VIAUMB00 Business Intelligence Laboratory
 site_author: Dudás Ákos
 copyright: Copyright &copy; BME AUT
+
 repo_name: bi-labor/es-mssql
 repo_url: https://github.com/bi-labor/es-mssql
 
 theme:
   name: material
   custom_dir: theme-overrides
-  language: hu
+  language: en
   palette:
     primary: red
     accent: red
