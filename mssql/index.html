@@ -728,19 +728,19 @@
                 
                 
                 <h1 id="microsoft-sql-server-business-intelligence">Microsoft SQL Server Business Intelligence<a class="headerlink" href="#microsoft-sql-server-business-intelligence" title="Permanent link">&para;</a></h1>
-<p>The goal of this laboratory is to practice the usage of Microsoft SQL Server products in business intelligence scenarios. Through the exercises you will familiarize yourself with the usage of Microsoft SQL Server as a data warehouse, Integration Services as an ETL tool and Reporting Services for report generation.</p>
+<p>This laboratory's goal is to practice the usage of Microsoft SQL Server products in business intelligence scenarios. Through the exercises, you will familiarize yourself with the usage of Microsoft SQL Server as a data warehouse, Integration Services as an ETL tool, and Reporting Services for report generation.</p>
 <h2 id="pre-requisites">Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h2>
 <p>You need to following tools to complete this laboratory:</p>
 <ul>
 <li>PC with Windows. You can also use a VM at <a href="https://cloud.bme.hu">https://cloud.bme.hu</a>, see details <a href="bme-cloud-vm-usage/">here</a>.</li>
 <li>Microsoft SQL Server. Express edition is sufficient, or <em>localdb</em> installed along with Visual Studio is also fine</li>
 <li><a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio</a></li>
-<li>Microsoft Visual Studio 2017 / 2019. Community version is sufficient.</li>
+<li>Microsoft Visual Studio 2017 / 2019. The community version is sufficient.</li>
 <li>Integration Services and Report Server Project support for Visual Studio<ul>
 <li>Visual Studio 2017: <a href="https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017#install-analysis-services-integration-services-and-reporting-services-tools">SQL Server Data Tools</a></li>
 <li>Visual Studio 2019:<ul>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio">Microsoft Reporting Services Projects extension</a></li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects">SQL Server Integration Services Projects extension</a>. It is recommended that these extension are kept <a href="https://docs.microsoft.com/en-us/visualstudio/extensibility/how-to-update-a-visual-studio-extension?view=vs-2019">up to date</a>.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects">SQL Server Integration Services Projects extension</a>. It is recommended that these extensions are kept <a href="https://docs.microsoft.com/en-us/visualstudio/extensibility/how-to-update-a-visual-studio-extension?view=vs-2019">up to date</a>.</li>
 </ul>
 </li>
 </ul>
@@ -759,11 +759,11 @@
 <li>SQL Reporting Services <a href="https://docs.microsoft.com/en-us/sql/reporting-services/create-a-basic-table-report-ssrs-tutorial">tutorial</a></li>
 </ul>
 <h2 id="task-overview">Task overview<a class="headerlink" href="#task-overview" title="Permanent link">&para;</a></h2>
-<p>We have a webshop that sells books. Our goal is to understand our users, and find out which are the best books we should market more. We have the users of the webshop, the books, and user-given ratings of these books. We already exported these data in the form of CSV files. We will use Microsoft SQL Server as a data warehouse, Integration Services as the ETL tool, and Reporting Services to present our insights in a visual form.</p>
+<p>We have a webshop that sells books. Our goal is to understand our users and find out which are the best books we should market more. We have the users of the webshop, the books, and user-given ratings of these books. We already exported these data in the form of CSV files. We will use Microsoft SQL Server as a data warehouse, Integration Services as the ETL tool, and Reporting Services to present our insights in a visual form.</p>
 <p>The model of our approach looks like the following.</p>
 <p><img alt="Overview of the process" src="images/process-overview.svg" /></p>
 <h2 id="grading">Grading<a class="headerlink" href="#grading" title="Permanent link">&para;</a></h2>
-<p>Exercises 1 &amp; 2 help you prepare the environment. Starting with exercise 3, <strong>each exercise is worth one grade when completed successfully</strong>. In order for an exercise to count as <em>successful</em> you must finish <em>all</em> its subtasks successfully. (E.g. if you complete exercises 3, 4 successfully, but there is an error in exercise 5, and you did not complete exercise 6, the resulting grade will be 3.)</p>
+<p>Exercises 1 &amp; 2 help you prepare the environment. Starting with exercise 3, <strong>each exercise is worth one grade when completed successfully</strong>. For an exercise to count as <em>successful</em> you must finish <em>all</em> its subtasks successfully. (E.g. if you complete exercises 3, 4 successfully, but there is an error in exercise 5, and you did not complete exercise 6, the resulting grade will be 3.)</p>
                 
               
               

@@ -731,7 +731,7 @@
 <p>The purpose of this exercise is to use the data visualization capabilities of <em>Kibana</em>.</p>
 <div class="admonition note">
 <p class="admonition-title">Screenshots</p>
-<p>The following exercises will ask you to create visualizations, then export their Kibana description as JSON, as well as create a screenshot of the visualization itself. When creating the screenshot, make sure the <strong>entire visualization with the legend</strong> is visible.</p>
+<p>The following exercises will ask you to create visualizations, then export their Kibana description as JSON, and create a screenshot of the visualization itself. When creating the screenshot, make sure the <strong>entire visualization with the legend</strong> is visible.</p>
 </div>
 <h2 id="create-an-index-pattern">Create an Index pattern<a class="headerlink" href="#create-an-index-pattern" title="Permanent link">&para;</a></h2>
 <p>Our first step is to tell <em>Kibana</em> which indexes it should consider when creating the visualizations.</p>
@@ -746,12 +746,12 @@
 <p><img alt="Kibana index pattern" src="../images/kibana-index-pattern-1.png" /></p>
 </li>
 <li>
-<p>Select <em>I don't want to use the Time Filter</em> as <em>Time Filter field name</em> since we are not going to use this function during the exercises. Click on <em>Create index pattern</em>.</p>
+<p>Select <em>I don't want to use the Time Filter</em> as <em>Time Filter field name</em> since we will not use this function during the exercises. Click on <em>Create index pattern</em>.</p>
 <p><img alt="Kibana index pattern" src="../images/kibana-index-pattern-2.png" /></p>
 </li>
 <li>
 <p>Now click on the <em>Visualize</em> tab again to see the following.</p>
-<p><img alt="Kibana create first visualization" src="../images/kibana-create-first-visualization.png" /></p>
+<p><img alt="Kibana create the first visualization" src="../images/kibana-create-first-visualization.png" /></p>
 </li>
 </ol>
 <h2 id="a-how-many-people-did-the-companies-hire-each-month-between-2010-and-2016-vertical-bar-chart">a) How many people did the companies hire each month between 2010 and 2016? (vertical bar chart)<a class="headerlink" href="#a-how-many-people-did-the-companies-hire-each-month-between-2010-and-2016-vertical-bar-chart" title="Permanent link">&para;</a></h2>
@@ -765,11 +765,11 @@
 <p><img alt="Kibana search source" src="../images/kibana-search-source.png" /></p>
 </li>
 <li>
-<p>Under the <em>Metrics</em> setting set <em>People hired</em> as the <em>Custom Label</em>. (Expand the <em>Y-axis</em> label to get the configuration options.)</p>
+<p>Under the <em>Metrics</em> setting, set <em>People hired</em> as the <em>Custom Label</em>. (Expand the <em>Y-axis</em> label to get the configuration options.)</p>
 <p><img alt="Kibana Metrics" src="../images/kibana-a-metrics.png" /></p>
 </li>
 <li>
-<p>Under the <em>Buckets</em> setting click <em>Add</em> then select <em>X-Axis</em>, and set the following.</p>
+<p>Under the <em>Buckets</em> setting, click <em>Add</em>, then select <em>X-Axis</em>, and set the following.</p>
 <ul>
 <li><em>Aggregation</em> should be <em>Date Histogram</em></li>
 <li><em>Field</em> should be <code>hired</code></li>
@@ -779,7 +779,7 @@
 <p><img alt="Kibana Buckets" src="../images/kibana-a-buckets.png" /></p>
 </li>
 <li>
-<p>In the top left corner click on the <em>Add a filter</em> link and use the following settings to create the filter. Click on <em>Save</em> to save the filter.</p>
+<p>In the top left corner, click on the <em>Add a filter</em> link and use the following settings to create the filter. Click on <em>Save</em> to save the filter.</p>
 <p><img alt="Kibana filter" src="../images/kibana-a-filter.png" /></p>
 </li>
 <li>
@@ -788,7 +788,7 @@
 <div class="admonition example">
 <p class="admonition-title">SUBMISSION</p>
 <p>Create a screenshot of the visualization preview and save it as <code>ex5-a.png</code>.</p>
-<p>Click on the <em>Management</em> tab in the left side menu, and choose the <em>Saved Objects</em> option. Select and export the visualization you just saved. No need to include related objects. Save the downloaded file as <code>ex5-a.ndjson</code>.</p>
+<p>Click on the <em>Management</em> tab in the left side menu, and choose the <em>Saved Objects</em> option. Select and export the visualization you just saved — no need to include related objects. Save the downloaded file as <code>ex5-a.ndjson</code>.</p>
 <p><img alt="Kibana export" src="../images/kibana-export.png" /></p>
 </div>
 </li>
@@ -805,11 +805,11 @@
 <p>Select the previously created <code>salaries</code> index pattern as the search source.</p>
 </li>
 <li>
-<p>Under the <em>Buckets</em> setting click <em>Add</em> and select <em>Split Slices</em> and set a <em>Terms</em> aggregation on the <code>gender</code> field. As <em>Custom Label</em> set <em>Gender</em>.</p>
+<p>Under the <em>Buckets</em> setting, click <em>Add</em> and select <em>Split Slices</em> and set a <em>Terms</em> aggregation on the <code>gender</code> field. As <em>Custom Label</em> set <em>Gender</em>.</p>
 <p><img alt="Kibana Buckets" src="../images/kibana-b-buckets-1.png" /></p>
 </li>
 <li>
-<p>Within the <em>Buckets</em> configuration area click on the <em>Add</em> button and select <em>Split Slices</em> with a <em>Range</em> aggregation on the <code>age</code> field with the following ranges. Also add a custom label <em>Age</em>.</p>
+<p>Within the <em>Buckets</em> configuration area, click on the <em>Add</em> button and select <em>Split Slices</em> with a <em>Range</em> aggregation on the <code>age</code> field with the following ranges. Also, add a custom label <em>Age</em>.</p>
 <p><img alt="Kibana Buckets" src="../images/kibana-b-buckets-2.png" /></p>
 </li>
 </ol>

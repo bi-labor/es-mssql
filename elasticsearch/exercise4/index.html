@@ -731,7 +731,7 @@
 <p>The purpose of this exercise is to use the search and aggregation capabilities of <em>Elasticsearch</em> to answer questions of the data imported previously.</p>
 <div class="admonition note">
 <p class="admonition-title">Query JSON</p>
-<p>You will be requested to save the <strong>query</strong> JSON in the following exercises. The image below shows you what that means (i.e. the <strong>VALID</strong> JSON that is sent to Elasticsearch, <strong>WITHOUT</strong> the header part; <strong>NOT</strong> the result JSON that is on the right side in Kibana).</p>
+<p>You will be requested to save the <strong>query</strong> JSON in the following exercises. The image below shows you what that means (i.e., the <strong>VALID</strong> JSON sent to Elasticsearch, <strong>WITHOUT</strong> the header part; <strong>NOT</strong> the result JSON that is on the right side in Kibana).</p>
 <p><img alt="Kibana query parts" src="../images/kibana-query-parts.png" /></p>
 </div>
 <div class="admonition note">
@@ -825,11 +825,11 @@
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Specifying <code>"size": 0</code> means that we do not want any matching documents, we only need the aggregation results. (There is no search criteria specified here, but there could be.)</p>
+<p>Specifying <code>"size": 0</code> means that we do not want any matching documents as we only need the aggregation results. (There are no search criteria specified here, but there could be.)</p>
 <p>This query first groups the documents by the <code>gender</code> value and then calculates the average of the <code>salary</code> values within the groups.</p>
 <div class="admonition example">
 <p class="admonition-title">SUBMISSION</p>
-<p>Based on the results, what is the average salary of women? Type your answer into <code>ex4-c.txt</code>. Include only the number and nothing else in this text file (e.g. <code>123.45</code>). (You do <em>not</em> need to save the query JSON here.)</p>
+<p>Based on the results, what is the average salary of women? Type your answer into <code>ex4-c.txt</code>. Include only the number and nothing else in this text file (e.g., <code>123.45</code>). (You do <em>not</em> need to save the query JSON here.)</p>
 </div>
                 
               

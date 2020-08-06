@@ -637,7 +637,7 @@
                 
                 <h1 id="exercise-4-report-about-users">Exercise 4: Report about users<a class="headerlink" href="#exercise-4-report-about-users" title="Permanent link">&para;</a></h1>
 <p>Extend the provided Reporting Services project <code>ex4.sln</code> by modifying the project contents in place. You can find this solution in the root of the checked out git repository.</p>
-<p>Create a report that summarizes from which country do our users come from. A table should list the number of users by country, along with the average age from the country; and a pie chart should display the number of users from the top 10 countries.</p>
+<p>Create a report that summarizes from which country do our users come from. A table should list the number of users by country, along with the average age from the country, and a pie chart should display the number of users from the top 10 countries.</p>
 <p>The final report should look similar to this:</p>
 <p><img alt="Users report" src="../images/report-users.png" /></p>
 <ol>
@@ -650,7 +650,7 @@
 <p><img alt="Report data toolbox" src="../images/rs-report-data-toolbox.png" /></p>
 </li>
 <li>
-<p>Add a new <em>Data source</em> to the report by right clicking the <em>Data sources</em> folder in the <em>Report data</em> window.</p>
+<p>Add a new <em>Data source</em> to the report by right-clicking the <em>Data sources</em> folder in the <em>Report data</em> window.</p>
 <ul>
 <li>Chose the "Embedded connection" option.</li>
 <li>Connect to <em>Microsoft SQL Server</em>.</li>
@@ -665,11 +665,11 @@
 </ul>
 </li>
 <li>
-<p>Add a new dataset by right clicking the <em>Datasets</em> folder in the <em>Report data</em> window. The dataset specifies how to fetch the data we want to display. It will be an SQL query.</p>
+<p>Add a new dataset by right-clicking the <em>Datasets</em> folder in the <em>Report data</em> window. The dataset specifies how to fetch the data we want to display. It will be an SQL query.</p>
 <ul>
 <li>Chose "Use a dataset embedded in my report"</li>
 <li>Select the data source from the dropdown. It is the data source created in the previous step.</li>
-<li>The query should list the number of users and average age for each country, sorted descending according to the number of users. The query should also skip countries which are "outliers" having too few (&lt;50) users.</li>
+<li>The query should list the number of users and the average age for each country sorted descending according to the number of users. The query should also skip countries that are "outliers" having too few (&lt;50) users.</li>
 <li>
 <p>Write the query as text as follows</p>
 <div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">Country</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">as</span> <span class="k">Count</span><span class="p">,</span> <span class="k">avg</span><span class="p">(</span><span class="n">Age</span><span class="p">)</span> <span class="k">as</span> <span class="n">AvgAge</span>
@@ -689,7 +689,7 @@
 <ul>
 <li>Add a table to the report surface by dragging one from the <em>Toolbox</em>.</li>
 <li>Drag each field from the <em>Report data</em> toolbox from under the <em>Dataset</em> created above into the table.</li>
-<li>Delete obsolete columns by right clicking the table. There should be 3 columns: country, number of users, and average age.</li>
+<li>Delete obsolete columns by right-clicking the table. There should be 3 columns: country, number of users, and average age.</li>
 <li>Edit the header row to have meaningful column headers.</li>
 </ul>
 </li>
@@ -721,7 +721,7 @@
 <div class="admonition example">
 <p class="admonition-title">SUBMISSION</p>
 <p>Include a screenshot of the report as <code>ex4.png</code>.</p>
-<p>Please make sure that the screenshot is taken such that relevant parts of the report are all visible (title, table and diagram too). See the sample at the beginning of the exercise.</p>
+<p>Please make sure that the screenshot is taken such that relevant parts of the report are all visible (title, table, and diagram too). See the sample at the beginning of the exercise.</p>
 </div>
                 
               

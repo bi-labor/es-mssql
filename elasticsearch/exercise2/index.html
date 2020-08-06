@@ -714,12 +714,12 @@
                 
                 
                 <h1 id="exercise-2-initializing-elasticsearch-and-kibana">Exercise 2: Initializing Elasticsearch and Kibana<a class="headerlink" href="#exercise-2-initializing-elasticsearch-and-kibana" title="Permanent link">&para;</a></h1>
-<p>The purpose of this exercise is to start <em>Elasticsearch</em> and <em>Kibana</em>. You have to options for running them:</p>
+<p>The purpose of this exercise is to start <em>Elasticsearch</em> and <em>Kibana</em>. You have two options for running them:</p>
 <ol>
 <li>Using Docker</li>
-<li>Or installing them on your machine.</li>
+<li>Or install them on your machine.</li>
 </ol>
-<p>In university computer laboratories use the Docker option. Otherwise chose the option best suited for you.</p>
+<p>In the university computer laboratories use the Docker option. Otherwise choose the option best suited for you.</p>
 <h2 id="option-1-start-elasticsearch-and-kibana-using-docker">Option 1: Start <em>Elasticsearch</em> and <em>Kibana</em> using Docker<a class="headerlink" href="#option-1-start-elasticsearch-and-kibana-using-docker" title="Permanent link">&para;</a></h2>
 <p>If you have Docker, or you are working in the university computer laboratories, use this option.</p>
 <ol>
@@ -727,13 +727,13 @@
 <p>Start Docker Desktop and wait for it to initialize.</p>
 </li>
 <li>
-<p><strong>Only in university computer laboratories</strong>: open Docker Desktop settings (right click on the Docker icon on the taskbar), and follow the instructions from the laboratory instructor to configure a proxy to be used by Docker.</p>
+<p><strong>Only in university computer laboratories</strong>: open Docker Desktop settings (right-click on the Docker icon on the taskbar), and follow the teacher's instructions to configure a proxy to be used by Docker.</p>
 </li>
 <li>
 <p>Open a command prompt or PowerShell console and test whether Docker is working: execute <code>docker version</code>, which should print version information for client and server.</p>
 </li>
 <li>
-<p>Locate the provided <code>docker-compose.yml</code> file in the checked out starter solution (located in the root of your git repository). Open it in a text editor of your choice and check its contents. Check the following specifics:</p>
+<p>Locate the provided <code>docker-compose.yml</code> file in the checked-out starter solution (located in the root of your git repository). Open it in a text editor of your choice and check its contents. Check the following specifics:</p>
 <ul>
 <li>
 <p><code>environment</code>: This is used to set environment variables in the container. We can use these to provide some settings for <em>Elasticsearch</em> and <em>Kibana</em> as well. One example is the <code>cluster.name</code> variable.</p>
@@ -775,7 +775,7 @@
 <p>Start both using the executables <code>bin/elasticsearch(.bat)</code> and <code>bin/kibana(.bat)</code>. There is no configuration needed; the default setup will work fine</p>
 </li>
 <li>
-<p>Wait for a few seconds while they start up.</p>
+<p>Wait for a few seconds while they start.</p>
 <p>Elasticsearch will print something like this:</p>
 <div class="highlight"><pre><span></span><code>[INFO ][o.e.h.AbstractHttpServerTransport] [xx] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
 [INFO ][o.e.n.Node               ] [xx] started
@@ -794,7 +794,7 @@
 <h2 id="check-that-the-systems-are-running">Check that the systems are running<a class="headerlink" href="#check-that-the-systems-are-running" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Open a browser of your choice and navigate to <a href="http://localhost:9200">http://localhost:9200</a> to verify that Elasticsearch is up and running. Make sure to verify the version too!</p>
+<p>Open a browser of your choice and navigate to <a href="http://localhost:9200">http://localhost:9200</a> to verify that Elasticsearch is up and running. Make sure to check the version too!</p>
 <p><img alt="Elasticsearch version" src="../images/elasticsearch-version.png" /></p>
 </li>
 <li>
