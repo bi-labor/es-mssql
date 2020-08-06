@@ -3,7 +3,7 @@
 1. Connect to the local database server using SQL Server Management Studio with the following credentials:
 
     - Server name: `(localdb)\mssqllocaldb`
-        - If you are using the Express edition, the the connection string is `localhost\sqlexpress`
+        - If you are using the Express edition, the connection string is `localhost\sqlexpress`
     - Authentication: _Windows Authentication_
 
     ![Connect to SQL Server](images/mssql-connect.png)
@@ -12,7 +12,7 @@
 
     ![Create new database](images/mssql-create-db.png)
 
-1. Create a new table to store data from the users csv file. The columns of the table should copy the columns of the csv file with one exception: the "Location" column should be split into "City" and "Country".
+1. Create a new table to store data from the users csv file. The columns of the table should copy the columns of the csv file with one exception: the "Location" column should be split into "City" and "Country."
 
     Click the _New query_ button and execute the following script to create the table.
 

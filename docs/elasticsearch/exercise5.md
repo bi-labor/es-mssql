@@ -3,7 +3,7 @@
 The purpose of this exercise is to use the data visualization capabilities of _Kibana_.
 
 !!! note "Screenshots"
-    The following exercises will ask you to create visualizations, then export their Kibana description as JSON, as well as create a screenshot of the visualization itself. When creating the screenshot, make sure the **entire visualization with the legend** is visible.
+    The following exercises will ask you to create visualizations, then export their Kibana description as JSON, and create a screenshot of the visualization itself. When creating the screenshot, make sure the **entire visualization with the legend** is visible.
 
 ## Create an Index pattern
 
@@ -19,13 +19,13 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
     ![Kibana index pattern](images/kibana-index-pattern-1.png)
 
-1. Select _I don't want to use the Time Filter_ as _Time Filter field name_ since we are not going to use this function during the exercises. Click on _Create index pattern_.
+1. Select _I don't want to use the Time Filter_ as _Time Filter field name_ since we will not use this function during the exercises. Click on _Create index pattern_.
 
     ![Kibana index pattern](images/kibana-index-pattern-2.png)
 
 1. Now click on the _Visualize_ tab again to see the following.
 
-    ![Kibana create first visualization](images/kibana-create-first-visualization.png)
+    ![Kibana create the first visualization](images/kibana-create-first-visualization.png)
 
 ## a) How many people did the companies hire each month between 2010 and 2016? (vertical bar chart)
 
@@ -37,11 +37,11 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
     ![Kibana search source](images/kibana-search-source.png)
 
-1. Under the _Metrics_ setting set _People hired_ as the _Custom Label_. (Expand the _Y-axis_ label to get the configuration options.)
+1. Under the _Metrics_ setting, set _People hired_ as the _Custom Label_. (Expand the _Y-axis_ label to get the configuration options.)
 
     ![Kibana Metrics](images/kibana-a-metrics.png)
 
-1. Under the _Buckets_ setting click _Add_ then select _X-Axis_, and set the following.
+1. Under the _Buckets_ setting, click _Add_, then select _X-Axis_, and set the following.
 
     - _Aggregation_ should be _Date Histogram_
     - _Field_ should be `hired`
@@ -50,7 +50,7 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
     ![Kibana Buckets](images/kibana-a-buckets.png)
 
-1. In the top left corner click on the _Add a filter_ link and use the following settings to create the filter. Click on _Save_ to save the filter.
+1. In the top left corner, click on the _Add a filter_ link and use the following settings to create the filter. Click on _Save_ to save the filter.
 
     ![Kibana filter](images/kibana-a-filter.png)
 
@@ -61,7 +61,7 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
     !!! example "SUBMISSION"
         Create a screenshot of the visualization preview and save it as `ex5-a.png`.
 
-        Click on the _Management_ tab in the left side menu, and choose the _Saved Objects_ option. Select and export the visualization you just saved. No need to include related objects. Save the downloaded file as `ex5-a.ndjson`.
+        Click on the _Management_ tab in the left side menu, and choose the _Saved Objects_ option. Select and export the visualization you just saved — no need to include related objects. Save the downloaded file as `ex5-a.ndjson`.
 
         ![Kibana export](images/kibana-export.png)
 
@@ -73,11 +73,11 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
 1. Select the previously created `salaries` index pattern as the search source.
 
-1. Under the _Buckets_ setting click _Add_ and select _Split Slices_ and set a _Terms_ aggregation on the `gender` field. As _Custom Label_ set _Gender_.
+1. Under the _Buckets_ setting, click _Add_ and select _Split Slices_ and set a _Terms_ aggregation on the `gender` field. As _Custom Label_ set _Gender_.
 
     ![Kibana Buckets](images/kibana-b-buckets-1.png)
 
-1. Within the _Buckets_ configuration area click on the _Add_ button and select _Split Slices_ with a _Range_ aggregation on the `age` field with the following ranges. Also add a custom label _Age_.
+1. Within the _Buckets_ configuration area, click on the _Add_ button and select _Split Slices_ with a _Range_ aggregation on the `age` field with the following ranges. Also, add a custom label _Age_.
 
     ![Kibana Buckets](images/kibana-b-buckets-2.png)
 

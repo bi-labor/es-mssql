@@ -2,7 +2,7 @@
 
 Extend the provided Reporting Services project `ex4.sln` by modifying the project contents in place. You can find this solution in the root of the checked out git repository.
 
-Create a report that summarizes from which country do our users come from. A table should list the number of users by country, along with the average age from the country; and a pie chart should display the number of users from the top 10 countries.
+Create a report that summarizes from which country do our users come from. A table should list the number of users by country, along with the average age from the country, and a pie chart should display the number of users from the top 10 countries.
 
 The final report should look similar to this:
 
@@ -16,7 +16,7 @@ The final report should look similar to this:
 
     ![Report data toolbox](images/rs-report-data-toolbox.png)
 
-1. Add a new _Data source_ to the report by right clicking the _Data sources_ folder in the _Report data_ window.
+1. Add a new _Data source_ to the report by right-clicking the _Data sources_ folder in the _Report data_ window.
 
     - Chose the "Embedded connection" option.
     - Connect to _Microsoft SQL Server_.
@@ -28,11 +28,11 @@ The final report should look similar to this:
 
         ![Add a new data source](images/rs-add-data-source-credentials.png)
 
-1. Add a new dataset by right clicking the _Datasets_ folder in the _Report data_ window. The dataset specifies how to fetch the data we want to display. It will be an SQL query.
+1. Add a new dataset by right-clicking the _Datasets_ folder in the _Report data_ window. The dataset specifies how to fetch the data we want to display. It will be an SQL query.
 
     - Chose "Use a dataset embedded in my report"
     - Select the data source from the dropdown. It is the data source created in the previous step.
-    - The query should list the number of users and average age for each country, sorted descending according to the number of users. The query should also skip countries which are "outliers" having too few (<50) users.
+    - The query should list the number of users and the average age for each country sorted descending according to the number of users. The query should also skip countries that are "outliers" having too few (<50) users.
     - Write the query as text as follows
 
          ```sql
@@ -50,7 +50,7 @@ The final report should look similar to this:
 
     - Add a table to the report surface by dragging one from the _Toolbox_.
     - Drag each field from the _Report data_ toolbox from under the _Dataset_ created above into the table.
-    - Delete obsolete columns by right clicking the table. There should be 3 columns: country, number of users, and average age.
+    - Delete obsolete columns by right-clicking the table. There should be 3 columns: country, number of users, and average age.
     - Edit the header row to have meaningful column headers.
 
 1. Add a pie chart by dragging a _Chart_ item from the _Toolbox_ next to the table.
@@ -73,4 +73,4 @@ The final report should look similar to this:
 !!! example "SUBMISSION"
     Include a screenshot of the report as `ex4.png`.
 
-    Please make sure that the screenshot is taken such that relevant parts of the report are all visible (title, table and diagram too). See the sample at the beginning of the exercise.
+    Please make sure that the screenshot is taken such that relevant parts of the report are all visible (title, table, and diagram too). See the sample at the beginning of the exercise.

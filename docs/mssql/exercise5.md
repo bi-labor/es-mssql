@@ -15,11 +15,11 @@ Create a new ETL process to import the books and ratings datasets. Open the prov
 - Prefix the **book titles** with your Neptun code.
 - You will need to **filter for duplicate ISBNs** among the books dataset, as we did before. Make sure to use case insensitive comparison for the duplicate filter.
 - Make sure to import the **image URLs** from the books data file.
-- Remember to extend the length of the imported columns in the flat file connection settings (**_OutputColumnWidth_**) for the fields; **1000 characters** should be sufficient.
+- Remember to extend the imported columns' length in the flat file connection settings (**_OutputColumnWidth_**) for the fields; **1000 characters** should be sufficient.
 - The **ratings** dataset contains invalid values: there are rows where the value is **0**. These should be skipped using a **Conditional split** component.
 - It is best to separate the two CSV import into different _data flows_ within the same _control flow_ process.
 
 !!! example "SUBMISSION"
-    Include proof of the successful import by taking a screenshots of the **books database table contents** after successful execution of the ETL process as `ex5.png`.
+    Include proof of the successful import by taking a screenshot of the **books database table contents** after successfully executing the ETL process as `ex5.png`.
 
     Please make sure that the screenshot is taken such that it includes the database name (which is your Neptun code) from the _Object explorer_ window, and includes a few sample records with the Neptun code clearly visible.

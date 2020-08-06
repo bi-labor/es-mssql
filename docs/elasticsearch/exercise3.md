@@ -1,18 +1,18 @@
 # Exercise 3: Initializing Elasticsearch
 
-Now that both _Elasticsearch_ and _Kibana_ are operational, let us create the necessary indices for us to work with in the following exercises.
+Now that both _Elasticsearch_ and _Kibana_ are operational let us create the necessary indices for us to work with in the following exercises.
 
 ## Index a document via _PowerShell_
 
 First, we are going to use _Elasticsearch's_ REST API through _PowerShell_.
 
-1. To index a document in _Elasticsearch_ issue the following command.
+1. To index a document in _Elasticsearch_, issue the following command.
 
     ```powershell
     (Invoke-WebRequest 'http://localhost:9200/test/_doc/1?pretty' -Method Put -ContentType 'application/json' -Body '{ "name": "John Doe" }' -UseBasicParsing).Content
     ```
 
-    This way we inserted a document of type `_doc` into the index called `test` with id `1`. The response JSON should state `"result": "created"`.
+    This way, we inserted a document of type `_doc` into the index called `test` with id `1`. The response JSON should state `"result": "created"`.
 
 1. Query the document with the following command.
 
@@ -20,7 +20,7 @@ First, we are going to use _Elasticsearch's_ REST API through _PowerShell_.
     (Invoke-WebRequest 'http://localhost:9200/test/_doc/1?pretty' -Method Get -UseBasicParsing).Content
     ```
 
-    The result JSON tells us the name of the index, the id of the document, as well as the full document we inserted in the `_source` field.
+    The result JSON tells us the name of the index, the id of the document, and the full document we inserted in the `_source` field.
 
     ```json
     {
@@ -39,7 +39,7 @@ First, we are going to use _Elasticsearch's_ REST API through _PowerShell_.
 
 ## Create an index and index a document using Kibana
 
-In this part of the exercise we are going to create an index for documents containing information about people working in the fast food industry. Here is a sample document.
+In this part of the exercise, we will create an index for documents containing information about people working in the fast-food industry. Here is a sample document.
 
 ### Sample document
 
@@ -64,7 +64,7 @@ In this part of the exercise we are going to create an index for documents conta
 }
 ```
 
-We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although it uses the same REST API that we used through _PowerShell_, it provides a more convenient GUI for us to use. In this _Dev tool_ we can run queries. A query contains of (1) a http verb and an URL matching Elasticsearch' REST API, and then (2) a body as JSON.
+We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although it uses the same REST API that we used through _PowerShell_, it provides a more convenient GUI for us to use. In this _Dev tool_, we can run queries. A query contains (1) a http verb and an URL matching Elasticsearch' REST API, and (2) a body as JSON.
 
 ![Kibana Dev Tools](images/kibana-dev-tools.png)
 
@@ -94,20 +94,20 @@ We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although
 
     The settings we use here are the following.
 
-    - `settings`: We set the number of _shards_ and _replicas_ here. While settings the number of _shards_ is not that important here, we must set the number of _replicas_ to **zero** in order to have an index with **green** _health_ value. This is because _Elasticsearch_ refuses to put a _shard_ and its _replica_ on the same node, and we only have a single node.
+    - `settings`: We set the number of _shards_ and _replicas_ here. While settings the number of _shards_ is not that important here, we must set the number of _replicas_ to **zero** to have an index with **green** _health_ value. This is because _Elasticsearch_ refuses to put a _shard_ and its _replica_ on the same node, and we only have a single node.
 
-    - `mapping`: Mapping is the "schema" of the data. It is not necessary to set this, but when the data is ambiguous, Elasticsearch will make a choice how to interpret data, unless we specify the mapping.
+    - `mapping`: Mapping is the "schema" of the data. It is not necessary to set this, but when the data is ambiguous, Elasticsearch will make a choice how to interpret data unless we specify the mapping.
 
-        - `gender`, `address.state`, `company`: These are values we know are only going to have a few select values (e.g. "male" and "female" for gender), therefore we do not want to allow _free text search_ on them. We can help the system by specifying this.
+        - `gender`, `address.state`, `company`: These are values we know are only going to have a few select values (e.g., "male" and "female" for gender), therefore we do not want to allow _free text search_ on them. We can help the system by specifying this.
 
-        - `hired`: Although this is a date field, the date representation of our data is not standard — _Elasticsearch_ wouldn't recognize it by itself. Therefore we have to explicitly specify the date format.
+        - `hired`: Although this is a date field, the date representation of our data is not standard — _Elasticsearch_ wouldn't recognize it by itself. Therefore we have to specify the date format explicitly.
 
 1. We can check the indices with the `GET _cat/indices?v` query.
 
     ![Elasticsearch indices](images/elasticsearch-indices.png)
 
     !!! note ""
-        Note how the health of the `test` index is **yellow** and the health of the `salaries` index is **green**. That is because the default value for the number of _replicas_ is **1**.
+        Note how the health of the `test` index is **yellow**, and the health of the `salaries` index is **green**. That is because the default value for the number of _replicas_ is **1**.
 
 1. Insert the sample document into the created index. You can find the sample document [here](#sample-document).
 
@@ -130,7 +130,7 @@ We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although
 
 ## Modify the input data
 
-Before we import the rest of the sample data, let us make some changes by adding your **Neptun code** as a prefix to some of the values:
+Before importing the rest of the sample data, let us make some changes by adding your **Neptun code** as a prefix to some of the values:
 
 - Each `gender` value shall be prefixed, e.g. `"gender":"NEPTUN female"`
 - Each `company` value shall be prefixed, e.g. `"company":"NEPTUN McDonalds"`
@@ -143,11 +143,11 @@ Before we import the rest of the sample data, let us make some changes by adding
     (Get-Content .\salaries.json) -replace '"gender":"', '"gender":"NEPTUN ' -replace '"company":"', '"company":"NEPTUN ' | Set-Content .\salaries.json
     ```
 
-1. Verify the results, it should look similar (with your own Neptun code):
+1. Verify the results; it should look similar (with your own Neptun code):
 
     ![Replacements in the document](images/replace-data-result.png)
 
-    The file must be a valid JSON! Please double check the quotations marks around the values. If the result is not correct, you can revert the change made to this file using git (`git checkout HEAD -- salaries.json`), and then retry.
+    The file must be a valid JSON! Please double-check the quotations marks around the values. If the result is not correct, you can revert the change made to this file using git (`git checkout HEAD -- salaries.json`), and then retry.
 
     The modified file shall be uploaded as part of the submission.
 
@@ -156,7 +156,7 @@ Before we import the rest of the sample data, let us make some changes by adding
 
 ## Index many documents using the _bulk_ API
 
-And now let us index these documents.
+And now, let us index these documents.
 
 1. We can add multiple documents to the index using the _bulk_ API. Issue the following command from the _PowerShell_ window in the folder of the starter solution.
 
@@ -164,11 +164,11 @@ And now let us index these documents.
     Invoke-WebRequest 'http://localhost:9200/_bulk' -Method Post -ContentType 'application/json' -InFile .\salaries.json -UseBasicParsing
     ```
 
-1. Verify the response whether there are any errors. You will see a similar message if everything is OK (note the _errors_ in the response):
+1. Check the response for errors. You will see a similar message if everything is OK (note the _errors_ in the response):
 
     ![Elasticsearch indices](images/bulk-import-ok.png)
 
-    If you see a similar error, it means the changes in the source file resulted in an invalid json file.
+    If you see a similar error, it means the source file changes resulted in an invalid json file.
 
     ![Elasticsearch indices](images/bulk-import-parse-error.png)
 
@@ -182,8 +182,8 @@ And now let us index these documents.
 
     1. Now retry the bulk index request.
 
-1. Execute a search using query `GET salaries/_search` (using Kibana). This will return a few documents, and also let us know how many documents there are (total number matching the query will be the total number of documents, due to the lack of filtering in this search). There should be **1101** documents.
+1. Execute a search using query `GET salaries/_search` (using Kibana). This will return a few documents and let us know how many documents there are (total number matching the query will be the total number of documents, due to the lack of filtering in this search). There should be **1101** documents.
 
     ![Elasticsearch indices](images/kibana-search-total.png)
 
-    If you see fewer documents, you need to use the Refresh API to make sure Elasticsearch is finished with all indexing operations. To trigger this, execute a `POST salaries/_refresh` request.
+    If you see fewer documents, you need to use the Refresh API to ensure Elasticsearch is finished with all indexing operations. To trigger this, execute a `POST salaries/_refresh` request.

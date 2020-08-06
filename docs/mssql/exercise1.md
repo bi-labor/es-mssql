@@ -5,7 +5,7 @@
 
 ## Checking out your repository
 
-1. Open the following URL and accept the assignment to get your own repository: <TBD>
+1. Open the following URL and accept the assignment to get your repository: <TBD>
 
 1. Wait for the repository creation to complete, then check out the repository.
 
@@ -18,9 +18,9 @@
 
 ## Prepare and check the data
 
-1. Download the data files from [here](BXBooks-CSV.zip) and extract the contents of this zip into the `data` folder.
+1. Download the data files from [here](BXBooks-CSV.zip) and extract this zip's contents into the `data` folder.
 
     !!! note ""
-        We cannot include this in the starter repository due to limitations of GitHub Template Repositories. Hence the manual step here.
+        We cannot include this in the starter repository due to the limitations of GitHub Template Repositories. Hence the manual step here.
 
-1. Open the CSV files to check their contents. You will work with these datasets. Familiarize yourself with their structure and content.
+1. Open the CSV files to check their contents. You will work with these datasets. Please familiarize yourself with their structure and content.

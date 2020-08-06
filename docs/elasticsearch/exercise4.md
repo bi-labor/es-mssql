@@ -3,7 +3,7 @@
 The purpose of this exercise is to use the search and aggregation capabilities of _Elasticsearch_ to answer questions of the data imported previously.
 
 !!! note "Query JSON"
-    You will be requested to save the **query** JSON in the following exercises. The image below shows you what that means (i.e. the **VALID** JSON that is sent to Elasticsearch, **WITHOUT** the header part; **NOT** the result JSON that is on the right side in Kibana).
+    You will be requested to save the **query** JSON in the following exercises. The image below shows you what that means (i.e., the **VALID** JSON sent to Elasticsearch, **WITHOUT** the header part; **NOT** the result JSON that is on the right side in Kibana).
 
     ![Kibana query parts](images/kibana-query-parts.png)
 
@@ -105,9 +105,9 @@ We have to use [term aggregations](https://www.elastic.co/guide/en/elasticsearch
 }
 ```
 
-Specifying `"size": 0` means that we do not want any matching documents, we only need the aggregation results. (There is no search criteria specified here, but there could be.)
+Specifying `"size": 0` means that we do not want any matching documents as we only need the aggregation results. (There are no search criteria specified here, but there could be.)
 
 This query first groups the documents by the `gender` value and then calculates the average of the `salary` values within the groups.
 
 !!! example "SUBMISSION"
-    Based on the results, what is the average salary of women? Type your answer into `ex4-c.txt`. Include only the number and nothing else in this text file (e.g. `123.45`). (You do _not_ need to save the query JSON here.)
+    Based on the results, what is the average salary of women? Type your answer into `ex4-c.txt`. Include only the number and nothing else in this text file (e.g., `123.45`). (You do _not_ need to save the query JSON here.)
