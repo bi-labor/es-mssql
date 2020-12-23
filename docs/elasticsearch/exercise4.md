@@ -63,7 +63,7 @@ Building on the previous query, replace the `query` with a [boolean query](https
       "must": { "match_all": {} },
       "filter": [
         { "range": { "age": { "gte": 18, "lte": 30 } } },
-        { "term": { "company": "McDonalds" } }
+        { "term": { "company": "NEPTUN McDonalds" } }
       ]
     }
   },
@@ -74,7 +74,7 @@ Building on the previous query, replace the `query` with a [boolean query](https
 The difference between this query and the previous one is that we have to apply some filters to the results.
 
 - The `age` must be between **18** and **30**.
-- The `company` must be _McDonalds_.
+- The `company` must be _NEPTUN McDonalds_ prefixed with your Neptun code.
 
 Execute this query and verify the results.
 

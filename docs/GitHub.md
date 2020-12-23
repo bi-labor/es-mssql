@@ -1,6 +1,6 @@
 # Submitting your work (GitHub)
 
-We are using GitHub to submit the solutions. You submit each laboratory in a GitHub repository that you will create through a provided link. The solution of the laboratory exercises are created within these repositories, then committed and pushed to GitHub. The submission is finished with a _pull request_ assigned to the laboratory instructor.
+We are using GitHub to submit the solutions. You submit each laboratory in a GitHub repository that you will create through a provided link. The solution of the laboratory exercises are created within these repositories, then committed and pushed to GitHub. The submission is finished with a _pull request_ assigned to the laboratory instructor with GitHub name `akosdudas`.
 
 !!! important "IMPORTANT"
     The submission requirements detailed below and mandatory. Submissions not following these guidelines are not graded.

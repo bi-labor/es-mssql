@@ -11,8 +11,10 @@ For the other laboratory topics, please refer to the course website.
 
 You need to submit your solutions in git repositories. Please refer to the [detailed guideline](GitHub.md).
 
-!!! important "IMPORTANT"
+!!! danger "IMPORTANT"
     You are **required** to follow these guidelines. Exercises not submitted in the expected format are not graded.
+
+    Workflow errors, i.e., not following the guidelines (e.g., not assigning the right person, or not assigning at all) are penalized.
 
 ## Screenshots
 

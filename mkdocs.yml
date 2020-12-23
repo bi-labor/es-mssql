@@ -47,7 +47,7 @@ plugins:
       prebuild_index: true
 
 nav:
-  - "Guides":
+  - "BI lab":
       - index.md
       - GitHub.md
       - GitHub-Actions.md

@@ -43,9 +43,11 @@ In this part of the exercise, we will create an index for documents containing i
 
 ### Sample document
 
+When using this sample document, make sure to replace the Neptun code with yours all uppercase in the `gender` field. The final value should look like this: `ABC123 female`.
+
 ```json
 {
-  "gender": "female",
+  "gender": "NEPTUN female",
   "firstName": "Evelyn",
   "lastName": "Petersen",
   "age": 17,
@@ -64,11 +66,11 @@ In this part of the exercise, we will create an index for documents containing i
 }
 ```
 
-We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although it uses the same REST API that we used through _PowerShell_, it provides a more convenient GUI for us to use. In this _Dev tool_, we can run queries. A query contains (1) a http verb and an URL matching Elasticsearch' REST API, and (2) a body as JSON.
+We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although it uses the same REST API that we used through _PowerShell_, it provides a more convenient GUI for us to use. In this _Dev tool_, we can run queries.
 
 ![Kibana Dev Tools](images/kibana-dev-tools.png)
 
-1. In _Kibana's_ Dev Tools enter `PUT salaries` in the first line and then enter the following JSON starting on a new line. Then press the _Play_ button in the top right corner of the editor.
+1. A query in _Kibana's_ Dev Tools contains (1) a http verb and an URL matching Elasticsearch' REST API, and (2) a body as JSON. Enter `PUT salaries` in the first line and then enter the following JSON starting on a new line. Then press the _Play_ button in the top right corner of the editor.
 
     ```json
     {
@@ -102,7 +104,7 @@ We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although
 
         - `hired`: Although this is a date field, the date representation of our data is not standard — _Elasticsearch_ wouldn't recognize it by itself. Therefore we have to specify the date format explicitly.
 
-1. We can check the indices with the `GET _cat/indices?v` query.
+1. We can check the indices with the `GET _cat/indices?v` query. (Just use the Dev Tools to execute this query too.)
 
     ![Elasticsearch indices](images/elasticsearch-indices.png)
 
@@ -111,10 +113,13 @@ We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although
 
 1. Insert the sample document into the created index. You can find the sample document [here](#sample-document).
 
+    !!! note ""
+        Do not forget to edit the Neptun code in the `gender` field.
+
     ```
     POST salaries/_doc
     {
-      ... // the sample document comes here
+      ... // the sample document comes here with the correct Neptun code
     }
     ```
 
@@ -130,14 +135,14 @@ We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although
 
 ## Modify the input data
 
-Before importing the rest of the sample data, let us make some changes by adding your **Neptun code** as a prefix to some of the values:
+Before importing the rest of the sample data, let us make some changes by adding your **Neptun code** as a prefix to some of the values in the file too:
 
 - Each `gender` value shall be prefixed, e.g. `"gender":"NEPTUN female"`
 - Each `company` value shall be prefixed, e.g. `"company":"NEPTUN McDonalds"`
 
 1. Find the `salaries.json` file in the root of the repository. Open a _PowerShell_ console here.
 
-1. Edit the following command by adding your Neptun code, then execute it in _PowerShell_ (do NOT change the quotation marks, only edit the 6 characters of the Neptun code!):
+1. Edit the following command by adding your Neptun code all uppercase, then execute it in _PowerShell_ (do NOT change the quotation marks, only edit the 6 characters of the Neptun code!):
 
     ```powershell
     (Get-Content .\salaries.json) -replace '"gender":"', '"gender":"NEPTUN ' -replace '"company":"', '"company":"NEPTUN ' | Set-Content .\salaries.json

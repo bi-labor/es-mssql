@@ -15,7 +15,7 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
     When opening this page the first time, you will be redirected to the _Management_ / _Index patterns_ configuration page to create a new _index pattern_.
 
-1. Enter the index name — `salaries` — as the index pattern. Make sure _Kibana_ says _Success! Your pattern matches 1 index_, and click _Next step_.
+1. Create a new index pattern. Enter the index name — `salaries` — as the index pattern. Make sure _Kibana_ says _Success! Your pattern matches 1 index_, and click _Next step_.
 
     ![Kibana index pattern](images/kibana-index-pattern-1.png)
 
@@ -27,7 +27,7 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
     ![Kibana create the first visualization](images/kibana-create-first-visualization.png)
 
-## a) How many people did the companies hire each month between 2010 and 2016? (vertical bar chart)
+## a) How many people did KFC hire each month? (vertical bar chart)
 
 1. Click on the _Create new visualization_ button on the _Visualize_ tab, and select _Vertical Bar_.
 
@@ -45,23 +45,23 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
     - _Aggregation_ should be _Date Histogram_
     - _Field_ should be `hired`
-    - _Minimum interval_ should be _Monthly_
+    - _Minimum interval_ should be _Month_
     - _Custom Label_ should be _Month_.
 
     ![Kibana Buckets](images/kibana-a-buckets.png)
 
-1. In the top left corner, click on the _Add a filter_ link and use the following settings to create the filter. Click on _Save_ to save the filter.
+1. In the top left corner, click on the _Add a filter_ link and filter for company "KFC" (with the appropriate prefix): use the following settings to create the filter. Click on _Save_ to save the filter.
 
     ![Kibana filter](images/kibana-a-filter.png)
 
-1. The configuration of the visualization is now ready. You see the preview of the visualization to the right. Click on the _Save_ button to save the visualization as `5_a`.
+1. The configuration of the visualization is now ready. You see the preview of the visualization. Click on the _Save_ button in the top right corner to save the visualization as `5_a`.
 
     ![Kibana save visualization](images/kibana-a-save.png)
 
     !!! example "SUBMISSION"
-        Create a screenshot of the visualization preview and save it as `ex5-a.png`.
+        Create a screenshot of the visualization preview and save it as `ex5-a.png`. Make sure that the filter, including your Neptun code, is visible on this screenshot.
 
-        Click on the _Management_ tab in the left side menu, and choose the _Saved Objects_ option. Select and export the visualization you just saved — no need to include related objects. Save the downloaded file as `ex5-a.ndjson`.
+        Click on the _Stack Management_ tab in the left side menu, and choose the _Saved Objects_ option. Select and export the visualization you just saved — no need to include related objects. Save the downloaded file as `ex5-a.ndjson`.
 
         ![Kibana export](images/kibana-export.png)
 
@@ -77,7 +77,7 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
     ![Kibana Buckets](images/kibana-b-buckets-1.png)
 
-1. Within the _Buckets_ configuration area, click on the _Add_ button and select _Split Slices_ with a _Range_ aggregation on the `age` field with the following ranges. Also, add a custom label _Age_.
+1. Within the _Buckets_ configuration area, click on the _Add_ button again and select _Split Slices_ with a _Range_ aggregation on the `age` field with the following ranges. Also, add a custom label _Age_.
 
     ![Kibana Buckets](images/kibana-b-buckets-2.png)
 
