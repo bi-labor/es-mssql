@@ -7,7 +7,7 @@ This laboratory aims to practice working with _Elasticsearch_ through writing qu
 You need the following tools to complete this laboratory:
 
 - Windows, Linux, or Mac: Every component you need is platform-independent.
-- Elasticsearch and Kibana version **7.5.x**
+- Elasticsearch and Kibana version **7.10.x**
     - Either run them using Docker
         - Windows or Mac: [install Docker Desktop](https://www.docker.com/products/docker-desktop)
         - Linux [install Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) and [install docker-compose](https://docs.docker.com/compose/install/)
