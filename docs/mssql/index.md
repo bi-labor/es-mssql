@@ -9,12 +9,11 @@ You need to following tools to complete this laboratory:
 - PC with Windows. You can also use a VM at <https://cloud.bme.hu>, see details [here](bme-cloud-vm-usage.md).
 - Microsoft SQL Server. Express edition is sufficient, or _localdb_ installed along with Visual Studio is also fine
 - [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
-- Microsoft Visual Studio 2017 / 2019. The community version is sufficient.
+- Microsoft Visual Studio 2019. The community version is sufficient.
 - Integration Services and Report Server Project support for Visual Studio
-    - Visual Studio 2017: [SQL Server Data Tools](https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017#install-analysis-services-integration-services-and-reporting-services-tools)
-    - Visual Studio 2019:
-        - [Microsoft Reporting Services Projects extension](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
-        - [SQL Server Integration Services Projects extension](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects). It is recommended that these extensions are kept [up to date](https://docs.microsoft.com/en-us/visualstudio/extensibility/how-to-update-a-visual-studio-extension?view=vs-2019).
+    - [Microsoft Reporting Services Projects extension](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
+    - [SQL Server Integration Services Projects extension](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects).
+    - It is recommended that these extensions are kept [up to date](https://docs.microsoft.com/en-us/visualstudio/extensibility/how-to-update-a-visual-studio-extension?view=vs-2019).
 - A GitHub account and a git tool
 
 ## Material to review before the laboratory

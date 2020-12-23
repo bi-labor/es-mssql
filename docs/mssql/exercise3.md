@@ -110,8 +110,8 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
     There will be a few rows with `NULL` values; these records failed the _Derived column_ transformation. Check whether the failure was justified (the problem is with the input), or whether the error is in your ETL process!
 
 !!! example "SUBMISSION"
-    Then create a screenshot of the table contents. Save the screenshot file as `ex3.png` - overwrite the placeholder file with yours.
+    Create a screenshot of the database table contents. Save the screenshot file as `ex3.png` - overwrite the placeholder file with yours.
 
-     Please make sure that the screenshot is taken such that it includes the database name (which is your Neptun code) from the _Object explorer_ window, and includes a few sample records with the Neptun code clearly visible.
+    Please make sure that the screenshot is taken such that it includes the database name (which is your Neptun code) from the _Object explorer_ window, and includes a few sample records with the Neptun code clearly visible.
 
     ![Sample expected screenshot](images/users-table-verify-content.png)

@@ -28,6 +28,8 @@ The final report should look similar to this:
 
         ![Add a new data source](images/rs-add-data-source-credentials.png)
 
+    - After the _data source_ is added, open its properties and verify the _Credentials_. You might need to set up this page again. (This seems to be a bug in Visual Studio.)
+
 1. Add a new dataset by right-clicking the _Datasets_ folder in the _Report data_ window. The dataset specifies how to fetch the data we want to display. It will be an SQL query.
 
     - Chose "Use a dataset embedded in my report"
