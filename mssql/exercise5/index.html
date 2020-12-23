@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -12,8 +10,9 @@
       
         <meta name="author" content="Dudás Ákos">
       
+      
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
     
     
       
@@ -21,20 +20,22 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.fe0cca5b.min.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
-      
+      <link rel="stylesheet" href="../../assets/stylesheets/main.73f7c429.min.css">
       
         
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
         
-        <meta name="theme-color" content="#ef5350">
+          
+          
+          <meta name="theme-color" content="#ef5552">
+        
       
     
     
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
@@ -53,7 +54,10 @@
     
     
     
+    
+    
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="red">
+      
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -71,7 +75,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="../.." title="VIAUMB00 Business Intelligence Laboratory" class="md-header-nav__button md-logo" aria-label="VIAUMB00 Business Intelligence Laboratory">
       
@@ -83,18 +89,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             VIAUMB00 Business Intelligence Laboratory
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
               Exercise 5: Import the books and ratings datasets using Integration Services
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -105,7 +113,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -146,27 +154,25 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
           
-
-  
-
-<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   
   
+
+
+  
+  
+  
     <li class="md-tabs__item">
-      
-        <a href="../.." class="md-tabs__link">
-          Guides
-        </a>
-      
+      <a href="../.." class="md-tabs__link">
+        BI lab
+      </a>
     </li>
   
 
@@ -174,12 +180,15 @@
         
   
   
+
+
+  
+  
+  
     <li class="md-tabs__item">
-      
-        <a href="../../elasticsearch/" class="md-tabs__link">
-          Elasticsearch
-        </a>
-      
+      <a href="../../elasticsearch/" class="md-tabs__link">
+        Elasticsearch
+      </a>
     </li>
   
 
@@ -187,12 +196,17 @@
         
   
   
+    
+  
+
+
+  
+  
+  
     <li class="md-tabs__item">
-      
-        <a href="../" class="md-tabs__link md-tabs__link--active">
-          MSSQL
-        </a>
-      
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        MSSQL
+      </a>
     </li>
   
 
@@ -206,10 +220,18 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="VIAUMB00 Business Intelligence Laboratory" class="md-nav__button md-logo" aria-label="VIAUMB00 Business Intelligence Laboratory">
       
@@ -240,22 +262,21 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
     
     <label class="md-nav__link" for="nav-1">
-      Guides
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      BI lab
+      <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Guides" data-md-level="1">
+    <nav class="md-nav" aria-label="BI lab" data-md-level="1">
       <label class="md-nav__title" for="nav-1">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Guides
+        <span class="md-nav__icon md-icon"></span>
+        BI lab
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -265,8 +286,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../.." title="Elasticsearch & MSSQL" class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       Elasticsearch & MSSQL
     </a>
   </li>
@@ -277,8 +299,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../../GitHub/" title="Submitting your work (GitHub)" class="md-nav__link">
+    <a href="../../GitHub/" class="md-nav__link">
       Submitting your work (GitHub)
     </a>
   </li>
@@ -289,8 +312,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../../GitHub-Actions/" title="GitHub Actions" class="md-nav__link">
+    <a href="../../GitHub-Actions/" class="md-nav__link">
       GitHub Actions
     </a>
   </li>
@@ -301,8 +325,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../../FAQ/" title="FAQ" class="md-nav__link">
+    <a href="../../FAQ/" class="md-nav__link">
       FAQ
     </a>
   </li>
@@ -313,8 +338,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../../GitHub-credentials/" title="GitHub credentials in university labs" class="md-nav__link">
+    <a href="../../GitHub-credentials/" class="md-nav__link">
       GitHub credentials in university labs
     </a>
   </li>
@@ -330,21 +356,20 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     
     <label class="md-nav__link" for="nav-2">
       Elasticsearch
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Elasticsearch" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Elasticsearch
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -355,8 +380,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../../elasticsearch/" title="Elasticsearch laboratory" class="md-nav__link">
+    <a href="../../elasticsearch/" class="md-nav__link">
       Elasticsearch laboratory
     </a>
   </li>
@@ -367,8 +393,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise1/" title="Exercise 1: Get the starter solution" class="md-nav__link">
+    <a href="../../elasticsearch/exercise1/" class="md-nav__link">
       Exercise 1: Get the starter solution
     </a>
   </li>
@@ -379,8 +406,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise2/" title="Exercise 2: Initializing Elasticsearch and Kibana" class="md-nav__link">
+    <a href="../../elasticsearch/exercise2/" class="md-nav__link">
       Exercise 2: Initializing Elasticsearch and Kibana
     </a>
   </li>
@@ -391,8 +419,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise3/" title="Exercise 3: Initializing Elasticsearch" class="md-nav__link">
+    <a href="../../elasticsearch/exercise3/" class="md-nav__link">
       Exercise 3: Initializing Elasticsearch
     </a>
   </li>
@@ -403,8 +432,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise4/" title="Exercise 4: Elasticsearch queries" class="md-nav__link">
+    <a href="../../elasticsearch/exercise4/" class="md-nav__link">
       Exercise 4: Elasticsearch queries
     </a>
   </li>
@@ -415,8 +445,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise5/" title="Exercise 5: Kibana visualizations" class="md-nav__link">
+    <a href="../../elasticsearch/exercise5/" class="md-nav__link">
       Exercise 5: Kibana visualizations
     </a>
   </li>
@@ -427,8 +458,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise6/" title="Exercise 6: Elasticsearch queries — practice" class="md-nav__link">
+    <a href="../../elasticsearch/exercise6/" class="md-nav__link">
       Exercise 6: Elasticsearch queries — practice
     </a>
   </li>
@@ -439,8 +471,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../../elasticsearch/exercise7/" title="Exercise 7: Kibana visualizations — practice" class="md-nav__link">
+    <a href="../../elasticsearch/exercise7/" class="md-nav__link">
       Exercise 7: Kibana visualizations — practice
     </a>
   </li>
@@ -455,24 +488,23 @@
       
       
 
+
   
 
 
+  
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
     
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       MSSQL
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="MSSQL" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         MSSQL
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -483,8 +515,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../" title="Microsoft SQL Server Business Intelligence" class="md-nav__link">
+    <a href="../" class="md-nav__link">
       Microsoft SQL Server Business Intelligence
     </a>
   </li>
@@ -495,8 +528,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../exercise1/" title="Exercise 1: Get the starter solution" class="md-nav__link">
+    <a href="../exercise1/" class="md-nav__link">
       Exercise 1: Get the starter solution
     </a>
   </li>
@@ -507,8 +541,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../exercise2/" title="Exercise 2: Create database and table for users data" class="md-nav__link">
+    <a href="../exercise2/" class="md-nav__link">
       Exercise 2: Create database and table for users data
     </a>
   </li>
@@ -519,8 +554,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../exercise3/" title="Exercise 3: Import the users dataset using Integration Services" class="md-nav__link">
+    <a href="../exercise3/" class="md-nav__link">
       Exercise 3: Import the users dataset using Integration Services
     </a>
   </li>
@@ -531,8 +567,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../exercise4/" title="Exercise 4: Report about users" class="md-nav__link">
+    <a href="../exercise4/" class="md-nav__link">
       Exercise 4: Report about users
     </a>
   </li>
@@ -541,6 +578,7 @@
           
           
           
+
 
   
 
@@ -552,7 +590,7 @@
       
     
     
-    <a href="./" title="Exercise 5: Import the books and ratings datasets using Integration Services" class="md-nav__link md-nav__link--active">
+    <a href="./" class="md-nav__link md-nav__link--active">
       Exercise 5: Import the books and ratings datasets using Integration Services
     </a>
     
@@ -564,8 +602,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../exercise6/" title="Exercise 6: Create a report listing the highest rated books" class="md-nav__link">
+    <a href="../exercise6/" class="md-nav__link">
       Exercise 6: Create a report listing the highest rated books
     </a>
   </li>
@@ -576,8 +615,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../bi-software-intro/" title="Using MSSQL BI tools" class="md-nav__link">
+    <a href="../bi-software-intro/" class="md-nav__link">
       Using MSSQL BI tools
     </a>
   </li>
@@ -588,8 +628,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../bme-cloud-vm-usage/" title="Using BME Cloud" class="md-nav__link">
+    <a href="../bme-cloud-vm-usage/" class="md-nav__link">
       Using BME Cloud
     </a>
   </li>
@@ -607,7 +648,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -630,9 +672,6 @@
                   <a href="https://github.com/bi-labor/es-mssql/edit/master/docs/mssql/exercise5.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
-                
-                
-                  
                 
                 
                 <h1 id="exercise-5-import-the-books-and-ratings-datasets-using-integration-services">Exercise 5: Import the books and ratings datasets using Integration Services<a class="headerlink" href="#exercise-5-import-the-books-and-ratings-datasets-using-integration-services" title="Permanent link">&para;</a></h1>
@@ -738,15 +777,15 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "../..",
-          features: ["tabs"],
+          features: ['navigation.tabs'],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
