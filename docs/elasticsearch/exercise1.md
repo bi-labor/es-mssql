@@ -5,7 +5,7 @@
 
 ## Check out the git repository
 
-1. Open the following URL and accept the assignment to get your repository: <TBD>
+1. Open the following URL and accept the assignment to get your repository: <https://classroom.github.com/a/2JIfMQxz>
 
 1. Wait for the repository creation to complete, then check out the repository.
 
