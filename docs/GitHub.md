@@ -50,6 +50,20 @@ The detailed description below shows the entire procedure. This summary is an ov
 
     If you are using the console or the shell, the following command performs the clone (if the `git` command is available): `git clone <repository link>`
 
+    ??? tip "If you are using Sourcetree"
+        If you are using Sourcetree, you might need to use a Personal Access Token (PAT) for access as follows:
+
+        1. Head to your GitHub account settings and choose _Developer settings_ from the left menu.
+        1. Choose the _Personal access token_ option and click _Generate new token_.
+        1. The note field is to remember what this token was created for. Let's give a name, e.g. `sourcetree`.
+        1. At the _Select scope_ form tick every box available and click _Generate token_.
+        1. After the generation process copy the created token to the clipboard and head over to the Sourcetree app.
+        1. Go to Tools → Options → Authentication.
+        1. If you already have a GitHub account set up with some other access token or authentication info, click on it and choose _Edit_ otherwise choose _Add_.
+        1. Choose the hosting service as GitHub, preferred protocol as HTTPS, and at the _Credentials_ part choose _Authentication Basic_. Type in your GitHub username then click on the _Refresh Password_ option.
+        1. Copy the created token as the password and click OK.
+        1. After this, cloning and pushing to the repository should work.
+
 1. If the cloning is successful, **DO NOT START WORKING YET!** The solution should _not_ be committed to the repository `master` branch. Instead, create a new branch with the name `solution`.
 
     In GitHub Desktop, use the _Branch_ menu for creating a new one.
