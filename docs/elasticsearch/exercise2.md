@@ -42,7 +42,7 @@ If you have Docker, or you are working in the university computer laboratories, 
 
 ## Option 2: Start _Elasticsearch_ and _Kibana_ by installing them
 
-1. Download [Elasticsearch](https://www.elastic.co/downloads/past-releases/elasticsearch-7-10-1) and [Kibana](https://www.elastic.co/downloads/past-releases/kibana-7-10-1). Please make sure to use **version 7.10.x**; the starter code and the instructions might be specific to this version.
+1. Download the OSS version of [Elasticsearch](https://www.elastic.co/downloads/past-releases/elasticsearch-oss-7-10-1) and [Kibana](https://www.elastic.co/downloads/past-releases/kibana-oss-7-10-1). Please make sure to use **version 7.10.x**; the starter code and the instructions might be specific to this version.
 
 1. Extract the archives.
 
