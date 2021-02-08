@@ -4,19 +4,22 @@ The purpose of this exercise is to practice the data visualization capabilities 
 
 ## Create three visualizations to answer the following questions
 
-a) What was the _average_ age of the people hired each year in the different companies?
+**a)** What was the _average_ age of the people hired each year in the different companies?
 
 Use a _vertical bar chart_ for visualization.
 
 !!! tip "Tips"
     - You will have to use two aggregations to create this visualization. By default, Kibana stacks the data for the different companies on top of each other. For our use-case, it would be much better if these would be next to each other instead. Fortunately, you can set this if you choose the _Mode_ called _normal_ instead of _stacked_ under the _Metrics & Axes_ settings.
     - Make sure to set the _Metrics_ to _Average_ of _age_ instead of _Count_!
+    - Your visualization should have a similar configuration:
 
-b) What is the distribution of the workers between the various companies in the state of New York (NY)?
+        ![](images/kibana-avg-age-buckets.png)
+
+**b)** What is the distribution of the workers between the various companies in the state of New York (NY)?
 
 Use a _pie chart_ for visualization.
 
-c) What is the _average_ salary of the workers aged between 18 and 30 in the various states?
+**c)** What is the _average_ salary of the workers aged between 18 and 30 in the various states?
 
 !!! note ""
     Make sure to set the _Metrics_ to _Average_ of _salary_ instead of _Count_!
