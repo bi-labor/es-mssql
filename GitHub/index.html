@@ -813,6 +813,20 @@
 <p>You may use any git client. The simplest one is <a href="https://desktop.github.com/">GitHub Desktop</a> if you do not have a favorite yet. You can list your repositories in this application directly from GitHub.</p>
 <p><img alt="GitHub Desktop repository clone" src="../images/github/github-desktop-clone.png" /></p>
 <p>If you are using the console or the shell, the following command performs the clone (if the <code>git</code> command is available): <code>git clone &lt;repository link&gt;</code></p>
+<details class="tip"><summary>If you are using Sourcetree</summary><p>If you are using Sourcetree, you might need to use a Personal Access Token (PAT) for access as follows:</p>
+<ol>
+<li>Head to your GitHub account settings and choose <em>Developer settings</em> from the left menu.</li>
+<li>Choose the <em>Personal access token</em> option and click <em>Generate new token</em>.</li>
+<li>The note field is to remember what this token was created for. Let's give a name, e.g. <code>sourcetree</code>.</li>
+<li>At the <em>Select scope</em> form tick every box available and click <em>Generate token</em>.</li>
+<li>After the generation process copy the created token to the clipboard and head over to the Sourcetree app.</li>
+<li>Go to Tools → Options → Authentication.</li>
+<li>If you already have a GitHub account set up with some other access token or authentication info, click on it and choose <em>Edit</em> otherwise choose <em>Add</em>.</li>
+<li>Choose the hosting service as GitHub, preferred protocol as HTTPS, and at the <em>Credentials</em> part choose <em>Authentication Basic</em>. Type in your GitHub username then click on the <em>Refresh Password</em> option.</li>
+<li>Copy the created token as the password and click OK.</li>
+<li>After this, cloning and pushing to the repository should work.</li>
+</ol>
+</details>
 </li>
 <li>
 <p>If the cloning is successful, <strong>DO NOT START WORKING YET!</strong> The solution should <em>not</em> be committed to the repository <code>master</code> branch. Instead, create a new branch with the name <code>solution</code>.</p>
