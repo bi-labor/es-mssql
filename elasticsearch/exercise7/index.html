@@ -733,18 +733,22 @@
                 <h1 id="exercise-7-kibana-visualizations-practice">Exercise 7: Kibana visualizations — practice<a class="headerlink" href="#exercise-7-kibana-visualizations-practice" title="Permanent link">&para;</a></h1>
 <p>The purpose of this exercise is to practice the data visualization capabilities of <em>Kibana</em>. Feel free to take inspiration from the solutions in <a href="../exercise5/">exercise 5</a>.</p>
 <h2 id="create-three-visualizations-to-answer-the-following-questions">Create three visualizations to answer the following questions<a class="headerlink" href="#create-three-visualizations-to-answer-the-following-questions" title="Permanent link">&para;</a></h2>
-<p>a) What was the <em>average</em> age of the people hired each year in the different companies?</p>
+<p><strong>a)</strong> What was the <em>average</em> age of the people hired each year in the different companies?</p>
 <p>Use a <em>vertical bar chart</em> for visualization.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tips</p>
 <ul>
 <li>You will have to use two aggregations to create this visualization. By default, Kibana stacks the data for the different companies on top of each other. For our use-case, it would be much better if these would be next to each other instead. Fortunately, you can set this if you choose the <em>Mode</em> called <em>normal</em> instead of <em>stacked</em> under the <em>Metrics &amp; Axes</em> settings.</li>
 <li>Make sure to set the <em>Metrics</em> to <em>Average</em> of <em>age</em> instead of <em>Count</em>!</li>
+<li>
+<p>Your visualization should have a similar configuration:</p>
+<p><img alt="" src="../images/kibana-avg-age-buckets.png" /></p>
+</li>
 </ul>
 </div>
-<p>b) What is the distribution of the workers between the various companies in the state of New York (NY)?</p>
+<p><strong>b)</strong> What is the distribution of the workers between the various companies in the state of New York (NY)?</p>
 <p>Use a <em>pie chart</em> for visualization.</p>
-<p>c) What is the <em>average</em> salary of the workers aged between 18 and 30 in the various states?</p>
+<p><strong>c)</strong> What is the <em>average</em> salary of the workers aged between 18 and 30 in the various states?</p>
 <div class="admonition note">
 <p>Make sure to set the <em>Metrics</em> to <em>Average</em> of <em>salary</em> instead of <em>Count</em>!</p>
 </div>
