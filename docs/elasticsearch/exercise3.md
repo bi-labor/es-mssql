@@ -43,7 +43,7 @@ In this part of the exercise, we will create an index for documents containing i
 
 ### Sample document
 
-When using this sample document, make sure to replace the Neptun code with yours all uppercase in the `gender` field. The final value should look like this: `ABC123 female`.
+When using this sample document, make sure to **replace the Neptun code** with yours all uppercase in the `gender` and `company` fields. The final value should look like this: `ABC123 female` and `ABC123 Subway` respectively.
 
 ```json
 {
@@ -60,7 +60,7 @@ When using this sample document, make sure to replace the Neptun code with yours
     "houseNumber": 503
   },
   "salary": 87217,
-  "company": "Subway",
+  "company": "NEPTUN Subway",
   "email": "evelyn.petersen@subway.com",
   "hired": "09/29/2009"
 }
