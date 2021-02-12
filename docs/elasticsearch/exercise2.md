@@ -5,7 +5,7 @@ The purpose of this exercise is to start _Elasticsearch_ and _Kibana_. You have 
 1. Using Docker
 1. Or install them on your machine.
 
-In the university computer laboratories use the Docker option. Otherwise choose the option best suited for you.
+In the university computer laboratories use the Docker option. Otherwise choose the option best suited for you (if you don't have Docker, you can just go with option #2).
 
 ## Option 1: Start _Elasticsearch_ and _Kibana_ using Docker
 
