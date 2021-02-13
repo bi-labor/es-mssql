@@ -11,7 +11,7 @@ The detailed description below shows the entire procedure. This summary is an ov
 
 1. The lab exercises are solved in a dedicated GitHub repository created through a link in the exercise description.
 
-1. Your solution is submitted on a new branch, not on master. You can create any number of committed on this branch. You need to push these commits to GitHub.
+1. Your solution is submitted on a new branch, not on master. You can create any number of commits on this branch. You need to push these commits to GitHub.
 
 1. You submit your final solution through a pull request assigned to the laboratory instructor.
 
