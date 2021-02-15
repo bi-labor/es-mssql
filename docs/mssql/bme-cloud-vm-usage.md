@@ -1,6 +1,6 @@
 # Using BME Cloud
 
-Go to <https://cloud.bme.hu> and log in with your EduID. A prepared VM template is available in the "Smallville" data center with the name "BI laboratory MSSQL." You can use this template to create a VM that has all the necessary software installed.
+A prepared VM template with name "BI laboratory MSSQL" is available in two data centers of the BME cloud. Go to <https://niif.cloud.bme.hu> or <https://smallville.cloud.bme.hu> and log in with your EduID. Find the template and use it to create a VM that has all the necessary software installed.
 
 You will need an RDP client to connect to the cloud VM.
 
