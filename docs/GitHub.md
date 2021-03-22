@@ -1,6 +1,6 @@
 # Submitting your work (GitHub)
 
-We are using GitHub to submit the solutions. You submit each laboratory in a GitHub repository that you will create through a provided link. The solution of the laboratory exercises are created within these repositories, then committed and pushed to GitHub. The submission is finished with a _pull request_ assigned to the laboratory instructor with GitHub name `akosdudas`.
+We are using GitHub to submit the solutions. You submit each laboratory in a GitHub repository that you will create through a provided link. The solution of the laboratory exercises is created within these repositories, then committed and pushed to GitHub. The submission is finished with a _pull request_ assigned to the laboratory instructor with GitHub name `akosdudas`.
 
 !!! important "IMPORTANT"
     The submission requirements detailed below and mandatory. Submissions not following these guidelines are not graded.
@@ -55,12 +55,12 @@ The detailed description below shows the entire procedure. This summary is an ov
 
         1. Head to your GitHub account settings and choose _Developer settings_ from the left menu.
         1. Choose the _Personal access token_ option and click _Generate new token_.
-        1. The note field is to remember what this token was created for. Let's give a name, e.g. `sourcetree`.
-        1. At the _Select scope_ form tick every box available and click _Generate token_.
-        1. After the generation process copy the created token to the clipboard and head over to the Sourcetree app.
+        1. The note field is to remember what this token was created for. Let's give a name, e.g., `sourcetree`.
+        1. In the _Select scope_ form, tick every box available and click _Generate token_.
+        1. After the generation process, copy the created token to the clipboard and head over to the Sourcetree app.
         1. Go to Tools → Options → Authentication.
-        1. If you already have a GitHub account set up with some other access token or authentication info, click on it and choose _Edit_ otherwise choose _Add_.
-        1. Choose the hosting service as GitHub, preferred protocol as HTTPS, and at the _Credentials_ part choose _Authentication Basic_. Type in your GitHub username then click on the _Refresh Password_ option.
+        1. If you already have a GitHub account set up with some other access token or authentication info, click on it and choose _Edit_, otherwise choose _Add_.
+        1. Choose the hosting service as GitHub, preferred protocol as HTTPS, and at the _Credentials_ part choose _Authentication Basic_. Type in your GitHub username, then click on the _Refresh Password_ option.
         1. Copy the created token as the password and click OK.
         1. After this, cloning and pushing to the repository should work.
 
@@ -92,11 +92,11 @@ The detailed description below shows the entire procedure. This summary is an ov
     !!! tip "At home"
         When working from home, you may want to set the name and email address globally using the `--global` switch in the commands above.
 
-    To commit using GitHub Desktop, first check if you are on the right branch. During the first push, the _solution_ branch needs to be published.
+    To commit using GitHub Desktop, first check if you are on the correct branch. During the first push, the _solution_ branch needs to be published.
 
     ![GitHub Desktop push branch](images/github/github-desktop-commit-to-branch.png)
 
-    When adding further commits, verify the branch. You can publish the commit using the _Push origin_ button. The little number on this button shows you how many commits need pushing.
+    When adding further commits, verify the branch. You can publish the commit using the _Push origin_ button. The tiny number on this button shows you how many commits need pushing.
 
     ![GitHub Desktop commit and push](images/github/github-desktop-push-commit.png)
 
@@ -133,7 +133,7 @@ The detailed description below shows the entire procedure. This summary is an ov
     !!! tip "Why the pull request?"
         This _pull request_ combines all changes you made and shows us the final result. This helps the laboratory instructor to evaluate your submission more easily. This _pull request_ means you submit your solution; hence this step **cannot be omitted**.
 
-    To open the _pull request_, you need to go to the repository's GitHub web frontend. If you pushed recently, GitHub will offer you to create the pull request.
+    To open the _pull request_, you need to go to the repository's GitHub web frontend. If you pushed recently, GitHub offers you to create the pull request.
 
     ![GitHub create pull request](images/github/github-create-pull-request-1.png)
 
@@ -153,7 +153,7 @@ The detailed description below shows the entire procedure. This summary is an ov
 
     If you need more information about the evaluation and the results, _GitHub Actions_ can provide you more. See the short guide [here](GitHub-Actions.md).
 
-1. If you are not satisfied with your work, you can make further changes. You only need to commit and push your changes. Any changes pushed will re-trigger the evaluation of the _pull request_. We ask that you trigger **NO MORE THAN 5 evaluations**!
+1. If you are not satisfied with your work, you can make further changes. You only need to commit and push your changes. Any pushed change will re-trigger the evaluation of the _pull request_. We ask that you trigger **NO MORE THAN 5 evaluations**!
 
     !!! tip "Making further changes without running the evaluation"
         If you want to make changes to your submission and not have the re-evaluation run, you should **convert the pull request to draft**.
@@ -165,7 +165,7 @@ The detailed description below shows the entire procedure. This summary is an ov
         ![GitHub draft PR ready](images/github/github-draft-pr-ready.png)
 
     !!! note "Maximum 5"
-        Evaluations that fail due to transient errors, such as network problems, are not counted into the 5 evaluations. But if you trigger more evaluation by mistake, or on purpose, it will be sanctioned. You are required to **test your solution locally** before submitting it.
+        Evaluations that fail due to transient errors, such as network problems, are not counted into the 5 evaluations. But if you trigger more evaluation by mistake or on purpose, it will be sanctioned. You are required to **test your solution locally** before submitting it.
 
 1. **FINALLY**, when you are ready, assign the _pull request_ to your laboratory instructor. This step is considered as the submission of your work.
 
@@ -179,7 +179,7 @@ The detailed description below shows the entire procedure. This summary is an ov
 
 ## Questions and complaints regarding the final result
 
-If you have questions on concerns regarding the automated evaluation, use the pull request for communication with the instructor by asking questions via comments. To let the instructor know you have questions, please use `@akosdudas` [mention](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#mentioning-people-and-teams) in the PR comment. This will automatically send an email notification.
+If you have questions or concerns regarding the automated evaluation, use the pull request for communication with the instructor by asking questions via comments. To let the instructor know you have questions, please use `@akosdudas` [mention](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#mentioning-people-and-teams) in the PR comment. This will automatically send an email notification.
 
 ![GitHub PR asking questions](images/github/github-question-in-pr.png)
 

@@ -29,4 +29,4 @@ You need the following tools to complete this laboratory:
 
 ## Grading
 
-Exercises 1 & 2 help you prepare the environment. Starting with exercise 3, **each exercise is worth one grade when completed successfully**. For an exercise to count as _successful_, you must finish _all_ its subtasks successfully. (E.g. if you complete exercises 3, 4 and 5 successfully, but there is an error in exercise 6, and you did not complete exercise 7, the resulting grade will be 3.)
+Exercises 1 & 2 help you prepare the environment. Starting with exercise 3, **each exercise is worth one grade when completed successfully**. For an exercise to count as _successful_, you must finish _all_ its subtasks successfully. (E.g. if you complete exercises 3, 4, and 5 successfully, but there is an error in exercise 6, and you did not complete exercise 7, the resulting grade will be 3.)

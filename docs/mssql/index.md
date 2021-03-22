@@ -1,6 +1,6 @@
 # Microsoft SQL Server Business Intelligence
 
-This laboratory's goal is to practice the usage of Microsoft SQL Server products in business intelligence scenarios. Through the exercises, you will familiarize yourself with the usage of Microsoft SQL Server as a data warehouse, Integration Services as an ETL tool, and Reporting Services for report generation.
+This laboratory's goal is to practice the usage of Microsoft SQL Server products in business intelligence scenarios. Through the exercises, you will familiarize yourself with Microsoft SQL Server's usage as a data warehouse, Integration Services as an ETL tool, and Reporting Services for report generation.
 
 ## Pre-requisites
 
@@ -13,7 +13,7 @@ You need to following tools to complete this laboratory:
 - Integration Services and Report Server Project support for Visual Studio
     - [Microsoft Reporting Services Projects extension](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
     - [SQL Server Integration Services Projects extension](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects).
-    - It is recommended that these extensions are kept [up to date](https://docs.microsoft.com/en-us/visualstudio/extensibility/how-to-update-a-visual-studio-extension?view=vs-2019).
+    - It is recommended to keep these extensions [up to date](https://docs.microsoft.com/en-us/visualstudio/extensibility/how-to-update-a-visual-studio-extension?view=vs-2019).
 - A GitHub account and a git tool
 
 ## Material to review before the laboratory
@@ -35,4 +35,4 @@ The model of our approach looks like the following.
 
 ## Grading
 
-Exercises 1 & 2 help you prepare the environment. Starting with exercise 3, **each exercise is worth one grade when completed successfully**. For an exercise to count as _successful_ you must finish _all_ its subtasks successfully. (E.g. if you complete exercises 3, 4 successfully, but there is an error in exercise 5, and you did not complete exercise 6, the resulting grade will be 3.)
+Exercises 1 & 2 help you prepare the environment. Starting with exercise 3, **each exercise is worth one grade when completed successfully**. For an exercise to count as _successful_ you must finish _all_ its subtasks successfully. (E.g. if you complete exercises 3 and 4 successfully, but there is an error in exercise 5, and you did not complete exercise 6, the resulting grade will be 3.)

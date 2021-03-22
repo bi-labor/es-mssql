@@ -9,7 +9,7 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
 1. Find the _SSIS Toolbox_; you will need to use this window in the following tasks.
 
     !!! note ""
-        If you cannot see this toolbox window, after opening `Package.dtsx`, look for the _Extensions > SSIS > SSIS Toolbox_ menu.
+        If you cannot see this toolbox window after opening `Package.dtsx`, look for the _Extensions > SSIS > SSIS Toolbox_ menu.
 
 1. Add a new _SQL Task_ to the _Control flow_ that erases any content from the target database table. You will likely need to run the ETL process multiple times, but the data should only be imported once, hence the initial cleanup task.
 
@@ -46,7 +46,7 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
     - Switch to the _Advanced_ page (within the dialog)
         - Verify that the correct number of columns is present
         - Change the UserID to be parsed as `four byte signed integer`
-        - Although the age should be a number, it must be parsed as a string here, because there are values in the CSV with the literal `NULL` text
+        - Although the age should be a number, it must be parsed as a string because there are values in the CSV with the literal `NULL` text
         - Increase the length (_OutputColumnWidth_) of the Location column from 50 to 1.000
     - The preview pane is a good way to verify the results. Ensure that there are no lingering quotation marks in the values (if there are, you missed to specify the text qualifier before).
     - Close the dialog. If you need to modify the settings, you will find this _Connection manager_ at the bottom of the designer surface.
@@ -55,9 +55,9 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
 
 1. To split the _Location_ column into two and parse the _Age_ as a number, add a _Derived column_ transformation (drag one from the SSIS Toolbox pane to the data flow editor surface). Connect the blue output of the file source into this new box to specify the data flow direction (see image below for reference). Then open the settings of the _Derived column_ element to specify how the derived values are calculated.
 
-    - Add a new column that contains the age as an integer. Check if the string is "NULL", in that case, keep the null value, or cast to int.
+    - Add a new column that contains the age as an integer. Check if the string is "NULL"; in that case, keep the null value, or cast to int.
         - Use the following expression: `[Age] == "NULL" ? NULL(DT_I4) : (DT_I4)[Age]`. (You may need to change the column names.)
-    - Split the location column into two, and **include your Neptun code** in the text: create a new _City_ and a new _Country_ column using string operations; _Country_ should be prefixed with your Neptun code.
+    - Split the location column into two, and **include your Neptun code** in the text: create a new _City_, and a new _Country_ column using string operations; _Country_ should be prefixed with your Neptun code.
         - Take a look at a few examples of the _Location_: they are in the form of "city, state, country"
         - To separate the country, find the second comma in the text. The rest is the city (you can keep the state included in the city text). **Prefix the country with your Neptun code** by concatenating it as a string to the front. E.g., "nyc, new york, usa" becomes:
             - Country: "NEPTUN usa"
@@ -79,7 +79,7 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
 
         ![Integration Services ADO NET Destination settings](images/is-users-adonet-destination.png)
 
-    - Check the mapping and make sure that the right fields go into the right columns. Make sure to double-check the _Age_ column because it may exist as a number, and as a string - you need the numbered type here. (Mind, that the input column names may be different for you.)
+    - Check the mapping and make sure that the correct fields go into the correct columns. Make sure to double-check the _Age_ column because it may exist as a number and as a string - you need the numbered type here. (Mind that the input column names may be different for you.)
 
         ![Integration Services ADO NET Destination mapping](images/is-users-adonet-mapping.png)
 
@@ -90,7 +90,7 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
 
         ![Integration Services Data flow of the Users import](images/is-users-data-flow.png)
 
-    - A the [Configure Error Output dialog](https://docs.microsoft.com/en-us/sql/integration-services/configure-an-error-output-in-a-data-flow-component) will pop up to specify how to handle errors. For all columns and error types select _Redirect row_. There is a total number of 6 elements to change here. Close this dialog.
+    - A the [Configure Error Output dialog](https://docs.microsoft.com/en-us/sql/integration-services/configure-an-error-output-in-a-data-flow-component) will pop up to specify how to handle errors. For all columns and error types, select _Redirect row_. There is a total number of 6 elements to change here. Close this dialog.
 
         ![Integration Services Error output configuration](images/is-users-error-output.png)
 
@@ -112,6 +112,6 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
 !!! example "SUBMISSION"
     Create a screenshot of the database table contents. Save the screenshot file as `ex3.png` - overwrite the placeholder file with yours.
 
-    Please make sure that the screenshot is taken such that it includes the database name (which is your Neptun code) from the _Object explorer_ window, and includes a few sample records with the Neptun code clearly visible.
+    Please make sure to create the screenshot such that it includes the database name (which is your Neptun code) from the _Object explorer_ window, and includes a few sample records with the Neptun code clearly visible.
 
     ![Sample expected screenshot](images/users-table-verify-content.png)

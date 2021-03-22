@@ -88,7 +88,7 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
 1. Create a new visualization of type _Region Map_. Select the previously created `salaries` index pattern as the search source.
 
-1. Under the _Buckets_ setting add a _Shape field_ with _Terms_ aggregation on the `address.state` field. Make sure to set the _Size_ value to at least 50.
+1. Under the _Buckets_ setting, add a _Shape field_ with _Terms_ aggregation on the `address.state` field. Make sure to set the _Size_ value to at least 50.
 
     ![Kibana Buckets](images/kibana-c-buckets.png)
 

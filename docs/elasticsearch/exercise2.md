@@ -5,7 +5,7 @@ The purpose of this exercise is to start _Elasticsearch_ and _Kibana_. You have 
 1. Using Docker
 1. Or install them on your machine.
 
-In the university computer laboratories use the Docker option. Otherwise choose the option best suited for you (if you don't have Docker, you can just go with option #2).
+In the university computer laboratories use the Docker option. Otherwise, choose the option best suited for you (if you don't have Docker, you can go with option #2).
 
 ## Option 1: Start _Elasticsearch_ and _Kibana_ using Docker
 
@@ -17,11 +17,11 @@ If you have Docker, or you are working in the university computer laboratories, 
 
 1. Open a command prompt or PowerShell console and test whether Docker is working: execute `docker version`, which should print version information for client and server.
 
-1. Locate the provided `docker-compose.yml` file in the checked-out starter solution (located in the root of your git repository). Open it in a text editor of your choice and check its contents. Check the following specifics:
+1. Locate the provided `docker-compose.yml` file in the checked-out starter solution (located in the root of your git repository). Open it in a text editor of your choice, and check its contents. Check the following specifics:
 
     - `environment`: This is used to set environment variables in the container. We can use these to provide some settings for _Elasticsearch_ and _Kibana_ as well. One example is the `cluster.name` variable.
 
-    - `ulimits`: In order for _Elasticsearch_ to function properly, we have to set some `ulimit` values in the container.
+    - `ulimits`: For _Elasticsearch_ to function correctly, we have to set some `ulimit` values in the container.
 
     - `volumes`: Due to how file storage works in _Docker_ containers, every data is lost if we remove a container and start a new one. Of course, this is not exactly appropriate for a database service like _Elasticsearch_. Therefore we are going to use a `volume` which provides a more durable storage option.
 
@@ -68,7 +68,7 @@ If you have Docker, or you are working in the university computer laboratories, 
 
     If you need to change the ports, edit the following files, then restart the applications:
 
-    - `config\elasticsearch.yml`, look for key `http.port`, uncomment it and set a port;
+    - `config\elasticsearch.yml`, look for key `http.port`, uncomment it, and set a port;
     - `config\kibana.yml`, look for key `elasticsearch.hosts`, uncomment it and set the same port.
 
 ## Check that the systems are running

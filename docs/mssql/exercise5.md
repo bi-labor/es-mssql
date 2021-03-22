@@ -17,7 +17,7 @@ Create a new ETL process to import the books and ratings datasets. Open the prov
 - Make sure to import the **image URLs** from the books data file.
 - Remember to extend the imported columns' length in the flat file connection settings (**_OutputColumnWidth_**) for the fields; **1000 characters** should be sufficient.
 - The **ratings** dataset contains invalid values: there are rows where the value is **0**. These should be skipped using a **Conditional split** component.
-- It is best to separate the two CSV import into different _data flows_ within the same _control flow_ process.
+- It is best to separate the two CSV imports into different _data flows_ within the same _control flow_ process.
 
 !!! example "SUBMISSION"
     Include proof of the successful import by taking a screenshot of the **books database table contents** after successfully executing the ETL process as `ex5.png`.

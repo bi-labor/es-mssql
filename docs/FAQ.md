@@ -12,7 +12,7 @@ After each commit you push, a minimal set of tests are executed for verification
 
 ### You do not know that is the problem in your solution
 
-It is not our goal with the evaluation to explain the problems precisely. It is part of your work to evaluate and test your own solution. The error message can also come from the actual execution of your work and comes from the tools used.
+It is not our goal with the evaluation to explain the problems precisely. It is part of your work to evaluate and test your solution. The error message can also come from the actual execution of your work and comes from the tools used.
 
 ### You finished your work but got no evaluation/grade
 

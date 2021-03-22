@@ -26,4 +26,4 @@ In this exercise, you are required to create a new report using Reporting Servic
 !!! example "SUBMISSION"
     Include the **SQL query** in file `ex6.sql` and a screenshot of the **report** in file `ex6.png`.
 
-    Please ensure that the screenshot is taken so that relevant parts of the report are all visible (title, table with Neptun codes, ratings, cover images). See the sample above.
+    Please ensure that the screenshot displays all the relevant parts of the report (title, table with Neptun codes, ratings, cover images). See the sample above.

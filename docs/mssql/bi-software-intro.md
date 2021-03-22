@@ -20,7 +20,7 @@ Refresh the list by right-clicking the Databases or Tables folder in the _Object
 
 ## Microsoft SQL Server Data Tools integrated into Visual Studio
 
-After installing Microsoft SQL Server Data Tools, you will find new project types in Visual Studio in the New Project wizard.
+After installing Microsoft SQL Server Data Tools, you will find new visual Studio project types in the New Project wizard.
 
 ![New projects in Visual Studio](mssql-bi-software-intro/vs-project-types.png)
 
@@ -34,7 +34,7 @@ The Integration services project contains a _Package.dtsx_ (visible in Solution 
 
 Control flow is the high-level component responsible for the execution of the entire process; Data flow contains part of the whole process, a single ETL flow. We build ETL processes by combining the two.
 
-The ETL process is built from the available components by dragging them from the _SSIS toolbox_ and connecting them. The _SSIS toolbox_ can be opened from the _View_ menu under _Other Windows_. Each component's settings can be edited in the _Properties_ box on the right, or by _double clicking_ the boxes themselves.
+The ETL process is built from the available components by dragging them from the _SSIS toolbox_ and connecting them. The _SSIS toolbox_ can be opened from the _View_ menu under _Other Windows_. Each component's settings can be edited in the _Properties_ box on the right or by _double clicking_ the boxes themselves.
 
 ![SSIS toolbox and element properties](mssql-bi-software-intro/is-package-components.png)
 
@@ -47,7 +47,7 @@ Notable components (from the _SSIS Toolbox_) that you will need:
 - Conditional Split: split the data into two paths based on a condition
 - Sort: sorting and duplicate filtering
 
-We can debug the process using the **Debug** button in the toolbar. During the execution, we will get immediate feedback on the progress and the result. The detailed log can be viewed by clicking the **Progress** button, or in the **Output window**.
+We can debug the process using the **Debug** button in the toolbar. During the execution, we will get immediate feedback on the progress and the result. The detailed log can be viewed by clicking the **Progress** button or in the **Output window**.
 
 ![Debug execution of the ETL process](mssql-bi-software-intro/is-debug.png)
 

@@ -63,7 +63,7 @@ The final report should look similar to this:
 
     - Chose a pie chart type.
     - Create a new dataset, similar to the one before, that returns only the **top 10** rows.
-    - Open the _Chart data_ overlay by clicking the chart component. You need to click to a white area for this overlay to appear.
+    - Open the _Chart data_ overlay by clicking the chart component. You need to click on a white area for this overlay to appear.
     - From the newly created dataset display the _Count_ field as the _Values_ and the _Country_ field as _Category groups_:
 
         ![Specify chart data](images/rs-users-chart-data.png)
@@ -75,4 +75,4 @@ The final report should look similar to this:
 !!! example "SUBMISSION"
     Include a screenshot of the report as `ex4.png`.
 
-    Please make sure that the screenshot is taken such that relevant parts of the report are all visible (title, table, and diagram too). See the sample at the beginning of the exercise.
+    Please make sure to create the screenshot such that relevant parts of the report are all visible (title, table, and diagram too). See the sample at the beginning of the exercise.

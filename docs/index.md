@@ -14,14 +14,14 @@ You need to submit your solutions in git repositories. Please refer to the [deta
 !!! danger "IMPORTANT"
     You are **required** to follow these guidelines. Exercises not submitted in the expected format are not graded.
 
-    Workflow errors, i.e., not following the guidelines (e.g., not assigning the right person, or not assigning at all) are penalized.
+    Workflow errors, i.e., not following the guidelines (e.g., not assigning the right person or not assigning at all), are penalized.
 
 ## Screenshots
 
 The exercises will ask for a few screenshots. The exercises describe the expected content of these screenshots. You can create a screenshot of the entire desktop or the specified application.
 
 !!! tip ""
-    You should upload the screenshots to the git repository as part of your solution. The repository is private, hence only you and the instructors have access to it.
+    You should upload the screenshots to the git repository as part of your solution. The repository is private; hence only you and the instructors have access to it.
 
 ## Automatic evaluation
 
@@ -31,10 +31,10 @@ The exercises will ask for a few screenshots. The exercises describe the expecte
 
 ---
 
-!!! note "Pull requests welcome"
+!!! note "Pull requests are welcome"
     As a student of this course, you can earn extra credit by contributing to the materials! Open a _pull request_ to fix an error or contribute to the contents in any way! Check the link to the repository in the upper right corner.
 
 !!! quote "License"
     The materials found in this repository are created for the students of course BMEVIAUMB00. The usage of these materials outside the scope of teaching or learning this particular course is only granted if the source and authors are contributed.
-    
+
     The materials are to be used within the course context. For any other usage scenarios, the material is provided as-is.
