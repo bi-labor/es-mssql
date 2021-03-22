@@ -11,8 +11,8 @@
         <meta name="author" content="Dudás Ákos">
       
       
-      <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
@@ -75,11 +75,9 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-header__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory">
+    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-header__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory" data-md-component="logo">
       
   <img src="../../images/logo-bme-aut.png" alt="logo">
 
@@ -228,14 +226,12 @@
                   <div class="md-sidebar__inner">
                     
 
-
-
   
 
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-nav__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory">
+    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-nav__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory" data-md-component="logo">
       
   <img src="../../images/logo-bme-aut.png" alt="logo">
 
@@ -831,14 +827,14 @@
 <p><strong>I just created a new database/table, but it does not appear in SSMS</strong></p>
 <p>Refresh the list by right-clicking the Databases or Tables folder in the <em>Object explorer</em>.</p>
 <h2 id="microsoft-sql-server-data-tools-integrated-into-visual-studio">Microsoft SQL Server Data Tools integrated into Visual Studio<a class="headerlink" href="#microsoft-sql-server-data-tools-integrated-into-visual-studio" title="Permanent link">&para;</a></h2>
-<p>After installing Microsoft SQL Server Data Tools, you will find new project types in Visual Studio in the New Project wizard.</p>
+<p>After installing Microsoft SQL Server Data Tools, you will find new visual Studio project types in the New Project wizard.</p>
 <p><img alt="New projects in Visual Studio" src="../mssql-bi-software-intro/vs-project-types.png" /></p>
 <p>The projects themselves contain mostly xml-based descriptions. For production use, these so-called <em>packages</em> are published to servers for execution. For debugging purposes, Visual Studio is also able to execute the packages.</p>
 <h2 id="integration-services-project">Integration Services project<a class="headerlink" href="#integration-services-project" title="Permanent link">&para;</a></h2>
 <p>The Integration services project contains a <em>Package.dtsx</em> (visible in Solution Explorer), which, when opened, presents a designer UI. There are two views to this UI: the <em>Control Flow</em> and the <em>Data Flow</em>.</p>
 <p><img alt="Control flow and Data flow views" src="../mssql-bi-software-intro/is-control-data-flow.png" /></p>
 <p>Control flow is the high-level component responsible for the execution of the entire process; Data flow contains part of the whole process, a single ETL flow. We build ETL processes by combining the two.</p>
-<p>The ETL process is built from the available components by dragging them from the <em>SSIS toolbox</em> and connecting them. The <em>SSIS toolbox</em> can be opened from the <em>View</em> menu under <em>Other Windows</em>. Each component's settings can be edited in the <em>Properties</em> box on the right, or by <em>double clicking</em> the boxes themselves.</p>
+<p>The ETL process is built from the available components by dragging them from the <em>SSIS toolbox</em> and connecting them. The <em>SSIS toolbox</em> can be opened from the <em>View</em> menu under <em>Other Windows</em>. Each component's settings can be edited in the <em>Properties</em> box on the right or by <em>double clicking</em> the boxes themselves.</p>
 <p><img alt="SSIS toolbox and element properties" src="../mssql-bi-software-intro/is-package-components.png" /></p>
 <p>Notable components (from the <em>SSIS Toolbox</em>) that you will need:</p>
 <ul>
@@ -849,7 +845,7 @@
 <li>Conditional Split: split the data into two paths based on a condition</li>
 <li>Sort: sorting and duplicate filtering</li>
 </ul>
-<p>We can debug the process using the <strong>Debug</strong> button in the toolbar. During the execution, we will get immediate feedback on the progress and the result. The detailed log can be viewed by clicking the <strong>Progress</strong> button, or in the <strong>Output window</strong>.</p>
+<p>We can debug the process using the <strong>Debug</strong> button in the toolbar. During the execution, we will get immediate feedback on the progress and the result. The detailed log can be viewed by clicking the <strong>Progress</strong> button or in the <strong>Output window</strong>.</p>
 <p><img alt="Debug execution of the ETL process" src="../mssql-bi-software-intro/is-debug.png" /></p>
 <p>If there are errors during execution, you will see the component with issues marked with a red circle. In most cases, the actual error you can find in the <em>Output</em> window.</p>
 <p><img alt="Debug execution of the ETL process" src="../mssql-bi-software-intro/is-debug-error-output.png" /></p>
@@ -996,7 +992,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
       
     
   </body>

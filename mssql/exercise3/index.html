@@ -11,8 +11,8 @@
         <meta name="author" content="Dudás Ákos">
       
       
-      <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
@@ -75,11 +75,9 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-header__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory">
+    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-header__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory" data-md-component="logo">
       
   <img src="../../images/logo-bme-aut.png" alt="logo">
 
@@ -228,14 +226,12 @@
                   <div class="md-sidebar__inner">
                     
 
-
-
   
 
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-nav__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory">
+    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-nav__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory" data-md-component="logo">
       
   <img src="../../images/logo-bme-aut.png" alt="logo">
 
@@ -666,7 +662,7 @@
 <li>
 <p>Find the <em>SSIS Toolbox</em>; you will need to use this window in the following tasks.</p>
 <div class="admonition note">
-<p>If you cannot see this toolbox window, after opening <code>Package.dtsx</code>, look for the <em>Extensions &gt; SSIS &gt; SSIS Toolbox</em> menu.</p>
+<p>If you cannot see this toolbox window after opening <code>Package.dtsx</code>, look for the <em>Extensions &gt; SSIS &gt; SSIS Toolbox</em> menu.</p>
 </div>
 </li>
 <li>
@@ -713,7 +709,7 @@
 <li>Switch to the <em>Advanced</em> page (within the dialog)<ul>
 <li>Verify that the correct number of columns is present</li>
 <li>Change the UserID to be parsed as <code>four byte signed integer</code></li>
-<li>Although the age should be a number, it must be parsed as a string here, because there are values in the CSV with the literal <code>NULL</code> text</li>
+<li>Although the age should be a number, it must be parsed as a string because there are values in the CSV with the literal <code>NULL</code> text</li>
 <li>Increase the length (<em>OutputColumnWidth</em>) of the Location column from 50 to 1.000</li>
 </ul>
 </li>
@@ -727,11 +723,11 @@
 <li>
 <p>To split the <em>Location</em> column into two and parse the <em>Age</em> as a number, add a <em>Derived column</em> transformation (drag one from the SSIS Toolbox pane to the data flow editor surface). Connect the blue output of the file source into this new box to specify the data flow direction (see image below for reference). Then open the settings of the <em>Derived column</em> element to specify how the derived values are calculated.</p>
 <ul>
-<li>Add a new column that contains the age as an integer. Check if the string is "NULL", in that case, keep the null value, or cast to int.<ul>
+<li>Add a new column that contains the age as an integer. Check if the string is "NULL"; in that case, keep the null value, or cast to int.<ul>
 <li>Use the following expression: <code>[Age] == "NULL" ? NULL(DT_I4) : (DT_I4)[Age]</code>. (You may need to change the column names.)</li>
 </ul>
 </li>
-<li>Split the location column into two, and <strong>include your Neptun code</strong> in the text: create a new <em>City</em> and a new <em>Country</em> column using string operations; <em>Country</em> should be prefixed with your Neptun code.<ul>
+<li>Split the location column into two, and <strong>include your Neptun code</strong> in the text: create a new <em>City</em>, and a new <em>Country</em> column using string operations; <em>Country</em> should be prefixed with your Neptun code.<ul>
 <li>Take a look at a few examples of the <em>Location</em>: they are in the form of "city, state, country"</li>
 <li>To separate the country, find the second comma in the text. The rest is the city (you can keep the state included in the city text). <strong>Prefix the country with your Neptun code</strong> by concatenating it as a string to the front. E.g., "nyc, new york, usa" becomes:<ul>
 <li>Country: "NEPTUN usa"</li>
@@ -761,7 +757,7 @@
 <p><img alt="Integration Services ADO NET Destination settings" src="../images/is-users-adonet-destination.png" /></p>
 </li>
 <li>
-<p>Check the mapping and make sure that the right fields go into the right columns. Make sure to double-check the <em>Age</em> column because it may exist as a number, and as a string - you need the numbered type here. (Mind, that the input column names may be different for you.)</p>
+<p>Check the mapping and make sure that the correct fields go into the correct columns. Make sure to double-check the <em>Age</em> column because it may exist as a number and as a string - you need the numbered type here. (Mind that the input column names may be different for you.)</p>
 <p><img alt="Integration Services ADO NET Destination mapping" src="../images/is-users-adonet-mapping.png" /></p>
 </li>
 </ul>
@@ -775,7 +771,7 @@
 <p><img alt="Integration Services Data flow of the Users import" src="../images/is-users-data-flow.png" /></p>
 </li>
 <li>
-<p>A the <a href="https://docs.microsoft.com/en-us/sql/integration-services/configure-an-error-output-in-a-data-flow-component">Configure Error Output dialog</a> will pop up to specify how to handle errors. For all columns and error types select <em>Redirect row</em>. There is a total number of 6 elements to change here. Close this dialog.</p>
+<p>A the <a href="https://docs.microsoft.com/en-us/sql/integration-services/configure-an-error-output-in-a-data-flow-component">Configure Error Output dialog</a> will pop up to specify how to handle errors. For all columns and error types, select <em>Redirect row</em>. There is a total number of 6 elements to change here. Close this dialog.</p>
 <p><img alt="Integration Services Error output configuration" src="../images/is-users-error-output.png" /></p>
 </li>
 <li>
@@ -800,7 +796,7 @@
 <div class="admonition example">
 <p class="admonition-title">SUBMISSION</p>
 <p>Create a screenshot of the database table contents. Save the screenshot file as <code>ex3.png</code> - overwrite the placeholder file with yours.</p>
-<p>Please make sure that the screenshot is taken such that it includes the database name (which is your Neptun code) from the <em>Object explorer</em> window, and includes a few sample records with the Neptun code clearly visible.</p>
+<p>Please make sure to create the screenshot such that it includes the database name (which is your Neptun code) from the <em>Object explorer</em> window, and includes a few sample records with the Neptun code clearly visible.</p>
 <p><img alt="Sample expected screenshot" src="../images/users-table-verify-content.png" /></p>
 </div>
                 
@@ -919,7 +915,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
       
     
   </body>

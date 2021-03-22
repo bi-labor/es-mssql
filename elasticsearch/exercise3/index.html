@@ -11,8 +11,8 @@
         <meta name="author" content="Dudás Ákos">
       
       
-      <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
@@ -75,11 +75,9 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-header__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory">
+    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-header__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory" data-md-component="logo">
       
   <img src="../../images/logo-bme-aut.png" alt="logo">
 
@@ -228,14 +226,12 @@
                   <div class="md-sidebar__inner">
                     
 
-
-
   
 
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-nav__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory">
+    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-nav__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory" data-md-component="logo">
       
   <img src="../../images/logo-bme-aut.png" alt="logo">
 
@@ -769,7 +765,7 @@
                 
                 
                 <h1 id="exercise-3-initializing-elasticsearch">Exercise 3: Initializing Elasticsearch<a class="headerlink" href="#exercise-3-initializing-elasticsearch" title="Permanent link">&para;</a></h1>
-<p>Now that both <em>Elasticsearch</em> and <em>Kibana</em> are operational let us create the necessary indices for us to work with in the following exercises.</p>
+<p>Now that both <em>Elasticsearch</em> and <em>Kibana</em> are operational, let us create the necessary indices for us to work with in the following exercises.</p>
 <h2 id="index-a-document-via-powershell">Index a document via <em>PowerShell</em><a class="headerlink" href="#index-a-document-via-powershell" title="Permanent link">&para;</a></h2>
 <p>First, we are going to use <em>Elasticsearch's</em> REST API through <em>PowerShell</em>.</p>
 <ol>
@@ -783,7 +779,7 @@
 <p>Query the document with the following command.</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">Invoke-WebRequest</span> <span class="s1">&#39;http://localhost:9200/test/_doc/1?pretty&#39;</span> <span class="n">-Method</span> <span class="n">Get</span> <span class="n">-UseBasicParsing</span><span class="p">).</span><span class="n">Content</span>
 </code></pre></div>
-<p>The result JSON tells us the name of the index, the id of the document, and the full document we inserted in the <code>_source</code> field.</p>
+<p>The result JSON tells us the name of the index, the document's id, and the entire document we inserted in the <code>_source</code> field.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;_index&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
   <span class="nt">&quot;_type&quot;</span><span class="p">:</span> <span class="s2">&quot;_doc&quot;</span><span class="p">,</span>
@@ -849,26 +845,22 @@
 <p>The settings we use here are the following.</p>
 <ul>
 <li>
-<p><code>settings</code>: We set the number of <em>shards</em> and <em>replicas</em> here. While settings the number of <em>shards</em> is not that important here, we must set the number of <em>replicas</em> to <strong>zero</strong> to have an index with <strong>green</strong> <em>health</em> value. This is because <em>Elasticsearch</em> refuses to put a <em>shard</em> and its <em>replica</em> on the same node, and we only have a single node.</p>
+<p><code>settings</code>: We set the number of <em>shards</em> and <em>replicas</em> here. While settings the number of <em>shards</em> is not that important here, we must set the number of <em>replicas</em> to <strong>zero</strong> to have an index with <strong>green</strong> <em>health</em> value. <em>Elasticsearch</em> refuses to put a <em>shard</em> and its <em>replica</em> on the same node, and we only have a single node.</p>
 </li>
 <li>
-<p><code>mapping</code>: Mapping is the "schema" of the data. It is not necessary to set this, but when the data is ambiguous, Elasticsearch will make a choice how to interpret data unless we specify the mapping.</p>
+<p><code>mapping</code>: Mapping is the "schema" of the data. It is not mandatory to set this, but Elasticsearch will choose how to interpret data when it is ambiguous unless we specify the mapping.</p>
 <ul>
-<li>
-<p><code>gender</code>, <code>address.state</code>, <code>company</code>: These are values we know are only going to have a few select values (e.g., "male" and "female" for gender), therefore we do not want to allow <em>free text search</em> on them. We can help the system by specifying this.</p>
-</li>
-<li>
-<p><code>hired</code>: Although this is a date field, the date representation of our data is not standard — <em>Elasticsearch</em> wouldn't recognize it by itself. Therefore we have to specify the date format explicitly.</p>
-</li>
+<li><code>gender</code>, <code>address.state</code>, <code>company</code>: These are values we know are only going to have a few select values (e.g., "male" and "female" for gender), therefore we do not want to allow <em>free text search</em> on them. We can help the system by specifying this.</li>
 </ul>
+<p><code>hired</code>: Although this is a date field, the date representation is not standard — <em>Elasticsearch</em> wouldn't recognize it by itself. Therefore we have to specify the date format explicitly.</p>
 </li>
 </ul>
 </li>
 <li>
-<p>We can check the indices with the <code>GET _cat/indices?v</code> query. (Just use the Dev Tools to execute this query too.)</p>
+<p>We can check the indices with the <code>GET _cat/indices?v</code> query. (Use the Dev Tools to execute this query too.)</p>
 <p><img alt="Elasticsearch indices" src="../images/elasticsearch-indices.png" /></p>
 <div class="admonition note">
-<p>Note how the health of the <code>test</code> index is <strong>yellow</strong>, and the health of the <code>salaries</code> index is <strong>green</strong>. That is because the default value for the number of <em>replicas</em> is <strong>1</strong>.</p>
+<p>Note how the <code>test</code> index's health is <strong>yellow</strong>, and the health of the <code>salaries</code> index is <strong>green</strong>. That is because the default value for the number of <em>replicas</em> is <strong>1</strong>.</p>
 </div>
 </li>
 <li>
@@ -881,15 +873,15 @@
   ... // the sample document comes here with the correct Neptun code
 }
 </code></pre></div>
-<p>Executing the query will yield a similar result (in the right side of the window). This is the response of the POST query with the <code>id</code> of the document inserted.</p>
+<p>Executing the query will yield a similar result (on the right side of the window). This is the response of the POST query with the <code>id</code> of the document inserted.</p>
 <p><img alt="Elasticsearch created document" src="../images/elasticsearch-created-document.png" /></p>
-<p>We can use the <code>_id</code> value in the response to query the document.</p>
+<p>We can use the <code>_id</code> value from the response to query the document.</p>
 <div class="highlight"><pre><span></span><code>GET salaries/_doc/eZSmaGkBig5GeeBFsFG6
 </code></pre></div>
 </li>
 </ol>
 <h2 id="modify-the-input-data">Modify the input data<a class="headerlink" href="#modify-the-input-data" title="Permanent link">&para;</a></h2>
-<p>Before importing the rest of the sample data, let us make some changes by adding your <strong>Neptun code</strong> as a prefix to some of the values in the file too:</p>
+<p>Before importing the rest of the sample data, add your <strong>Neptun code</strong> as a prefix to some of the values in the file too:</p>
 <ul>
 <li>Each <code>gender</code> value shall be prefixed, e.g. <code>"gender":"NEPTUN female"</code></li>
 <li>
@@ -906,7 +898,7 @@
 <li>
 <p>Verify the results; it should look similar (with your own Neptun code):</p>
 <p><img alt="Replacements in the document" src="../images/replace-data-result.png" /></p>
-<p>The file must be a valid JSON! Please double-check the quotations marks around the values. If the result is not correct, you can revert the change made to this file using git (<code>git checkout HEAD -- salaries.json</code>), and then retry.</p>
+<p>The file must be a valid JSON! Please double-check the quotation marks around the values. If the result is not correct, you can revert the change made to this file using git (<code>git checkout HEAD -- salaries.json</code>) and then retry.</p>
 <p>The modified file shall be uploaded as part of the submission.</p>
 <div class="admonition warning">
 <p class="admonition-title">IMPORTANT</p>
@@ -939,7 +931,7 @@
 <p>Reset the changes made to the <code>salaries.json</code> file, and retry the replacement with special care regarding the quotation marks.</p>
 </li>
 <li>
-<p>Now retry the bulk index request.</p>
+<p>Now, retry the bulk index request.</p>
 </li>
 </ol>
 </li>
@@ -1065,7 +1057,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
       
     
   </body>

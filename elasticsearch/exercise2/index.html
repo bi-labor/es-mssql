@@ -11,8 +11,8 @@
         <meta name="author" content="Dudás Ákos">
       
       
-      <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
@@ -75,11 +75,9 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-header__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory">
+    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-header__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory" data-md-component="logo">
       
   <img src="../../images/logo-bme-aut.png" alt="logo">
 
@@ -228,14 +226,12 @@
                   <div class="md-sidebar__inner">
                     
 
-
-
   
 
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-nav__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory">
+    <a href="../.." title="BMEVIAUMB00 Business Intelligence Laboratory" class="md-nav__button md-logo" aria-label="BMEVIAUMB00 Business Intelligence Laboratory" data-md-component="logo">
       
   <img src="../../images/logo-bme-aut.png" alt="logo">
 
@@ -734,7 +730,7 @@
 <li>Using Docker</li>
 <li>Or install them on your machine.</li>
 </ol>
-<p>In the university computer laboratories use the Docker option. Otherwise choose the option best suited for you (if you don't have Docker, you can just go with option #2).</p>
+<p>In the university computer laboratories use the Docker option. Otherwise, choose the option best suited for you (if you don't have Docker, you can go with option #2).</p>
 <h2 id="option-1-start-elasticsearch-and-kibana-using-docker">Option 1: Start <em>Elasticsearch</em> and <em>Kibana</em> using Docker<a class="headerlink" href="#option-1-start-elasticsearch-and-kibana-using-docker" title="Permanent link">&para;</a></h2>
 <p>If you have Docker, or you are working in the university computer laboratories, use this option.</p>
 <ol>
@@ -748,13 +744,13 @@
 <p>Open a command prompt or PowerShell console and test whether Docker is working: execute <code>docker version</code>, which should print version information for client and server.</p>
 </li>
 <li>
-<p>Locate the provided <code>docker-compose.yml</code> file in the checked-out starter solution (located in the root of your git repository). Open it in a text editor of your choice and check its contents. Check the following specifics:</p>
+<p>Locate the provided <code>docker-compose.yml</code> file in the checked-out starter solution (located in the root of your git repository). Open it in a text editor of your choice, and check its contents. Check the following specifics:</p>
 <ul>
 <li>
 <p><code>environment</code>: This is used to set environment variables in the container. We can use these to provide some settings for <em>Elasticsearch</em> and <em>Kibana</em> as well. One example is the <code>cluster.name</code> variable.</p>
 </li>
 <li>
-<p><code>ulimits</code>: In order for <em>Elasticsearch</em> to function properly, we have to set some <code>ulimit</code> values in the container.</p>
+<p><code>ulimits</code>: For <em>Elasticsearch</em> to function correctly, we have to set some <code>ulimit</code> values in the container.</p>
 </li>
 <li>
 <p><code>volumes</code>: Due to how file storage works in <em>Docker</em> containers, every data is lost if we remove a container and start a new one. Of course, this is not exactly appropriate for a database service like <em>Elasticsearch</em>. Therefore we are going to use a <code>volume</code> which provides a more durable storage option.</p>
@@ -800,7 +796,7 @@
 <p><code>[info][server][Kibana][http] http server running at http://localhost:5601</code></p>
 <p>If you need to change the ports, edit the following files, then restart the applications:</p>
 <ul>
-<li><code>config\elasticsearch.yml</code>, look for key <code>http.port</code>, uncomment it and set a port;</li>
+<li><code>config\elasticsearch.yml</code>, look for key <code>http.port</code>, uncomment it, and set a port;</li>
 <li><code>config\kibana.yml</code>, look for key <code>elasticsearch.hosts</code>, uncomment it and set the same port.</li>
 </ul>
 </li>
@@ -932,7 +928,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
       
     
   </body>
