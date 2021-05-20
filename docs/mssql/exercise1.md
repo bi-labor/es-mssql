@@ -5,7 +5,7 @@
 
 ## Checking out your repository
 
-1. Open the following URL and accept the assignment to get your repository: <https://classroom.github.com/a/HywjUNvO>
+1. Create your git repository using the invitation link in Moodle. Make sure to use the URL that belongs to this topic!
 
 1. Wait for the repository creation to complete, then check out the repository.
 
