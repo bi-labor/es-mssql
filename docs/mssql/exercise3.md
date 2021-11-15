@@ -83,7 +83,7 @@ Extend the provided Integration Services project `ex3.sln` by modifying the proj
 
         ![Integration Services ADO NET Destination mapping](images/is-users-adonet-mapping.png)
 
-1. If you were to execute the process now, it would fail due to errors in the _Derived columns_ transformation. Some content does not correspond to the transformations. Let us skip these rows.
+1. If you were to execute the process now, it would fail due to errors in the _Derived columns_ transformation. Some content fails the transformations. Let us skip these rows.
 
     - Add another _ADO NET Destination_ component.
     - Point the red arrow from the _Derived column_ into this new database destination.

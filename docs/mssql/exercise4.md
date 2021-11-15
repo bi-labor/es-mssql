@@ -75,4 +75,4 @@ The final report should look similar to this:
 !!! example "SUBMISSION"
     Include a screenshot of the report as `ex4.png`.
 
-    Please make sure to create the screenshot such that relevant parts of the report are all visible (title, table, and diagram too). See the sample at the beginning of the exercise.
+    Please make sure to create the screenshot such that relevant parts of the report are all visible (title, table, and diagram too) and that the title contains your Neptun code. See the sample at the beginning of the exercise.

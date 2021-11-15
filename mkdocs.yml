@@ -68,7 +68,6 @@ nav:
       - index.md
       - GitHub.md
       - GitHub-Actions.md
-      - FAQ.md
       - GitHub-credentials.md
   - "Elasticsearch":
       - elasticsearch/index.md
