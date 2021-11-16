@@ -826,12 +826,12 @@
 <p>The purpose of this exercise is to use the search and aggregation capabilities of <em>Elasticsearch</em> to answer questions of the data imported previously.</p>
 <div class="admonition note">
 <p class="admonition-title">Query JSON</p>
-<p>You will be requested to save the <strong>query</strong> JSON in the following exercises. The image below shows you what that means (i.e., the <strong>VALID</strong> JSON sent to Elasticsearch, <strong>WITHOUT</strong> the header part; <strong>NOT</strong> the result JSON that is on the right side in Kibana).</p>
+<p>You will be requested to save the <strong>query</strong> JSON in the following exercises. The image below shows you what that means: the <strong>VALID</strong> JSON sent to Elasticsearch, <strong>WITHOUT</strong> the first line, and definitely <strong>NOT</strong> the result JSON that is on the right side in Kibana.</p>
 <p><img alt="Kibana query parts" src="../images/kibana-query-parts.png" /></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Search syntax</p>
-<p>Please use the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-body.html">search syntax</a> of Elasticsearch that defines the criteria in JSON body. Do <em>not</em> use the URL query method filtering.</p>
+<p>Please use the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-your-data.html">search syntax</a> of Elasticsearch that defines the criteria in JSON body. Do <em>not</em> use the URL query method filtering.</p>
 </div>
 <p>All of the following queries are sent to the <code>salaries/_search</code> endpoint with a <code>GET</code> method. This means that the <strong>first line in <em>Kibana Dev Tools</em> will be <code>GET salaries/_search</code></strong> for all of them.</p>
 <h2 id="select-in-elasticsearch">"SELECT *" in <em>Elasticsearch</em><a class="headerlink" href="#select-in-elasticsearch" title="Permanent link">&para;</a></h2>
@@ -920,7 +920,7 @@
 <p>This query first groups the documents by the <code>gender</code> value and then calculates the average of the <code>salary</code> values within the groups.</p>
 <div class="admonition example">
 <p class="admonition-title">SUBMISSION</p>
-<p>Based on the results, what is the average salary of women? Type your answer into <code>ex4-c.txt</code>. Include only the number and nothing else in this text file (e.g., <code>123.45</code>). (You do <em>not</em> need to save the query JSON here.)</p>
+<p>Based on the results, what is the average salary of women? Type your answer into <code>ex4-c.txt</code>. Include only the number and nothing else in this text file (e.g., <code>123.45</code>). Don't worry about decimal digits, the value will be rounded for comparison. (You do <em>not</em> need to save the query JSON here.)</p>
 </div>
                 
               

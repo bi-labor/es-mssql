@@ -832,58 +832,61 @@
 <p>Our first step is to tell <em>Kibana</em> which indexes it should consider when creating the visualizations.</p>
 <ol>
 <li>
-<p>Click on the <em>Visualize</em> tab on the left side menu.</p>
-<p><img alt="Kibana Visualize" src="../images/kibana-visualize.png" /></p>
-<p>When opening this page the first time, you will be redirected to the <em>Management</em> / <em>Index patterns</em> configuration page to create a new <em>index pattern</em>.</p>
+<p>Click on the <em>Visualize Library</em> tab on the left side menu.</p>
+<p><img alt="Kibana Visualize Library" src="../images/kibana-visualize.png" /></p>
+<p>When opening this page the first time, you will be asked to configuration a new <em>index pattern</em>.</p>
 </li>
 <li>
-<p>Create a new index pattern. Enter the index name — <code>salaries</code> — as the index pattern. Make sure <em>Kibana</em> says <em>Success! Your pattern matches 1 index</em>, and click <em>Next step</em>.</p>
+<p>Click the <em>Create new index pattern</em> button. Enter the index name — <code>salaries</code> — as the index pattern. Make sure <em>Kibana</em> says <em>Success! Your pattern matches 1 index</em>, and click <em>Next step</em>.</p>
 <p><img alt="Kibana index pattern" src="../images/kibana-index-pattern-1.png" /></p>
 </li>
 <li>
-<p>Select <em>I don't want to use the Time Filter</em> as <em>Time Filter field name</em> since we will not use this function during the exercises. Click on <em>Create index pattern</em>.</p>
+<p>Select <em>I don't want to use the time filter</em> as <em>Timestamp field</em> since we will not use this function during the exercises. Click on <em>Create index pattern</em>.</p>
 <p><img alt="Kibana index pattern" src="../images/kibana-index-pattern-2.png" /></p>
 </li>
 <li>
-<p>Now click on the <em>Visualize</em> tab again to see the following.</p>
+<p>Now click on the <em>Visualize Library</em> in the menu again to see the following.</p>
 <p><img alt="Kibana create the first visualization" src="../images/kibana-create-first-visualization.png" /></p>
 </li>
 </ol>
 <h2 id="a-how-many-people-did-kfc-hire-each-month-vertical-bar-chart">a) How many people did KFC hire each month? (vertical bar chart)<a class="headerlink" href="#a-how-many-people-did-kfc-hire-each-month-vertical-bar-chart" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Click on the <em>Create new visualization</em> button on the <em>Visualize</em> tab, and select <em>Vertical Bar</em>.</p>
-<p><img alt="Kibana vertical bar" src="../images/kibana-vertical-bar.png" /></p>
+<p>Click on the <em>Create new visualization</em> button on the <em>Visualize</em> tab, and use the <em>Lens</em> visualization.</p>
+<p><img alt="Kibana Lens visualize" src="../images/kibana-lens-visualize.png" /></p>
 </li>
 <li>
-<p>Select the previously created <code>salaries</code> index pattern as the search source.</p>
-<p><img alt="Kibana search source" src="../images/kibana-search-source.png" /></p>
+<p>This will bring up an editor where the visualization can be built using drag and drop. Select the type in the middle and the content on the right side of the editor. Start by specifying the type as <em>Bar vertical</em> and confirming the index on the right, which is <code>salaries</code>.</p>
+<p><img alt="Kibana Lens builder properties" src="../images/kibana-lens-properties.png" /></p>
 </li>
 <li>
-<p>Under the <em>Metrics</em> setting, set <em>People hired</em> as the <em>Custom Label</em>. (Expand the <em>Y-axis</em> label to get the configuration options.)</p>
-<p><img alt="Kibana Metrics" src="../images/kibana-a-metrics.png" /></p>
-</li>
-<li>
-<p>Under the <em>Buckets</em> setting, click <em>Add</em>, then select <em>X-Axis</em>, and set the following.</p>
+<p>Set the <em>Horizontal axis</em> to display a <em>Date histogram</em> with the following settings:</p>
 <ul>
-<li><em>Aggregation</em> should be <em>Date Histogram</em></li>
 <li><em>Field</em> should be <code>hired</code></li>
-<li><em>Minimum interval</em> should be <em>Month</em></li>
+<li><em>Minimum interval</em> should be <em>month</em></li>
 <li><em>Custom Label</em> should be <em>Month</em>.</li>
 </ul>
-<p><img alt="Kibana Buckets" src="../images/kibana-a-buckets.png" /></p>
+<p><img alt="Kibana horizontal axis" src="../images/kibana-a-horizontal.png" /></p>
 </li>
 <li>
-<p>In the top left corner, click on the <em>Add a filter</em> link and filter for company "KFC" (with the appropriate prefix): use the following settings to create the filter. Click on <em>Save</em> to save the filter.</p>
+<p>Then set the vertical axis to display the <em>Count</em> of <em>Records</em> with display name <em>People hired</em>.</p>
+<p><img alt="Kibana vertical axis" src="../images/kibana-a-vertical.png" /></p>
+</li>
+<li>
+<p>The graph will be empty after these configuration because we need to select a time window too. In the upper right corner click into the time selector and display everything since Jan 1, 2009. (Click into the time field textbox to get the selector as below.) Then click <em>Update</em> and the diagram should now display the bar chart.</p>
+<p><img alt="Kibana vertical axis" src="../images/kibana-a-timefilter.png" /></p>
+</li>
+<li>
+<p>The last thing that is missing is a filter. In the top left corner, click on the <em>Add a filter</em> link and filter for company "KFC" (with the appropriate prefix): use the following settings to create the filter. Click on <em>Save</em> to save the filter.</p>
 <p><img alt="Kibana filter" src="../images/kibana-a-filter.png" /></p>
 </li>
 <li>
-<p>The configuration of the visualization is now ready. You see the preview of the visualization. Click on the <em>Save</em> button in the top right corner to save the visualization as <code>5_a</code>.</p>
+<p>The configuration of the visualization is now ready. You see the preview of the visualization. Click on the <em>Save</em> button in the top right corner to save the visualization with title <code>5_a</code> (without adding it to any dashboard).</p>
 <p><img alt="Kibana save visualization" src="../images/kibana-a-save.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">SUBMISSION</p>
 <p>Create a screenshot of the visualization preview and save it as <code>ex5-a.png</code>. Make sure that the filter, including your Neptun code, is visible on this screenshot.</p>
-<p>Click on the <em>Stack Management</em> tab in the left side menu, and choose the <em>Saved Objects</em> option. Select and export the visualization you just saved — no need to include related objects. Save the downloaded file as <code>ex5-a.ndjson</code>.</p>
+<p>Click on the <em>Stack Management</em> tab in the left side menu (at the very bottom), and choose the <em>Saved Objects</em> option. Select and export the visualization you just saved — no need to include related objects. Save the downloaded file as <code>ex5-a.ndjson</code>.</p>
 <p><img alt="Kibana export" src="../images/kibana-export.png" /></p>
 </div>
 </li>
@@ -891,21 +894,14 @@
 <h2 id="b-show-the-gender-and-age-distribution-of-the-workers-pie-chart">b) Show the gender and age distribution of the workers! (pie chart)<a class="headerlink" href="#b-show-the-gender-and-age-distribution-of-the-workers-pie-chart" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Go back to the <em>Visualize</em> tab. It will likely load the last visualization. Click on the tab button again to get back to the landing page of all visualizations.</p>
+<p>Go back to the <em>Visualize Library</em> page and create a new visualization.</p>
 </li>
 <li>
-<p>Click on the <em>Create visualization</em> button on the <em>Visualize</em> tab, and select <em>Pie</em>.</p>
+<p>Select <em>Pie</em> as the chart type.</p>
 </li>
 <li>
-<p>Select the previously created <code>salaries</code> index pattern as the search source.</p>
-</li>
-<li>
-<p>Under the <em>Buckets</em> setting, click <em>Add</em> and select <em>Split Slices</em> and set a <em>Terms</em> aggregation on the <code>gender</code> field. As <em>Custom Label</em> set <em>Gender</em>.</p>
-<p><img alt="Kibana Buckets" src="../images/kibana-b-buckets-1.png" /></p>
-</li>
-<li>
-<p>Within the <em>Buckets</em> configuration area, click on the <em>Add</em> button again and select <em>Split Slices</em> with a <em>Range</em> aggregation on the <code>age</code> field with the following ranges. Also, add a custom label <em>Age</em>.</p>
-<p><img alt="Kibana Buckets" src="../images/kibana-b-buckets-2.png" /></p>
+<p>First, add a <em>Slice by</em> the <em>top values</em> of the <em>gender</em> field, then another slice by <em>intervals</em> of the <em>age</em> field. And finally, the <em>Size by</em> should be the count of records.</p>
+<p><img alt="Kibana Buckets" src="../images/kibana-b-properties.png" /></p>
 </li>
 </ol>
 <div class="admonition example">
@@ -915,15 +911,11 @@
 <h2 id="c-show-the-distribution-of-the-workers-locations-on-a-map">c) Show the distribution of the workers' locations on a map!<a class="headerlink" href="#c-show-the-distribution-of-the-workers-locations-on-a-map" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Create a new visualization of type <em>Region Map</em>. Select the previously created <code>salaries</code> index pattern as the search source.</p>
+<p>Create a new visualization, this time, it should be a <em>Map</em> type.</p>
 </li>
 <li>
-<p>Under the <em>Buckets</em> setting, add a <em>Shape field</em> with <em>Terms</em> aggregation on the <code>address.state</code> field. Make sure to set the <em>Size</em> value to at least 50.</p>
-<p><img alt="Kibana Buckets" src="../images/kibana-c-buckets.png" /></p>
-</li>
-<li>
-<p>Under <em>Options</em> / <em>Layer Settings</em> select <em>USA States</em> as <em>Vector map</em> and <em>FIPS 5-2 alpha code</em> as <em>Join field</em>.</p>
-<p><img alt="Kibana Options" src="../images/kibana-c-options.png" /></p>
+<p>On the right add a new layer of type <em>Choropleth</em> with the following settings&gt;</p>
+<p><img alt="Kibana Map visualization" src="../images/kibana-c.png" /></p>
 </li>
 </ol>
 <div class="admonition example">

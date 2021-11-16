@@ -906,8 +906,9 @@
 <p><img alt="Kibana Dev Tools" src="../images/kibana-dev-tools.png" /></p>
 <ol>
 <li>
-<p>A query in <em>Kibana's</em> Dev Tools contains (1) a http verb and an URL matching Elasticsearch' REST API, and (2) a body as JSON. Enter <code>PUT salaries</code> in the first line and then enter the following JSON starting on a new line. Then press the <em>Play</em> button in the top right corner of the editor.</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<p>A query in <em>Kibana's</em> Dev Tools contains an http verb and an URL matching Elasticsearch' REST API in the first line, following with a body as JSON. Copy the text from below then press the <em>Play</em> button in the top right corner of the editor.</p>
+<div class="highlight"><pre><span></span><code><span class="err">PUT</span> <span class="err">salaries</span>
+<span class="p">{</span>
   <span class="nt">&quot;settings&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;number_of_shards&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="nt">&quot;number_of_replicas&quot;</span><span class="p">:</span> <span class="mi">0</span>
@@ -948,14 +949,29 @@
 </div>
 </li>
 <li>
-<p>Insert the sample document into the created index. You can find the sample document <a href="#sample-document">here</a>.</p>
+<p>Insert the sample document into the created index.</p>
 <div class="admonition note">
-<p>Do not forget to edit the Neptun code in the <code>gender</code> field.</p>
+<p>Before executing this query do not forget to edit the Neptun code in the <code>gender</code> and <code>company</code> fields.</p>
 </div>
-<div class="highlight"><pre><span></span><code>POST salaries/_doc
-{
-  ... // the sample document comes here with the correct Neptun code
-}
+<div class="highlight"><pre><span></span><code><span class="err">POST</span> <span class="err">salaries/_doc</span>
+<span class="p">{</span>
+  <span class="nt">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;NEPTUN female&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;firstName&quot;</span><span class="p">:</span> <span class="s2">&quot;Evelyn&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;lastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Petersen&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;age&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+  <span class="nt">&quot;phone&quot;</span><span class="p">:</span> <span class="s2">&quot;+1 (900) 503-3892&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;zipCode&quot;</span><span class="p">:</span> <span class="mi">63775</span><span class="p">,</span>
+    <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Lynn&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;street&quot;</span><span class="p">:</span> <span class="s2">&quot;Clarkson Avenue&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;houseNumber&quot;</span><span class="p">:</span> <span class="mi">503</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;salary&quot;</span><span class="p">:</span> <span class="mi">87217</span><span class="p">,</span>
+  <span class="nt">&quot;company&quot;</span><span class="p">:</span> <span class="s2">&quot;NEPTUN Subway&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;evelyn.petersen@subway.com&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;hired&quot;</span><span class="p">:</span> <span class="s2">&quot;09/29/2009&quot;</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>Executing the query will yield a similar result (on the right side of the window). This is the response of the POST query with the <code>id</code> of the document inserted.</p>
 <p><img alt="Elasticsearch created document" src="../images/elasticsearch-created-document.png" /></p>
@@ -965,7 +981,7 @@
 </li>
 </ol>
 <h2 id="modify-the-input-data">Modify the input data<a class="headerlink" href="#modify-the-input-data" title="Permanent link">&para;</a></h2>
-<p>Before importing the rest of the sample data, add your <strong>Neptun code</strong> as a prefix to some of the values in the file too:</p>
+<p>Before importing the rest of the sample data, add your <strong>Neptun code</strong> as a prefix to some of the values in the <code>salaries.json</code> file too:</p>
 <ul>
 <li>Each <code>gender</code> value shall be prefixed, e.g. <code>"gender":"NEPTUN female"</code></li>
 <li>
@@ -1022,7 +1038,7 @@
 <li>
 <p>Execute a search using query <code>GET salaries/_search</code> (using Kibana). This will return a few documents and let us know how many documents there are (total number matching the query will be the total number of documents, due to the lack of filtering in this search). There should be <strong>1101</strong> documents.</p>
 <p><img alt="Elasticsearch indices" src="../images/kibana-search-total.png" /></p>
-<p>If you see fewer documents, you need to use the Refresh API to ensure Elasticsearch is finished with all indexing operations. To trigger this, execute a <code>POST salaries/_refresh</code> request.</p>
+<p>If you see fewer documents, you might try using the Refresh API to ensure Elasticsearch is finished with all indexing operations. To trigger this, execute a <code>POST salaries/_refresh</code> request. Then check the count again. If it is still not correct, you need to start over.</p>
 </li>
 </ol>
                 

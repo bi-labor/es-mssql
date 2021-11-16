@@ -800,19 +800,29 @@
 <p><strong>a)</strong> What was the <em>average</em> age of the people hired each year in the different companies?</p>
 <p>Use a <em>vertical bar chart</em> for visualization.</p>
 <div class="admonition tip">
-<p class="admonition-title">Tips</p>
 <ul>
-<li>You will have to use two aggregations to create this visualization. By default, Kibana stacks the data for the different companies on top of each other. For our use-case, it would be much better if these would be next to each other instead. Fortunately, you can set this if you choose the <em>Mode</em> called <em>normal</em> instead of <em>stacked</em> under the <em>Metrics &amp; Axes</em> settings.</li>
-<li>Make sure to set the <em>Metrics</em> to <em>Average</em> of <em>age</em> instead of <em>Count</em>!</li>
+<li>The horizontal axis is a date histogram per year of the <em>hired</em> field.</li>
+<li>The vertical axis is the average of the <em>age</em>.</li>
+<li>And a further breakdown by company is needed. The breakdown should be the <em>top 10 values</em> of the companies to get all of them.</li>
+<li>Don't forget that a time filtering might be active in the upper right corner; set this to display everything since Jan 1, 2009.</li>
 </ul>
 </div>
 <p><strong>b)</strong> What is the distribution of the workers between the various companies in the state of New York (NY)?</p>
 <p>Use a <em>pie chart</em> for visualization.</p>
-<p><strong>c)</strong> What is the <em>average</em> salary of the workers aged between 18 and 30 in the various states?</p>
-<div class="admonition note">
-<p>Make sure to set the <em>Metrics</em> to <em>Average</em> of <em>salary</em> instead of <em>Count</em>!</p>
+<div class="admonition tip">
+<ul>
+<li>Make sure to set the <em>top values</em> of the company to 10, otherwise not all companies are displayed.</li>
+<li>Don't forget to add a filter for the state of NY too!</li>
+</ul>
 </div>
-<p>Use a <em>region map</em> for visualization.</p>
+<p><strong>c)</strong> What is the <em>average</em> salary of the workers aged between 18 and 30 in the various states?</p>
+<p>Use a <em>Choropleth</em> map visualization.</p>
+<div class="admonition tip">
+<ul>
+<li>After specifying the map layer, you will need to edit the <em>join</em> properties to use the average of the salaries. This setting will be available after the layer is added. Look for this setting on the right side of the screen where the map layer properties are set.</li>
+<li>Don't forget that a filtering is needed too!</li>
+</ul>
+</div>
 <hr />
 <p>Your visualizations, when finished and added to the dashboard (next part of the exercise) should look similar to this:</p>
 <p><img alt="Sample dashboard" src="../images/kibana-dashboard-sample.png" /></p>
@@ -826,7 +836,7 @@
 <p>Create a new dashboard here.</p>
 </li>
 <li>
-<p>Use the <em>Add</em> button on the dashboard to add existing visualizations. Add the three you created in this exercise.</p>
+<p>Use the <em>Add from library</em> button on the dashboard to add existing visualizations. Add the three you created in this exercise.</p>
 </li>
 <li>
 <p>You can drag and drop them on the dashboard to various places, change their size, etc.</p>
