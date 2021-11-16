@@ -8,20 +8,27 @@ The purpose of this exercise is to practice the data visualization capabilities 
 
 Use a _vertical bar chart_ for visualization.
 
-!!! tip "Tips"
-    - You will have to use two aggregations to create this visualization. By default, Kibana stacks the data for the different companies on top of each other. For our use-case, it would be much better if these would be next to each other instead. Fortunately, you can set this if you choose the _Mode_ called _normal_ instead of _stacked_ under the _Metrics & Axes_ settings.
-    - Make sure to set the _Metrics_ to _Average_ of _age_ instead of _Count_!
+!!! tip ""
+    - The horizontal axis is a date histogram per year of the _hired_ field.
+    - The vertical axis is the average of the _age_.
+    - And a further breakdown by company is needed. The breakdown should be the _top 10 values_ of the companies to get all of them.
+    - Don't forget that a time filtering might be active in the upper right corner; set this to display everything since Jan 1, 2009.
 
 **b)** What is the distribution of the workers between the various companies in the state of New York (NY)?
 
 Use a _pie chart_ for visualization.
 
+!!! tip ""
+    - Make sure to set the _top values_ of the company to 10, otherwise not all companies are displayed.
+    - Don't forget to add a filter for the state of NY too!
+
 **c)** What is the _average_ salary of the workers aged between 18 and 30 in the various states?
 
-!!! note ""
-    Make sure to set the _Metrics_ to _Average_ of _salary_ instead of _Count_!
+Use a _Choropleth_ map visualization.
 
-Use a _region map_ for visualization.
+!!! tip ""
+    - After specifying the map layer, you will need to edit the _join_ properties to use the average of the salaries. This setting will be available after the layer is added. Look for this setting on the right side of the screen where the map layer properties are set.
+    - Don't forget that a filtering is needed too!
 
 ---
 
@@ -37,7 +44,7 @@ When all three visualizations are ready, create a new dashboard, and add the vis
 
 1. Create a new dashboard here.
 
-1. Use the _Add_ button on the dashboard to add existing visualizations. Add the three you created in this exercise.
+1. Use the _Add from library_ button on the dashboard to add existing visualizations. Add the three you created in this exercise.
 
 1. You can drag and drop them on the dashboard to various places, change their size, etc.
 

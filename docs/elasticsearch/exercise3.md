@@ -70,9 +70,10 @@ We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although
 
 ![Kibana Dev Tools](images/kibana-dev-tools.png)
 
-1. A query in _Kibana's_ Dev Tools contains (1) a http verb and an URL matching Elasticsearch' REST API, and (2) a body as JSON. Enter `PUT salaries` in the first line and then enter the following JSON starting on a new line. Then press the _Play_ button in the top right corner of the editor.
+1. A query in _Kibana's_ Dev Tools contains an http verb and an URL matching Elasticsearch' REST API in the first line, following with a body as JSON. Copy the text from below then press the _Play_ button in the top right corner of the editor.
 
     ```json
+    PUT salaries
     {
       "settings": {
         "number_of_shards": 1,
@@ -111,15 +112,30 @@ We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although
     !!! note ""
         Note how the `test` index's health is **yellow**, and the health of the `salaries` index is **green**. That is because the default value for the number of _replicas_ is **1**.
 
-1. Insert the sample document into the created index. You can find the sample document [here](#sample-document).
+1. Insert the sample document into the created index.
 
     !!! note ""
-        Do not forget to edit the Neptun code in the `gender` field.
+        Before executing this query do not forget to edit the Neptun code in the `gender` and `company` fields.
 
-    ```
+    ```json
     POST salaries/_doc
     {
-      ... // the sample document comes here with the correct Neptun code
+      "gender": "NEPTUN female",
+      "firstName": "Evelyn",
+      "lastName": "Petersen",
+      "age": 17,
+      "phone": "+1 (900) 503-3892",
+      "address": {
+        "zipCode": 63775,
+        "state": "NY",
+        "city": "Lynn",
+        "street": "Clarkson Avenue",
+        "houseNumber": 503
+      },
+      "salary": 87217,
+      "company": "NEPTUN Subway",
+      "email": "evelyn.petersen@subway.com",
+      "hired": "09/29/2009"
     }
     ```
 
@@ -135,7 +151,7 @@ We are going to use _Kibana's_ Dev Tools for this part of the exercise. Although
 
 ## Modify the input data
 
-Before importing the rest of the sample data, add your **Neptun code** as a prefix to some of the values in the file too:
+Before importing the rest of the sample data, add your **Neptun code** as a prefix to some of the values in the `salaries.json` file too:
 
 - Each `gender` value shall be prefixed, e.g. `"gender":"NEPTUN female"`
 - Each `company` value shall be prefixed, e.g. `"company":"NEPTUN McDonalds"`
@@ -191,4 +207,4 @@ And now, let us index these documents.
 
     ![Elasticsearch indices](images/kibana-search-total.png)
 
-    If you see fewer documents, you need to use the Refresh API to ensure Elasticsearch is finished with all indexing operations. To trigger this, execute a `POST salaries/_refresh` request.
+    If you see fewer documents, you might try using the Refresh API to ensure Elasticsearch is finished with all indexing operations. To trigger this, execute a `POST salaries/_refresh` request. Then check the count again. If it is still not correct, you need to start over.

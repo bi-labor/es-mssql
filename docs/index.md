@@ -27,6 +27,8 @@ The exercises will ask for a few screenshots. The exercises describe the expecte
 
 **You will receive automatic feedback in GitHub when submitting your solution.** This feedback includes a "total," which is the number of successfully completed exercises; this is a preliminary grade, and it is subject to change by the instructor.
 
+**The automatic evaluation does not replace your local testing.** Before uploading your solution, test it locally.
+
 **Your solution is expected to work in this automated evaluation environment**. Please take extra care following the exercise guidelines. The automated feedback will let you know if there is some error in your submission; you must fix these. The evaluation uses _GitHub Actions_. You have access to all the logs and the detailed result of every evaluation on the GitHub web interface. [This guide](GitHub-Actions.md) helps you understand where to look for them.
 
 ---

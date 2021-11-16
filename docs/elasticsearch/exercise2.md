@@ -5,11 +5,9 @@ The purpose of this exercise is to start _Elasticsearch_ and _Kibana_. You have 
 1. Using Docker
 1. Or install them on your machine.
 
-In the university computer laboratories use the Docker option. Otherwise, choose the option best suited for you (if you don't have Docker, you can go with option #2).
+If you have Docker installed, use the first option. Otherwise, it is easier to go with the second option; also use this in the university computer labs.
 
 ## Option 1: Start _Elasticsearch_ and _Kibana_ using Docker
-
-If you have Docker, or you are working in the university computer laboratories, use this option.
 
 1. Start Docker Desktop and wait for it to initialize.
 
@@ -42,16 +40,19 @@ If you have Docker, or you are working in the university computer laboratories, 
 
 ## Option 2: Start _Elasticsearch_ and _Kibana_ by installing them
 
-1. Download the **OSS** version of [Elasticsearch](https://www.elastic.co/downloads/past-releases/elasticsearch-oss-7-10-1) and [Kibana](https://www.elastic.co/downloads/past-releases/kibana-oss-7-10-1). Please make sure to use **version 7.10.x**; the starter code and the instructions might be specific to this version.
+1. Download the **7.15.x** version of [Elasticsearch](https://www.elastic.co/downloads/past-releases/elasticsearch-7-15-2) and [Kibana](https://www.elastic.co/downloads/past-releases/kibana-7-15-2). Please make sure to use **version 7.15.x**; the starter code and the instructions might be specific to this version.
 
 1. Extract the archives.
 
     !!! note ""
-        Extracting the zip files will take a considerable amount of time.
+        Extracting the zip files will take some time. Some paths might be long, so it is best to extract these to a directory with a short path.
 
 1. Start both using the executables `bin/elasticsearch(.bat)` and `bin/kibana(.bat)`. There is no configuration needed; the default setup will work fine
 
-1. Wait for a few seconds while they start.
+1. Wait until they start.
+
+    !!! note ""
+        Startup might take up to a minute, don't be alarmed.
 
     Elasticsearch will print something like this:
 
