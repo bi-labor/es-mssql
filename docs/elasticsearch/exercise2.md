@@ -2,12 +2,48 @@
 
 The purpose of this exercise is to start _Elasticsearch_ and _Kibana_. You have two options for running them:
 
-1. Using Docker
-1. Or install them on your machine.
+1. Download and extract them on your machine.
+1. or using Docker.
 
 If you have Docker installed, use the first option. Otherwise, it is easier to go with the second option; also use this in the university computer labs.
 
-## Option 1: Start _Elasticsearch_ and _Kibana_ using Docker
+## Option 1: Start _Elasticsearch_ and _Kibana_ by downloading and extracting them
+
+1. When working at home: download the **7.15.x** version of [Elasticsearch](https://www.elastic.co/downloads/past-releases/elasticsearch-7-15-2) and [Kibana](https://www.elastic.co/downloads/past-releases/kibana-7-15-2). Please make sure to use **version 7.15.x**; the starter code and the instructions might be specific to this version.
+
+ Then extract the archives.
+
+    !!! note ""
+        Extracting the zip files will take some time. Some paths might be long, so it is best to extract these to a directory with a short path.
+
+1. When working in university computer laboratories: locate the folders containing Elasticsearch and Kibana under `c:\tools`. To ensure a clean database, remove the `data` directory under the folder of Elasticsearch.
+
+1. Start both using the executables `bin/elasticsearch(.bat)` and `bin/kibana(.bat)`. There is no configuration needed; the default setup will work fine
+
+1. Wait until they start.
+
+    !!! note ""
+        Startup might take up to a minute, don't be alarmed.
+
+    Elasticsearch will print something like this:
+
+    ```
+    [INFO ][o.e.h.AbstractHttpServerTransport] [xx] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+    [INFO ][o.e.n.Node               ] [xx] started
+    ```
+
+    Note the port where Elasticsearch is available (should be 9200).
+
+    Kibana, when ready, will print:
+
+    `[info][server][Kibana][http] http server running at http://localhost:5601`
+
+    If you need to change the ports, edit the following files, then restart the applications:
+
+    - `config\elasticsearch.yml`, look for key `http.port`, uncomment it, and set a port;
+    - `config\kibana.yml`, look for key `elasticsearch.hosts`, uncomment it and set the same port.
+
+## Option 2: Start _Elasticsearch_ and _Kibana_ using Docker
 
 1. Start Docker Desktop and wait for it to initialize.
 
@@ -37,40 +73,6 @@ If you have Docker installed, use the first option. Otherwise, it is easier to g
 1. To shut down the running system, use _CTRL + C_. Your data will be kept, and restarting with the same command as above will restart the applications.
 
     To completely shut down the applications and remove all data, use `docker-compose down -v`.
-
-## Option 2: Start _Elasticsearch_ and _Kibana_ by installing them
-
-1. Download the **7.15.x** version of [Elasticsearch](https://www.elastic.co/downloads/past-releases/elasticsearch-7-15-2) and [Kibana](https://www.elastic.co/downloads/past-releases/kibana-7-15-2). Please make sure to use **version 7.15.x**; the starter code and the instructions might be specific to this version.
-
-1. Extract the archives.
-
-    !!! note ""
-        Extracting the zip files will take some time. Some paths might be long, so it is best to extract these to a directory with a short path.
-
-1. Start both using the executables `bin/elasticsearch(.bat)` and `bin/kibana(.bat)`. There is no configuration needed; the default setup will work fine
-
-1. Wait until they start.
-
-    !!! note ""
-        Startup might take up to a minute, don't be alarmed.
-
-    Elasticsearch will print something like this:
-
-    ```
-    [INFO ][o.e.h.AbstractHttpServerTransport] [xx] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
-    [INFO ][o.e.n.Node               ] [xx] started
-    ```
-
-    Note the port where Elasticsearch is available (should be 9200).
-
-    Kibana, when ready, will print:
-
-    `[info][server][Kibana][http] http server running at http://localhost:5601`
-
-    If you need to change the ports, edit the following files, then restart the applications:
-
-    - `config\elasticsearch.yml`, look for key `http.port`, uncomment it, and set a port;
-    - `config\kibana.yml`, look for key `elasticsearch.hosts`, uncomment it and set the same port.
 
 ## Check that the systems are running
 
