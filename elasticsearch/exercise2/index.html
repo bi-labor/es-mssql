@@ -478,15 +478,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#option-1-start-elasticsearch-and-kibana-using-docker" class="md-nav__link">
-    Option 1: Start Elasticsearch and Kibana using Docker
+  <a href="#option-1-start-elasticsearch-and-kibana-by-downloading-and-extracting-them" class="md-nav__link">
+    Option 1: Start Elasticsearch and Kibana by downloading and extracting them
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-2-start-elasticsearch-and-kibana-by-installing-them" class="md-nav__link">
-    Option 2: Start Elasticsearch and Kibana by installing them
+  <a href="#option-2-start-elasticsearch-and-kibana-using-docker" class="md-nav__link">
+    Option 2: Start Elasticsearch and Kibana using Docker
   </a>
   
 </li>
@@ -771,15 +771,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#option-1-start-elasticsearch-and-kibana-using-docker" class="md-nav__link">
-    Option 1: Start Elasticsearch and Kibana using Docker
+  <a href="#option-1-start-elasticsearch-and-kibana-by-downloading-and-extracting-them" class="md-nav__link">
+    Option 1: Start Elasticsearch and Kibana by downloading and extracting them
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-2-start-elasticsearch-and-kibana-by-installing-them" class="md-nav__link">
-    Option 2: Start Elasticsearch and Kibana by installing them
+  <a href="#option-2-start-elasticsearch-and-kibana-using-docker" class="md-nav__link">
+    Option 2: Start Elasticsearch and Kibana using Docker
   </a>
   
 </li>
@@ -811,11 +811,45 @@
                 <h1 id="exercise-2-initializing-elasticsearch-and-kibana">Exercise 2: Initializing Elasticsearch and Kibana<a class="headerlink" href="#exercise-2-initializing-elasticsearch-and-kibana" title="Permanent link">&para;</a></h1>
 <p>The purpose of this exercise is to start <em>Elasticsearch</em> and <em>Kibana</em>. You have two options for running them:</p>
 <ol>
-<li>Using Docker</li>
-<li>Or install them on your machine.</li>
+<li>Download and extract them on your machine.</li>
+<li>or using Docker.</li>
 </ol>
 <p>If you have Docker installed, use the first option. Otherwise, it is easier to go with the second option; also use this in the university computer labs.</p>
-<h2 id="option-1-start-elasticsearch-and-kibana-using-docker">Option 1: Start <em>Elasticsearch</em> and <em>Kibana</em> using Docker<a class="headerlink" href="#option-1-start-elasticsearch-and-kibana-using-docker" title="Permanent link">&para;</a></h2>
+<h2 id="option-1-start-elasticsearch-and-kibana-by-downloading-and-extracting-them">Option 1: Start <em>Elasticsearch</em> and <em>Kibana</em> by downloading and extracting them<a class="headerlink" href="#option-1-start-elasticsearch-and-kibana-by-downloading-and-extracting-them" title="Permanent link">&para;</a></h2>
+<ol>
+<li>When working at home: download the <strong>7.15.x</strong> version of <a href="https://www.elastic.co/downloads/past-releases/elasticsearch-7-15-2">Elasticsearch</a> and <a href="https://www.elastic.co/downloads/past-releases/kibana-7-15-2">Kibana</a>. Please make sure to use <strong>version 7.15.x</strong>; the starter code and the instructions might be specific to this version.</li>
+</ol>
+<p>Then extract the archives.</p>
+<div class="highlight"><pre><span></span><code>!!! note &quot;&quot;
+    Extracting the zip files will take some time. Some paths might be long, so it is best to extract these to a directory with a short path.
+</code></pre></div>
+<ol>
+<li>
+<p>When working in university computer laboratories: locate the folders containing Elasticsearch and Kibana under <code>c:\tools</code>. To ensure a clean database, remove the <code>data</code> directory under the folder of Elasticsearch.</p>
+</li>
+<li>
+<p>Start both using the executables <code>bin/elasticsearch(.bat)</code> and <code>bin/kibana(.bat)</code>. There is no configuration needed; the default setup will work fine</p>
+</li>
+<li>
+<p>Wait until they start.</p>
+<div class="admonition note">
+<p>Startup might take up to a minute, don't be alarmed.</p>
+</div>
+<p>Elasticsearch will print something like this:</p>
+<div class="highlight"><pre><span></span><code>[INFO ][o.e.h.AbstractHttpServerTransport] [xx] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[INFO ][o.e.n.Node               ] [xx] started
+</code></pre></div>
+<p>Note the port where Elasticsearch is available (should be 9200).</p>
+<p>Kibana, when ready, will print:</p>
+<p><code>[info][server][Kibana][http] http server running at http://localhost:5601</code></p>
+<p>If you need to change the ports, edit the following files, then restart the applications:</p>
+<ul>
+<li><code>config\elasticsearch.yml</code>, look for key <code>http.port</code>, uncomment it, and set a port;</li>
+<li><code>config\kibana.yml</code>, look for key <code>elasticsearch.hosts</code>, uncomment it and set the same port.</li>
+</ul>
+</li>
+</ol>
+<h2 id="option-2-start-elasticsearch-and-kibana-using-docker">Option 2: Start <em>Elasticsearch</em> and <em>Kibana</em> using Docker<a class="headerlink" href="#option-2-start-elasticsearch-and-kibana-using-docker" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>Start Docker Desktop and wait for it to initialize.</p>
@@ -852,39 +886,6 @@
 <li>
 <p>To shut down the running system, use <em>CTRL + C</em>. Your data will be kept, and restarting with the same command as above will restart the applications.</p>
 <p>To completely shut down the applications and remove all data, use <code>docker-compose down -v</code>.</p>
-</li>
-</ol>
-<h2 id="option-2-start-elasticsearch-and-kibana-by-installing-them">Option 2: Start <em>Elasticsearch</em> and <em>Kibana</em> by installing them<a class="headerlink" href="#option-2-start-elasticsearch-and-kibana-by-installing-them" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Download the <strong>7.15.x</strong> version of <a href="https://www.elastic.co/downloads/past-releases/elasticsearch-7-15-2">Elasticsearch</a> and <a href="https://www.elastic.co/downloads/past-releases/kibana-7-15-2">Kibana</a>. Please make sure to use <strong>version 7.15.x</strong>; the starter code and the instructions might be specific to this version.</p>
-</li>
-<li>
-<p>Extract the archives.</p>
-<div class="admonition note">
-<p>Extracting the zip files will take some time. Some paths might be long, so it is best to extract these to a directory with a short path.</p>
-</div>
-</li>
-<li>
-<p>Start both using the executables <code>bin/elasticsearch(.bat)</code> and <code>bin/kibana(.bat)</code>. There is no configuration needed; the default setup will work fine</p>
-</li>
-<li>
-<p>Wait until they start.</p>
-<div class="admonition note">
-<p>Startup might take up to a minute, don't be alarmed.</p>
-</div>
-<p>Elasticsearch will print something like this:</p>
-<div class="highlight"><pre><span></span><code>[INFO ][o.e.h.AbstractHttpServerTransport] [xx] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
-[INFO ][o.e.n.Node               ] [xx] started
-</code></pre></div>
-<p>Note the port where Elasticsearch is available (should be 9200).</p>
-<p>Kibana, when ready, will print:</p>
-<p><code>[info][server][Kibana][http] http server running at http://localhost:5601</code></p>
-<p>If you need to change the ports, edit the following files, then restart the applications:</p>
-<ul>
-<li><code>config\elasticsearch.yml</code>, look for key <code>http.port</code>, uncomment it, and set a port;</li>
-<li><code>config\kibana.yml</code>, look for key <code>elasticsearch.hosts</code>, uncomment it and set the same port.</li>
-</ul>
 </li>
 </ol>
 <h2 id="check-that-the-systems-are-running">Check that the systems are running<a class="headerlink" href="#check-that-the-systems-are-running" title="Permanent link">&para;</a></h2>
