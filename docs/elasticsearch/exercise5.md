@@ -74,7 +74,7 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
 1. Select _Pie_ as the chart type.
 
-1. First, add a _Slice by_ the _top values_ of the _gender_ field, then another slice by _intervals_ of the _age_ field. And finally, the _Size by_ should be the count of records.
+1. First, add a _Slice by_ the _top values_ of the _gender_ field, then another slice by _intervals_ of the _age_ field. (The intervals should be large anough so that the final vizualization is similar to the one below.) And finally, the _Size by_ should be the count of records.
 
     ![Kibana Buckets](images/kibana-b-properties.png)
 
