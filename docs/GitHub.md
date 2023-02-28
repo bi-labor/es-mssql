@@ -167,7 +167,7 @@ The detailed description below shows the entire procedure. This summary is an ov
     !!! note "Maximum 5"
         Evaluations that fail due to transient errors, such as network problems, are not counted into the 5 evaluations. But if you trigger more evaluation by mistake or on purpose, it will be sanctioned. You are required to **test your solution locally** before submitting it.
 
-1. **FINALLY**, when you are ready, assign the _pull request_ to your laboratory instructor. This step is considered as the submission of your work.
+1. **FINALLY**, when you are ready, assign the _pull request_ to your laboratory instructor (@kpomazi). This step is considered as the submission of your work.
 
     ![GitHub create pull request](images/github/github-create-pull-request-3.png)
 
@@ -179,7 +179,7 @@ The detailed description below shows the entire procedure. This summary is an ov
 
 ## Questions and complaints regarding the final result
 
-If you have questions or concerns regarding the automated evaluation, use the pull request for communication with the instructor by asking questions via comments. To let the instructor know you have questions, please use `@instructorname` [mention](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#mentioning-people-and-teams) in the PR comment. This will automatically send an email notification.
+If you have questions or concerns regarding the automated evaluation, use the pull request for communication with the instructor by asking questions via comments. To let the instructor know you have questions, please use `@instructorname` `(@kpomazi)`  [mention](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#mentioning-people-and-teams) in the PR comment. This will automatically send an email notification.
 
 ![GitHub PR asking questions](images/github/github-question-in-pr.png)
 
