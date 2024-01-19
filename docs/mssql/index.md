@@ -9,11 +9,10 @@ You need to following tools to complete this laboratory:
 - PC with Windows. You can also use a VM at <https://cloud.bme.hu>, see details [here](bme-cloud-vm-usage.md).
 - Microsoft SQL Server. Express edition is sufficient, or _localdb_ installed along with Visual Studio is also fine
 - [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
-- Microsoft Visual Studio 2019. The community version is sufficient. (Note: version 2022 does not support the required extensions yet, thus 2019 is needed.)
+- Microsoft Visual Studio 2022. The community version is sufficient. 
 - Integration Services and Report Server Project support for Visual Studio
-    - [Microsoft Reporting Services Projects extension](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
-    - [SQL Server Integration Services Projects extension](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects).
-    - It is recommended to keep these extensions [up to date](https://docs.microsoft.com/en-us/visualstudio/extensibility/how-to-update-a-visual-studio-extension?view=vs-2019).
+    - [SQL Server Integration Services Projects extension](https://marketplace.visualstudio.com/items?itemName=SSIS.MicrosoftDataToolsIntegrationServices).
+- PowerBI Desktop
 - A GitHub account and a git tool
 
 ## Material to review before the laboratory
