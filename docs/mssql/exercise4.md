@@ -1,76 +1,46 @@
 # Exercise 4: Report about users
 
-Extend the provided Reporting Services project `ex4.sln` by modifying the project contents in place. You can find this solution in the root of the checked out git repository.
-
 Create a report that summarizes from which country do our users come from. A table should list the number of users by country, along with the average age from the country, and a pie chart should display the number of users from the top 10 countries.
 
 The final report should look similar to this:
 
-![Users report](images/report-users.png)
+![Users report](images/pbi-users-report.png)
 
-1. Open the solution with Visual Studio, and open _users.rdl_ from _Solution explorer_.
+1. Open the project _ex4.pbix_ in the repository with PowerBI Desktop.
 
-    ![Report files in Solution Explorer](images/rs-solution-explorer.png)
+1. Add a new data source using the _Get data_ and _SQL Server_ options. PIC
 
-1. Locate the _Report data_ toolbox. If you cannot find it, open it from the _View_ menu.
+    - Use the same settings for _Server_ and _Database_ as before.
 
-    ![Report data toolbox](images/rs-report-data-toolbox.png)
+    ![Database settings in PowerBI](images/pbi-database-settings.png)
 
-1. Add a new _Data source_ to the report by right-clicking the _Data sources_ folder in the _Report data_ window.
+    - Load the table BXUser.
 
-    - Chose the "Embedded connection" option.
-    - Connect to _Microsoft SQL Server_.
-    - Use the _Edit_ button to specify connection details. Use the same settings as before.
+    ![Select BXUser table in PowerBI](images/pbi-navigator.png)
 
-        ![Add a new data source](images/rs-add-data-source.png)
+1. After the data is loaded, open the Report View and add a Table from _Visualizations_ tab.
 
-    - Switch to the _Credentials_ page and select the _Use Windows Authentication option_.
+    - From the _Data_ tab, drag the following columns of _BXUser_ to Columns: _Country_, _UserId_, _Age_ 
 
-        ![Add a new data source](images/rs-add-data-source-credentials.png)
+    - For the _Age_ columns, select _Average_ instead of _Sum_ using the dropdown menu.
 
-    - After the _data source_ is added, open its properties and verify the _Credentials_. You might need to set up this page again. (This seems to be a bug in Visual Studio.)
+    ![Table columns in PowerBI](images/pbi-table-settings.png)
 
-1. Add a new dataset by right-clicking the _Datasets_ folder in the _Report data_ window. The dataset specifies how to fetch the data we want to display. It will be an SQL query.
+    - Sort the table by clicking on the _Count of UserId_ column in the report.
 
-    - Chose "Use a dataset embedded in my report"
-    - Select the data source from the dropdown. It is the data source created in the previous step.
-    - The query should list the number of users and the average age for each country sorted descending according to the number of users. The query should also skip countries that are "outliers" having too few (<50) users.
-    - Write the query as text as follows
+1. Add a Pie Chart from the _Visualizations_ tab.
+    
+    - Drag the column _Country_ to _Legend_ and _Values_ of the chart.
 
-         ```sql
-         select Country, count(*) as Count, avg(Age) as AvgAge
-         from BXUser
-         where Country is not NULL and Country<>''
-         group by Country
-         having count(*) >= 50
-         order by Count desc
-         ```
+    - Add a _Top N_ filter to show only the top 10 countries.
 
-    ![Add a new dataset](images/rs-add-dataset.png)
+    - Rename the diagram by renaming the _Values_ field.
 
-1. Visualize the result in a table.
+    ![Pie Chart settings in PowerBI](images/pbi-pie-settings.png)
 
-    - Add a table to the report surface by dragging one from the _Toolbox_.
-    - Drag each field from the _Report data_ toolbox from under the _Dataset_ created above into the table.
-    - Delete obsolete columns by right-clicking the table. There should be 3 columns: country, number of users, and average age.
-    - Edit the header row to have meaningful column headers.
+1. Add a title to the report, and **include your Neptun code in the title**. Make sure the report looks similar to the sample report on the top of the page. (Colors can be different.)
 
-1. Add a pie chart by dragging a _Chart_ item from the _Toolbox_ next to the table.
-
-    - The designer view of the report should be similar:
-
-        ![Designer view of the report](images/rs-users-report-designer.png)
-
-    - Chose a pie chart type.
-    - Create a new dataset, similar to the one before, that returns only the **top 10** rows.
-    - Open the _Chart data_ overlay by clicking the chart component. You need to click on a white area for this overlay to appear.
-    - From the newly created dataset display the _Count_ field as the _Values_ and the _Country_ field as _Category groups_:
-
-        ![Specify chart data](images/rs-users-chart-data.png)
-
-1. Add a title to the report, and **include your Neptun code in the title**. (See the sample report at the top.)
-
-1. Preview the report by switching to the _Preview_ tab in Visual Studio.
+1. Save your project.
 
 !!! example "SUBMISSION"
     Include a screenshot of the report as `ex4.png`.
