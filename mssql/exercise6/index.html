@@ -734,38 +734,38 @@
                 
                 
                 <h1 id="exercise-6-create-a-report-listing-the-highest-rated-books">Exercise 6: Create a report listing the highest rated books<a class="headerlink" href="#exercise-6-create-a-report-listing-the-highest-rated-books" title="Permanent link">&para;</a></h1>
-<p>In this exercise, you are required to create a new report using Reporting Services. Create a report that lists the <strong>top 10 highest rated books</strong> in a table.</p>
+<p>In this exercise, you are required to create a new report using PowerBI Desktop. 
+Create a report that lists the <strong>highest rated books</strong> in a table.</p>
 <ul>
 <li>
-<p>The report should be edited in solution <code>ex6.sln</code> in file <code>books.rdl</code>.</p>
+<p>The report should be edited by opening __ex6.pbix_.</p>
 </li>
 <li>
-<p>The top 10 books should be presented as a table displaying the title, author, publication year, average rating, and the cover image of the book (using the medium-sized image URL from the dataset).</p>
+<p>The top rated books should be presented as a table displaying the title, author, publication year, average rating, and the cover image of the book (using the medium-sized image URL from the dataset).</p>
 </li>
 <li>
-<p>Use an <em>Image</em> component from the toolbox. The image source should be <em>External</em> to fetch it based on the URL.</p>
+<p>Create a connection between the tables <em>BXBook</em> and <em>BXRating</em> by using the Model View on the left pane.</p>
 </li>
 <li>
-<p>An SQL script should compute the average rating. Ignore any book that does not have at least 20 ratings.</p>
-<p>Include this sql script (a single <code>select</code> sql statement) in file <code>ex6.sql</code>.</p>
-<div class="admonition note">
-<p>The file should contain a single sql query. Do not include the database name, and do not include any <code>go</code> command either.</p>
-</div>
+<p>Using the Table View, change type of the URL columns to <em>Image URL</em>. (Select the column and use the <em>Column Tools</em> menu.)</p>
 </li>
 <li>
-<p>Make sure to calculate the rating appropriately: if the imported rating is of type integer, make sure to use decimal types when averaging the values!</p>
+<p>Only show books with at least 20 ratings. (Use filters!)</p>
+</li>
+<li>
+<p>Make sure to calculate the average rating appropriately.</p>
 </li>
 <li>
 <p>Add a title to the report, and include your Neptun code in the title.</p>
 </li>
 <li>
 <p>The final report should look similar to this (your results do not need to match exactly):</p>
-<p><img alt="Top books report" src="../images/report-books.png" /></p>
+<p><img alt="Top books report" src="../images/pbi-ratings-table.png" /></p>
 </li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">SUBMISSION</p>
-<p>Include the <strong>SQL query</strong> in file <code>ex6.sql</code> and a screenshot of the <strong>report</strong> in file <code>ex6.png</code>.</p>
+<p>A screenshot of the <strong>report</strong> in file <code>ex6.png</code>.</p>
 <p>Please ensure that the screenshot displays all the relevant parts of the report (title, table with Neptun codes, ratings, cover images). See the sample above.</p>
 </div>
                 
