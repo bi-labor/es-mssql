@@ -2,10 +2,7 @@
 
 ![Build docs](https://github.com/bi-labor/es-mssql/workflows/Build%20docs/badge.svg?branch=master)
 
-This repository contains laboratory exercises for the following course topics:
-
-- Elasticsearch laboratory
-- Microsoft SQL Server Business Intelligence laboratory
+This repository contains laboratory exercises for Business Intelligence Laboratory.
 
 The exercise documentation is build with MkDocs and published on GitHub Pages at <https://bi-labor.github.io/es-mssql/>
 

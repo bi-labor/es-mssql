@@ -10,6 +10,7 @@ You need the following tools to complete this laboratory:
 - Elasticsearch and Kibana version **7.15.x**
     - Either run them using Docker, if you have Docker on your machine
     - Or you can download the binaries (see in Exercise 2)
+        - You can also use a VM at <https://cloud.bme.hu>, see details [here](bme-cloud-vm-usage.md).
 - PowerShell
     - Included in Windows
     - [Install PowerShell Core on Linux](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux)

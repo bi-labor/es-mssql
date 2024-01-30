@@ -1,4 +1,4 @@
-site_name: BMEVIAUMB00 Business Intelligence Laboratory
+site_name: BMEVIAUMB00 and BMEVIAUMB09 Business Intelligence Laboratory
 site_author: Dudás Ákos
 copyright: Copyright &copy; BME VIK AUT
 
@@ -78,6 +78,18 @@ nav:
       - elasticsearch/exercise5.md
       - elasticsearch/exercise6.md
       - elasticsearch/exercise7.md
+      - elasticsearch/bme-cloud-vm-usage.md
+  - "Pentaho":
+      - pentaho/index.md
+      - pentaho/exercise1.md
+      - pentaho/exercise2.md
+      - pentaho/exercise3.md
+      - pentaho/exercise4.md
+      - pentaho/exercise5.md
+      - pentaho/exercise6.md
+      - pentaho/exercise7.md
+      - pentaho/exercise8.md
+      - pentaho/bme-cloud-vm-usage.md
   - "MSSQL":
       - mssql/index.md
       - mssql/exercise1.md

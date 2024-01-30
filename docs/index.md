@@ -1,11 +1,10 @@
-# Elasticsearch & MSSQL
+# Business Intelligence Laboratory
 
 This repository contains laboratory exercises for the following course topics:
 
 - [Elasticsearch laboratory](elasticsearch/index.md)
+- [Pentaho laboratory](pentaho/index.md)
 - [Microsoft SQL Server Business Intelligence laboratory](mssql/index.md)
-
-For the other laboratory topics, please refer to the course website.
 
 ## Submitting your work
 
@@ -37,6 +36,6 @@ The exercises will ask for a few screenshots. The exercises describe the expecte
     As a student of this course, you can earn extra credit by contributing to the materials! Open a _pull request_ to fix an error or contribute to the contents in any way! Check the link to the repository in the upper right corner.
 
 !!! quote "License"
-    The materials found in this repository are created for the students of course BMEVIAUMB00. The usage of these materials outside the scope of teaching or learning this particular course is only granted if the source and authors are contributed.
+    The materials found in this repository are created for the students of course BMEVIAUMB00 and BMEVIAUMB09. The usage of these materials outside the scope of teaching or learning this particular course is only granted if the source and authors are contributed.
 
     The materials are to be used within the course context. For any other usage scenarios, the material is provided as-is.
