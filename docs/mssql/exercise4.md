@@ -43,6 +43,20 @@ The final report should look similar to this:
 1. Save your project.
 
 !!! example "SUBMISSION"
-    Include a screenshot of the report as `ex4.png`.
+    Include a screenshot of the report as `ex4a.png`.
+
+    Please make sure to create the screenshot such that relevant parts of the report are all visible (title, table, and diagram too) and that the title contains your Neptun code. See the sample at the beginning of the exercise.
+
+1. Create a new Page. Here you will visualize the cities for a chosen country.
+
+1. Use a _Clustered bar chart_ with _City_ in the X-axis and _Count of UserID_ in the Y-axis.
+
+1. Drag the column _Country_ to the **Drill through** option of your Visualization.
+
+1. Check if the _Drill through_ works by right clicking a country on your first page in the _Pie Chart_.
+
+
+!!! example "SUBMISSION"
+    Include a screenshot of the bar chart showing the **cities of the United Kingdom** by using the _Drill through_ option as `ex4b.png`.
 
     Please make sure to create the screenshot such that relevant parts of the report are all visible (title, table, and diagram too) and that the title contains your Neptun code. See the sample at the beginning of the exercise.
