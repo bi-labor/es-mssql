@@ -49,7 +49,7 @@ The final report should look similar to this:
 
 1. Create a new Page. Here you will visualize the cities for a chosen country.
 
-1. Use a _Clustered bar chart_ with _City_ in the X-axis and _Count of UserID_ in the Y-axis.
+1. Use a _Clustered bar chart_ with _City_ in the Y-axis and _Count of UserID_ in the X-axis.
 
 1. Drag the column _Country_ to the **Drill through** option of your Visualization.
 
