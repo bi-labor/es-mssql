@@ -25,7 +25,7 @@ You need to following tools to complete this laboratory:
 
 ## Task overview
 
-We have a webshop that sells books. Our goal is to understand our users and find out which are the best books we should market more. We have the users of the webshop, the books, and user-given ratings of these books. We already exported these data in the form of CSV files. We will use Microsoft SQL Server as a data warehouse, Integration Services as the ETL tool, and Reporting Services to present our insights in a visual form.
+We have a webshop that sells books. Our goal is to understand our users and find out which are the best books we should market more. We have the users of the webshop, the books, and user-given ratings of these books. We already exported these data in the form of CSV files. We will use Microsoft SQL Server as a data warehouse, Integration Services as the ETL tool, and PowerBI to present our insights in a visual form.
 
 The model of our approach looks like the following.
 
