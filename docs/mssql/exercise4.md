@@ -59,4 +59,4 @@ The final report should look similar to this:
 !!! example "SUBMISSION"
     Include a screenshot of the bar chart showing the **cities of the United Kingdom** by using the _Drill through_ option as `ex4b.png`.
 
-    Please make sure to create the screenshot such that relevant parts of the report are all visible (title, table, and diagram too) and that the title contains your Neptun code. See the sample at the beginning of the exercise.
+    Please make sure to create the screenshot such that relevant parts of the report are all visible.
