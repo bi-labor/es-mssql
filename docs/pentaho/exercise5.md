@@ -12,7 +12,7 @@ correctly, the following screen will appear. Choose new report and save it name 
     ![Data Sets](images/prd-report02a.png)
     ![Data Sets](images/prd-report02b.png)
 
-1. Click on the plus button and browse for the previously created transformation, named `ex4-transformation1`.ktr. After choosing it you should see the previously declared steps, choose the Group by from here.
+1. Click on the plus button and browse for the previously created transformation, named `ex3-transformation1`.ktr. After choosing it you should see the previously declared steps, choose the Group by from here.
 
     ![Data Source](images/prd-report03.png)
 
