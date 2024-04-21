@@ -17,7 +17,7 @@ correctly, the following screen will appear. Choose new report and save it name 
     ![Data Source](images/prd-report03.png)
 
 1. Take a look at the structure of the report, you should see the following sections:
-    - Page header/footer: header/gooter repeated for every physical page of the report
+    - Page header/footer: header/footer repeated for every physical page of the report
     - Report header/footer: header/footer present at the start of the actual report (a report template could contain multiple records)
     - Details: repeated for every entry (row) in the data set
     Drag and drop the date, Number of students, and Average grade to the details section, in the following pattern.
