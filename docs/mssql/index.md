@@ -28,7 +28,7 @@ We have a webshop that sells books. Our goal is to understand our users and find
 
 The model of our approach looks like the following.
 
-![Overview of the process](images/process-overview.svg)
+![Overview of the process](images/process-overview2.png)
 
 ## Grading
 
