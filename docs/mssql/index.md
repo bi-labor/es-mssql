@@ -6,7 +6,7 @@ This laboratory's goal is to practice the usage of Microsoft SQL Server products
 
 You need to following tools to complete this laboratory:
 
-- PC with Windows. You can also use a VM at <https://cloud.bme.hu>, see details [here](bme-cloud-vm-usage.md).
+- PC with Windows.
 - Microsoft SQL Server. Express edition is sufficient, or _localdb_ installed along with Visual Studio is also fine
 - [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
 - Microsoft Visual Studio 2022. The community version is sufficient. 
