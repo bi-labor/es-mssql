@@ -9,7 +9,7 @@ You need to following tools to complete this laboratory:
 - PC with Windows.
 - Microsoft SQL Server. Express edition is sufficient, or _localdb_ installed along with Visual Studio is also fine
 - [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
-- Microsoft Visual Studio 2022. The community version is sufficient. 
+- Microsoft Visual Studio 2022 or newer. The community version is sufficient. 
 - [SQL Server Integration Services Projects extension](https://marketplace.visualstudio.com/items?itemName=SSIS.MicrosoftDataToolsIntegrationServices).
 - PowerBI Desktop
 - A GitHub account and a git tool
