@@ -11,7 +11,7 @@ You need the following tools to complete this laboratory:
 
 - Windows, Linux, or Mac: Every component you need is platform-independent.
     - You can also use a VM at <https://cloud.bme.hu>, see details [here](bme-cloud-vm-usage.md).
-- Java
+- [Java 8 x64](https://javadl.oracle.com/webapps/download/AutoDL?BundleId=252627_99a6cb9582554a09bd4ac60f73f9b8e6)
 - Pentaho Data Integration and Pentaho Report Designer version **8.3.x**
     - You can download the binaries (see in Exercise 2)
 - A GitHub account and a git tool

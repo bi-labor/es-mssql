@@ -15,7 +15,7 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
     When opening this page the first time, you will be asked to configuration a new _index pattern_.
 
-1. Click the _Create new index pattern_ button. Enter the index name — `salaries` — as the index pattern. Make sure _Kibana_ says _Success! Your pattern matches 1 index_, and click _Next step_.
+1. Click the _Create new index pattern_ button. Enter the index name — `salaries` — as the index pattern. Make sure _Kibana_ says _Success! Your pattern matches 1 index_.
 
     ![Kibana index pattern](images/kibana-index-pattern-1.png)
 
@@ -74,7 +74,7 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
 1. Select _Pie_ as the chart type.
 
-1. First, add a _Slice by_ the _top values_ of the _gender_ field, then another slice by _intervals_ of the _age_ field. (The intervals should be large anough so that the final vizualization is similar to the one below.) And finally, the _Size by_ should be the count of records.
+1. First, add a _Slice by_ the _top values_ of the _gender_ field, then another slice by _intervals_ of the _age_ field. (The intervals should be large enough so that the final vizualization is similar to the one below.) And finally, the _Size by_ should be the count of records.
 
     ![Kibana Buckets](images/kibana-b-properties.png)
 
@@ -83,7 +83,7 @@ Our first step is to tell _Kibana_ which indexes it should consider when creatin
 
 ## c) Show the distribution of the workers' locations on a map!
 
-1. Create a new visualization, this time, it should be a _Map_ type.
+1. Create a new visualization, this time, instead of _Lens_ it should be a _Map_ type.
 
 1. On the right add a new layer of type _Choropleth_ with the following settings>
 

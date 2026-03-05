@@ -6,7 +6,7 @@ The purpose of this exercise is to download _Pentaho_. Download and extract them
 
 1. Get Pentaho Data Integration and Pentaho Report Designer by downloading and extracting them.
 
-    - When working at home: download the **8.3.x** version of [Pentaho Data Integration](https://privatefilesbucket-community-edition.s3.us-west-2.amazonaws.com/8.3.0.0-371/ce/client-tools/pdi-ce-8.3.0.0-371.zip) and [Pentaho Report Designer](https://privatefilesbucket-community-edition.s3.us-west-2.amazonaws.com/8.3.0.0-371/ce/client-tools/prd-ce-8.3.0.0-371.zip). Please make sure to use **version 8.3.x**; the starter code and the instructions might be specific to this version. Then extract the archives.
+    - When working at home: download the **8.3.x** version of [Pentaho Data Integration](https://github.com/ambientelivre/legacy-pentaho-ce/releases/download/pdi-ce-8.3.0.0-371/pdi-ce-8.3.0.0-371.zip) and [Pentaho Report Designer](https://github.com/ambientelivre/legacy-pentaho-ce/releases/download/prd-ce-8.3.0.0-371/prd-ce-8.3.0.0-371.zip). Please make sure to use **version 8.3.x**; the starter code and the instructions might be specific to this version. Then extract the archives.
 
         !!! note ""
             Extracting the zip files will take some time. Some paths might be long, so it is best to extract these to a directory with a short path.

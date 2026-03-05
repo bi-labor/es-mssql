@@ -12,7 +12,7 @@ correctly, the following screen will appear. Choose new report and save it name 
     ![Data Sets](images/prd-report02a.png)
     ![Data Sets](images/prd-report02b.png)
 
-1. Click on the plus button and browse for the previously created transformation, named `ex4-transformation1`.ktr. After choosing it you should see the previously declared steps, choose the Group by from here.
+1. Click on the plus button and browse for the previously created transformation, named `ex3-transformation1`.ktr. After choosing it you should see the previously declared steps, choose the Group by from here.
 
     ![Data Source](images/prd-report03.png)
 
@@ -20,6 +20,7 @@ correctly, the following screen will appear. Choose new report and save it name 
     - Page header/footer: header/gooter repeated for every physical page of the report
     - Report header/footer: header/footer present at the start of the actual report (a report template could contain multiple records)
     - Details: repeated for every entry (row) in the data set
+
     Drag and drop the date, Number of students, and Average grade to the details section, in the following pattern.
 
     ![Details](images/prd-report04.png)
@@ -43,7 +44,7 @@ correctly, the following screen will appear. Choose new report and save it name 
 
     ![Logo](images/prd-report08.png)
 
-    If you click on the play button, and select print preview, you should see the following:
+    If you click on the play button, and select print preview, you should the following:
 
     ![Preview](images/prd-report09.png)
 
