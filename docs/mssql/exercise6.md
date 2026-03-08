@@ -3,7 +3,7 @@
 In this exercise, you are required to create a new report using PowerBI Desktop. 
 Create a report that lists the **highest rated books** in a table.
 
-- The report should be edited by opening __ex6.pbix_.
+- The report should be edited by opening _ex6.pbix_.
 
 - The top rated books should be presented as a table displaying the title, author, publication year, average rating, and the cover image of the book (using the medium-sized image URL from the dataset).
 
