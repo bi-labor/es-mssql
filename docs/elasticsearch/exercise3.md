@@ -6,18 +6,28 @@ Now that both _Elasticsearch_ and _Kibana_ are operational, let us create the ne
 
 First, we are going to use _Elasticsearch's_ REST API through _PowerShell_.
 
-1. To index a document in _Elasticsearch_, issue the following command.
+1. To index a document in _Elasticsearch_, issue the following command in _PowerShell_.
 
     ```powershell
     (Invoke-WebRequest 'http://localhost:9200/test/_doc/1?pretty' -Method Put -ContentType 'application/json' -Body '{ "name": "John Doe" }' -UseBasicParsing).Content
     ```
 
+    Or to use _cURL_ issue the following.
+    ```bash
+    curl -X PUT "http://localhost:9200/test/_doc/1?pretty" -H "Content-Type: application/json" -d '{ "name": "John Doe" }'
+    ```
+
     This way, we inserted a document of type `_doc` into the index called `test` with id `1`. The response JSON should state `"result": "created"`.
 
-1. Query the document with the following command.
+1. Query the document with the following command in _PowerShell_.
 
     ```powershell
     (Invoke-WebRequest 'http://localhost:9200/test/_doc/1?pretty' -Method Get -UseBasicParsing).Content
+    ```
+
+    Or to use cURL issue the following.
+    ```bash
+    curl "http://localhost:9200/test/_doc/1?pretty"
     ```
 
     The result JSON tells us the name of the index, the document's id, and the entire document we inserted in the `_source` field.
@@ -164,6 +174,11 @@ Before importing the rest of the sample data, add your **Neptun code** as a pref
     (Get-Content .\salaries.json) -replace '"gender":"', '"gender":"NEPTUN ' -replace '"company":"', '"company":"NEPTUN ' | Set-Content .\salaries.json
     ```
 
+    Or to use _sed_ issue the following.
+    ```bash
+    sed -i 's/"gender":"/"gender":"NEPTUN /g; s/"company":"/"company":"NEPTUN /g' salaries.json
+    ```
+
 1. Verify the results; it should look similar (with your own Neptun code):
 
     ![Replacements in the document](images/replace-data-result.png)
@@ -183,6 +198,11 @@ And now, let us index these documents.
 
     ```powershell
     Invoke-WebRequest 'http://localhost:9200/_bulk' -Method Post -ContentType 'application/json' -InFile .\salaries.json -UseBasicParsing
+    ```
+
+    Or to use _cURL_:
+    ```bash
+    curl -X POST "http://localhost:9200/_bulk" -H "Content-Type: application/json" --data-binary @salaries.json
     ```
 
 1. Check the response for errors. You will see a similar message if everything is OK (note the _errors_ in the response):
